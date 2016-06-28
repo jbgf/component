@@ -1,0 +1,110 @@
+
+#myScrollspy{
+    bottom: 10px;
+    font-family: 宋体;
+    font-size: 14px;
+    height: 456px;
+    line-height: 19px;
+    position: fixed;
+    width: 270px;
+} 
+.catalog-scroller{
+    height: 330px;
+    right: 0;
+    overflow: hidden;
+    padding-top: 15px;
+    position: absolute;
+    top: 0;
+    width: 210px;
+    z-index: 1;
+}  
+
+dl#myNav{
+    height: auto;
+    position: relative;
+    width: 210px;
+}
+
+.nav > dt {
+
+    margin-bottom: 7px;
+    padding-right: 20px;
+    position: relative;
+   
+}
+.nav > dt .pointer{
+    background: transparent url("circle.png") no-repeat scroll 3px -222px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    
+    margin-top: 4px;
+    position: absolute;
+    right: 0;top:1px;
+    width: 10px;
+}
+.nav > dt > a {
+    text-align: right;
+    display: block;
+    line-height: 19px;
+    padding-right: 10px;
+    color: #555;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+
+.nav > dt.active > a{color:#142DDF;}
+.nav > dt.active .pointer{color:#142DDF;}   
+.sider{
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 345px;
+    background-color: #eaeaea;
+    border: 1px solid #eaeaea;
+    border-top: 0;
+    border-bottom: 0;
+    
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #eaeaea;
+    border-color: -moz-use-text-color #eaeaea;
+    border-image: none;
+    border-style: none solid;
+    
+    z-index: -1;
+    right: 3px;
+    
+    
+    
+}
+.sider .start,.sider .end{
+    background: transparent url("circle.png") no-repeat scroll 0 center;
+    height: 10px;
+    left: -5px;
+    overflow: hidden;
+    position: absolute;
+    width: 10px;
+    font-style: normal;
+}
+.sider .start{top:0;}
+.sider .end{
+    bottom: 0;
+    margin: 0;
+}
+    
+img.arrow {
+    right: 0;
+    z-index: 2;
+    top: 5px;
+    position: absolute;
+    height: 13px;
+    width: 18px;
+    cursor: pointer;
+
+}
+    .content{margin-left: 30%;}
