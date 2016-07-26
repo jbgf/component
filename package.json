@@ -1,0 +1,25 @@
+{
+  "name": "component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbgf/component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbgf/component/issues"
+  },
+  "homepage": "https://github.com/jbgf/component#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-connect-php": "0.0.7",
+    "run-sequence": "^1.2.2"
+  }
+}
