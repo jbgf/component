@@ -10,7 +10,7 @@
 </head>
 <body>
     <!--图片展示-->
-    <div class="hot">
+    <div class="picRow02_wrapper">
         <div class="hotTitle">
             <span class="fire"><img src="img/fire.png"><span class="fireText">热门商品</span></span>
             <span class="leftRight">
@@ -123,46 +123,81 @@
                           <span class="textRow price">￥300.00</span>
                       </div>
                   </li>
-                  <li>
-                      <div class="picBox">
-                          <img src="http://i.imgur.com/q7H4v9N.jpg?1">  
-                      </div>
-                      <div class="textBox">
-                          <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
-                          <span class="textRow price">￥300.00</span>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="picBox">
-                          <img src="http://i.imgur.com/Ai7sZwa.jpg">  
-                      </div>
-                      <div class="textBox">
-                          <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
-                          <span class="textRow price">￥300.00</span>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="picBox">
-                          <img src="http://i.imgur.com/q7H4v9N.jpg?1">  
-                      </div>
-                      <div class="textBox">
-                          <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
-                          <span class="textRow price">￥300.00</span>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="picBox">
-                          <img src="http://i.imgur.com/q7H4v9N.jpg?1">  
-                      </div>
-                      <div class="textBox">
-                          <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
-                          <span class="textRow price">￥300.00</span>
-                      </div>
-                  </li>
+                  
+                  
                  
               </ul>
         </div>
-        
+        <script type="text/javascript">
+            $(document).ready(function(){
+  
+              scrollLink(20,1500);
+            });
+            function scrollLink(speed,delay) {   //函数 函数名(变量1,变量2,变量3)滚动高度,速度,延迟
+            var p=false; //定义变量 p为假;
+            var t; //定义变量t了
+            var $ul=$("#hotPicRow ul"); //定义变量o为document.getElementByIdx_x("marqueebox")对象
+            var ul = $ul[0];
+            var blockNum = $(".picRow02 ul li").length;
+            if(blockNum<4){return}
+
+            var lengthUl = ul.scrollWidth;
+            var singleBlock = lengthUl/(blockNum);
+            
+            var index;
+            
+            var array = new Array();
+            for(var i= 1;i<=blockNum;i++){
+              array.push(i*singleBlock)
+            };
+            
+            var list = $ul.html();
+            
+            $ul.append(list).prepend(list); //
+            
+            ul.style.marginLeft=-lengthUl+'px'; //o的属性，设置或获取对象的上边距宽度
+            
+            ul.onmouseover=function(){p=true;} 
+            ul.onmouseout=function(){p=false;} 
+
+            function start(){ 
+              function arrow(){
+                $(".arrow_right").on("click",function(){
+                        getIndex()
+                       
+                      if(!$ul.is(":animated"))
+                      $ul.stop(false,true).animate({'margin-left':'-='+singleBlock},{duration:'fast',complete:function(){if(index==blockNum){index=1;ul.style.marginLeft=-lengthUl+'px';}}})
+                });
+                $(".arrow_left").on("click",function(){
+                        getIndex();
+                      
+                      if(!$ul.is(":animated"))                    
+                      $ul.stop(false,true).animate({'margin-left':'+='+singleBlock},{duration:'fast',complete:function(){ if(index==blockNum){index=1;ul.style.marginLeft=-lengthUl+'px';}}})
+                })
+              }
+              arrow();
+            } 
+            function getIndex(){
+                var marginLeft = ul.style.marginLeft;
+                for(var i = 1;i<=blockNum;i++){
+                  
+                      if(Math.abs(parseInt(marginLeft)+lengthUl)<array[i-1]){
+                        index = i;
+                        
+                        return ;
+                      }
+                      
+                };
+                
+            }
+            function scrolling(){ //“滚动”函数
+              var marginLeft = ul.style.marginLeft;
+            }
+
+            start();
+        };
+
+        </script>
     </div>
     <!--glide轮播-->
     <div class="banner full-screen">
