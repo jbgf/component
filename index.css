@@ -47,11 +47,11 @@
 
 
 /***************************************************************************
-**********************************pirRow03**********************************
+**********************************picRow03**********************************
 ***************************************************************************/
 .picRow03_wrapper{
 	overflow: hidden;
-	width:217px;
+	width:223px;
 	margin:0 auto;
 }
 .picRow03{
@@ -70,7 +70,7 @@
 	display: inline-block;
     width: 240px;
     height: 100%;
-    border:1px solid #E9E6E6;
+   
 }
 .picRow03 li>div{float: left;position: relative;}
 .picRow03 li .picBox{
@@ -79,19 +79,23 @@
 }
 .picRow03 li .textBox{
 	white-space: normal;
-	width: 145px;
-	padding: 25px 20px;
-	height: 100%;
-	color: #000;
+    width: 145px;
+    padding: 13px 0 13px 20px;
+    height: 100%;
+    color: #000;
 }
 .picRow03 li .textBox .textRow{
 	display: block;
     text-align: left;
-    line-height: 23px;
+    font-size: 10px;
+    line-height: 17px;
 }
-.picRow03 li .textBox .textRow.price{
-	color:#f7a244;font-size: 16px;
-
+.picRow03 li .textBox .textRow.name{
+	color: #f7a244;
+    font-size: 15px;
+    height: 20px;
+    line-height: 11px;
+	
 }
 .picRow03 li .picBox img{width:100%;height: 100%;}
 .productBox{padding-top: 36px;}
