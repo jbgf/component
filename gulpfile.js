@@ -92,8 +92,8 @@ gulp.task('clean:dest',function(callback){
 
 gulp.task('connectPhp',function(){
 	connect.server({
-		bin:'D:/xampp/php/php.exe',
-		ini: 'D:/xampp/php/php.ini',
+		bin:'f:/xampp/php/php.exe',
+		ini: 'f:/xampp/php/php.ini',
 		port:8001
   	});
   	gulp.watch('./*.php').on('change', function () {
