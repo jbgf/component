@@ -104,7 +104,7 @@ a {
 }
 .plst_pt {
   overflow: hidden;
-  _width: 100%;
+  width: 100%;
 }
 .plst_pt ul {
   overflow: hidden;
@@ -119,8 +119,8 @@ a {
 }
 .plst_pt li.slidePage>img {
   display: block;
-  width: 356px;
-  height: 588px;
+  width: 100%;
+  height: 100%;
   margin-bottom: 5px;
   border: 1px solid #e3f2fa;
   padding: 1px;
@@ -129,6 +129,7 @@ a {
 .wp_roll {
   position: relative;
   _width: 100%;
+  overflow: hidden;
 }
 .roll_lt{
   background:url(images/mfrl.gif);
@@ -259,53 +260,27 @@ a {
                         <p>Launch IWB products.</p>
                   </div>  
               </li>
+              <li class="slidePage">
+                  <img src="images/16.jpg">
+                  <div class="des">
+                      <img src="images/16-01.png" class="img-responsive center-block">
+                        <h1>IQ established.</h1>
+                        <div class="line"></div>
+                        <p>Launch IWB products.</p>
+                    </div>  
+              </li>
+              <li class="slidePage">
+                  <img src="images/16.jpg">
+                  <div class="des">
+                      <img src="images/16-01.png" class="img-responsive center-block">
+                        <h1>IQ established.</h1>
+                        <div class="line"></div>
+                        <p>Launch IWB products.</p>
+                  </div>  
+              </li>
               
             </ul>
-            <!--
-                <ul id="mr_fu">
-                <li class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <img src="images/17.gif" class="img-responsive center-block" />
-                </li>
-                <li class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <img src="images/16.jpg" class="img-responsive center-block" />
-                    <div class="des">
-                      <img src="images/16-01.png" class="img-responsive center-block">
-                        <h1>IQ established.</h1>
-                        <div class="line"></div>
-                        <p>Launch IWB products.</p>
-                    </div>
-                 </li>
-                 <li class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <img src="images/16.jpg" class="img-responsive center-block" />
-                    <div class="des">
-                      <img src="images/16-01.png" class="img-responsive center-block">
-                        <h1>IQ established.</h1>
-                        <div class="line"></div>
-                        <p>Launch IWB products.</p>
-                    </div>
-                 </li>
-                 <li class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <img src="images/16.jpg" class="img-responsive center-block" />
-                    <div class="des">
-                      <img src="images/16-01.png" class="img-responsive center-block">
-                        <h1>IQ established.</h1>
-                        <div class="line"></div>
-                        <p>Launch IWB products.</p>
-                    </div>
-                 </li>
-                 <li  class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <img src="images/16.jpg" class="img-responsive center-block" />
-                    <div class="des">
-                      <img src="images/16-01.png" class="img-responsive center-block">
-                        <h1>IQ established.</h1>
-                        <div class="line"></div>
-                        <p>Launch IWB products.</p>
-                    </div>
-                 </li>
-               
-               
-            </ul>
-            -->
+           
           </div>
         </div>
     </div>
@@ -318,8 +293,8 @@ a {
 $(function(){
 //列表自适应
 var ptListWrp = $('.jQ_ptLst'); //列表容器
-var valLstLiWth = $('.jQ_ptLst li.slidePage').width(); //图片宽度（图片可能包括边框样式等，取Li宽度参与可视图片计算避免误差）
-var valImgLth = 1; //可见图数变量*
+var valLstLiWth ;//= $('.jQ_ptLst li.slidePage').width(); //图片宽度（图片可能包括边框样式等，取Li宽度参与可视图片计算避免误差）
+var valImgLth = 4; //可见图数变量*
 var valpLstMg = 0; //边距变量*
 var pLstLesMg = 5; //临界间距
 //列表滚动
@@ -327,16 +302,18 @@ var pLstRoLt = $('.jQ_plstRoLt'); //左滚动元素
 var pLstRoRt = $('.jQ_plstRoRt'); //右滚动元素
 var pLstImgLth = ptListWrp.find('.slidePage').children('img').length; //获取图片总数
 //宽度自适应方法
+
 function fnAutoWth(){
 //重置滚动
 $('.jQ_ptLst ul').css({'marginLeft':'0'});
 pLstRoLt.hide();
 pLstRoRt.show();
 var pLstWrpWth = ptListWrp.width(); //获取当前可视区域宽度
-
-valImgLth = Math.floor(pLstWrpWth / valLstLiWth); ///当前可视图片数计算*
+valLstLiWth = Math.floor(pLstWrpWth/valImgLth);
+ptListWrp.find('.slidePage').css('width',valLstLiWth);
+//valImgLth = Math.floor(pLstWrpWth / valLstLiWth); ///当前可视图片数计算*
 /*修改*/
-valImgLth = 4;
+//valImgLth = 4;
 
 //图片间距算法
 function fnpLstMg(){
@@ -352,6 +329,8 @@ if(valpLstMg < pLstLesMg){
 //valImgLth = valImgLth - 1; //当间距达到临界值，图片数-1
 fnpLstMg(); //重新计算间距
 };
+
+
 //可视图片数 >= 总图片数时，总图片数即可视图片数
 if(valImgLth >= pLstImgLth){
 valImgLth = pLstImgLth;
@@ -367,6 +346,7 @@ ptListWrp.find('li').css('margin-left',valpLstMg);
 };
 //初始执行宽度自适应方法
 fnAutoWth();
+
 //动态变化宽度时执行方法
 $(window).resize(function(){
 fnAutoWth(); //宽度自适应方法
@@ -383,7 +363,8 @@ pLstRoWrp.not(':animated').animate({marginLeft: ptLstCssMg - (ptLstImgMg + valLs
 //回调函数判断滚动之后的箭头状态
 var ptLstCurMg = parseInt(pLstRoWrp.css('margin-left')); //获取当前已滚动宽度
 var ptLstRoWth = (pLstImgLth - valImgLth) * (ptLstImgMg + valLstLiWth);//计算非可视区域宽度
-console.log(valImgLth)
+console.log(ptLstCurMg)
+console.log(ptLstRoWth)
 //当已滚动宽度 = 非可视区宽度，即已滚动至最后一图
 if(ptLstCurMg + ptLstRoWth == 0){
 $this.hide(); //隐藏右箭头
