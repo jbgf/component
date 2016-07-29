@@ -294,7 +294,7 @@ $(function(){
 //列表自适应
 var ptListWrp = $('.jQ_ptLst'); //列表容器
 var valLstLiWth ;//= $('.jQ_ptLst li.slidePage').width(); //图片宽度（图片可能包括边框样式等，取Li宽度参与可视图片计算避免误差）
-var valImgLth = 4; //可见图数变量*
+var valImgLth = $(window).width()>900?4:1; //可见图数变量*
 var valpLstMg = 0; //边距变量*
 var pLstLesMg = 5; //临界间距
 //列表滚动
