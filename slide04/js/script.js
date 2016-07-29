@@ -76,6 +76,6 @@ $[_0x89fd[1]][_0x89fd[0]] = function(_0x2091x1) {
 	};
 };
 
-$(document).ready(function(){
+jQuery(document).ready(function($){
 	$().maps();
 });
