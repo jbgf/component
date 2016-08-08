@@ -1,4 +1,7 @@
 *{box-sizing: border-box;}
+a{text-decoration: none;}
+a:visited{color:#000;}
+ul{list-style: none;}
 .wrapper{
   padding: 15px;
   margin-right: auto;
@@ -165,4 +168,66 @@
 	padding: 0;
 	margin: 0;
 	border: 0;
+}
+
+/*btnBox*/
+.btnBox>.btn{
+    float: left;
+    margin-right: 20px;
+}
+.btnBox>.btn.on, .btnBox>.btn.on {
+    background-color: #f48000;
+    color: #fff;
+}
+.btn{
+	text-align: center;
+	display: inline-block;
+    border: 1px solid #d8d8d8;    
+    background-color: #eee;
+    height: 36px;
+    line-height: 36px;
+    padding:0 18px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+.btn_s {
+    
+    border-radius: 15px;
+    padding:0 18px;
+    height: 27px;
+    line-height: 27px;
+    font-size: 13px;
+    font-weight: 400;
+    
+}
+
+/*pagiantion*/
+ul.pagination {
+    color: #9a9a9a;
+    list-style: none;
+    margin: 0px auto 0px;
+    height: 67px;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+ul.pagination li {
+    display: inline-block;
+    margin-left: 10px;
+    background-color: #fdfdfd;
+    border: 1px solid #C9C8C8;
+    padding-top: 11px;
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 3px;
+}
+ul.pagination .ellipsis {
+    color: #000;
+    font-size: 12px;
+    margin: 0;
+    border: 0;
+    width: 20px;
+    letter-spacing: -6px;
 }
