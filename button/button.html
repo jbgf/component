@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/frame.css">
+	<link rel="stylesheet" type="text/css" href="/css/button.css">
+	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<div class="container1200">
+	<div class="bg extend-width bg-black">
+		<div class="line ">	
+			<div class="block block-1 ">
+				<div class="brandName white">Button</div>
+			</div>
+		</div>
+	</div>	
+	<div class = "line">
+		<div class="block block-4">
+			<div class="box">
+					《行宫》
+
+		寥落古行宫，宫花寂寞红。
+		白头宫女在，闲坐说玄宗。
+
+					<div class="hide">
+						<br/>
+		《登鹳雀楼》
+
+		白日依山尽，黄河入海流。
+		欲穷千里目，更上一层楼。
+					</div>
+					<div id="rbBtn" class="rbBtnRow">
+						<span class="rbBtn blue">【详细】</span>
+					</div>
+					<script type="text/javascript">
+						$(document).on("click",".rbBtn",function(){
+							var rbBtnRow = $(this).parent(".rbBtnRow"),
+							hideText = rbBtnRow.siblings(".hide");
+							hideText.toggle();
+							v = hideText.is(":visible");
+							//切换按钮文字
+							if(v){
+								$(this).text("【收起】");
+							}else{
+								$(this).text("【详细】");
+							}
+						});
+						var r = document.getElementById("rbBtn");
+						console.log($("#rbBtn").prop("outerHTML"));
+						
+					</script>
+			</div>
+		</div>
+		<div class="block block-4"></div>
+		<div class="block block-4"></div>
+		<div class="block block-4"></div>
+	</div>
+	</div>
+</body>
+</html>

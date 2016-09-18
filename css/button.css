@@ -1,0 +1,10 @@
+.btnRow{position: relative;}
+.rbBtn{
+	display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    background: #fff;
+    text-align: right;
+    line-height: 28px;
+}

@@ -43,21 +43,9 @@ gulp.task('browserSync',function(){
 });
 gulp.task('watch',['browserSync','connectPhp'],function(){
 	
-	 gulp.watch(['login/*.html','login/*.js'],browserSync.reload);
-	 gulp.watch(['head/*.js','head/*.css'],browserSync.reload);
-	 gulp.watch(['sideBar/*.js','sideBar/*.css'],browserSync.reload);
-	 gulp.watch(['poster/*.js','poster/*.css'],browserSync.reload);
-	 gulp.watch(['details/*.js','details/*.css'],browserSync.reload);
-	 gulp.watch(['ad/*.js','ad/*.css'],browserSync.reload);
-	 gulp.watch(['comment/*.js','comment/*.css'],browserSync.reload);
-	 gulp.watch(['common/*.js','common/*.css'],browserSync.reload);
-	 gulp.watch(['explore/*.js','explore/*.css'],browserSync.reload);
-	 gulp.watch(['like/*.js','like/*.css'],browserSync.reload);
-	 gulp.watch(['pagination/*.js','pagination/*.css'],browserSync.reload);
-	 gulp.watch(['backButton/*.js','backButton/*.css'],browserSync.reload);
-
-	 gulp.watch(['html/likePage/*.js','html/likePage/*.css','html/likePage/*.html'],browserSync.reload);
-	 
+	 gulp.watch(['button/*.html','button/*.js,button/*.css'],browserSync.reload);
+	 gulp.watch(['js/*.js'],browserSync.reload);
+	 gulp.watch(['css/*.css'],browserSync.reload);
 });
 /*压缩*/
 //src 相对于gulpfile，main.html的文件链接相对于main.html
