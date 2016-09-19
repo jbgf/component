@@ -32,8 +32,8 @@
 		白日依山尽，黄河入海流。
 		欲穷千里目，更上一层楼。
 					</div>
-					<div id="rbBtn" class="rbBtnRow">
-						<span class="rb-btn blue">【详细】</span>
+					<div id="rBtn" class="rbBtnRow">
+						<span class="button r-btn blue">【详细】</span>
 					</div>
 					<script type="text/javascript">
 						$(document).on("click",".rb-btn",function(){
@@ -50,9 +50,9 @@
 						});
 
 						//html
-						console.log($("#rb-btn").prop("outerHTML"));
+						console.log($("#r-btn").prop("outerHTML"));
 						//js
-						console.log($("#rb-btn").next("script").text());
+						console.log($("#r-btn").next("script").text());
 						
 						//01\获取到外链的样式表
 						/*var sheet = document.styleSheets[2];　　　　
@@ -86,8 +86,12 @@
 							var cssArray = readCss(ele);
 							console.log(cssArray);
 						};
-						css(".rb-btn");
+						
 
+						$(function(){
+							css(".r-btn");
+							css(".heart");
+						})
 						//02\获取特定元素的样式,chrome deprecated
 						/*console.log(window.getMatchedCSSRules(r));*/
 						　　　
@@ -96,14 +100,24 @@
 		</div>
 		<div class="block block-4">
 			<div class="box">
-				<a class="heart-btn" href="#">
+				<a class="button heart-btn" href="#">
 					<img class="heart" src="/img/icon01.png">
 					<img src="/img/c01.png">
 				</a>
 			</div>
 		</div>
-		<div class="block block-4"></div>
-		<div class="block block-4"></div>
+		<div class="block block-4">
+			<div class="box">
+				寥落古行宫
+				<a class="button r-btn orange" href="#">【更多】</a>
+			</div> 
+		</div>
+		<div class="block block-4">
+			<div class="box">
+				寥落古行宫
+				<a class="button r-btn btn-s gray" href="#">更多 ></a>
+			</div>
+		</div>
 	</div>
 	</div>
 </body>
