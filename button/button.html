@@ -33,10 +33,10 @@
 		欲穷千里目，更上一层楼。
 					</div>
 					<div id="rbBtn" class="rbBtnRow">
-						<span class="rbBtn blue">【详细】</span>
+						<span class="rb-btn blue">【详细】</span>
 					</div>
 					<script type="text/javascript">
-						$(document).on("click",".rbBtn",function(){
+						$(document).on("click",".rb-btn",function(){
 							var rbBtnRow = $(this).parent(".rbBtnRow"),
 							hideText = rbBtnRow.siblings(".hide");
 							hideText.toggle();
@@ -48,17 +48,60 @@
 								$(this).text("【详细】");
 							}
 						});
-						var r = document.getElementById("rbBtn");
-						console.log($("#rbBtn").prop("outerHTML"));
-						console.log($("#rbBtn").next("script").text());
-						var sheet=document.styleSheets[2];　　　　//获取到外链的样式表
-　　　　　　			var rule=sheet.cssRules[0];
+
+						//html
+						console.log($("#rb-btn").prop("outerHTML"));
+						//js
+						console.log($("#rb-btn").next("script").text());
+						
+						//01\获取到外链的样式表
+						/*var sheet = document.styleSheets[2];　　　　
+　　　　　　			var rule = sheet.cssRules[0];
 						var selector = rule.selectorText;
-						console.log(sheet);　　　
+						console.log(sheet);*/
+
+							//stackoverflow http://stackoverflow.com/questions/2952667/find-all-css-rules-that-apply-to-an-element
+						function css(selector){
+
+							function readCss(a){
+
+							    var sheets = document.styleSheets, o = [];
+							    a.matches = a.matches || a.webkitMatchesSelector || a.mozMatchesSelector || a.msMatchesSelector || a.oMatchesSelector;
+							    for (var i in sheets) {
+							        var rules = sheets[i].rules || sheets[i].cssRules;
+							        for (var r in rules) {
+							            if (a.matches(rules[r].selectorText)) {
+							                o[rules[r].selectorText] = (rules[r].cssText);
+							            }
+							        }
+							    }
+							    return o;
+							};
+							
+							function writeCss(){
+
+							};
+
+							var ele = $(selector)[0];
+							var cssArray = readCss(ele);
+							console.log(cssArray);
+						};
+						css(".rb-btn");
+
+						//02\获取特定元素的样式,chrome deprecated
+						/*console.log(window.getMatchedCSSRules(r));*/
+						　　　
 					</script>
 			</div>
 		</div>
-		<div class="block block-4"></div>
+		<div class="block block-4">
+			<div class="box">
+				<a class="heart-btn" href="#">
+					<img class="heart" src="/img/icon01.png">
+					<img src="/img/c01.png">
+				</a>
+			</div>
+		</div>
 		<div class="block block-4"></div>
 		<div class="block block-4"></div>
 	</div>

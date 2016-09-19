@@ -1,5 +1,5 @@
 .btnRow{position: relative;}
-.rbBtn{
+.rb-btn{
 	display: block;
     cursor: pointer;
     position: absolute;
@@ -7,4 +7,17 @@
     background: #fff;
     text-align: right;
     line-height: 28px;
+}
+
+.heart-btn{
+	text-align: center;
+	display: inline-block;
+}
+.heart{
+	display: block;
+	animation: pound 2.5s infinite;
+	transform-origin: center;
+}
+@keyframes pound {
+	50% { transform: scale(1.1); }
 }
