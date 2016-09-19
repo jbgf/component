@@ -50,7 +50,11 @@
 						});
 						var r = document.getElementById("rbBtn");
 						console.log($("#rbBtn").prop("outerHTML"));
-						
+						console.log($("#rbBtn").next("script").text());
+						var sheet=document.styleSheets[2];　　　　//获取到外链的样式表
+　　　　　　			var rule=sheet.cssRules[0];
+						var selector = rule.selectorText;
+						console.log(sheet);　　　
 					</script>
 			</div>
 		</div>
