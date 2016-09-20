@@ -2,8 +2,8 @@
 a{text-decoration: none;cursor: pointer;}
 /*a:visited{color:inherit;}*/
 ul{list-style: none;}
-
-
+body{font-family: "Helvetica Neue", Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', Arial,sans-serif;}
+input{border:none;}
 
 .container1200{width:1200px;margin:0 auto;}
 .line{
@@ -25,6 +25,8 @@ ul{list-style: none;}
 .block:after{
 	clear:both;
 }
+
+.full-width{width:100%;}
 .extend-width{margin: 0 -9999px;padding: 0 9999px;}
 
 .hide{display: none;}

@@ -18,3 +18,14 @@
 }	
 
 .btn-s{font-size: 13px;}
+
+.input-set{display: table;}
+.input-set input{display: table-cell;height: 100%;font-size: 16px;font-weight: 500;}
+.input-set input.input{width:72%;padding-left:10px;}
+.input-set input.button{width:28%;}
+.input-set-l{height: 48px;}
+
+
+
+    
+    

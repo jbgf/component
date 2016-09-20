@@ -7,7 +7,11 @@
 
 /*color*/
 .white{color:#fff;}
-.blue{color: #0c8ae1;}
+.blue{color:#0c8ae1;}
 .orange{color:#ff8702;}
 .gray{color:#C2C1C1;}
+.black{color:#333;}
+
+.bg-gray{background:#e1e9f6;}
+.bg-blue{background:#1978cf;}
 .bg-black{background:#0f1014;}

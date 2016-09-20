@@ -32,12 +32,12 @@
 		白日依山尽，黄河入海流。
 		欲穷千里目，更上一层楼。
 					</div>
-					<div id="rBtn" class="rbBtnRow">
+					<div id="r-btn" class="btnRow">
 						<span class="button r-btn blue">【详细】</span>
 					</div>
 					<script type="text/javascript">
-						$(document).on("click",".rb-btn",function(){
-							var rbBtnRow = $(this).parent(".rbBtnRow"),
+						$(document).on("click",".r-btn",function(){
+							var rbBtnRow = $(this).parent(".btnRow"),
 							hideText = rbBtnRow.siblings(".hide");
 							hideText.toggle();
 							v = hideText.is(":visible");
@@ -118,7 +118,40 @@
 				<a class="button r-btn btn-s gray" href="#">更多 ></a>
 			</div>
 		</div>
+
 	</div>
+
+	<div class="line">
+			<div class="block block-4">
+				<div class="box">
+					<a class="button r-btn btn-s black" href="#" style="text-transform: uppercase;font-weight:bold;">more+</a>
+				</div>
+			</div>
+			<div class="block block-4">
+				<div class="box">
+					<a class="button heart-btn" href="#">
+						<img class="heart" src="/img/icon01.png">
+						<img src="/img/c01.png">
+					</a>
+				</div>
+			</div>
+			<div class="block block-4">
+				<div class="box">
+					
+                    <div class="input-set input-set-l">
+	                    <input class="input bg-gray" type="" name="" placeholder="输入关键词">
+	                    <input class="button bg-blue white" type="submit" class="addon" value="搜索">
+                    </div>
+                   
+				</div> 
+			</div>
+			<div class="block block-4">
+				<div class="box">
+					寥落古行宫
+					<a class="button r-btn btn-s gray" href="#">更多 ></a>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
