@@ -6,7 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
 	<link rel="stylesheet" type="text/css" href="/css/frame.css">
 	<link rel="stylesheet" type="text/css" href="/css/button.css">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
 	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript" src="/js/getHCJ.js"></script>
 </head>
 <body>
 	<div class="container1200">
@@ -32,11 +35,11 @@
 		白日依山尽，黄河入海流。
 		欲穷千里目，更上一层楼。
 					</div>
-					<div id="r-btn" class="btnRow">
-						<span class="button r-btn blue">【详细】</span>
+					<div id="float-r" class="btnRow">
+						<span class="button float-r blue">【详细】</span>
 					</div>
 					<script type="text/javascript">
-						$(document).on("click",".r-btn",function(){
+						$(document).on("click",".float-r",function(){
 							var rbBtnRow = $(this).parent(".btnRow"),
 							hideText = rbBtnRow.siblings(".hide");
 							hideText.toggle();
@@ -48,53 +51,6 @@
 								$(this).text("【详细】");
 							}
 						});
-
-						//html
-						console.log($("#r-btn").prop("outerHTML"));
-						//js
-						console.log($("#r-btn").next("script").text());
-						
-						//01\获取到外链的样式表
-						/*var sheet = document.styleSheets[2];　　　　
-　　　　　　			var rule = sheet.cssRules[0];
-						var selector = rule.selectorText;
-						console.log(sheet);*/
-
-							//stackoverflow http://stackoverflow.com/questions/2952667/find-all-css-rules-that-apply-to-an-element
-						function css(selector){
-
-							function readCss(a){
-
-							    var sheets = document.styleSheets, o = [];
-							    a.matches = a.matches || a.webkitMatchesSelector || a.mozMatchesSelector || a.msMatchesSelector || a.oMatchesSelector;
-							    for (var i in sheets) {
-							        var rules = sheets[i].rules || sheets[i].cssRules;
-							        for (var r in rules) {
-							            if (a.matches(rules[r].selectorText)) {
-							                o[rules[r].selectorText] = (rules[r].cssText);
-							            }
-							        }
-							    }
-							    return o;
-							};
-							
-							function writeCss(){
-
-							};
-
-							var ele = $(selector)[0];
-							var cssArray = readCss(ele);
-							console.log(cssArray);
-						};
-						
-
-						$(function(){
-							css(".r-btn");
-							css(".heart");
-						})
-						//02\获取特定元素的样式,chrome deprecated
-						/*console.log(window.getMatchedCSSRules(r));*/
-						　　　
 					</script>
 			</div>
 		</div>
@@ -109,13 +65,13 @@
 		<div class="block block-4">
 			<div class="box">
 				寥落古行宫
-				<a class="button r-btn orange" href="#">【更多】</a>
+				<a class="button float-r orange" href="#">【更多】</a>
 			</div> 
 		</div>
 		<div class="block block-4">
 			<div class="box">
 				寥落古行宫
-				<a class="button r-btn btn-s gray" href="#">更多 ></a>
+				<a class="button float-r btn-s gray" href="#">更多 ></a>
 			</div>
 		</div>
 
@@ -124,17 +80,10 @@
 	<div class="line">
 			<div class="block block-4">
 				<div class="box">
-					<a class="button r-btn btn-s black" href="#" style="text-transform: uppercase;font-weight:bold;">more+</a>
+					<a class="button float-r btn-s black" href="#" style="text-transform: uppercase;font-weight:bold;">more+</a>
 				</div>
 			</div>
-			<div class="block block-4">
-				<div class="box">
-					<a class="button heart-btn" href="#">
-						<img class="heart" src="/img/icon01.png">
-						<img src="/img/c01.png">
-					</a>
-				</div>
-			</div>
+			
 			<div class="block block-4">
 				<div class="box">
 					
@@ -145,10 +94,16 @@
                    
 				</div> 
 			</div>
+
 			<div class="block block-4">
 				<div class="box">
-					寥落古行宫
-					<a class="button r-btn btn-s gray" href="#">更多 ></a>
+                    <span class="button btn-r-m bg-yellow white">解析</span>
+				</div> 
+			</div>
+			<div class="block block-4">
+				<div class="box">
+					<span class="button btn-r-m bg-pink white">
+					<img class="icon" src="/img/icon_w.png" style="margin-top: -3px;">做帐</span>
 				</div>
 			</div>
 		</div>
