@@ -2,6 +2,11 @@
 
 /*定制layer.js插件的skin即特定的样式*/
 .demo-class .layui-layer-content{
-		padding-right: 15px;
-    	padding-left: 15px;
+		padding:20px 15px;
 }
+.hcj.line{height: 100%}
+.line>.block{height: 100%;}
+.hcj.line>.block>.line{height: 50%;}
+
+.hcj .title{background:#ddd;color:black;padding:5%;}
+.hcj .content{border:1px solid #A19E9F;height:90%;overflow: scroll;border-top: none;}

@@ -18,8 +18,11 @@
   }
   getHCJ.prototype.getH = function (h){
     var that = this;
-	
-	console.log($(h).html());
+    
+    var script = $(h).find("script").detach().text();
+	  var html = $(h).html();
+	  console.log(html);
+    console.log(script);  
   }
   getHCJ.prototype.getC = function () {
     var that = this;
