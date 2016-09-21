@@ -8,11 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="/css/button.css">
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
 	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/js/layer/layer.js"></script>
 	<script type="text/javascript" src="/js/index.js"></script>
-	<script type="text/javascript" src="/js/getHCJ.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".container1200").set();
+		});
+        
+	</script>
 </head>
 <body>
-	<div class="container1200">
+	<div class="container1200" ><!-- data-set="set" -->
 	<div class="bg extend-width bg-black">
 		<div class="line ">	
 			<div class="block block-1 ">
@@ -106,6 +112,22 @@
 					<img class="icon" src="/img/icon_w.png" style="margin-top: -3px;">做帐</span>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<div class="line hcj">
+			<div id="html" class="block block-3">
+				<div class="title">id</div>
+			</div>
+			
+			<div id="css" class="block block-3">
+				 
+			</div>
+
+			<div id = "js" class="block block-3">
+				
+			</div>
+			
 		</div>
 	</div>
 </body>
