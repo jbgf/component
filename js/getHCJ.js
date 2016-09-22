@@ -6,22 +6,26 @@
        //传入的triggerbtn
        this.triggerBtn = $(element);
 
-       this.getSelector(this.triggerBtn);
   }
 
   getHCJ.DEFAULTS = {
     
   }	
-  getHCJ.prototype.getSelector = function(triggerBtn){
-  	   var h = triggerBtn.parent().next(".box");
-  	   this.getH(h)	
+  getHCJ.prototype.getSelector = function(_relatedTarget){
+
+  	   //获取box元素
+       var box = this.triggerBtn.parent().next(".box");
+  	   //获取box元素内的html
+       this.getH(box)	
   }
-  getHCJ.prototype.getH = function (h){
+  
+  getHCJ.prototype.getH = function (box){
     var that = this;
     
-    var script = $(h).find("script").detach().text();
-	  var html = $(h).html();
-	  console.log(html);
+    var script = box.find("script").detach().text();
+	  var html = box.html();
+    
+	  $("#html .content").text(html);
     console.log(script);  
   }
   getHCJ.prototype.getC = function () {
@@ -60,17 +64,19 @@
 	
   }
   
-  function Plugin(option) {
+  function Plugin(option,_relatedTarget) {
     return this.each(function () {
+      
       var $this   = $(this)
       var data    = $this.data('hcj.get')
-      var options = typeof option == 'object' && option
+      var options = $.extend({}, getHCJ.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
       if (!data) $this.data('hcj.get', (data = new getHCJ(this, options)))
-      if (typeof option == 'string') data[option]()
+      if (typeof option == 'string') data[option](_relatedTarget)
+      else { data.getSelector(_relatedTarget)}
     })
   }
-
+  
   var old = $.fn.set
 
   $.fn.getHCJ             = Plugin
@@ -80,6 +86,26 @@
     $.fn.getHCJ = old
     return this
   }
+
+  // modalBox DATA-API
+  // ==============
+
+  $(document).on('click.hcj.get.data-api', '[data-toggle="getHCJ"]', function (e) {
+    var $this   = $(this)
+    var href    = $this.attr('href')
+    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
+    var option  = $target.data('bs.getHCJ') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
+
+    if ($this.is('a')) e.preventDefault()
+
+    $target.one('show.bs.getHCJ', function (showEvent) {
+      if (showEvent.isDefaultPrevented()) return // only register focus restorer if getHCJ will actually get shown
+      $target.one('hidden.bs.getHCJ', function () {
+        $this.is(':visible') && $this.trigger('focus')
+      })
+    })
+    Plugin.call($target, option, this)  //this即是Plugin定义中的_relatedTarget参数
+  })
 
 }(jQuery);						
 
