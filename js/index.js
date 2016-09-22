@@ -35,7 +35,7 @@
 			  skin: 'demo-class',  //给弹窗添加特殊的class设置样式
 			  area: ['800px', '560px'],
 			  shadeClose: true, //点击遮罩关闭
-			  content:'<div class="line hcj"><div id="html" class="block block-3"></div><div id="css" class="block block-3"></div><div id="js" class="block block-3"></div></div>',
+			  content:'<div class="line hcj"><div id="html" class="block block-2"><div class="title">html</div><div class="content"></div></div><div class="block block-2"><div class="line"><div id="css" class="block block-1"><div class="title">css</div><div class="content"></div></div></div><div class="line"><div id="js" class="block block-1"><div class="title">js</div><div class="content"></div></div></div></div></div>',
 		  	  success: function(layero, index){
 			    		 $trigger.getHCJ();
 			  }	
