@@ -10,10 +10,31 @@
   }
 
   set.DEFAULTS = {
-    trigger: ".get"
+    trigger: ".get",
+    rowBlock:4
   }	
 
   set.prototype.ini = function (){
+    var brandName = this.options.brandName || "组件";
+    var rowNum = this.options.rowBlock;
+    var boxNum = this.box.length;
+    var className = 'block block-'+rowNum+'';
+    var b = $("<div></div>").addClass(className);
+    this.box.wrap(b);
+    var a= [];
+    var b_array = [];
+    for(var i=1;i<= boxNum;i++){
+        a.push($(".block")[i-1]);
+        
+        if(i%rowNum==0){
+          b_array.push(a);
+          
+          a = []; //a.length = 0 会影响b;
+          
+        }
+    }
+    console.log(b)
+    $(".brandName ").html(brandName);
     var that = this;
   	if(this.box.length != 0){
   		var btnRow = $('<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>')	
@@ -88,3 +109,4 @@
   })
 
 }(jQuery);
+
