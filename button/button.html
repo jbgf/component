@@ -13,24 +13,25 @@
 	<script type="text/javascript" src="/js/index.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			$(".container1200").set({
-				brandName:"Button",
-				
+			$("#buttonBox").set({
+				brandName:"Button & Input",
 			});
 		});
 		
 	</script>
 </head>
 <body>
-	<div class="container1200" ><!-- data-set="set" -->
+	
 	<div class="bg extend-width bg-black">
-		<div class="line ">	
-			<div class="block block-1 ">
-				<div class="brandName white">Button</div>
+		<div class="container1200">
+			<div class="line ">	
+				<div class="block block-1 ">
+					<div class="brandName white">Button</div>
+				</div>
 			</div>
 		</div>
 	</div>	
-	
+	<div id="buttonBox" class="container1200" ><!-- data-set="set" -->
 		
 			<div class="box">
 					《行宫》
@@ -46,10 +47,10 @@
 		欲穷千里目，更上一层楼。
 					</div>
 					<div id="float-r" class="btnRow">
-						<span class="button float-r blue">【详细】</span>
+						<span id="toggleBtn01" class="button float-r blue">【详细】</span>
 					</div>
 					<script type="text/javascript">
-						$(document).on("click",".float-r",function(){
+						$(document).on("click","#toggleBtn01",function(){
 							var rbBtnRow = $(this).parent(".btnRow"),
 							hideText = rbBtnRow.siblings(".hide");
 							hideText.toggle();

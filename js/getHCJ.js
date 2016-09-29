@@ -12,23 +12,21 @@
     
   }	
   getHCJ.prototype.getSelector = function(_relatedTarget){
-
   	   //获取box元素
        var box = this.triggerBtn.parent().next(".box");
   	   //获取box元素内的html
-       this.getH(box)	
+       this.getH(box);
+       this.getC(box);
   }
   
   getHCJ.prototype.getH = function (box){
     var that = this;
-    
     var script = box.find("script").detach().text();
 	  var html = box.html();
-    
 	  $("#html .content").text(html);
-    console.log(script);  
   }
-  getHCJ.prototype.getC = function () {
+
+  getHCJ.prototype.getC = function(selector){
     var that = this;
 	function css(selector){
 
@@ -48,7 +46,7 @@
 		};
 		
 		function writeCss(){
-
+        
 		};
 
 		var ele = $(selector)[0];
@@ -61,7 +59,7 @@
     var that = this;
 	//js
 	console.log($("#float-r").next("script").text());
-	
+	   
   }
   
   function Plugin(option,_relatedTarget) {
@@ -87,7 +85,7 @@
     return this
   }
 
-  // modalBox DATA-API
+  //  DATA-API
   // ==============
 
   $(document).on('click.hcj.get.data-api', '[data-toggle="getHCJ"]', function (e) {
