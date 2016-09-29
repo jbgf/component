@@ -33,7 +33,11 @@
           
         }
     }
-    console.log(b)
+    b_array.each(function(index, el) {
+        
+    });
+
+
     $(".brandName ").html(brandName);
     var that = this;
   	if(this.box.length != 0){
