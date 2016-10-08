@@ -28,8 +28,9 @@
 
   getHCJ.prototype.getC = function(box){
     var that = this;
+    var cssDiv = $("#css .content");
     var css = {
-        allSelector:function(){
+        allNode:function(){
             var $node = box.find("*");
             var selectorArray = [];
             for(var i = 0;i < $node.length;i++){
@@ -47,25 +48,30 @@
             a.matches = a.matches || a.webkitMatchesSelector || a.mozMatchesSelector || a.msMatchesSelector || a.oMatchesSelector;
             for (var i in sheets) {
                 var rules = sheets[i].rules || sheets[i].cssRules;
-                for (var r in rules) {
+                for (var r in rules){
 
                     if (a.matches(rules[r].selectorText)) {
                         if (rules[r].selectorText == "*") {continue}
-                        
-                        o[rules[r].selectorText] = rules[r].cssText;
+                        o.push(rules[r].cssText);
                     }
                 }
             }
             
-            console.log(o)
+            if(o.length>0){return o}
         }
 
     }
 		
 		function writeCss(){
-          var s = css.allSelector();
+          var s = css.allNode();
+            
           for(var i in s){
-            css.readCss(s[i]);
+            var c = css.readCss(s[i]);
+            if(c){
+              for(var j= 0 ;j<c.length;j++){
+                  cssDiv.append('<p>'+c[j]+'</p>')
+              }      
+            }
           }
 		};
 

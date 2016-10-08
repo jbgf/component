@@ -17,4 +17,7 @@
 .hcj.line>.block>.line{height: 50%;}
 
 .hcj .title{background:#ddd;color:black;padding: 6px 10px;}
-.hcj .content{overflow: auto;}
+.hcj .content{
+	overflow: auto;
+	padding:20px;
+}
