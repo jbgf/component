@@ -1,3 +1,8 @@
+.container-p-15 {
+  
+    height: 100%;
+}
+
 .headRow{padding:10px 0;border-bottom:1px solid #ddd;margin-bottom: 10px;}
 .tag{margin-left: 7px;}
 /*定制layer.js插件的skin即特定的样式*/

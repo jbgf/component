@@ -26,34 +26,51 @@
 	  $("#html .content").text(html);
   }
 
-  getHCJ.prototype.getC = function(selector){
+  getHCJ.prototype.getC = function(box){
     var that = this;
-	function css(selector){
+    var css = {
+        allSelector:function(){
+            var $node = box.find("*");
+            var selectorArray = [];
+            for(var i = 0;i < $node.length;i++){
+              /*
+               var s = $node[i].id || $node[i].className.split(' ')[0] ;
+              
+               if(s)selectorArray.push(s);*/
+               selectorArray.push($node[i]);
+            };
+            return selectorArray;
+            
+        },
+        readCss:function(a){
+            var sheets = document.styleSheets, o = [];
+            a.matches = a.matches || a.webkitMatchesSelector || a.mozMatchesSelector || a.msMatchesSelector || a.oMatchesSelector;
+            for (var i in sheets) {
+                var rules = sheets[i].rules || sheets[i].cssRules;
+                for (var r in rules) {
 
-		function readCss(a){
+                    if (a.matches(rules[r].selectorText)) {
+                        if (rules[r].selectorText == "*") {continue}
+                        
+                        o[rules[r].selectorText] = rules[r].cssText;
+                    }
+                }
+            }
+            
+            console.log(o)
+        }
 
-		    var sheets = document.styleSheets, o = [];
-		    a.matches = a.matches || a.webkitMatchesSelector || a.mozMatchesSelector || a.msMatchesSelector || a.oMatchesSelector;
-		    for (var i in sheets) {
-		        var rules = sheets[i].rules || sheets[i].cssRules;
-		        for (var r in rules) {
-		            if (a.matches(rules[r].selectorText)) {
-		                o[rules[r].selectorText] = (rules[r].cssText);
-		            }
-		        }
-		    }
-		    return o;
-		};
+    }
 		
 		function writeCss(){
-        
+          var s = css.allSelector();
+          for(var i in s){
+            css.readCss(s[i]);
+          }
 		};
 
-		var ele = $(selector)[0];
-		var cssArray = readCss(ele);
-		
-	};
-	
+	  writeCss(); 
+    
   }
   getHCJ.prototype.getJ = function () {
     var that = this;
