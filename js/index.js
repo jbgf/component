@@ -20,6 +20,7 @@
     
     var brandName = this.options.brandName || "组件";
     var rowNum = this.options.rowBlock;
+    //box数量 = 组件数量；
     var boxNum = box.length;
     var className = 'block block-'+rowNum+'';
     
@@ -28,19 +29,14 @@
       return "<div class='" + className + "'></div>";
     });
    
-    var a= [];
-    var b_array = [];
+    
     var block = that.container.find(".block");
+    var a= $.makeArray(block);
+    var b_array = [];
 //页面布局成几行几列    
-    for(var i=1;i<= boxNum;i++){
-        a.push(block[i-1]);
+    for(var i=0;i< boxNum;i+=rowNum){
+        b_array.push(a.slice(i,i+rowNum));
         
-        if(i % rowNum == 0){
-          b_array.push(a);
-                
-          a = []; //a.length = 0 会影响b;
-          
-        }
     }
 
     $.each(b_array,function(index,value){

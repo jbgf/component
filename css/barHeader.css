@@ -1,0 +1,13 @@
+.g-topbar {
+    height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    background-color: rgb(243,243,243);
+}
+.g-topbar span.title-g {
+    margin-left: 0;
+}
+.g-topbar span, .g-topbar a {
+    display: inline-block;
+    margin-left: 15px;
+}

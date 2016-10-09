@@ -5,7 +5,8 @@
   function getHCJ(element, options) {
        //传入的triggerbtn
        this.triggerBtn = $(element);
-
+       this.box = this.triggerBtn.parent().next(".box");
+       this.script = this.box.find("script").detach().text();
   }
 
   getHCJ.DEFAULTS = {
@@ -13,17 +14,21 @@
   }	
   getHCJ.prototype.getSelector = function(_relatedTarget){
   	   //获取box元素
-       var box = this.triggerBtn.parent().next(".box");
+       
   	   //获取box元素内的html
+       var box = this.box;
        this.getH(box);
        this.getC(box);
+       this.getJ(box);
+       
   }
   
   getHCJ.prototype.getH = function (box){
     var that = this;
-    var script = box.find("script").detach().text();
+    
 	  var html = box.html();
 	  $("#html .content").text(html);
+
   }
 
   getHCJ.prototype.getC = function(box){
@@ -34,10 +39,7 @@
             var $node = box.find("*");
             var selectorArray = [];
             for(var i = 0;i < $node.length;i++){
-              /*
-               var s = $node[i].id || $node[i].className.split(' ')[0] ;
               
-               if(s)selectorArray.push(s);*/
                selectorArray.push($node[i]);
             };
             return selectorArray;
@@ -45,18 +47,21 @@
         },
         readCss:function(a){
             var sheets = document.styleSheets, o = [];
+            
             a.matches = a.matches || a.webkitMatchesSelector || a.mozMatchesSelector || a.msMatchesSelector || a.oMatchesSelector;
-            for (var i in sheets) {
+            //不要base.css,从1开始。
+            for (var i = 1; i < sheets.length; i++) {
                 var rules = sheets[i].rules || sheets[i].cssRules;
                 for (var r in rules){
 
                     if (a.matches(rules[r].selectorText)) {
-                        if (rules[r].selectorText == "*") {continue}
+                        
                         o.push(rules[r].cssText);
                     }
                 }
             }
-            
+            /*style样式*/
+            /*if(a.style.cssText){o.push(a.style.cssText)}*/
             if(o.length>0){return o}
         }
 
@@ -64,24 +69,31 @@
 		
 		function writeCss(){
           var s = css.allNode();
-            
+          var tra = [];
           for(var i in s){
             var c = css.readCss(s[i]);
             if(c){
               for(var j= 0 ;j<c.length;j++){
-                  cssDiv.append('<p>'+c[j]+'</p>')
+                  //非重复
+                  if(tra.indexOf(c[j]) == -1){
+                        tra.push(c[j]);
+                        cssDiv.append('<p>'+c[j]+'</p>');
+                  }
+                  
               }      
             }
+
           }
 		};
 
 	  writeCss(); 
     
   }
-  getHCJ.prototype.getJ = function () {
+  getHCJ.prototype.getJ = function (box) {
     var that = this;
-	//js
-	console.log($("#float-r").next("script").text());
+	  var jsDiv = $("#js .content"); 
+	  var scriptText = that.script;
+    jsDiv.append(scriptText);
 	   
   }
   

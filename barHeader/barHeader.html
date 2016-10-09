@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/frame.css">
+	<link rel="stylesheet" type="text/css" href="/css/button.css">
+	<link rel="stylesheet" type="text/css" href="/css/barHeader.css">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	
+	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/js/layer/layer.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#barHeaderBox").set({
+				brandName:"Bar & Header",
+				rowBlock:1
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	
+	<div class="bg extend-width bg-black">
+		<div class="container1200">
+			<div class="line ">	
+				<div class="block block-1 ">
+					<div class="brandName white"></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div id="barHeaderBox" class="container1200" ><!-- data-set="set" -->
+		<div class="box">
+			<div class="g-topbar ">
+	              <div class="container1000">
+	                <span class="green title-g" style="text-transform: uppercase;">ADJKF</span> <span>欢迎进入福建检验检疫技术中心!</span>
+	                <span id="showtime">2016年10月9日 星期日 16:57:22</span>
+	                <div class="float-r"><a class="green">会员登录</a><a class="green">会员注册</a><a>收藏</a></div>
+	              </div>
+	        </div>
+	        <script type="text/javascript">
+	        	
+          		showTime();
+          		function showTime(){ 
+		            var show_day=new Array('星期日','星期一','星期二','星期三','星期四','星期五','星期六'); 
+		            var time=new Date(); 
+		            var year=time.getFullYear(); 
+		            var month=time.getMonth(); 
+		            var date=time.getDate(); 
+		            var day=time.getDay(); 
+		            var hour=time.getHours(); 
+		            var minutes=time.getMinutes(); 
+		            var second=time.getSeconds(); 
+		            month=month+1; 
+		            month<10?month='0'+month:month; 
+		            
+		            hour<10?hour='0'+hour:hour; 
+		            minutes<10?minutes='0'+minutes:minutes; 
+		            second<10?second='0'+second:second; 
+		            var now_time=year+'年'+month+'月'+date+'日'+' '+show_day[day]+' '+hour+':'+minutes+':'+second; 
+		            document.getElementById('showtime').innerHTML=now_time; 
+		            setTimeout(showTime,1000); 
+		            
+		        };
+	        </script>
+		</div>
+			
+		
+	</div>
+
+	
+</body>
+</html>
