@@ -1,3 +1,6 @@
+@charset "utf-8";
+
+/*g-topbar01 start*/
 .g-topbar {
     height: 34px;
     line-height: 34px;
@@ -11,3 +14,98 @@
     display: inline-block;
     margin-left: 15px;
 }
+/*g-topbar01 end*/
+
+/*导航栏navbar-line01 start*/
+.navbar-line{
+/*margin:0 -37px;*/
+}
+
+.navbar-block{
+	
+	float: left;position: relative;
+
+	min-height: 1px;
+	cursor: pointer;
+	font-size:14px;
+	position: relative;
+
+	display: block;
+}
+.navbar-block a.navLink{
+	display: block;
+	padding:13px 37px;
+
+}
+.navbar-block .naver_0{
+	display: none;
+    position: absolute;
+    z-index: 99;
+    padding-top: 10px;
+	
+	
+}
+.navbar-block.on,.navbar-block:hover{background: #fff;color:#6eb92b;}
+
+.navbar-block .naver_0 .nav_erc{
+	color:#6eb92b;
+	
+    background-color: #ecf8fc;
+    background-color: rgba(236,248,252,.9);
+    text-align: center;
+}
+.navbar-block .naver_0 .nav_erc li {
+
+    padding-top: 3px;
+    left: 0;
+}
+.navbar-block .naver_0 .nav_erc{
+	color: #6eb92b;
+    background-image: url(../img/navBarbg.png) ;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    text-align: center;
+    width: 404px;
+    height: 99px;
+    padding: 15px;
+  	box-sizing: content-box;	
+}
+.navbar-block .naver_0 .nav_erc .navBox01,
+.navbar-block .naver_0 .nav_erc .navBox01Pic,
+.navbar-block .naver_0 .nav_erc .navBox01Pic a,
+.navbar-block .naver_0 .nav_erc .navBox01Link{display: block;height: 100%;}
+.navbar-block .naver_0 .nav_erc .navBox01Link .linkWrapper{
+	display: table-cell;
+    vertical-align: middle;
+    height: 104px;
+    text-align: left;
+}
+.navbar-block .naver_0 .nav_erc .navBox01Link .linkContent{padding-left: 15px}
+
+.navbar-block .naver_0 .nav_erc .navBox01Link .linkContent .navLi{
+	display: block;
+    float: left;
+    background: url(../img/nav-lb.png) no-repeat 0px 53%;
+    font-size: 12px;
+    padding: 7px 0;
+}
+.navbar-block .naver_0 .nav_erc .navBox01Link .linkContent .navLi:hover{background-image: none;}
+.navbar-block .naver_0 .nav_erc .navBox01Link .linkContent .navLi:hover a{
+	background:#6eb92b;
+	color: #fff;	
+}
+
+.navbar-block .naver_0 .nav_erc .navBox01Link .linkContent .navLi a{padding: 0px 10px;}
+.navbar-block .naver_0 .nav_erc .navBox01Link .linkContent .navLi.nvali-l{width: 150px;}
+.navbar-block .naver_0 .nav_erc .navBox01Link .linkContent .navLi.nvali-r{}
+.navbar-block .naver_0 .nav_erc li {
+
+	padding: 5px 45px;
+}
+.navbar-block .naver_0 .nav_erc li:hover{background-color: #6eb92b;}
+.navbar-block .naver_0 .nav_erc li:hover a{color: #fff;}
+.navbar-block .naver_0 .nav_erc li a{
+	white-space: nowrap;
+
+}
+/*导航栏navbar-line01 end*/
