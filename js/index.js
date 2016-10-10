@@ -23,7 +23,7 @@
     //box数量 = 组件数量；
     var boxNum = box.length;
     var className = 'block block-'+rowNum+'';
-    var data = $el.data()
+    
     
     box.wrap(function() {
       return "<div class='" + className + "'></div>";
@@ -53,13 +53,19 @@
   	if(box.length != 0){
   		var btnRow = $('<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>')	
   		
-
   		box.before(btnRow);
 
       block.each(function(index,ele){
         var tag = $("<img class='tag js' src='/img/js.png'>");
-        that.haveScript($(ele))?$(ele).find(".headRow").append(tag)
+        var s = that.haveTag($(ele)).script;
+        var p = that.haveTag($(ele)).plugin;
+        var h;
+        s?$(ele).find(".headRow").append(tag)
         :"";
+        //因为调用插件方法，可能会改变文档结构，所以先保存一份。
+        p?(h = $(ele).find(".box").html(),window[p]())
+        :"";
+        console.log(h)
 
       })
   		$.getScript("/js/getHCJ.js",function(){
@@ -68,9 +74,13 @@
   		
   	}
   }
-  set.prototype.haveScript = function($block){
-    var state = $block.find("script").length !=0;
-    
+  set.prototype.haveTag = function($block){
+    var script = $block.find("script").length !=0;
+    var plugin = $block.find("[data-plugin]").attr("data-plugin") || undefined;
+    var state = {
+      script:script,
+      plugin:plugin
+    };
     return state;
   }
   set.prototype.modalWindow = function () {
