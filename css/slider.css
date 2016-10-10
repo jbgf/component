@@ -1,0 +1,15 @@
+
+/*superSlider*/
+
+.slideBox{ width:100%; overflow:hidden; position:relative; border-top:1px solid #ddd;  }
+.slideBox .hd{text-align: center; width:100%; overflow:hidden; position:absolute; bottom:5px; z-index:1; }
+.slideBox .hd ul{ overflow:hidden; zoom:1; display: inline-block; }
+.slideBox .hd ul li{ float:left; margin-right:12px;  width:15px; height:15px; border-radius:50%;line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+.slideBox .hd ul li.on{ background:#6eb92b; color:#fff; }
+.slideBox .bd{ position:relative; width:100%; z-index:0;   }
+.slideBox .bd li{ width:100%;display:block;vertical-align:middle; }
+.slideBox .bd li a{width: 100%;display: block;}
+.slideBox .bd img{ width:100%; display: block;  }
+
+.publish{padding: 20px 0;}
+.tip{background: url(../img/tip.png) no-repeat;width: 96px;height: 36px;line-height: 36px;padding-left: 15px;}

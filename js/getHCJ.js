@@ -73,11 +73,11 @@
           for(var i in s){
             var c = css.readCss(s[i]);
             if(c){
-              for(var j= 0 ;j<c.length;j++){
+              for(var j = 0 ;j<c.length;j++){
                   //非重复
                   if(tra.indexOf(c[j]) == -1){
                         tra.push(c[j]);
-                        cssDiv.append('<p>'+c[j]+'</p>');
+                        cssDiv.append(c[j]+'<br>');
                   }
                   
               }      

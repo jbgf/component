@@ -16,9 +16,20 @@
 .line>.block{height: 100%;}
 .hcj.line>.block>.line{height: 50%;}
 
-.hcj .title{background:#ddd;color:black;padding: 6px 10px;}
+.hcj .title{
+	background: #ddd;
+    color: black;
+    padding: 6px 10px;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 .hcj .content{
 	max-height: 250px;
     overflow: auto;
 	padding:20px;
+}
+
+.hcj #html .content{
+	max-height: 93%;
 }

@@ -2,7 +2,12 @@
 a{text-decoration: none;cursor: pointer;}
 /*a:visited{color:inherit;}*/
 ul{list-style: none;}
-body{font-family: "Helvetica Neue", Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', Arial,sans-serif;overflow-x: hidden;}
+body{
+	font-family: 'Microsoft YaHei',"Helvetica Neue", Helvetica, 'Hiragino Sans GB',  'WenQuanYi Micro Hei', Arial,sans-serif;
+	overflow-x: hidden;
+	font: normal 12px/22px 宋体;
+    color: #666;
+    }
 input{border:none;}
 
 

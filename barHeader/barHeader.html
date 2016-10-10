@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/frame.css">
 	<link rel="stylesheet" type="text/css" href="/css/button.css">
 	<link rel="stylesheet" type="text/css" href="/css/barHeader.css">
+	
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
 	
 	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
@@ -34,6 +35,45 @@
 		</div>
 	</div>	
 	<div id="barHeaderBox" class="container1200" ><!-- data-set="set" -->
+		
+
+		<div class="box ">
+			<div class="bg-green">
+		        <div class="container1000">
+		            
+		            <div class="navbar-line02 clear white"> 
+		                <div class="navbar-block on"><a class="navLink">首页</a></div>
+		                <div class="navbar-block"><a class="navLink">关于我们</a>
+		                    <ul class="naver_0" style="display: none;">
+		                        
+		                        <div class="nav_erc">
+		                          <li class="nav_center"><a href="#">中心简介</a></li>
+		                          <li class="nav_center"><a href="#">组织机构</a></li>
+		                          <li class="nav_center"><a href="#">关于我们</a></li>
+		                          <li class="nav_center"><a href="#"> 联系我们</a></li>
+		                        </div>
+		                        
+		                    </ul>
+		                </div>
+		                <div class="navbar-block"><a class="navLink">产品检测范围</a></div>
+		                <div class="navbar-block"><a class="navLink">服务支持</a></div>
+		                <div class="navbar-block"><a class="navLink">资讯中心</a></div>
+		                <div class="navbar-block"><a class="navLink">信息公开</a></div>
+		              
+		            </div>
+		           
+		        </div>
+		    </div>
+		    <script type="text/javascript">
+      			  var st = 180;
+		          $('.navbar-line02 .navbar-block').mouseenter(function () {
+		              $(this).find('ul').stop(false, true).slideDown(st);
+		          }).mouseleave(function () {
+		              $(this).find('ul').stop(false, true).slideUp(st);
+		          });
+
+      		</script>
+		</div>
 		<div class="box">
 			<div class="g-topbar ">
 	              <div class="container1000">
@@ -72,7 +112,7 @@
 			<div class="bg-green">
 		        <div class="container1000">
 		            
-		            <div class="navbar-line clear white"> 
+		            <div class="navbar-line01 clear white"> 
 
 		          
 		                <div class="navbar-block on"><a class="navLink">首页</a></div>
@@ -216,7 +256,7 @@
       		</div>
       		<script type="text/javascript">
       			  var st = 180;
-		          $('.navbar-block').mouseenter(function () {
+		          $('.navbar-line01 .navbar-block').mouseenter(function () {
 		              $(this).find('ul').stop(false, true).slideDown(st);
 		          }).mouseleave(function () {
 		              $(this).find('ul').stop(false, true).slideUp(st);

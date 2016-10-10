@@ -23,7 +23,7 @@
 .block-2{width:50%;}
 .block-3{width:33.3333333333%;}
 .block-4{width:25%;}
-.box{padding:10px;}
+.box{padding:10px;text-align: center;}
 
 .container-auto:before,.container-auto:after,
 .container1200:before,.container1200:after,
@@ -39,6 +39,7 @@
 
 .full-width{width:100%;}
 .extend-width{margin: 0 -9999px;padding: 0 9999px;}
+.mar-center{margin:0 auto;}
 
 .hide{display: none;}
 
@@ -81,6 +82,8 @@
 .margin-r-350{margin-right:350px}
 .margin-r-360{margin-right:360px}
 
+.margin-l-8{margin-left: 8px}
+.margin-l-20{margin-left: 20px}
 .margin-l-40{margin-left: 40px}
 .margin-l-150{margin-left: 150px;}
 .margin-l-165{margin-left: 165px;}
