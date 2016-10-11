@@ -6,11 +6,13 @@
        //传入的triggerbtn
        this.triggerBtn = $(element);
        this.box = this.triggerBtn.parent().next(".box");
-       this.script = this.box.find("script").detach().text();
+       
+       this.options = options;
+
   }
 
   getHCJ.DEFAULTS = {
-    
+       
   }	
   getHCJ.prototype.getSelector = function(_relatedTarget){
   	   //获取box元素
@@ -25,8 +27,8 @@
   
   getHCJ.prototype.getH = function (box){
     var that = this;
-    
-	  var html = box.html();
+	  var html = this.options.originalH ? this.options.originalH 
+               :box.html();
 	  $("#html .content").text(html);
 
   }
@@ -92,7 +94,7 @@
   getHCJ.prototype.getJ = function (box) {
     var that = this;
 	  var jsDiv = $("#js .content"); 
-	  var scriptText = that.script;
+	  var scriptText = box.find("script").text();
     jsDiv.append(scriptText);
 	   
   }

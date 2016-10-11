@@ -54,22 +54,22 @@
   		var btnRow = $('<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>')	
   		
   		box.before(btnRow);
-
+      var h;
       block.each(function(index,ele){
         var tag = $("<img class='tag js' src='/img/js.png'>");
         var s = that.haveTag($(ele)).script;
         var p = that.haveTag($(ele)).plugin;
-        var h;
+        
         s?$(ele).find(".headRow").append(tag)
         :"";
         //因为调用插件方法，可能会改变文档结构，所以先保存一份。
-        p?(h = $(ele).find(".box").html(),window[p]())
+        p?(h = $(ele).find(".box").find("script").remove().end().html(),window[p]())
         :"";
-        console.log(h)
+
 
       })
   		$.getScript("/js/getHCJ.js",function(){
-  			that.modalWindow();
+  			that.modalWindow({originalH:h});
   		});
   		
   	}
@@ -83,7 +83,7 @@
     };
     return state;
   }
-  set.prototype.modalWindow = function () {
+  set.prototype.modalWindow = function (p) {
     var that = this;
     
     $(document).on("click",that.options.trigger,function(){
@@ -100,7 +100,7 @@
   			  shadeClose: true,    //点击遮罩关闭
   			  content:modal,
   		  	  success: function(layero, index){
-  			    		 $trigger.getHCJ();
+  			    		 $trigger.getHCJ(p);
   			  }	
   		  });
   	})
