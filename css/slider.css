@@ -1,15 +1,113 @@
 
-/*superSlider*/
+/*slideBox01 start*/
 
-.slideBox{ width:100%; overflow:hidden; position:relative; border-top:1px solid #ddd;  }
-.slideBox .hd{text-align: center; width:100%; overflow:hidden; position:absolute; bottom:5px; z-index:1; }
-.slideBox .hd ul{ overflow:hidden; zoom:1; display: inline-block; }
-.slideBox .hd ul li{ float:left; margin-right:12px;  width:15px; height:15px; border-radius:50%;line-height:14px; text-align:center; background:#fff; cursor:pointer; }
-.slideBox .hd ul li.on{ background:#6eb92b; color:#fff; }
-.slideBox .bd{ position:relative; width:100%; z-index:0;   }
-.slideBox .bd li{ width:100%;display:block;vertical-align:middle; }
-.slideBox .bd li a{width: 100%;display: block;}
-.slideBox .bd img{ width:100%; display: block;  }
+.slideBox01{ width:100%; overflow:hidden; position:relative; border-top:1px solid #ddd;  }
+.slideBox01 .hd{text-align: center; width:100%; overflow:hidden; position:absolute; bottom:5px; z-index:1; }
+.slideBox01 .hd ul{ overflow:hidden; zoom:1; display: inline-block; }
+.slideBox01 .hd ul li{ float:left; margin-right:12px;  width:15px; height:15px; border-radius:50%;line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+.slideBox01 .hd ul li.on{ background:#6eb92b; color:#fff; }
+.slideBox01 .bd{ position:relative; width:100%; z-index:0;   }
+.slideBox01 .bd li{ width:100%;display:block;vertical-align:middle; }
+.slideBox01 .bd li a{width: 100%;display: block;}
+.slideBox01 .bd img{ width:100%; display: block;  }
+/*slideBox01 end*/
+
 
 .publish{padding: 20px 0;}
-.tip{background: url(../img/tip.png) no-repeat;width: 96px;height: 36px;line-height: 36px;padding-left: 15px;}
+.tip{
+	background: url(../img/tip.png) no-repeat;
+    width: 96px;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 15px;
+    font-size: 13px;
+    color: #fff;
+    text-align: left;	
+}
+/*txtScroll-left01 start*/
+.txtScroll-left01 {
+    width: 850px;
+    position: relative;
+    padding: 6px 0 6px 100px;
+}
+.txtScroll-left01 .bd {
+    overflow: hidden;
+}
+
+.txtScroll-left01 .bd ul li {
+    margin-right: 20px;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+    _display: inline;
+}
+
+.txtScroll-left01 .bd ul li a {
+    background: url(../img/bgicon01.png) no-repeat 0 50%;
+    padding-left: 15px;
+}
+/*txtScroll-left01 end*/
+
+/*picScroll02 start*/
+
+.picScroll02{ width:100%; overflow:hidden; position:relative; border-top:1px solid #ddd;  }
+.picScroll02 .hd{text-align: center; width:100%; overflow:hidden; position:absolute; bottom:100px; z-index:1; }
+.picScroll02 .hd ul{ overflow:hidden; zoom:1; display: inline-block; }
+.picScroll02 .hd ul li{ float:left; margin-right:12px;  width:10px; height:10px; border-radius:50%;line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+.picScroll02 .hd ul li.on{ background:#6eb92b; color:#fff; }
+.picScroll02 .bd{ position:relative; width:100%; z-index:0;   }
+.picScroll02 .bd li{ width:100%;display:block;vertical-align:middle; }
+.picScroll02 .bd li a{width: 100%;display: block;}
+.picScroll02 .bd img{ width:100%; display: block;  }
+
+.picScroll02.n-pic{width:290px;/*position: relative;*/}
+.picScroll02.n-pic .n-pic-text{
+    padding:9px;
+}
+.picScroll02.n-pic .n-pic-text .n-pic-title{
+    text-align: center;
+    font-size: 16px;
+    padding: 3px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.picScroll02.n-pic .n-pic-text .n-pic-content{padding:5px 0;text-align: left;}
+
+/*picScroll02 end*/
+
+/*textTab01 tab切换 start*/ 
+.textTab01{ text-align:left;  border-bottom: 1px dashed #ddd;height: 142px;}
+.textTab01 .hd{ 
+    height:35px; 
+    line-height:38px; background:#f4f4f4;  
+    border-bottom:2px solid #6eb92b;  
+    position:relative; 
+}
+.textTab01 .hd ul{
+    float:left;  
+    position:absolute; left:0px; top:-1px;
+    height:37px;   
+}     
+.textTab01 .hd ul li{ 
+    float:left; padding:0 20px;
+    cursor:pointer;  
+}     
+.textTab01 .hd ul li.on{ 
+    height:35px;
+    background:#fff;
+    background:#6eb92b;
+    border-bottom:2px solid #6eb92b;
+    color: #fff; 
+}
+.textTab01 .bd ul{ padding:15px 0;  zoom:1;  }     
+.textTab01 .bd li{
+}     
+.textTab01 .bd li .stb-text{
+    height: 30px;
+    line-height: 23px;
+    font-size: 15px;
+    font-weight: 600;
+}
+/*textTab01 tab切换 end*/ 

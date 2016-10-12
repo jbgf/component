@@ -40,6 +40,12 @@
     z-index: 99;
     position: relative;
 }
+.tag{
+    border:1px solid #6eb92b;
+    border-radius: 10px;
+    padding:0px 10px;
+    display: inline-block;
+}
 
 /*btn-num01 start*/
 .btn-num01{

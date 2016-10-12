@@ -1,6 +1,7 @@
 *{box-sizing: border-box;margin:0;padding:0;}
 a{text-decoration: none;cursor: pointer;}
-/*a:visited{color:inherit;}*/
+a:visited{color:inherit;}
+a:link{color:inherit;}
 ul{list-style: none;}
 body{
 	font-family: 'Microsoft YaHei',"Helvetica Neue", Helvetica, 'Hiragino Sans GB',  'WenQuanYi Micro Hei', Arial,sans-serif;

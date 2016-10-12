@@ -5,10 +5,10 @@
   function getHCJ(element, options) {
        //传入的triggerbtn
        this.triggerBtn = $(element);
-       this.box = this.triggerBtn.parent().next(".box");
-       
        this.options = options;
-
+       this.index =$(this.options.trigger).index(this.triggerBtn);
+       this.box = this.triggerBtn.parent().next(".box");
+       this.script = this.box.find("script").detach().html();
   }
 
   getHCJ.DEFAULTS = {
@@ -27,7 +27,7 @@
   
   getHCJ.prototype.getH = function (box){
     var that = this;
-	  var html = this.options.originalH ? this.options.originalH 
+	  var html = this.options.oh.length>0 ? this.options.oh[that.index] 
                :box.html();
 	  $("#html .content").text(html);
 
@@ -94,7 +94,8 @@
   getHCJ.prototype.getJ = function (box) {
     var that = this;
 	  var jsDiv = $("#js .content"); 
-	  var scriptText = box.find("script").text();
+	  var scriptText = that.script;
+    console.log(scriptText)
     jsDiv.append(scriptText);
 	   
   }
@@ -139,7 +140,9 @@
         $this.is(':visible') && $this.trigger('focus')
       })
     })
-    Plugin.call($target, option, this)  //this即是Plugin定义中的_relatedTarget参数
+    /*this即是Plugin定义中的_relatedTarget参数,
+    带有[data-toggle="getHCJ"]的触发按钮*/
+    Plugin.call($target, option, this)  
   })
 
 }(jQuery);						

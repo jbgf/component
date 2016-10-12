@@ -34,9 +34,112 @@
 	</div>	
 	
 	<div id="sliderBox" class="container1200">
+		<div class="box" data-block = "3">
+			<!--新闻tab切换 start-->                               
+                        <div id="textTab01" class="slideTxtBox textTab01" data-plugin="superslide" data-p-caseName="textTab01">
+                            <div class="hd">
+
+                              <ul><li>新闻专题</li><li>行业观察</li></ul>
+                            </div>
+                            <div class="bd">
+                              <ul>
+                                <li>
+                                      <p class="stb-text">第六届中国国际服务外包交易博览会...</p>
+                                      <p>8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中关村软件园联合召开了第六...<a class="button green" >[查看详情]</a></p>
+                                </li>
+                                
+                              </ul>
+                              <ul>
+                                <li><span class="date">2011-11-11</span><a href="http://www.SuperSlide2.com" target="_blank">中国打破了世界软件巨头规则</a></li>
+                                
+                              </ul>
+                            </div>
+                        </div>
+              <!--新闻tab切换 end-->
+              <script type="text/javascript">
+              		function textTab01(){
+              			//news tab切换
+          				jQuery("#textTab01").slide();
+              		}
+              </script>
+		</div>
+		<div class="box" data-block = "3">
+			<!--新闻图片切换 start-->                       
+                    <div id="newsBox01" class="picScroll02 newsBox n-pic float-l"  data-plugin="superslide" data-p-caseName="picScroll02">
+                        <div class="hd">
+                          <ul>
+                            <li><a></a></li>
+                            <li><a></a></li>
+                            <li><a></a></li>
+                          </ul>
+                        </div>
+                        <div class="bd">
+                          <ul>
+                            <li>
+                                <a href="#" target="_blank"><img src="/img/n-pic.png" />
+                                    <div class="title n-pic-text bg-green white">
+                                          <p class="n-pic-title">第六届中国国际服务外包交易博览会务外包交易博览会</p>
+                                          <p class="n-pic-content">8月29日下午，中国国际投资促进会与杭会在北京关村软件园联合召开了第六... </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="/img/n-pic.png" />
+                                    <div class="title n-pic-text bg-green white">
+                                          <p class="n-pic-title">第六届中国国际服务外包交易博览会...</p>
+                                          <p class="n-pic-content">8月29日下午，中国国际投资促进会与杭会在北京关村软件园联合召开了第六... </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="/img/n-pic.png" />
+                                    <div class="title n-pic-text bg-green white">
+                                          <p class="n-pic-title">第六届中国国际服务外包交易博览会...</p>
+                                          <p class="n-pic-content">8月29日下午，中国国际投资促进会与杭会在北京关村软件园联合召开了第六... </p>
+                                    </div>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </div> 
+            <!--新闻图片切换 end-->
+            <script type="text/javascript">
+            		function picScroll02(){
+			          jQuery("#newsBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});  
+            		}
+			          
+            </script>  	
+		</div>
+		<div class="box">
+			
+	        <div class="publish clear" data-plugin="superslide" data-p-caseName="textScroll01">
+	            <div class="tip title-s float-l">最新公告</div>
+	            <a class="button float-r green more marin-t-7">更多 >></a>
+	    <!--文字滚动 start-->          
+	            <div  class="txtScroll-left txtScroll-left01">
+	                <div  class="bd">
+	                  <ul class="infoList">
+	                    <li><a href="#" target="_blank">8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中.....</a></li>
+	                    <li><a href="#" target="_blank">8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中..... </a></li>
+	                    <li><a href="#" target="_blank">新加坡留学，国际双语课程</a></li>
+	                    <li><a href="#" target="_blank">高考后留学日本名校随你选</a></li>
+	                    <li><a href="#" target="_blank">教育培训行业优势资源推介</a></li>
+	                    <li><a href="#" target="_blank">女友坚持警局完婚不抛弃</a></li>
+	                  </ul>
+	                </div>
+	            </div>
+	    <!--文字滚动 start-->          
+	        </div>
+	        <script type="text/javascript">
+	        	//最新公告文字滚动
+		          function textScroll01(){
+		             jQuery(".txtScroll-left01").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:2,vis:2,trigger:"click"});
+		          }
+	        </script>
+		</div>	
 		<div class="box">
 			<!-- slider begin -->
-		      <div id="slideBox01" class="slideBox" data-plugin="SuperSlide">
+		      <div id="slideBox01" class="slideBox slideBox01" data-plugin="superslide" data-p-caseName="picScroll01">
 		          <div class="hd">
 		            <ul>
 		              <li><a></a></li>
@@ -56,21 +159,16 @@
 		      </div>
 		      <!-- slider end -->
 		      <script type="text/javascript">
-		      		function SuperSlide (){
-		      			var plugin = "/js/jquery.SuperSlide.2.1.1.js";
-			      		$.getScript(plugin,function(){
-			      			jQuery("#slideBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
-			      		})
+		      		function picScroll01 (){
+		      			
+			      			jQuery(".slideBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
+			      		
 		      		}
 		      		
     				
 		      </script>
 		</div>
 	</div>	
-	
-
-	
-
 	
 </body>
 </html>

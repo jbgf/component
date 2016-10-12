@@ -4,38 +4,107 @@
 
   function set(element, options) {
     this.container = $(element);
-    
+    this.originalH = [];
     this.options = $.extend({}, set.DEFAULTS, options);
     this.ini();
   }
 
   set.DEFAULTS = {
     trigger: ".get",
-    rowBlock:4
+    rowBlock:4,
+    'js_array' : {
+         "superslide":"/js/jquery.SuperSlide.2.1.1.js"
+    }
   }	
-
+  
   set.prototype.ini = function (){
     var that = this;
     var box = that.container.find(".box");
     
     var brandName = this.options.brandName || "组件";
     var rowNum = this.options.rowBlock;
+    
+    var bn_temp_array = [];
+    var node_array = [];
+    var count = 0;
     //box数量 = 组件数量；
     var boxNum = box.length;
     var className = 'block block-'+rowNum+'';
     
-    
-    box.wrap(function() {
-      return "<div class='" + className + "'></div>";
-    });
-    
+    box.each(function(i,e){
+      var bn = $(e).attr("data-block") || rowNum;
+      
+          if(bn){
+            var classNameNew = 'block block-'+bn+'';
+
+            $(e).wrap(function() {
+                   return "<div class='"+ classNameNew +"'></div>";
+            });
+            if($.inArray(bn, bn_temp_array) == -1){
+                node_array[bn] = [] ;
+                
+                node_array[bn].push($(e).parent(".block"));                
+                bn_temp_array.push(bn);   
+
+            }else{
+                if(node_array[bn])
+                node_array[bn].push($(e).parent(".block"));
+            }
+          }
+    })
+    for(var i = 0 ;i<node_array.length;i++){
+       if(node_array[i]){that.divide(node_array[i],i);}
+    }
     var block = that.container.find(".block");
-    var a= $.makeArray(block);
+//页面布局成几行几列 end   
+
+//开头的brand    写组件名
+    $(".brandName ").html(brandName);
+    
+  	if(box.length != 0){
+  		var btnRow = $('<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>')	
+  		
+  		box.before(btnRow);
+      
+      block.each(function(index,ele){
+        var status = that.haveTag($(ele));
+        var s = status.script;
+        var p = status.plugin;
+        var caseName = status.caseName; 
+        var stag ;
+        var ptag,caseNameTag;
+        var headRow = $(ele).find(".headRow");
+/*添加标签*/
+
+        s?(
+          stag = $("<span class='tag button green'>Javascript</span>"),  
+          headRow.append(stag)):"";
+
+        //因为调用插件方法，可能会改变文档结构，所以先获取插件调用前的html。  
+        p?(
+          ptag = $("<span class='tag button green'>"+p+"</span>"),
+          caseNameTag = $("<span class='tag button green'>"+caseName+"</span>"),
+          headRow.append(ptag,caseNameTag),
+          that.originalH.push($(ele).find(".box").clone().find("script").remove().end().html()),
+          $.getScript(that.options.js_array[p],function(){window[caseName]()})
+          
+          )
+        :"";
+      })
+  		$.getScript("/js/getHCJ.js",function(){
+  			  that.modalWindow();
+  		});
+  		
+  	}
+  }
+
+  set.prototype.divide = function(a,rn){
+    var that = this;
     var b_array = [];
-//页面布局成几行几列    
-    for(var i=0;i< boxNum;i+=rowNum){
-        b_array.push(a.slice(i,i+rowNum));
-        
+    var b_box = $("<div id=c"+rn+"></div>");
+//页面布局成几行几列 start
+    for(var i=0;i< a.length;i+=rn){
+        b_array.push(a.slice(i,i+rn));
     }
 
     $.each(b_array,function(index,value){
@@ -44,46 +113,24 @@
         $.each(row,function(i,v){
             $(v).appendTo($line)
         });
-        $line.appendTo(that.container)
+        $line.appendTo(b_box)
     })
-
-//开头的brand    写组件名
-    $(".brandName ").html(brandName);
-    var that = this;
-  	if(box.length != 0){
-  		var btnRow = $('<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>')	
-  		
-  		box.before(btnRow);
-      var h;
-      block.each(function(index,ele){
-        var tag = $("<img class='tag js' src='/img/js.png'>");
-        var s = that.haveTag($(ele)).script;
-        var p = that.haveTag($(ele)).plugin;
-        
-        s?$(ele).find(".headRow").append(tag)
-        :"";
-        //因为调用插件方法，可能会改变文档结构，所以先保存一份。
-        p?(h = $(ele).find(".box").find("script").remove().end().html(),window[p]())
-        :"";
-
-
-      })
-  		$.getScript("/js/getHCJ.js",function(){
-  			that.modalWindow({originalH:h});
-  		});
-  		
-  	}
+    b_box.appendTo(that.container)
   }
+
   set.prototype.haveTag = function($block){
     var script = $block.find("script").length !=0;
     var plugin = $block.find("[data-plugin]").attr("data-plugin") || undefined;
+    var caseName = $block.find("[data-plugin]").attr("data-p-caseName") || undefined;
     var state = {
       script:script,
-      plugin:plugin
+      plugin:plugin,
+      caseName:caseName
     };
+
     return state;
   }
-  set.prototype.modalWindow = function (p) {
+  set.prototype.modalWindow = function () {
     var that = this;
     
     $(document).on("click",that.options.trigger,function(){
@@ -100,7 +147,11 @@
   			  shadeClose: true,    //点击遮罩关闭
   			  content:modal,
   		  	  success: function(layero, index){
-  			    		 $trigger.getHCJ(p);
+  			    		 $trigger.getHCJ({
+                                  oh:that.originalH,
+                                  trigger:that.options.trigger
+
+                                });
   			  }	
   		  });
   	})
@@ -132,14 +183,12 @@
                 textArea.style.outline = 'none';
                 textArea.style.boxShadow = 'none';
                 textArea.style.background = 'transparent';
-
+                /*赋值，加入dom树，选择*/                  
                 textArea.value = text;
-
                 document.body.appendChild(textArea);
-
                 textArea.select();
 
-                try {
+                try {/*复制*/
                   var successful = document.execCommand('copy');
                   var msg = successful ? 'successful' : 'unsuccessful';
                   layer.msg('Copying '+title+' command was ' + msg);
