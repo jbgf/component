@@ -1,0 +1,14 @@
+/*news-list01 start*/
+.news-list01{max-height: 240px;}
+.news-list01 ul{padding-top: 10px;text-align: left}
+.news-list01 li{
+	display: block;
+    height: 33px;
+    line-height: 33px;
+    padding-left: 15px;
+    background:url(../img/iconbg02.png) no-repeat 0 50%;
+}
+.news-list01 li .date{ 
+	float:right;
+	color:#999;  }
+/*news-list01 end*/
