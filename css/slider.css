@@ -22,18 +22,20 @@
     padding-left: 15px;
     font-size: 13px;
     color: #fff;
-    text-align: left;	
+    text-align: left;
+    position: relative;
+    z-index: 99;	
 }
 /*txtScroll-left01 start*/
-.txtScroll-left01 {
-    width: 850px;
+.txtScroll-left01.case02{width:730px; background-color: #f7f7f7;}
+.txtScroll-left01{
+    width: 1050px;
     position: relative;
     padding: 6px 0 6px 100px;
 }
 .txtScroll-left01 .bd {
     overflow: hidden;
 }
-
 .txtScroll-left01 .bd ul li {
     margin-right: 20px;
     float: left;
@@ -42,7 +44,6 @@
     text-align: left;
     _display: inline;
 }
-
 .txtScroll-left01 .bd ul li a {
     background: url(../img/bgicon01.png) no-repeat 0 50%;
     padding-left: 15px;
@@ -78,7 +79,10 @@
 /*picScroll02 end*/
 
 /*textTab01 tab切换 start*/ 
-.textTab01{ text-align:left;  border-bottom: 1px dashed #ddd;height: 142px;}
+.textTab01.case02{height: auto;border-bottom: none;}
+.textTab01.case02 .news-list01{border-top: 1px dashed #ddd;}
+.textTab01.case02 .bd ul.switch{ padding:0px 0;  zoom:1; }     
+.textTab01{ text-align:left;border-bottom: 1px dashed #ddd;height: 142px;}
 .textTab01 .hd{ 
     height:35px; 
     line-height:38px; background:#f4f4f4;  
@@ -93,7 +97,7 @@
 .textTab01 .hd ul li{ 
     float:left; padding:0 20px;
     cursor:pointer;  
-}     
+}    
 .textTab01 .hd ul li.on{ 
     height:35px;
     background:#fff;
@@ -101,9 +105,10 @@
     border-bottom:2px solid #6eb92b;
     color: #fff; 
 }
-.textTab01 .bd ul{ padding:15px 0;  zoom:1;  }     
+.textTab01 .bd ul.switch{ padding:15px 0;  zoom:1; }     
 .textTab01 .bd li{
-}     
+}
+.textTab01 .bd ul li .s-general{padding:15px 0;}      
 .textTab01 .bd li .stb-text{
     height: 30px;
     line-height: 23px;

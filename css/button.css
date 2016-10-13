@@ -36,6 +36,20 @@
 .input-set input.button{width:28%;}
 .input-set-l{height: 48px;}
 
+/*input-set01 start*/
+.input-set01{width:328px; height: 38px;}
+.input-set01 input { display: inline-block; float: left; height: 100%; font-size: 16px; font-weight: 500; }
+.input-set01 input.input {
+    box-sizing:border-box; width: 80%; padding-left: 2%;border:1px solid #f6f6f6;
+    border-right: none;
+    background-color: #fff;
+}
+.input-set01 input.button { width: 18%; 
+    background-image: url(../img/search-icon.jpg);background-repeat:  no-repeat;
+    background-color: #f6f6f6;
+}
+/*input-set01 end*/
+
 .more {
     z-index: 99;
     position: relative;

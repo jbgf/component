@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/frame.css">
 	<link rel="stylesheet" type="text/css" href="/css/button.css">
 	<link rel="stylesheet" type="text/css" href="/css/slider.css">
+	<link rel="stylesheet" type="text/css" href="/css/content.css">
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
 	
 	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
@@ -34,6 +35,79 @@
 	</div>	
 	
 	<div id="sliderBox" class="container1200">
+		<div class="box" data-block="3">
+			<!--新闻tab切换 start-->                               
+                        <div id="textTab02" class="slideTxtBox textTab01 case02" data-plugin="superslide" data-p-casename="textTab02">
+                            <div class="hd">
+
+                              <ul><li>新闻专题</li><li>行业观察</li></ul>
+                            </div>
+                            <div class="bd">
+                              <ul class="switch">
+                                <li>
+                                      <div class="s-general">
+                                      <p class="stb-text">第六届中国国际服务外包交易博览会...</p>
+                                      <p>8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中关村软件园联合召开了第六...<a class="button green">[查看详情]</a></p>
+                                      </div>
+									  <div class="news-list01">
+							                <ul>
+							                    <li><a>2014年度上海市服务贸易发展专项资金申   <span class="date">09-04</span></a></li>
+							                    <li><a>“高企认定”提速生产性服务业发展<span class="date">09-04</span></a></li>
+							                    <li><a>重庆将大力发展五类服务贸易<span class="date">09-04</span></a></li>
+							                    <li><a>中国海运服务业服务贸易<span class="date">09-04</span></a></li>
+							                    <li><a>中国海运服务业服务贸易长期处于逆差状态<span class="date">09-04</span></a></li>
+							                    <li><a>2014年度上海市服务贸易发展专项资金申报指南<span class="date">09-04</span></a></li>
+							                    <li><a>2014年度上海市服务贸易发展专项资金申<span class="date">09-04</span></a></li>
+							                </ul>  
+							          </div>
+									
+                                </li>
+                              </ul>
+                              <ul class="switch">
+                                <li>
+                                <span class="date">2011-11-11</span><a href="http://www.SuperSlide2.com" target="_blank">中国打破了世界软件巨头规则</a></li>
+                              </ul>
+                            </div>
+                        </div>
+              <!--新闻tab切换 end-->
+              <script type="text/javascript">
+              		
+              		function textTab02(){
+              			//news tab切换
+          				jQuery("#textTab02").slide();
+              		}
+              
+              </script>
+		</div>
+		<div class="box bg-black">
+	        <div class="publish clear" data-plugin="superslide" data-p-casename="textScroll02">
+	            <div class="tip title-s float-l">最新公告</div>
+	    		<div class="input-set01 float-r">
+                      <input class="input " type="" name="" placeholder="输入关键词">
+                      <input class="button white" type="submit" value="">
+            	</div> 
+	    <!--文字滚动 start-->          
+	            <div id="txtScroll-left02" class="txtScroll-left txtScroll-left01 case02">
+	                <div class="bd">
+	                  <ul class="infoList">
+	                    <li><a href="#" target="_blank">8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中.....</a></li>
+	                    <li><a href="#" target="_blank">8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中..... </a></li>
+	                    <li><a href="#" target="_blank">新加坡留学，国际双语课程</a></li>
+	                    <li><a href="#" target="_blank">高考后留学日本名校随你选</a></li>
+	                    <li><a href="#" target="_blank">教育培训行业优势资源推介</a></li>
+	                    <li><a href="#" target="_blank">女友坚持警局完婚不抛弃</a></li>
+	                  </ul>
+	                </div>
+	            </div>
+	    <!--文字滚动 start-->
+	        </div>
+	        <script type="text/javascript">
+	        	//最新公告文字滚动
+		          function textScroll02(){
+		             jQuery("#txtScroll-left02").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:1,vis:1,trigger:"click"});
+		          }
+	        </script>		
+		</div>
 		<div class="box" data-block = "3">
 			<!--新闻tab切换 start-->                               
                         <div id="textTab01" class="slideTxtBox textTab01" data-plugin="superslide" data-p-caseName="textTab01">
@@ -42,7 +116,7 @@
                               <ul><li>新闻专题</li><li>行业观察</li></ul>
                             </div>
                             <div class="bd">
-                              <ul>
+                              <ul class="switch">
                                 <li>
                                       <p class="stb-text">第六届中国国际服务外包交易博览会...</p>
                                       <p>8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中关村软件园联合召开了第六...<a class="button green" >[查看详情]</a></p>
@@ -116,7 +190,7 @@
 	            <div class="tip title-s float-l">最新公告</div>
 	            <a class="button float-r green more marin-t-7">更多 >></a>
 	    <!--文字滚动 start-->          
-	            <div  class="txtScroll-left txtScroll-left01">
+	            <div id="txtScroll-left01" class="txtScroll-left txtScroll-left01">
 	                <div  class="bd">
 	                  <ul class="infoList">
 	                    <li><a href="#" target="_blank">8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中.....</a></li>
@@ -133,7 +207,7 @@
 	        <script type="text/javascript">
 	        	//最新公告文字滚动
 		          function textScroll01(){
-		             jQuery(".txtScroll-left01").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:2,vis:2,trigger:"click"});
+		             jQuery("#txtScroll-left01").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:2,vis:2,trigger:"click"});
 		          }
 	        </script>
 		</div>	
