@@ -56,7 +56,7 @@
        if(node_array[i]){that.divide(node_array[i],i);}
     }
     var block = that.container.find(".block");
-//页面布局成几行几列 end   
+
 
 //开头的brand    写组件名
     $(".brandName ").html(brandName);
@@ -70,10 +70,12 @@
         var status = that.haveTag($(ele));
         var s = status.script;
         var p = status.plugin;
+        var mt = $(box[index]).data("fixed")=="top";
         var caseName = status.caseName; 
         var stag ;
         var ptag,caseNameTag;
         var headRow = $(ele).find(".headRow");
+            headRow.css("margin-top",mt?"50px":"");
 /*添加标签*/
 
         s?(

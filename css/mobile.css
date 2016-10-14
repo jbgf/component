@@ -1,6 +1,7 @@
 /*m-navbar-01 start		*/
 		.m-navbar-01 {
 		  position: fixed;
+		  top: 0;
 		  right: 0;
 		  left: 0;
 		  z-index: 1030;
@@ -9,6 +10,7 @@
 		  -ms-transition: all .4s;
 		  -moz-transition: all .4s;
 		  transition: all .4s;
+		  text-align: left;
 		}
 		.m-navbar-01.open{height: 100%;}
 		.m-navbar-01 .navbar-t-btn {
