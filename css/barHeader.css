@@ -19,84 +19,66 @@
 
 /*导航栏navbar-line01 start*/
 .navbar-line01{}
-
 .navbar-line01 .navbar-block{
-	
 	float: left;position: relative;
-
 	min-height: 1px;
 	cursor: pointer;
 	font-size:14px;
 	position: relative;
-
 	display: block;
 }
 .navbar-line01 .navbar-block a.navLink{
 	display: block;
 	padding:13px 37px;
-
-}
-.navbar-line01 .navbar-block .naver_0{
-	display: none;
-    position: absolute;
-    z-index: 99;
-    padding-top: 10px;
 }
 .navbar-line01 .navbar-block.on,.navbar-block:hover{background: #fff;color:#6eb92b;}
-
-.navbar-line01 .navbar-block .naver_0 .nav_erc{
-    color: #6eb92b;
-    background-image: url(../img/navBarbg.png) ;
+.navbar-line01 .navbar-block .naver_01 {background-color: #fff; display: none; position: absolute; z-index: 99; padding-top: 10px; }
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 {
+    color: rgb(110, 185, 43);
+    border: 1px solid #6eb92b;
     background-repeat: no-repeat;
     background-color: transparent;
     text-align: center;
-    width: 404px;
+    position: relative;
     height: 99px;
     padding: 15px;
-    box-sizing: content-box;    
+    box-sizing: content-box;
+}
+.navbar-line01 .navbar-block .naver_01 .nav_erc01:before{
+    position: absolute;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border: 1px solid #6eb92b;
+    top: -6px;
+    left: 15%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    background-color: #fff;
+    transform: rotate(45deg);
+} 
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Pic, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Pic a, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Link { display: block; height: 100%; }
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Link .linkWrapper { 
+    display: table-cell; vertical-align: middle; height: 104px; text-align: left; 
+}
+.nav_erc01 .linkWrapper .link-middle{display: table-row;}
+.nav_erc01 .linkWrapper .link-middle .leftBox,
+.nav_erc01 .linkWrapper .link-middle .rightBox{display: table-cell;padding:0 10px;}
+
+.navbar-line01 .navbar-block .naver_01 .navBox01Link .navLi { 
+    display: block; 
+     
+    font-size: 12px; 
+    padding: 0px 0px 7px 0;
+}
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 .navLi a { 
+    padding: 0px 10px;  white-space: nowrap;
+    background: url("../img/nav-lb.png") 0px 48% no-repeat;
 }
 
-.navbar-line01 .navbar-block .naver_0 .nav_erc li {
-    padding-top: 3px;
-    left: 0;
-}
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a{background: #6eb92b;}
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a{color: #fff;}
 
-.navbar-line01 .navbar-block .naver_0 .nav_erc .navBox01,
-.navbar-line01 .navbar-block .naver_0 .nav_erc .navBox01Pic,
-.navbar-line01 .navbar-block .naver_0 .nav_erc .navBox01Pic a,
-.navbar-line01 .navbar-block .naver_0 .nav_erc .navBox01Link{display: block;height: 100%;}
-.navbar-line01 .navbar-block .naver_0 .nav_erc .navBox01Link .linkWrapper{
-	display: table-cell;
-    vertical-align: middle;
-    height: 104px;
-    text-align: left;
-}
-.navbar-line01 .navbar-block .naver_0 .navBox01Link .linkContent{padding-left: 15px}
-
-.navbar-line01 .navbar-block .naver_0 .navBox01Link .linkContent .navLi{
-	display: block;
-    float: left;
-    background: url(../img/nav-lb.png) no-repeat 0px 53%;
-    font-size: 12px;
-    padding: 7px 0;
-}
-.navbar-line01 .navbar-block .naver_0 .linkContent .navLi:hover{background-image: none;}
-.navbar-line01 .navbar-block .naver_0 .linkContent .navLi:hover a{
-	background:#6eb92b;
-	color: #fff;	
-}
-
-.navbar-line01 .navbar-block .naver_0 .nav_erc  .navLi a{padding: 0px 10px;}
-.navbar-line01 .navbar-block .naver_0 .nav_erc  .navLi.nvali-l{width: 150px;}
-.navbar-line01 .navbar-block .naver_0 .nav_erc  .navLi.nvali-r{}
-.navbar-line01 .navbar-block .naver_0 .nav_erc li {
-	padding: 5px 45px;
-}
-.navbar-line01 .navbar-block .naver_0 .nav_erc li:hover{background-color: #6eb92b;}
-.navbar-line01 .navbar-block .naver_0 .nav_erc li:hover a{color: #fff;}
-.navbar-line01 .navbar-block .naver_0 .nav_erc li a{
-	white-space: nowrap;
-}
 /*导航栏navbar-line01 end*/
 
 
