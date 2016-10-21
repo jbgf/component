@@ -1,44 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<link rel="stylesheet" type="text/css" href="modalBox.css">
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/frame.css">
+	<link rel="stylesheet" type="text/css" href="/css/button.css">
+	<link rel="stylesheet" type="text/css" href="/css/slider.css">
+	<link rel="stylesheet" type="text/css" href="/css/content.css">
+	<link rel="stylesheet" type="text/css" href="/css/modalBox.css">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
 	
-    <script src="jquery-1.9.1.min.js"></script>
-
-    <script type="text/javascript" src="modalBox.js"></script>
+	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/js/layer/layer.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
 	<script type="text/javascript">
-		
-			$(function(){
-				$(".modalBox").on("shown.bs.modalBox",function(e){
-					
-				})
-				$(".modalBox").modalBox();
+		$(function(){
+			$("#contentBox").set({
+				brandName:"ModalBox",
+				rowBlock:3
 			});
-			
+		});
 		
 	</script>
-
 </head>
 <body>
-		
-		<div class="modalBox fade">
-		  		<div class="modalBox-dialog" role="document">
-				    <div class="modalBox-content">
-				      <div class="modalBox-header">
-				        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-	<!-- 标题栏 -->			  <h4 class="modalBox-title">modalBox title</h4>
-				      </div>
-				      <div class="modalBox-body">
-	<!-- 提示信息-->			      <p>One fine body&hellip;</p>
-				      </div>
-				      <div c></div>
-				    </div>
-			  </div>
+	<div class="bg extend-width bg-black">
+		<div class="container1200">
+			<div class="line ">	
+				<div class="block block-1 ">
+					<div class="brandName white"></div>
+				</div>
+			</div>
 		</div>
-	    
+	</div>	
+	
+	<div id="modalBox" class="container1200">
+		<div class="box" >
+		
+			<div class="modalBox fade">
+			  		<div class="modalBox-dialog" role="document">
+					    <div class="modalBox-content">
+					      <div class="modalBox-header">
+					        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+		<!-- 标题栏 -->			  <h4 class="modalBox-title">modalBox title</h4>
+					      </div>
+					      <div class="modalBox-body">
+		<!-- 提示信息-->			      <p>One fine body&hellip;</p>
+					      </div>
+					      <div c></div>
+					    </div>
+				  </div>
+			</div>
+		</div>
+	</div>
+</body>    
 </html>

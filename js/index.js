@@ -132,37 +132,25 @@
 
     return state;
   }
-  set.prototype.modalWindow = function () {
-    var that = this;
-    
-    $(document).on("click",that.options.trigger,function(){
-  		  var $trigger = $(this);
-        //判断是否有js tag标签
-        var tag = $trigger.siblings(".tag").length != 0;
+  set.prototype.device = function(){
+    var d;
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+      d="mobile";
+    }else{
+      d="web";  
+    } 
+    return d;
+  }
 
-        var modal = HCJmodal(tag);
-  		  layer.open({
-  			  type: 1,
-  			  skin: 'demo-class',  //给弹窗添加特殊的class设置样式
-  			  area: ['800px', '560px'],
-          title:false/*"HCJ"*/,
-  			  shadeClose: true,    //点击遮罩关闭
-  			  content:modal,
-  		  	  success: function(layero, index){
-  			    		 $trigger.getHCJ({
-                                  oh:that.originalH,
-                                  trigger:that.options.trigger
+  set.prototype.template = function(options){
+        var tag = options.tag;
+        var deviceType = options.deviceType;
 
-                                });
-  			  }	
-  		  });
-  	})
-	  
-    function HCJmodal(tag){
         var hcjModal = '<div class="container-p-15"><div class="line hcj"><div class="block block-2"><div id="html"><div class="title">html</div><div class="content"></div></div></div><div class="block block-2"><div class="line"><div class="block block-1"><div id="css"><div class="title">css</div><div class="content"></div></div></div></div><div class="line"><div class="block block-1"><div id="js"><div class="title">js</div><div class="content"></div></div></div></div></div></div></div>';
         var hcModal = '<div class="container-p-15"><div class="line hcj"><div class="block block-2"><div id="html"><div class="title">html</div><div class="content"></div></div></div><div class="block block-2"><div id="css"><div class="title">css</div><div class="content"></div></div></div></div></div>';
-        var modal = tag?hcjModal:hcModal,
-            copyBtn = '<div class="copyBtn button btn-num01 margin-l-20" >C</div>';
+        var modal = tag?hcjModal:hcModal;
+        if(deviceType == "mobile"){console.log(modal)}
+        var copyBtn = '<div class="copyBtn button btn-num01 margin-l-20" >C</div>';
             modal = $(modal).find(".title").append(copyBtn).end().prop("outerHTML");
             
             $(document).on("click",".copyBtn",function(){
@@ -202,7 +190,35 @@
               }
 
         return modal;
-    }
+      
+  }  
+
+  set.prototype.modalWindow = function () {
+    var that = this;
+    
+    $(document).on("click",that.options.trigger,function(){
+  		  var $trigger = $(this);
+        //判断是否有js tag标签
+        var tag = $trigger.siblings(".tag").length != 0;
+        var deviceType = that.device();
+        var modal = that.template({tag:tag,deviceType:deviceType});
+  		  layer.open({
+  			  type: 1,
+  			  skin: 'demo-class',  //给弹窗添加特殊的class设置样式
+  			  area: ['800px','600px'],
+          title:false/*"HCJ"*/,
+  			  shadeClose: true,    //点击遮罩关闭
+  			  content:modal,
+  		  	success: function(layero, index){
+  			    		 $trigger.getHCJ({
+                                  oh:that.originalH,
+                                  trigger:that.options.trigger
+                 });
+  			  }	
+  		  });
+  	})
+	  
+    
 
     
 
