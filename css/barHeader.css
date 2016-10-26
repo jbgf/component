@@ -126,3 +126,132 @@
     color: #6eb92b;
 }
 /*导航栏navbar-line02 end*/
+
+/*wave-banner start*/
+.wave.plain {background-image: url(../img/wave-plain.png);}
+.wave.paint {background-image: url(../img/wave-paint.png);}
+.waveContainer{position: relative;width: 100%;height: 30rem;}
+.waveContainer ul{}
+.waveContainer .wave{
+    position: absolute;bottom: 0;display: block;
+    height: 15rem;
+    width: 300%;
+    left: -100%;    
+}
+.wave.depth-30 {
+  -webkit-animation: wave 7.11111s 0.1s infinite linear;
+  -moz-animation: wave 7.11111s 0.1s infinite linear;
+  animation: wave 7.11111s 0.1s infinite linear;
+  bottom: 200px;
+  margin: 0px 0px;
+  background-size: 180px 72px;
+  height: 72px;
+}
+.wave.depth-30:after {
+  height: 112px;
+}
+.wave.depth-40 {
+  -webkit-animation: wave 6.66667s 0.1s infinite linear;
+  -moz-animation: wave 6.66667s 0.1s infinite linear;
+  animation: wave 6.66667s 0.1s infinite linear;
+  bottom: 180px;
+  margin: 0px 0px;
+  background-size: 240px 96px;
+  height: 96px;
+}
+.wave.depth-40:after {
+  height: 96px;
+}
+.wave.depth-50 {
+  -webkit-animation: wave 6.22222s 0.1s infinite linear;
+  -moz-animation: wave 6.22222s 0.1s infinite linear;
+  animation: wave 6.22222s 0.1s infinite linear;
+  bottom: 150px;
+  margin: 0px 0px;
+  background-size: 300px 120px;
+  height: 120px;
+}
+.wave.depth-50:after {
+  height: 80px;
+}
+.wave.depth-60 {
+  -webkit-animation: wave 5.77778s 0.1s infinite linear;
+  -moz-animation: wave 5.77778s 0.1s infinite linear;
+  animation: wave 5.77778s 0.1s infinite linear;
+  bottom: 120px;
+  margin: 0px 0px;
+  background-size: 360px 144px;
+  height: 144px;
+}
+.wave.depth-60:after {
+  height: 64px;
+}
+.wave.depth-80 {
+  -webkit-animation: wave 4.88889s 0.1s infinite linear;
+  -moz-animation: wave 4.88889s 0.1s infinite linear;
+  animation: wave 4.88889s 0.1s infinite linear;
+  bottom: 60px;
+  margin: 0px 0px;
+  background-size: 480px 192px;
+  height: 192px;
+}
+.wave.depth-80:after {
+  height: 32px;
+}
+.wave.depth-100 {
+  -webkit-animation: wave 4s 0.1s infinite linear;
+  -moz-animation: wave 4s 0.1s infinite linear;
+  animation: wave 4s 0.1s infinite linear;
+  bottom: 0px;
+  margin: 0px 0px;
+  background-size: 600px 240px;
+  height: 240px;
+}
+.wave.depth-100:after {
+  height: 0px;
+}
+@keyframes wave {
+          0% {
+            -webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+            -moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+            transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+          }
+
+          100% {
+            -webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+            -moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+            transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+          }
+}
+.lighthouse{
+          -webkit-transform-origin: 50% 90%;
+          -moz-transform-origin: 50% 90%;
+          transform-origin: 50% 90%;
+          -webkit-animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          -moz-animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          background-image: url(../img/lighthouse.png);
+          background-repeat: no-repeat;
+          position: absolute;
+          right: 20%;
+          margin: 0px -112px;
+          background-size: 224px 392px;
+          height: 392px;
+          width: 224px;
+          margin: 0px -104px;
+          bottom: 188px;
+}
+@keyframes lighthouse{
+          0% {
+            -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
+            -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
+            transform: translate3d(15%,0,0) rotateZ(10deg);
+          }
+
+          100% {
+            -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+            -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+            transform: translate3d(-15%,0,0) rotateZ(-10deg);
+          }
+}
+/*wave-banner end*/

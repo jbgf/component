@@ -39,6 +39,7 @@
 /*input-set01 start*/
 .input-set01{width:328px; height: 38px;}
 .input-set01 input { display: inline-block; float: left; height: 100%; font-size: 16px; font-weight: 500; }
+.input-set01 input.input:focus{outline: none;} 
 .input-set01 input.input {
     box-sizing:border-box; width: 80%; padding-left: 2%;border:1px solid #f6f6f6;
     border-right: none;

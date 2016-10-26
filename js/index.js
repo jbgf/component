@@ -19,11 +19,11 @@
   
   set.prototype.ini = function (){
     var that = this;
+    that.options = $.extend({},that.options,{deviceType:that.device()})
+
     var box = that.container.find(".box");
-    
     var brandName = this.options.brandName || "组件";
     var rowNum = this.options.rowBlock;
-    
     var bn_temp_array = [];
     var node_array = [];
     var count = 0;
@@ -33,19 +33,15 @@
     
     box.each(function(i,e){
       var bn = $(e).attr("data-block") || rowNum;
-      
           if(bn){
             var classNameNew = 'block block-'+bn+'';
-
             $(e).wrap(function() {
                    return "<div class='"+ classNameNew +"'></div>";
             });
             if($.inArray(bn, bn_temp_array) == -1){
                 node_array[bn] = [] ;
-                
                 node_array[bn].push($(e).parent(".block"));                
                 bn_temp_array.push(bn);   
-
             }else{
                 if(node_array[bn])
                 node_array[bn].push($(e).parent(".block"));
@@ -63,9 +59,7 @@
     
   	if(box.length != 0){
   		var btnRow = $('<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>')	
-  		
   		box.before(btnRow);
-      
       block.each(function(index,ele){
         var status = that.haveTag($(ele));
         var s = status.script;
@@ -134,7 +128,7 @@
   }
   set.prototype.device = function(){
     var d;
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $(window).width()<700 ){
       d="mobile";
     }else{
       d="web";  
@@ -142,25 +136,71 @@
     return d;
   }
 
-  set.prototype.template = function(options){
-        var tag = options.tag;
-        var deviceType = options.deviceType;
+  set.prototype.frame = function(num,array,target,module){
+      /*num表示几行或几列；
+        array表示对这几行或列再分割，
+        module表示纵横，即分行/列，
+        target表示目标对象，
+        如num = 2，array = [2,4],target，module = h表示：
+        将target分为2行，分为2格，4格。
+      */
+      var propertyOne,propertyTwo,className;
+          if(module == "v"){propertyOne = "width";propertyTwo = "height"; className = "column"};
+          if(module == "h"){propertyOne = "height";propertyTwo = "width";className = "line"};
+          var data = {propertyOne : "width",propertyTwo : "height" ,className :"column"};
+          //行列
+          for(var i=0;i<num;i++){
+            $('<div class='+className+'></div>').appendTo(target).css(propertyOne,100/num+'%')
+                                                                 .css(propertyTwo,'100%')           
+          };
+         
+          $(target ).addClass('frame');
+          var rowColumn= $(target ).children("[class*='"+className+"']");
+          
+          rowColumn.each(function(index){
+            block(array[index],$(this),module);
+          });
+      
+      function block(num,target,module){
+          for(var i=0;i<num;i++){
+              $('<div class="block "></div>').appendTo(target)
+                                             .css(propertyOne,'100%')
+                                             .css(propertyTwo,100/num+'%')
+          };
+      };
+  }
+  set.prototype.template = function(jsTag){
+        var that = this;
+        var isJs = jsTag;
+        var isMobile = that.options.deviceType == "mobile";
+        var a01,a02,num,direction,
+            shell = $('<div id="" class="templateHCJ container-p-15"></div>');
+            isJs ?(a01 = ["html","css","js"],a02 = [1,2]):(a01 = ["html","css"],a02 = [1,1]);  
+            isMobile ?(num = isJs? 3 : 2, direction = "h" )
+                     :(num = 2 , direction = "v" );
+            
+            that.frame(num,a02,shell,direction); 
+            content(shell);
+        
+            
 
-        var hcjModal = '<div class="container-p-15"><div class="line hcj"><div class="block block-2"><div id="html"><div class="title">html</div><div class="content"></div></div></div><div class="block block-2"><div class="line"><div class="block block-1"><div id="css"><div class="title">css</div><div class="content"></div></div></div></div><div class="line"><div class="block block-1"><div id="js"><div class="title">js</div><div class="content"></div></div></div></div></div></div></div>';
-        var hcModal = '<div class="container-p-15"><div class="line hcj"><div class="block block-2"><div id="html"><div class="title">html</div><div class="content"></div></div></div><div class="block block-2"><div id="css"><div class="title">css</div><div class="content"></div></div></div></div></div>';
-        var modal = tag?hcjModal:hcModal;
-        if(deviceType == "mobile"){console.log(modal)}
         var copyBtn = '<div class="copyBtn button btn-num01 margin-l-20" >C</div>';
-            modal = $(modal).find(".title").append(copyBtn).end().prop("outerHTML");
+            var m = $(shell).find(".title").append(copyBtn).end().prop("outerHTML");
             
             $(document).on("click",".copyBtn",function(){
                 var text = $(this).parents(".title").siblings(".content").text();
                 var title = this.previousSibling.wholeText;
-                
                 copyTextToClipboard(title,text);
             })
+
+            function content(s){
+                var b = s.find(".block");
+                $.each(a01,function(i,e){
+                  b.eq(i).append('<div id='+e+'><div class="title">'+e+'</div><div class="content"></div></div>');
+                });     
+            }
     /*document.execCommand('copy');对input和textarea比较有效，所以还是创建一个隐藏的textarea*/
-            function copyTextToClipboard(title,text) {
+            function copyTextToClipboard(title,text){
                 var textArea = document.createElement("textarea");
                 /*设置样式*/  
                 textArea.style.position = 'fixed';
@@ -189,7 +229,7 @@
                 document.body.removeChild(textArea);
               }
 
-        return modal;
+        return m;
       
   }  
 
@@ -199,13 +239,20 @@
     $(document).on("click",that.options.trigger,function(){
   		  var $trigger = $(this);
         //判断是否有js tag标签
-        var tag = $trigger.siblings(".tag").length != 0;
+        var jsTag = that.haveTag($trigger.parents(".block")).script
+        
         var deviceType = that.device();
-        var modal = that.template({tag:tag,deviceType:deviceType});
+        
+        var modal = that.template(jsTag);
+
+        var areaWeb = ['800px','600px'],
+            areaMobile = [$(window).width()*.9+'px',$(window).height()*.8+'px'],
+            areaConfig = deviceType == "mobile" ? areaMobile : areaWeb;
+            
   		  layer.open({
   			  type: 1,
   			  skin: 'demo-class',  //给弹窗添加特殊的class设置样式
-  			  area: ['800px','600px'],
+  			  area: areaConfig,
           title:false/*"HCJ"*/,
   			  shadeClose: true,    //点击遮罩关闭
   			  content:modal,

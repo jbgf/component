@@ -10,13 +10,15 @@
 		
 }
 
-.hcj.line{height: 100%}
-.hcj #html,.hcj #css,.hcj #js{border:1px solid #DBD9D9;border-top: none;height: 100%;}
+.templateHCJ #html,.templateHCJ #css,.templateHCJ #js{
+    border: 1px solid #DBD9D9;
+    border-top: none;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
-.line>.block{height: 100%;}
-.hcj.line>.block>.line{height: 50%;}
-
-.hcj .title{
+.templateHCJ .title{
 	background: #ddd;
     color: black;
     padding: 6px 10px;
@@ -24,12 +26,11 @@
     font-weight: 700;
     text-transform: uppercase;
 }
-.hcj .content{
-	max-height: 250px;
-    overflow: auto;
-	padding:20px;
+.templateHCJ .content{
+    padding: 20px;
+    white-space: normal;
+    word-break: break-all;
 }
-
-.hcj #html .content{
+.templateHCJ #html .content{
 	max-height: 93%;
 }

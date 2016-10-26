@@ -26,6 +26,11 @@
 .line{
 	margin:0 -15px;
 }
+.column{float:left;}
+.block{
+	padding-left:15px;padding-right: 15px;float: left;position: relative;
+	min-height: 1px;
+}
 .block-1{width:100%;}
 .block-2{width:50%;}
 .block-3{width:33.3333333333%;}
@@ -34,11 +39,14 @@
 
 .container-auto:before,.container-auto:after,
 .container1200:before,.container1200:after,
+.column:before,.column:after,
 .line:before,.line:after,
 .block:before,.block:after{
 	content:" ";display:table;	
 }
+
 .container-auto:after,
+.column:after,
 .line:after,
 .block:after{
 	clear:both;
@@ -52,10 +60,7 @@
 
 .clear:before,.clear:after{content:" ";display:table;}
 .clear:after{clear:both;}
-.block{
-	padding-left:15px;padding-right: 15px;float: left;position: relative;
-	min-height: 1px;
-}
+
 
 
 /*color*/
