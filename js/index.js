@@ -115,7 +115,7 @@
   }
 
   set.prototype.haveTag = function($block){
-    var script = $block.find("script").length !=0;
+    var script = $block.find("script").length != 0 ;
     var plugin = $block.find("[data-plugin]").attr("data-plugin") || undefined;
     var caseName = $block.find("[data-plugin]").attr("data-p-caseName") || undefined;
     var state = {
@@ -158,6 +158,7 @@
           var rowColumn= $(target ).children("[class*='"+className+"']");
           
           rowColumn.each(function(index){
+            console.log(array[index])
             block(array[index],$(this),module);
           });
       
@@ -176,13 +177,11 @@
         var a01,a02,num,direction,
             shell = $('<div id="" class="templateHCJ container-p-15"></div>');
             isJs ?(a01 = ["html","css","js"],a02 = [1,2]):(a01 = ["html","css"],a02 = [1,1]);  
-            isMobile ?(num = isJs? 3 : 2, direction = "h" )
+            isMobile ?(num = isJs ? 3 : 2,a02 = isJs ? [1,1,1] : [1,1] , direction = "h" )
                      :(num = 2 , direction = "v" );
             
             that.frame(num,a02,shell,direction); 
-            content(shell);
-        
-            
+            content(shell); 
 
         var copyBtn = '<div class="copyBtn button btn-num01 margin-l-20" >C</div>';
             var m = $(shell).find(".title").append(copyBtn).end().prop("outerHTML");
