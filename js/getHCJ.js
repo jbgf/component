@@ -6,9 +6,9 @@
        //传入的triggerbtn
        this.triggerBtn = $(element);
        this.options = options;
-       this.index =$(this.options.trigger).index(this.triggerBtn);
-       this.box = this.triggerBtn.parent().next(".box");
+       this.box = this.triggerBtn.parent().siblings(".box");
        this.script = this.box.find("script").detach().html();
+
   }
 
   getHCJ.DEFAULTS = {
@@ -27,8 +27,9 @@
   
   getHCJ.prototype.getH = function (box){
     var that = this;
-	  var html = this.options.oh.length>0 ? this.options.oh[that.index] 
+	  var html = this.options.oh.length>0 ? this.options.oh
                :box.html();
+             
 	  $("#html .content").text(html);
 
   }
@@ -54,10 +55,10 @@
             //不要base.css,从1开始。
             for (var i = 1; i < sheets.length; i++) {
                 var rules = sheets[i].rules || sheets[i].cssRules;
+            //不要ui库的样式表，不要本插件使用的弹窗插件layer的样式表      
+                if(sheets[i].ownerNode.className == "ui" || sheets[i].ownerNode.id == "layui_layer_skinlayercss"){continue}
                 for (var r in rules){
-
                     if (a.matches(rules[r].selectorText)) {
-                        
                         o.push(rules[r].cssText);
                     }
                 }
@@ -95,7 +96,7 @@
     var that = this;
 	  var jsDiv = $("#js .content"); 
 	  var scriptText = that.script;
-    console.log(scriptText)
+   
     jsDiv.append(scriptText);
 	   
   }

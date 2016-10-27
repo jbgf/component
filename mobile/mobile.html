@@ -1,68 +1,254 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	
-	<link rel="stylesheet" type="text/css" href="/css/base.css">
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="/css/frame.css">
-	<link rel="stylesheet" type="text/css" href="/css/button.css">
-	<link rel="stylesheet" type="text/css" href="/css/barHeader.css">
-	<link rel="stylesheet" type="text/css" href="/css/index.css">
-	<link rel="stylesheet" type="text/css" href="/css/mobile.css">
-	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="/js/layer/layer.js"></script>
-	<script type="text/javascript" src="/js/index.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			$("#mobile").set({
-				brandName:"mobile",
-				rowBlock:1
-			});
-		});
-		
-	</script>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link class="ui" rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/frame.css">
+    <link rel="stylesheet" type="text/css" href="/css/button.css">
+    <link rel="stylesheet" type="text/css" href="/css/barHeader.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile.css">
+    <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $("#mobile").set({
+            brandName: "mobile",
+            rowBlock: 1
+        });
+    });
+    </script>
 </head>
-<body >
-	<div id="mobile" class="container">
-		<div class="box" data-fixed="top">	
-			
-				<nav class="m-navbar-01 "  role="navigation">
-				    
-				    <div class="navbar-header bg-blue03">
-				        <button type="button" class="navbar-t-btn" >
-				            <span class="sr-only">切换导航</span>
-				            <span class="icon-bar"></span>
-				            <span class="icon-bar"></span>
-				            <span class="icon-bar"></span>
-				        </button>
-				        <a class="navbar-brand" href="#"></a>
-				    </div>
-				    <div class="navbar-collapse02" id="navbar-collapse02">
-				        <ul class="">
-				            <li class="item item00 active"><a href="#">首页</a></li>
-				            <li class="item item01"><a href="#">关于我们</a></li>
-				            <li class="item item2"><a href="#">产品检测范围</a></li>
-				            <li class="item item3"><a href="#">服务支持</a></li>
-				            <li class="item item4"><a href="#">资讯中心</a></li>
-				            <li class="item item4"><a href="#"> 信息公开</a></li>
-				        </ul>
-				    </div>
-				 
-				</nav>
-			<script type="text/javascript">
-				$(document).on("click",".navbar-t-btn",function(){
-					var c = document.getElementsByClassName("m-navbar-01")[0].className;
-					var s = c.indexOf("open") !== -1 ;
-					$(".m-navbar-01")[s?"removeClass":"addClass"]("open");
-				})
-			</script>
-		</div>
-	</div>	
-	
-	
-	
+
+<body>
+    <div id="mobile" class="container">
+        <div class="box" data-fixed="top">
+            <nav class="m-navbar-01 " role="navigation">
+                <div class="navbar-header bg-blue03">
+                    <button type="button" class="navbar-t-btn">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <div class="navbar-collapse02" id="navbar-collapse02">
+                    <ul class="">
+                        <li class="item item00 active"><a href="#">首页</a></li>
+                        <li class="item item01"><a href="#">关于我们</a></li>
+                        <li class="item item2"><a href="#">产品检测范围</a></li>
+                        <li class="item item3"><a href="#">服务支持</a></li>
+                        <li class="item item4"><a href="#">资讯中心</a></li>
+                        <li class="item item4"><a href="#"> 信息公开</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <script type="text/javascript">
+            $(document).on("click", ".navbar-t-btn", function() {
+                var c = document.getElementsByClassName("m-navbar-01")[0].className;
+                var s = c.indexOf("open") !== -1;
+                $(".m-navbar-01")[s ? "removeClass" : "addClass"]("open");
+            })
+            </script>
+        </div>
+        <div class="box">
+        	<div class="row m-testRange01">
+	            <a class="moreLink gray float-r"><i class="glyphicon glyphicon-chevron-right"></i></a>
+	            <div class="tRange ">产品检测范围</div>  
+	        </div>
+        </div>
+        <div class="box">
+        	<!-- m-news01 start -->
+		      <div class="m-news01" data-ui="swiper" data-plugin="swiper" data-p-casename="mNewsTab01">
+		          <!-- swiper group start-->    
+		                  <div class="swiperGroup01 container" >
+		                      <div class="row">
+		                        <div id="swiper-container02" class="swiper-container float-l ">
+		                                <div class="tabRow swiper-wrapper">
+		                                    <div class="tab swiper-slide">新闻专题</div>
+		                                    <div class="tab swiper-slide">行业观察</div>
+		                                    <div class="tab swiper-slide">政策法规</div>
+		                                    <div class="tab swiper-slide">政策法规02</div>
+		                                </div>
+		                        </div>
+		                        <a class="moreLink gray"><i class="glyphicon glyphicon-chevron-right"></i></a>
+		                      </div>
+		                      <div class="row">
+		                        <div id="swiper-container03" class="swiper-container ">
+		                            <div class="swiper-wrapper ">
+		                                <div class="swiper-slide content-p">
+		                                    <div class="newsPic">
+		                                        <img src="/img/nav01.png">
+		                                        <p class="newsPic_t">中国海运服务业服务贸易长期处于逆差状态</p>
+		                                    </div>
+
+		                                    <div class="news-list01">
+		                                        <ul>
+		                                            <li><a>
+		                                            <span class="margin-t-2 float-r gray"><i class="glyphicon glyphicon-chevron-right"></i></span>  
+		                                            <span class="list-text ellipsis">中国海运服务业服务贸易长期处于逆差状态易长期处于逆差状态易长期处于逆差状态</span>   
+		                                            
+		                                            </a></li>
+		                                            <li><a>
+		                                            <span class="float-r gray"><i class="glyphicon glyphicon-chevron-right"></i></span>  
+		                                            <span class="list-text ellipsis">中国海运服务业服务贸易长期处于逆差状态</span>   
+		                                            
+		                                            </a></li>
+		                                            <li><a>
+		                                            <span class="float-r gray"><i class="glyphicon glyphicon-chevron-right"></i></span>  
+		                                            <span class="list-text ellipsis">中国海运服务业服务贸易长期处于逆差状态</span>   
+		                                            
+		                                            </a></li>
+		                                            
+		                                        </ul>  
+		                                    </div>
+		                                  
+		                                </div>
+		                                <div class="swiper-slide content-p">
+		                                    <div class="newsPic">
+		                                        <img src="/img/nav01.png">
+		                                        <p class="newsPic_t">中国海运服务业服务贸易长期处于逆差状态</p>
+		                                    </div>
+		                                </div>
+		                                <div class="swiper-slide content-p">
+		                                    <div class="newsPic">
+		                                        <img src="/img/nav01.png">
+		                                        <p class="newsPic_t">中国海运服务业服务贸易长期处于逆差状态</p>
+		                                    </div>
+		                                </div>
+		                                <div class="swiper-slide content-p">
+		                                    <div class="newsPic">
+		                                        <img src="/img/nav01.png">
+		                                        <p class="newsPic_t">中国海运服务业服务贸易长期处于逆差状态</p>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                      </div>
+		                  </div>
+		          <!-- swiper group END-->
+		                  <div class="more-Row bg-light-gray02">查看更多</div>
+
+		      </div>
+		    <!-- m-news01 end -->
+		    <script type="text/javascript">
+		    	function mNewsTab01(){
+		    		//首页news tab切换
+					tab_index("#swiper-container02",3,"#swiper-container03");
+			    	function tab_index(tab,perView,slider){
+							if($(tab).length == 0)return;
+					    	var mySwiper02 = new Swiper (tab, {
+							    /*autoplay:5000,*/
+							    loop: true,
+							    slidesPerView:perView,
+							    slideToClickedSlide:true,
+							})
+							
+							var num01 = $(slider).find(".swiper-slide").length;
+
+							var mySwiper03 = new Swiper (slider, {
+							    loop: true,
+							    slidesPerView:1,
+							    autoHeight: true,
+							    loopAdditionalSlides:(mySwiper02.slides.length-num01)/2-1   //复制后的slide数量要一样
+							})
+							mySwiper02.params.control = mySwiper03;  /*双向控制*/
+							mySwiper03.params.control = mySwiper02;
+					}
+				}
+		    </script>
+        </div>
+        <div class="box">
+            <div class="m-iconLink01 container" data-ui="bootstrap">
+                <div class="row">
+                    <div class="col-xs-4 link-zone">
+                        <a class="link-wrapper">
+                            <div class="Linkpic">
+                                <img class="img-center" src="/img/icon001.png">
+                            </div>
+                            <div class="LinkText">关于我们</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 link-zone">
+                        <a class="link-wrapper">
+                            <div class="Linkpic">
+                                <img class="img-center" src="/img/icon002.png">
+                            </div>
+                            <div class="LinkText">产品检测范围</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 link-zone">
+                        <a class="link-wrapper">
+                            <div class="Linkpic">
+                                <img class="img-center" src="/img/icon003.png">
+                            </div>
+                            <div class="LinkText">服务支持</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-4  link-zone">
+                        <a class="link-wrapper">
+                            <div class="Linkpic">
+                                <img class="img-center" src="/img/icon004.png">
+                            </div>
+                            <div class="LinkText">资讯中心</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-4  link-zone">
+                        <a class="link-wrapper">
+                            <div class="Linkpic">
+                                <img class="img-center" src="/img/icon005.png">
+                            </div>
+                            <div class="LinkText">信息公开</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 link-zone">
+                        <a class="link-wrapper">
+                            <div class="Linkpic">
+                                <img class="img-center" src="/img/icon006.png">
+                            </div>
+                            <div class="LinkText">联系我们</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <!-- slider begin -->
+            <div class="m-slideBox01" data-ui="swiper" data-plugin="swiper" data-p-casename="mBanner01">
+                <!-- swiper -->
+                <div id="webBannerBox" class="webBannerBox  ">
+                    <div id="swiper-container01" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/img/nav01.png"></div>
+                            <div class="swiper-slide"><img src="/img/nav01.png"></div>
+                            <div class="swiper-slide"><img src="/img/nav01.png"></div>
+                        </div>
+                        <!-- 如果需要分页器 -->
+                        <div id="swiper-pagination01" class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <!-- swiper END-->
+            </div>
+            <!-- slider end -->
+            <script type="text/javascript">
+            //banner swiper轮播
+            function mBanner01() {
+                var mySwiper = new Swiper('#swiper-container01', {
+                    autoplay: 5000,
+                    loop: true,
+                    pagination: '#swiper-pagination01'
+
+                })
+            }
+            </script>
+        </div>
+    </div>
 </body>
+
 </html>

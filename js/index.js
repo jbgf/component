@@ -13,7 +13,11 @@
     trigger: ".get",
     rowBlock:4,
     'js_array' : {
-         "superslide":"/js/jquery.SuperSlide.2.1.1.js"
+         "superslide":"/js/jquery.SuperSlide.2.1.1.js",
+         "swiper":"/js/swiper.min.js"
+    },
+    'css_array': {
+         "swiper":"/css/swiper.min.css"
     }
   }	
   
@@ -58,18 +62,21 @@
     $(".brandName ").html(brandName);
     
   	if(box.length != 0){
-  		var btnRow = $('<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>')	
-  		box.before(btnRow);
+  		
+  		/*box.before(btnRow);*/
       block.each(function(index,ele){
+        var btnRow = $('<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>');  
         var status = that.haveTag($(ele));
         var s = status.script;
         var p = status.plugin;
-        var mt = $(box[index]).data("fixed")=="top";
+        var position = status.fixedPosition;
+        $(box[index])[position == "top" ? "after" : "before" ](btnRow);
+        
         var caseName = status.caseName; 
         var stag ;
         var ptag,caseNameTag;
         var headRow = $(ele).find(".headRow");
-            headRow.css("margin-top",mt?"50px":"");
+            headRow.css("margin-top",position == "top"?"30px":"");
 /*添加标签*/
 
         s?(
@@ -81,11 +88,13 @@
           ptag = $("<span class='tag button green'>"+p+"</span>"),
           caseNameTag = $("<span class='tag button green'>"+caseName+"</span>"),
           headRow.append(ptag,caseNameTag),
-          that.originalH.push($(ele).find(".box").clone().find("script").remove().end().html()),
-          $.getScript(that.options.js_array[p],function(){window[caseName]()})
+          
+          $.getScript(that.options.js_array[p],function(){window[caseName]()}),
+          that.options.css_array ? $("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[p]+'>') : " "
           
           )
         :"";
+        that.originalH.push($(ele).find(".box").clone().find("script").remove().end().html());
       })
   		$.getScript("/js/getHCJ.js",function(){
   			  that.modalWindow();
@@ -115,13 +124,15 @@
   }
 
   set.prototype.haveTag = function($block){
-    var script = $block.find("script").length != 0 ;
+    var script = $block.find(".tag").length != 0 || $block.find("script").length != 0;
     var plugin = $block.find("[data-plugin]").attr("data-plugin") || undefined;
     var caseName = $block.find("[data-plugin]").attr("data-p-caseName") || undefined;
+    var fixedPosition = $block.find("[data-fixed]").attr("data-fixed") || undefined;
     var state = {
       script:script,
       plugin:plugin,
-      caseName:caseName
+      caseName:caseName,
+      fixedPosition:fixedPosition
     };
 
     return state;
@@ -146,7 +157,7 @@
       */
       var propertyOne,propertyTwo,className;
           if(module == "v"){propertyOne = "width";propertyTwo = "height"; className = "column"};
-          if(module == "h"){propertyOne = "height";propertyTwo = "width";className = "line"};
+          if(module == "h"){propertyOne = "height";propertyTwo = "width";className = "row02"};
           var data = {propertyOne : "width",propertyTwo : "height" ,className :"column"};
           //行列
           for(var i=0;i<num;i++){
@@ -158,7 +169,7 @@
           var rowColumn= $(target ).children("[class*='"+className+"']");
           
           rowColumn.each(function(index){
-            console.log(array[index])
+           
             block(array[index],$(this),module);
           });
       
@@ -170,23 +181,37 @@
           };
       };
   }
-  set.prototype.template = function(jsTag){
+  set.prototype.copyBoard = function(jsTag){
         var that = this;
         var isJs = jsTag;
-        var isMobile = that.options.deviceType == "mobile";
-        var a01,a02,num,direction,
-            shell = $('<div id="" class="templateHCJ container-p-15"></div>');
-            isJs ?(a01 = ["html","css","js"],a02 = [1,2]):(a01 = ["html","css"],a02 = [1,1]);  
-            isMobile ?(num = isJs ? 3 : 2,a02 = isJs ? [1,1,1] : [1,1] , direction = "h" )
-                     :(num = 2 , direction = "v" );
-            
-            that.frame(num,a02,shell,direction); 
-            content(shell); 
 
-        var copyBtn = '<div class="copyBtn button btn-num01 margin-l-20" >C</div>';
-            var m = $(shell).find(".title").append(copyBtn).end().prop("outerHTML");
+        var isMobile = that.options.deviceType == "mobile";
+        var a01,a02,num,direction,toggleBtn,
+            shell = $('<div id="" class="templateHCJ padding-t-15"></div>');
+            isJs ?(a01 = ["html","css","js"],a02 = [1,2]):(a01 = ["html","css"],a02 = [1,1]);  
+            if(isMobile){
+              num = isJs ? 3 : 2;
+              a02 = isJs ? [1,1,1] : [1,1] ;
+              direction = "h";
+              toggleBtn = '<span class="toggleBtn01 button float-r blue">【详细】</span>';
+              shell.addClass("mobile");
+
+              $(document).off("click.toggle").on("click.toggle",".toggleBtn01",function(){
+                  /*shell 点击按钮是，页面已加载shell；*/
+                  var content = $(this).closest(".block").find(".content");
+                      content.toggleClass("open");                 
+              })
+            }
+            else{
+              num = 2 ; 
+              direction = "v" ;
+            };
+               
+            that.frame(num,a02,shell,direction); 
+            var m = content(shell); 
             
-            $(document).on("click",".copyBtn",function(){
+            $(document).off("click.copy").on("click.copy",".copyBtn",function(){
+                
                 var text = $(this).parents(".title").siblings(".content").text();
                 var title = this.previousSibling.wholeText;
                 copyTextToClipboard(title,text);
@@ -194,10 +219,14 @@
 
             function content(s){
                 var b = s.find(".block");
+                var copyBtn = '<div class="copyBtn button btn-num01 margin-l-20" >C</div>';
+                var titleBtnRow = copyBtn + (toggleBtn || '');
+
                 $.each(a01,function(i,e){
-                  b.eq(i).append('<div id='+e+'><div class="title">'+e+'</div><div class="content"></div></div>');
-                });     
-            }
+                  b.eq(i).append('<div id='+e+'><div class="title">'+e+titleBtnRow+'</div><div class="content"></div></div>');
+                });
+                return $(shell).prop("outerHTML");     
+            } 
     /*document.execCommand('copy');对input和textarea比较有效，所以还是创建一个隐藏的textarea*/
             function copyTextToClipboard(title,text){
                 var textArea = document.createElement("textarea");
@@ -220,13 +249,13 @@
                 try {/*复制*/
                   var successful = document.execCommand('copy');
                   var msg = successful ? 'successful' : 'unsuccessful';
-                  layer.msg('Copying '+title+' command was ' + msg);
+                  layer.msg('Copying '+title+' command was ' + msg );
                 } catch (err) {
                   layer.msg('Oops, unable to copy');
                 }
 
                 document.body.removeChild(textArea);
-              }
+            }
 
         return m;
       
@@ -239,10 +268,11 @@
   		  var $trigger = $(this);
         //判断是否有js tag标签
         var jsTag = that.haveTag($trigger.parents(".block")).script
-        
+        var i = $(that.options.trigger).index($trigger);
+
         var deviceType = that.device();
         
-        var modal = that.template(jsTag);
+        var modal = that.copyBoard(jsTag);
 
         var areaWeb = ['800px','600px'],
             areaMobile = [$(window).width()*.9+'px',$(window).height()*.8+'px'],
@@ -257,7 +287,7 @@
   			  content:modal,
   		  	success: function(layero, index){
   			    		 $trigger.getHCJ({
-                                  oh:that.originalH,
+                                  oh:that.originalH[i],
                                   trigger:that.options.trigger
                  });
   			  }	

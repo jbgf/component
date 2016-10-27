@@ -62,7 +62,6 @@
 .clear:after{clear:both;}
 
 
-
 /*color*/
 .white{color:#fff;}
 .blue{color:#0c8ae1;}
@@ -71,6 +70,7 @@
 .gray{color:#C2C1C1;}
 .black{color:#333;}
 
+.bg-light-gray02{background-color: #f0f0f0;}
 .bg-gray{background:#e1e9f6;}
 .bg-blue{background:#1978cf;}
 .bg-blue03{background-color: #1978cf;}
@@ -85,6 +85,7 @@
 
 .padding-15{padding-left: 15px;padding-right: 15px;}
 .padding-37{padding-left:37px;padding-right:37px;}
+.padding-t-15{padding-top: 15px;}
 .padding-r-25{padding-right: 25px;}
 
 
@@ -109,3 +110,5 @@
 .margin-l-300{margin-left: 300px}
 .margin-l-308{margin-left: 308px}
 .margin-l-493{margin-left: 493px}
+
+
