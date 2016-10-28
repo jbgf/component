@@ -90,7 +90,6 @@
   		$.getScript("/js/getHCJ.js",function(){
   			  that.modalWindow();
   		});
-  		
   	}
   }
 
