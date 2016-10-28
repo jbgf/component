@@ -23,79 +23,70 @@
   
   set.prototype.ini = function (){
     var that = this;
-    that.options = $.extend({},that.options,{deviceType:that.device()})
-
+        that.options = $.extend({},that.options,{deviceType:that.device()});
     var box = that.container.find(".box");
     var brandName = this.options.brandName || "组件";
     var rowNum = this.options.rowBlock;
     var bn_temp_array = [];
-    var node_array = [];
-    var count = 0;
-    //box数量 = 组件数量；
-    var boxNum = box.length;
-    var className = 'block block-'+rowNum+'';
-    
+    var node_array = [];    
+
+//开头的brand    写组件名
+    $(".brandName ").html(brandName);
     box.each(function(i,e){
-      var bn = $(e).attr("data-block") || rowNum;
+        var bn = $(e).attr("data-block") || rowNum;
           if(bn){
-            var classNameNew = 'block block-'+bn+'';
+            var classNameNew = 'block block-'+bn+' frameBlock';
             $(e).wrap(function() {
                    return "<div class='"+ classNameNew +"'></div>";
             });
             if($.inArray(bn, bn_temp_array) == -1){
                 node_array[bn] = [] ;
-                node_array[bn].push($(e).parent(".block"));                
+                node_array[bn].push($(e).parent(".frameBlock"));                
                 bn_temp_array.push(bn);   
             }else{
                 if(node_array[bn])
-                node_array[bn].push($(e).parent(".block"));
+                node_array[bn].push($(e).parent(".frameBlock"));
             }
           }
+        var block = $(e).parents(".frameBlock");
+        var btnRow = '<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>';  
+        var status = that.haveTag(block);
+        var s = status.script;
+        var p = status.plugin;
+        var u = status.ui;
+        var position = status.fixedPosition;
+
+        $(e)[position == "top" ? "after" : "before" ](btnRow);
+        
+        var caseName = status.caseName; 
+        var stag,ptag,uiTag,caseNameTag,tagLine = "" ;
+       
+/*添加标签*/
+        u?tagLine += uiTag = "<span class='tag tag-blue  blue'>UI: "+u+"</span>":"";
+        s?
+          tagLine += stag = "<span class='tag tag-green  green'>Javascript</span>":"";
+
+        //因为调用插件方法，可能会改变文档结构，所以先获取插件调用前的html。  
+        p?(
+          tagLine += ptag = "<span class='tag tag-red  red'>"+p+"</span>",
+          tagLine += caseNameTag = "<span class='tag tag-red  red'>"+caseName+"</span>",
+          that.options.css_array ? $("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[p]+'>') : " ",
+          $.getScript(that.options.js_array[p],function(){window[caseName]()})
+          
+          )
+        :"";
+        var headRow = block.find(".headRow");
+            headRow.css("margin-top",position == "top"?"30px":"");
+        if(tagLine !="")headRow.append(tagLine);
+
+        that.originalH.push($(e).clone().find("script").remove().end().html());    
+
     })
     for(var i = 0 ;i<node_array.length;i++){
        if(node_array[i]){that.divide(node_array[i],i);}
     }
-    var block = that.container.find(".block");
 
-
-//开头的brand    写组件名
-    $(".brandName ").html(brandName);
-    
   	if(box.length != 0){
-  		
-  		/*box.before(btnRow);*/
-      block.each(function(index,ele){
-        var btnRow = $('<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>');  
-        var status = that.haveTag($(ele));
-        var s = status.script;
-        var p = status.plugin;
-        var position = status.fixedPosition;
-        $(box[index])[position == "top" ? "after" : "before" ](btnRow);
-        
-        var caseName = status.caseName; 
-        var stag ;
-        var ptag,caseNameTag;
-        var headRow = $(ele).find(".headRow");
-            headRow.css("margin-top",position == "top"?"30px":"");
-/*添加标签*/
-
-        s?(
-          stag = $("<span class='tag button green'>Javascript</span>"),  
-          headRow.append(stag)):"";
-
-        //因为调用插件方法，可能会改变文档结构，所以先获取插件调用前的html。  
-        p?(
-          ptag = $("<span class='tag button green'>"+p+"</span>"),
-          caseNameTag = $("<span class='tag button green'>"+caseName+"</span>"),
-          headRow.append(ptag,caseNameTag),
-          
-          $.getScript(that.options.js_array[p],function(){window[caseName]()}),
-          that.options.css_array ? $("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[p]+'>') : " "
-          
-          )
-        :"";
-        that.originalH.push($(ele).find(".box").clone().find("script").remove().end().html());
-      })
   		$.getScript("/js/getHCJ.js",function(){
   			  that.modalWindow();
   		});
@@ -128,11 +119,13 @@
     var plugin = $block.find("[data-plugin]").attr("data-plugin") || undefined;
     var caseName = $block.find("[data-plugin]").attr("data-p-caseName") || undefined;
     var fixedPosition = $block.find("[data-fixed]").attr("data-fixed") || undefined;
+    var ui = $block.find("[data-ui]").attr("data-ui") || undefined;
     var state = {
       script:script,
       plugin:plugin,
       caseName:caseName,
-      fixedPosition:fixedPosition
+      fixedPosition:fixedPosition,
+      ui:ui
     };
 
     return state;

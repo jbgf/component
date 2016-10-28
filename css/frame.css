@@ -68,6 +68,7 @@
 .green {color: #6eb92b;}
 .orange{color:#ff8702;}
 .gray{color:#C2C1C1;}
+.red{color: #ec5369;}
 .black{color:#333;}
 
 .bg-light-gray02{background-color: #f0f0f0;}
@@ -92,11 +93,13 @@
 .padding-l-64{padding-left: 64px;}
 
 .marin-t-7{margin-top: 7px;}
+.margin-r-20 {margin-right: 20px;}
 .margin-r-328{margin-right: 328px;}
 .margin-r-350{margin-right:350px}
 .margin-r-360{margin-right:360px}
 
 .margin-l-8{margin-left: 8px}
+.margin-l-10{margin-left: 10px}
 .margin-l-20{margin-left: 20px}
 .margin-l-40{margin-left: 40px}
 .margin-l-150{margin-left: 150px;}

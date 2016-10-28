@@ -4,7 +4,7 @@
 }
 
 .headRow{padding:10px 0;border-bottom:1px solid #ddd;margin-bottom: 10px;}
-.headRow .tag{margin-top: 5px;margin-left: 10px;}
+
 /*定制layer.js插件的skin即特定的样式*/
 .demo-class .layui-layer-content{
 		

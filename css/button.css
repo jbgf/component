@@ -55,13 +55,26 @@
     z-index: 99;
     position: relative;
 }
-.tag{
+
+.tag{margin-left: 10px;margin-top: 5px;}
+.tag-green{
     border:1px solid #6eb92b;
     border-radius: 10px;
     padding:0px 10px;
     display: inline-block;
 }
-
+.tag-blue{
+    border:1px solid #1978CF;
+    border-radius: 10px;
+    padding:0px 10px;
+    display: inline-block;
+}
+.tag-red{
+    border:1px solid #ec5369;
+    border-radius: 10px;
+    padding:0px 10px;
+    display: inline-block;
+}
 /*btn-num01 start*/
 .btn-num01{
     width: 25px;
@@ -77,6 +90,19 @@
 .btn-num01:active{background-color: #69A237;}
 /*btn-num01 end*/
 
+/*btn-num02 start*/
+.btn-num02 {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 12px;
+    background-color: #fff;
+    color: #c8c8c8;
+    display: inline-block;
+}
+/*btn-num02 end*/
 
     
     
