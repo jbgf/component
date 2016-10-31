@@ -14,7 +14,8 @@
     rowBlock:4,
     'js_array' : {
          "superslide":"/js/jquery.SuperSlide.2.1.1.js",
-         "swiper":"/js/swiper.min.js"
+         "swiper":"/js/swiper.min.js",
+         "affix-m":"/js/affix-m.js"
     },
     'css_array': {
          "swiper":"/css/swiper.min.css"
@@ -72,8 +73,8 @@
           tagLine += caseNameTag = "<span class='tag tag-red  red'>"+caseName+"</span>",
           p in that.options.css_array 
           ? ($("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[p]+'>'),
-             tagLine += uiTag = "<span class='tag tag-blue  blue'>UI: "+u+"</span>"): " ",
-          $.getScript(that.options.js_array[p],function(){window[caseName]()})
+             tagLine += uiTag = "<span class='tag tag-blue  blue'>UI: "+p+"</span>"): " ",
+          $.getScript(that.options.js_array[p],function(){if(caseName)window[caseName]()})
          
           )
         :"";

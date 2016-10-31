@@ -5,8 +5,9 @@
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    
     <link class="ui" rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
     <link rel="stylesheet" type="text/css" href="/css/frame.css">
     <link rel="stylesheet" type="text/css" href="/css/button.css">
     <link rel="stylesheet" type="text/css" href="/css/barHeader.css">
@@ -17,6 +18,15 @@
     <script type="text/javascript" src="/js/index.js"></script>
     <script type="text/javascript">
     $(function() {
+    	$(window).on("load resize",function(){
+			htmlFontSize();
+		})
+		function htmlFontSize (){
+		          var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+		              if(clientWidth > 640) clientWidth = 640;
+		              document.documentElement.style.fontSize = clientWidth * 1/23/*16*/+"px";
+		              return clientWidth * 1/23;
+		};
         $("#mobile").set({
             brandName: "mobile",
             rowBlock: 1
@@ -102,7 +112,7 @@
         </div>
         <div class="box">
         	<!-- m-news01 start -->
-		      <div class="m-news01" data-ui="swiper" data-plugin="swiper" data-p-casename="mNewsTab01">
+		      <div class="m-news01"  data-plugin="swiper" data-p-casename="mNewsTab01">
 		          <!-- swiper group start-->    
 		                  <div class="swiperGroup01 container" >
 		                      <div class="row">
@@ -257,7 +267,7 @@
         </div>
         <div class="box">
             <!-- slider begin -->
-            <div class="m-slideBox01" data-ui="swiper" data-plugin="swiper" data-p-casename="mBanner01">
+            <div class="m-slideBox01" data-plugin="swiper" data-p-casename="mBanner01">
                 <!-- swiper -->
                 <div id="webBannerBox" class="webBannerBox  ">
                     <div id="swiper-container01" class="swiper-container">
@@ -284,6 +294,87 @@
                 })
             }
             </script>
+        </div>
+        <div class="box" data-fixed="bottom">
+        	<!-- floatwindow start -->
+	        <div class="affix_p_sideBar" data-plugin="affix-m" data-p-casename="affixSideBar01" >
+		          <div class="sideBarBtn blue"><i class="glyphicon glyphicon-th-list"></i></div>
+		          <div class="siderBar01">
+		                <ul class="">
+		                    <li class="item"><a><i class="iconfont">&#xe605;</i>首页    </a></li>
+		                    <li class="item"><a><i class="iconfont">&#xe609;</i>关于我们</a></li>
+		                    <li class="item"><a class="on"><i class="iconfont">&#xe60b;</i>产品检测范围</a></li>
+		                    <li class="item"><a><i class="iconfont02">&#xe653;</i>服务支持 </a></li>
+		                    <li class="item"><a><i class="iconfont">&#xe604;</i>资讯中心 </a></li>
+		                    <li class="item"><a><i class="iconfont">&#xe606;</i>信息公开 </a></li>
+		                </ul>
+		          </div>
+	        </div>
+	 		<!-- floatwindow end -->
+	 		<script type="text/javascript">
+	 			function affixSideBar01(){
+	 					
+				    	$(".affix_p_sideBar").Affix({
+					        offset:{
+					        	top:$(".navbar-header").height(),	
+					            bottom: $('.footer').innerHeight()
+					        }
+					    });
+					    
+					    /*sideBar*/
+						$(".sideBarBtn").on("tap click",function(){
+					              $(".affix_p_sideBar .siderBar01").toggleClass("on");
+					              background(this);
+					    });
+					    function background(trigger){
+							var b = $(".bg");
+							if(b.length == 0){
+								b = $("<div class='bg'/>");
+								b.appendTo("body");	
+								b.on("tap click",function(){$(trigger).trigger("tap")});
+							}
+							b.toggleClass("on");
+						}
+				    
+	 			}
+	 		</script>
+  
+        </div>
+        <div class="box" data-fixed="bottom">
+        	<!-- footer start -->
+		   <div class="footer padding-t-65" data-plugin="affix-m" data-p-casename="affixBottomBar01">
+		      <div class="affix_p_bottom">
+		            <div class="bottomBar bg-blue white clearfix" >
+		                <a class="bb_btn bg-blue" href="" style="border-right:1px solid #4c8dc5">
+		                <i class="glyphicon glyphicon-search" style="margin-top: .3rem;"></i>
+		                报告查询
+		                </a>
+		                <a class="bb_btn bg-blue" href="" >
+		                <i class="glyphicon glyphicon-phone-alt"></i>
+		                联系我们
+		                </a>
+		            </div>
+		      </div>
+		      <div class="f_content bg-blue">
+		            <p class="white tech_surport">福建出入境检验检疫局检验检疫技术中心</p>
+		            <p class="white tech_surport">版权所有Copyright &copy;2016</p>
+		            <p class="white tech_surport">闽公网安备 35010202000106号</p>
+		            <p class="white tech_surport">闽ICP备14020747号-1</p>  
+		          <p class="white tech_surport">技术支持：润商网络</p>
+		      </div>
+		   </div>
+		   <!-- footer end -->
+		   <script type="text/javascript">
+		   		function affixBottomBar01(){
+
+				    $(".affix_p_bottom").Affix({
+				        offset:{
+				            bottom: $('.f_content').innerHeight()
+				        }
+				    })
+
+		   		}
+		   </script>
         </div>
     </div>
 </body>

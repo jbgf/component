@@ -205,3 +205,82 @@ margin-top: 100%; /* margin 百分比相对父元素宽度计算 */
 }
 
 /*typeRow end*/
+
+/*affix_p_bottom start*/
+.f_content{padding:1.5rem 0;}
+.f_content .tech_surport{font-size: 1rem;text-align: center;padding:.3rem 0 0 0;}
+.b_logo{
+  padding:0 0 1.5rem 0 ;
+  width: 57%;
+  margin: 0 auto;
+}
+
+/*bottomBar start*/
+.affix_p_bottom{position: relative;min-height: 1px;z-index: 98;}
+.affix_p_bottom.affix{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0; 
+}
+.affix_p_bottom .bottomBar{position: absolute;left: 0;right: 0;bottom: 0;}
+
+.bottomBar{z-index: 99;width: 100%;text-align: center;border-bottom:1px solid #4c8dc5}
+.bottomBar .bb_btn{width: 50%;float: left;height: 3rem;line-height: 3rem;}
+.bb_btn .glyphicon{font-size: 1rem;margin-right: .4rem;}
+.bb_btn .icon-sousuo{font-size: 1.3rem;}
+.bb_btn .icon-dianhua{font-size: 1.6rem}
+/*bottomBar end*/
+/*affix_p_bottom end*/
+
+/*.siderBar01 start*/
+.affix_p_sideBar .siderBar01{
+  position: fixed;left: 0;top: 0;
+  background:#f7fbff;  
+  height: 50%;
+  z-index: 99;  
+  width: 0;
+  visibility: hidden;
+  transition: all .1s;
+  opacity: 0;
+}  
+  
+.affix_p_sideBar .siderBar01.on{width: 45%;visibility: visible;opacity: 1;}
+.affix_p_sideBar .siderBar01 .item{}
+.affix_p_sideBar .siderBar01 .item a{
+  display: block;width: 100%;padding:.5rem 0 .5rem 1rem;
+  border-left: 3px solid transparent;
+  text-align: left;
+}
+.affix_p_sideBar .siderBar01 .item a.on{border-left: 3px solid #005bac;background-color: #cdddee}
+.affix_p_sideBar .siderBar01 .item a i{margin-right: .5rem}
+.affix_p_sideBar{position: relative;white-space: nowrap;z-index: 99;}
+.affix_p_sideBar.affix,
+.affix_p_sideBar.affix-top{
+  position: fixed;
+  bottom:3.5rem;
+  width: 100%;  
+  z-index: 99;
+  padding: .5rem 0 0 1rem;
+}
+.affix_p_sideBar.affix-top .siderBar01,
+.affix_p_sideBar.affix .siderBar01,
+.affix_p_sideBar.affix-bottom .siderBar01{top:50px; }
+.affix_p_sideBar .sideBarBtn .glyphicon{
+  font-size: 1.8rem;position:absolute;left: 1rem;
+  bottom:0;
+  top: auto;
+}
+
+.bg.on{
+  background-color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 98;
+  opacity: .5;
+}
+/*.siderBar01 start*/

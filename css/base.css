@@ -3,12 +3,12 @@ a{text-decoration: none;cursor: pointer;}
 a:visited{color:inherit;}
 a:link{color:inherit;}
 ul{list-style: none;}
-img{/*max-height:100%;*/max-width:100%;*height:100%;*width:100%;margin:auto;}
+img{/*max-height:100%;会导致百度地图不能用*/max-width:100%;*height:100%;*width:100%;margin:auto;}
  
 body{
 	font-family: 'Microsoft YaHei',"Helvetica Neue", Helvetica, 'Hiragino Sans GB',  'WenQuanYi Micro Hei', Arial,sans-serif;
 	overflow-x: hidden;
-	font: normal 12px/22px 宋体;
+	
     color: #666;
     }
 input{border:none;}
