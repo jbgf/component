@@ -70,11 +70,14 @@
         p?(
           tagLine += ptag = "<span class='tag tag-red  red'>"+p+"</span>",
           tagLine += caseNameTag = "<span class='tag tag-red  red'>"+caseName+"</span>",
-          that.options.css_array ? $("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[p]+'>') : " ",
+          p in that.options.css_array 
+          ? ($("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[p]+'>'),
+             tagLine += uiTag = "<span class='tag tag-blue  blue'>UI: "+u+"</span>"): " ",
           $.getScript(that.options.js_array[p],function(){window[caseName]()})
-          
+         
           )
         :"";
+
         var headRow = block.find(".headRow");
             headRow.css("margin-top",position == "top"?"30px":"");
         if(tagLine !="")headRow.append(tagLine);
@@ -119,12 +122,13 @@
     var caseName = $block.find("[data-plugin]").attr("data-p-caseName") || undefined;
     var fixedPosition = $block.find("[data-fixed]").attr("data-fixed") || undefined;
     var ui = $block.find("[data-ui]").attr("data-ui") || undefined;
+    /*data-ui 类似bootstrap这种*/
     var state = {
       script:script,
       plugin:plugin,
       caseName:caseName,
       fixedPosition:fixedPosition,
-      ui:ui
+      ui:ui                     
     };
 
     return state;

@@ -35,6 +35,93 @@
 	</div>	
 	
 	<div id="sliderBox" class="container1200">
+		<div class="box">
+			<div class="rangePic clear" data-plugin="superslide" data-p-casename="productSlider01">
+                               <div class="bd">
+                                 <ul>
+                                     <li >
+                                         <a class="rp-img">
+                                           <img src="/img/light-orange.png">
+                                           <div class="rp-bg">
+                                                <div class="num">01</div>
+                                                <div class="type">食品类
+                                                    <div class="b-line"></div>
+                                                </div>
+                                           </div>
+                                         </a>
+                                     </li>
+                                     <li>
+                                        <a class="rp-img on">
+                                           <img src="/img/light-orange.png">
+                                           <div class="rp-bg">
+                                                <div class="num">02</div>
+                                                <div class="type">水产类
+                                                    <div class="b-line"></div>
+                                                </div>
+                                           </div>
+                                         </a>
+                                     </li>
+                                     <li>
+                                        <a class="rp-img">
+                                           <img src="/img/light-orange.png">
+                                           <div class="rp-bg">
+                                                <div class="num">03</div>
+                                                <div class="type">动物及<br>动物产品类
+                                                    <div class="b-line"></div>
+                                                </div>
+                                                
+                                           </div>
+                                         </a>
+                                     </li>
+                                     <li>
+                                         <a class="other rp-img">
+                                           <img src="/img/light-orange.png">
+                                           <div class="rp-bg">
+                                                <div class="num">04</div>
+                                                <div class="type">其他类
+                                                    <div class="b-line"></div>
+                                                </div>
+                                           </div>
+                                         </a>
+                                     </li>
+                                     <li>
+                                         <a class="other rp-img">
+                                           <img src="/img/light-orange.png">
+                                           <div class="rp-bg">
+                                                <div class="num">04</div>
+                                                <div class="type">其他类
+                                                    <div class="b-line"></div>
+                                                </div>
+                                           </div>
+                                         </a>
+                                     </li>
+                                 </ul>
+                               </div> 
+                      </div>
+                      <script type="text/javascript">
+                      	function productSlider01(){
+                      		if($(".rangePic .bd li").length>4){
+					                jQuery(".rangePic").slide(
+					                	{titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:1,vis:4,trigger:"click",interTime:6000}
+					                	);
+					          }
+                      	}
+                      </script>
+                      <style type="text/css">
+                         .rangePic .bd li{
+                            width: 160px;
+                            float: left;
+                          }
+                          .range .rangePic .rp-img{
+                            width: 145px;
+                            display: block;
+                            margin: 0 auto;
+                            float: none;
+                          }
+                          
+                      </style>
+		</div>
+
 		<div class="box" data-block="3">
 			<!--新闻tab切换 start-->                               
                        <div id="textTab02" class="slideTxtBox textTab01 case02" data-plugin="superslide" data-p-casename="textTab02">

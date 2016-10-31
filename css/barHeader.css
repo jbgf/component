@@ -255,3 +255,18 @@
           }
 }
 /*wave-banner end*/
+
+/*header01 start*/
+.header01 {
+    padding: 25px 0 20px 0;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+}
+.header01 .h-title01 {
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+}
+.header .more {color: #888;}
+/*header01 end*/
