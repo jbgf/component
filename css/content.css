@@ -8,7 +8,14 @@
     padding-left: 15px;
     background:url(../img/iconbg02.png) no-repeat 0 50%;
 }
-.news-list01 li .date{ 
+.news-list01 li a .text{
+	width: 80%;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.news-list01 li a .date{ 
 	float:right;
 	color:#999;  }
 /*news-list01 end*/

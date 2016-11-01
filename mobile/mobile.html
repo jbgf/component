@@ -64,8 +64,156 @@
                 var c = document.getElementsByClassName("m-navbar-01")[0].className;
                 var s = c.indexOf("open") !== -1;
                 $(".m-navbar-01")[s ? "removeClass" : "addClass"]("open");
+
             })
+
             </script>
+        </div>
+        <div class="box">
+        	<div class="honorPic" data-plugin="equalHeights" data-p-casename="mhonorPic01">
+                  <div class="hp-item col-xs-6" ><img src="/img/nav01.png"></div>
+                  <div class="hp-item col-xs-6" ><img src="/img/nav01.png"></div>
+                  <div class="hp-item col-xs-6" ><img src="/img/nav01.png"></div>
+                  <div class="hp-item col-xs-6" ><img src="/img/nav01.png"></div>
+                  <div class="hp-item col-xs-6" ><img src="/img/nav01.png"></div>
+                  <div class="hp-item col-xs-6" ><img src="/img/n-pic.png"></div>
+                  <div class="hp-item col-xs-6" ><img src="/img/nav01.png"></div>
+                  <div class="hp-item col-xs-6" ><img src="/img/nav01.png"></div>
+                  <div class="hp-item col-xs-6" ><img src="/img/nav01.png"></div>
+                  
+            </div>
+            <script type="text/javascript">
+               function mhonorPic01(){
+            		$(".honorPic").equalHeights();
+               }	
+            </script>
+        </div>
+        <div class="box">
+        	<div class="m_header02 bg-blue container white text-center ">
+		        <a class="glyphicon glyphicon-chevron-left white" style="margin-left:-1rem;"></a>
+		        
+		        <a class="glyphicon glyphicon-home white float-r"></a>
+		    </div>
+        </div>
+        <div class="box">
+        	<!-- swiper group start-->    
+                  <div class="swiperGroup01 container text-color" data-plugin="swiper" data-p-casename="mNewsTab02">
+                      <div class="row">
+                        <div id="swiper-container04" class="swiper-container float-l ">
+                                <div class="tabRow swiper-wrapper">
+                                    <!-- <div class="tab swiper-slide">新闻专题</div>
+                                    <div class="tab swiper-slide">行业观察</div> -->
+                                    <div class="tab swiper-slide">1</div>
+                                    <div class="tab swiper-slide">中心动态2</div>
+                                    <div class="tab swiper-slide">政策法规3</div>
+                                    
+                                </div>
+                        </div>
+                       
+                      </div>
+                      <div class="row">
+                        <div id="swiper-container05" class="swiper-container ">
+                            <div class="swiper-wrapper ">
+                                 <!-- <div class="swiper-slide content-p"></div>
+                                 <div class="swiper-slide content-p"></div> -->
+                                 <div class="swiper-slide content-p">1</div>
+                                 <div class="swiper-slide content-p">2</div>
+                                <div class="swiper-slide content-p">
+                                    <div class="cnews-row clearfix">
+                                          <div class="cnews-pic float-l">
+                                            <img src="/img/nav01.png">
+                                          </div>
+                                          <div class="cnews-content">
+                                            <div class="cnews-title">国际商报：闽三中心获检验鉴定资质</div>
+                                            <div class="cnews-text">国际商报，本报讯福建检验检疫局加强技术中心系列实验室建设取得成效。近期，据国家质检总局发布公告...</div>
+                                          </div>
+                                    </div>
+
+                                    <div class="cnews-row clearfix">
+                                          <div class="cnews-pic float-l">
+                                            <img src="/img/nav01.png">
+                                          </div>
+                                          <div class="cnews-content">
+                                            <div class="cnews-title">国际商报：闽三中心获检验鉴定资质</div>
+                                            <div class="cnews-text">国际商报，本报讯福建检验检疫局加强技术中心系列实验室建设取得成效。近期，据国家质检总局发布公告...</div>
+                                          </div>
+                                    </div>
+
+                                    <div class="cnews-row clearfix">
+                                          <div class="cnews-pic float-l">
+                                            <img src="/img/nav01.png">
+                                          </div>
+                                          <div class="cnews-content">
+                                            <div class="cnews-title">国际商报：闽三中心获检验鉴定资质</div>
+                                            <div class="cnews-text">国际商报，本报讯福建检验检疫局加强技术中心系列实验室建设取得成效。近期，据国家质检总局发布公告...</div>
+                                          </div>
+                                    </div>
+
+                                    <div class="cnews-row clearfix">
+                                          <div class="cnews-pic float-l">
+                                            <img src="/img/nav01.png">
+                                          </div>
+                                          <div class="cnews-content">
+                                            <div class="cnews-title">国际商报：闽三中心获检验鉴定</div>
+                                            <div class="cnews-text ">国际商报，本报讯福建检验检疫局加强技术中心系列实验室建设取得成效。近期，据国家质检总局发布公告...</div>
+                                          </div>
+                                    </div>
+
+                                </div>
+                                  <style type="text/css">
+                           
+                         </style>
+                                
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+          <!-- swiper group END-->
+          			<script type="text/javascript">
+          				//center tab切换
+          			function mNewsTab02(){
+	          				var numPerView = $("#swiper-container04").find(".tab").length;
+							numPerView = numPerView <= 4 ? numPerView :4;
+							tab("#swiper-container04",numPerView,"#swiper-container05");
+							function tab(tab,perView,slider){
+									if($(tab).length == 0)return;
+									var num01 = $(slider).find(".swiper-slide").length;
+									var status = num01 > perView ? true : false;
+									var mySwiper02;	
+							    	if(status){
+							    		mySwiper02 = new Swiper (tab, {
+										    /*autoplay:5000,*/
+										    loop: status,
+										    slidesPerView:perView,
+										    slideToClickedSlide:true
+										})
+							    	}else{
+							    		$(tab).find(".swiper-slide").eq(0).addClass("swiper-slide-active")
+							    		$(tab).find(".swiper-slide").css("width",100/perView+"%").on("click",function(){
+							    			mySwiper03.slideTo( $(this).index())
+							    		});
+							    	}
+
+									var mySwiper03 = new Swiper (slider, {
+									    loop: status,
+									    onSlideChangeStart: function(swiper){
+									      if(!status){
+									      	    $(tab).find(".tab ").removeClass('swiper-slide-active')
+									            $(tab).find(".tab ").eq(swiper.activeIndex).addClass('swiper-slide-active') 	 	
+									      }
+									    },
+									    slidesPerView:1,
+									    autoHeight: true,
+									    loopAdditionalSlides:(status?mySwiper02.slides.length:num01-num01)/2-1   //复制后的slide数量要一样
+									})
+									if(status){
+										mySwiper02.params.control = mySwiper03;  /*双向控制*/
+										mySwiper03.params.control = mySwiper02;
+								    }
+							}
+	          		}
+					
+          			</script>
         </div>
         <div class="box">
 	          <div class="row m-testRange01">
@@ -103,6 +251,25 @@
 	            </div>
 	          </div>
 		     
+        </div>
+        <div class="box">
+        	<div class="m_header02 bg-blue container white leftBorder">
+		        关于我们
+		        <i class="glyphicon glyphicon-home float-r"></i>
+		    </div>
+        </div>
+        <div class="box">
+        	  <!-- logoRow end -->   
+		      <div class="relative-link container">
+		             <div class="row">
+		               <a class="l-item col-xs-4 bg-green white">中心简介</a>
+		               <a class="l-item col-xs-4 bg-green white">组织架构</a>
+		               <a class="l-item col-xs-4 bg-green white">中心资质</a>
+		               <a class="l-item col-xs-4 bg-green white">重点实验室介绍</a>
+		               <a class="l-item col-xs-4 bg-green white">中心文化</a>
+		               <a class="l-item col-xs-4 bg-green white">联系我们</a>
+		             </div>
+		      </div>
         </div>
         <div class="box">
         	<div class="row m-testRange01">
@@ -301,12 +468,12 @@
 		          <div class="sideBarBtn blue"><i class="glyphicon glyphicon-th-list"></i></div>
 		          <div class="siderBar01">
 		                <ul class="">
-		                    <li class="item"><a><i class="iconfont">&#xe605;</i>首页    </a></li>
-		                    <li class="item"><a><i class="iconfont">&#xe609;</i>关于我们</a></li>
-		                    <li class="item"><a class="on"><i class="iconfont">&#xe60b;</i>产品检测范围</a></li>
-		                    <li class="item"><a><i class="iconfont02">&#xe653;</i>服务支持 </a></li>
-		                    <li class="item"><a><i class="iconfont">&#xe604;</i>资讯中心 </a></li>
-		                    <li class="item"><a><i class="iconfont">&#xe606;</i>信息公开 </a></li>
+		                    <li class="item"><a><i class="glyphicon glyphicon-glass"></i>首页    </a></li>
+		                    <li class="item"><a><i class="glyphicon glyphicon-music"></i>关于我们</a></li>
+		                    <li class="item"><a class="on"><i class="glyphicon glyphicon-star"></i>产品检测范围</a></li>
+		                    <li class="item"><a><i class="glyphicon glyphicon-film"></i>服务支持 </a></li>
+		                    <li class="item"><a><i class="glyphicon glyphicon-facetime-video"></i>资讯中心 </a></li>
+		                    <li class="item"><a><i class="glyphicon glyphicon-adjust"></i>信息公开 </a></li>
 		                </ul>
 		          </div>
 	        </div>

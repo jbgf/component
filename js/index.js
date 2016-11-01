@@ -13,15 +13,42 @@
     trigger: ".get",
     rowBlock:4,
     'js_array' : {
-         "superslide":"/js/jquery.SuperSlide.2.1.1.js",
-         "swiper":"/js/swiper.min.js",
-         "affix-m":"/js/affix-m.js"
+         "superslide":{url:"/js/jquery.SuperSlide.2.1.1.js"},
+         "swiper":{url:"/js/swiper.min.js"},
+         "affix-m":{url:"/js/affix-m.js"},
+         "equalHeights":{url:"/js/equalHeights.js"}
     },
     'css_array': {
          "swiper":"/css/swiper.min.css"
     }
   }	
   
+  set.prototype.jsPlugin = function(pname,fname){
+    var that = this;
+    var po = this.options.js_array[pname];
+    var compelete = false;
+    if(po.ini){
+      //直接用setTimeout(window[fname],0),有时会不灵
+      if(fname)callUntil(fname)();
+
+    }else{
+      $.getScript(po.url,function(){
+        pname in that.options.css_array ?
+        $("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[pname]+'>'):"";
+        if(fname)window[fname]();
+        po.compelete = true;
+
+      })
+      /*避免多次载入*/
+      po.ini = true;
+    }
+    //递归直到完成插件js+css的载入
+    function callUntil(callBack){
+      var status  = po.compelete;
+      return function(){if(status){window[callBack](); }else{setTimeout(callUntil(callBack),100);}}
+    }
+  }
+
   set.prototype.ini = function (){
     var that = this;
         that.options = $.extend({},that.options,{deviceType:that.device()});
@@ -72,9 +99,9 @@
           tagLine += ptag = "<span class='tag tag-red  red'>"+p+"</span>",
           tagLine += caseNameTag = "<span class='tag tag-red  red'>"+caseName+"</span>",
           p in that.options.css_array 
-          ? ($("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[p]+'>'),
-             tagLine += uiTag = "<span class='tag tag-blue  blue'>UI: "+p+"</span>"): " ",
-          $.getScript(that.options.js_array[p],function(){if(caseName)window[caseName]()})
+          ? 
+             tagLine += uiTag = "<span class='tag tag-blue  blue'>UI: "+p+"</span>": " ",          
+          that.jsPlugin(p,caseName)
          
           )
         :"";
