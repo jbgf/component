@@ -116,3 +116,52 @@
     font-weight: 600;
 }
 /*textTab01 tab切换 end*/ 
+
+/*rangePic start*/
+.rangePic .bd li {
+    width: 160px;
+    float: left;
+}
+.rangePic .rp-img {
+    width: 145px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+}
+.rangePic .rp-img img{width:100%;display: block;}
+.rangePic .rp-img .rp-bg{
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.rangePic .rp-img .rp-bg{padding:15px 15px 5px;}
+.rangePic .rp-img .rp-bg>div{margin:0px auto 10px;}
+
+.rangePic{}
+.rangePic .rp-img{
+    float: left;padding-left: 10px;
+    padding-right: 10px;}
+.rangePic .rp-img:first-child{padding-left: 0}
+.rangePic .rp-img:last-child{padding-right: 0}
+.rangePic .rp-img.on .rp-bg{background-color: #6eb92b;color:#fff;}
+.rangePic .rp-img.on .rp-bg .num{background-color: #8fc85d;color:#fff;}
+.rangePic .rp-img.on .rp-bg .b-line{border-bottom-color: #fff;}
+.rangePic .rp-img .rp-bg .num{
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #c7c7c7;
+}
+.rangePic .rp-img .rp-bg .type{font-size: 15px;position: relative;min-height: 55px;}
+.rangePic .rp-img .rp-bg .b-line{
+    border-bottom: 3px solid #666;
+    width: 27px;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -14px; 
+}
+/*rangePic end*/

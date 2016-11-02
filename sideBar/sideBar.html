@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/frame.css">
+	<link rel="stylesheet" type="text/css" href="/css/button.css">
+	<link rel="stylesheet" type="text/css" href="/css/slider.css">
+	<link rel="stylesheet" type="text/css" href="/css/content.css">
+	<link rel="stylesheet" type="text/css" href="/css/sideBar.css">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	
+	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/js/layer/layer.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#sideBarBox").set({
+				brandName:"sideBarBox",
+				rowBlock:3
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<div class="bg extend-width bg-black">
+		<div class="container1200">
+			<div class="line ">	
+				<div class="block block-1 ">
+					<div class="brandName white"></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	<div id="sideBarBox" class="container1200">
+		<div class="box" >
+			<div class="r-sider01 float-r">
+                <ul>
+                    <li class="floor on f00"><div class="link big-title">服务支持</div></li>
+                    <li class="floor f01"><a class="link">
+                    <div class="p-wrapper">
+                        <p class="t01">IQTC服务指南</p><p class="t02">IQTC service guide</p>
+                    </div>
+                    </a></li>
+                    <li class="floor   f02"><a class="link">
+                    <div class="p-wrapper">
+                    <p class="t01">常见问题</p><p class="t02">Common problem</p>
+                    </div>
+                    </a></li>
+                    <li class="floor f03"><a class="link">
+                    <div class="p-wrapper">
+                    <p class="t01">相关表格下载</p><p class="t02">Download</p> 
+                    </div>
+                    </a></li>
+                    <li class="floor f04"><a class="link">
+                    <div class="p-wrapper">
+                    <p class="t01">报告查询</p><p class="t02">Report query</p>
+                    </div>
+                    </a></li>
+                    <li class="floor f05"><a class="link">
+                    <div class="p-wrapper">
+                    <p class="t01">在线咨询</p><p class="t02">Consulting</p>
+                    </div>
+                    </a></li>
+                    <li class="floor f06"><a class="link">
+                    <div class="p-wrapper">
+                    <p class="t01">在线留言</p><p class="t02">Leaving a message.</p>
+                    </div>
+                    </a></li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+            	//服务支持
+		          $('.r-sider01 .floor:not(.on)').hover(function(){
+		              $(this).addClass("on")
+		           },function(){
+		              $(this).removeClass("on")
+		          }) 
+            </script>
+		</div>
+	</div>
+</body>
+</html>

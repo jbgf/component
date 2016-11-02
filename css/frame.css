@@ -3,7 +3,7 @@
 	font-size: 20px;
 	font-weight: 700;
 }
-
+.button,.link{cursor: pointer;}
 
 .ellipsis{
   display:inline-block;*display:inline;zoom:1;text-align:center;
@@ -35,7 +35,7 @@
 .block-2{width:50%;}
 .block-3{width:33.3333333333%;}
 .block-4{width:25%;}
-.box{padding:10px;text-align: center;}
+.box{padding:10px;text-align: center;position: relative;}
 
 .container-auto:before,.container-auto:after,
 .container1200:before,.container1200:after,
@@ -50,6 +50,33 @@
 .line:after,
 .block:after{
 	clear:both;
+}
+
+.centerBg{
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/background.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    
+    overflow: hidden;
+}
+
+.input-base{
+    background-color: #FFF;
+    background-image: none;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 6px 12px;
+    -webkit-transition: border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s;
+    transition: border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s;
+    width: 100%;
+    font-size: 14px;
 }
 
 .full-width{width:100%;}
@@ -94,6 +121,7 @@
 .padding-l-64{padding-left: 64px;}
 
 .marin-t-7{margin-top: 7px;}
+.margin-t-15{margin-top: 15px;}
 .margin-r-20 {margin-right: 20px;}
 .margin-r-328{margin-right: 328px;}
 .margin-r-350{margin-right:350px}

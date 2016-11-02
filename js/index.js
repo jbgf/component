@@ -90,17 +90,17 @@
         var stag,ptag,uiTag,caseNameTag,tagLine = "" ;
        
 /*添加标签*/
-        u?tagLine += uiTag = "<span class='tag tag-blue  blue'>UI: "+u+"</span>":"";
+        u?tagLine += uiTag = "<span class='tagFrame tag-blue  blue'>UI: "+u+"</span>":"";
         s?
-          tagLine += stag = "<span class='tag tag-green  green'>Javascript</span>":"";
+          tagLine += stag = "<span class='tagFrame tag-green  green'>Javascript</span>":"";
 
         //因为调用插件方法，可能会改变文档结构，所以先获取插件调用前的html。  
         p?(
-          tagLine += ptag = "<span class='tag tag-red  red'>"+p+"</span>",
-          tagLine += caseNameTag = "<span class='tag tag-red  red'>"+caseName+"</span>",
+          tagLine += ptag = "<span class='tagFrame tag-red  red'>"+p+"</span>",
+          tagLine += caseNameTag = "<span class='tagFrame tag-red  red'>"+caseName+"</span>",
           p in that.options.css_array 
           ? 
-             tagLine += uiTag = "<span class='tag tag-blue  blue'>UI: "+p+"</span>": " ",          
+             tagLine += uiTag = "<span class='tagFrame tag-blue  blue'>UI: "+p+"</span>": " ",          
           that.jsPlugin(p,caseName)
          
           )
