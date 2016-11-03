@@ -74,4 +74,18 @@
     transition: opacity left right 0.5s;
 }
 
+/*r-article01 start*/
+.r-article01 {
+    padding: 23px 0 23px;
+}
+.r-article01 .r-row .r-link,
+.r-article01 .r-row {
+    text-align: left;
+}
+.r-article01 .r-page {
+    margin-right: 12px;
+    text-align: left;
+}
+/*r-article01 end*/
+
 
