@@ -56,7 +56,10 @@
             for (var i = 1; i < sheets.length; i++) {
                 var rules = sheets[i].rules || sheets[i].cssRules;
             //不要ui库的样式表，不要本插件使用的弹窗插件layer的样式表      
-                if(sheets[i].ownerNode.className == "ui" || sheets[i].ownerNode.id == "layui_layer_skinlayercss"){continue}
+                if(
+                  sheets[i].ownerNode.className == "base" ||
+                  sheets[i].ownerNode.className == "ui" || 
+                  sheets[i].ownerNode.id == "layui_layer_skinlayercss"){continue}
                 for (var r in rules){
                     if (a.matches(rules[r].selectorText)) {
                         o.push(rules[r].cssText);

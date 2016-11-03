@@ -165,3 +165,66 @@
     margin-left: -14px; 
 }
 /*rangePic end*/
+
+
+/*scrollSpyBox right 01 start*/
+
+.affix_p01{
+    min-height: 1px;
+    position: relative;
+}
+.affix_p01.affix {
+    position: fixed;
+    top: 0px;
+}
+.affix_p01 .myScrollspyWrapper{position: relative;width: 1200px;}
+.affix_p01 .myScrollspy {
+    font-family: 宋体;
+    font-size: 14px;
+    line-height: 19px;
+    position: absolute;
+    top: 28px;
+    right: -65px;
+    width: 85px;
+}
+.affix_p01 .catalog-scroller {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    border: 1px solid #dcdcdc;
+}
+.affix_p01 .catalog-scroller dl.nav {
+    height: auto;
+    position: relative;
+}
+.affix_p01 .catalog-scroller dl.nav > dt {
+    position: relative;
+}
+.affix_p01 .catalog-scroller dl.nav > dt > a{
+    text-align: center;
+    display: block;
+    line-height: 19px;
+    color: #b8b8b8;
+    text-decoration: none;
+    background-color: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #b8b8b8;
+    line-height: 35px;
+}
+.affix_p01 .nav > dt > a.top {
+    border-bottom: none;
+}
+.affix_p01 .nav > dt.active > a {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    white-space: normal;
+}
+.affix_p01 .nav > dt > a img {
+    display: block;
+    margin: 0 auto;
+}
+
+/*scrollSpyBox right 01 end*/

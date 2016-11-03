@@ -16,6 +16,7 @@
          "superslide":{url:"/js/jquery.SuperSlide.2.1.1.js"},
          "swiper":{url:"/js/swiper.min.js"},
          "affix-m":{url:"/js/affix-m.js"},
+         "affixBeta":{url:"/js/affixBeta.js"},
          "equalHeights":{url:"/js/equalHeights.js"}
     },
     'css_array': {

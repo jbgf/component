@@ -196,14 +196,7 @@ margin-top: 100%; /* margin 百分比相对父元素宽度计算 */
     background-color: #eaf7ff;
     height: 100%;
 }
-.middleTable{
-    display: table;
-}
-.middleTable .middleRow {
-    display: table-cell;
-    vertical-align: middle;
-    line-height: 30px;
-}
+
 
 /*typeRow end*/
 

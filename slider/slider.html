@@ -16,7 +16,7 @@
 	<script type="text/javascript">
 		$(function(){
 			$("#sliderBox").set({
-				brandName:"Slider",
+				brandName:"Slider & Affix",
 				rowBlock:1
 			});
 		});
@@ -36,6 +36,37 @@
 	
 	<div id="sliderBox" class="container1200">
 		<div class="box">
+        <!-- floatwindow start-->
+        <div id="affix_r01" class="affix_p01 affix-top"  data-plugin="affixBeta" data-p-casename="affix_r01">
+          <div class="myScrollspyWrapper" >
+            <div class="myScrollspy">
+                    <div class="catalog-scroller">
+                       
+                        <dl class="nav" id="myNav">
+                            <dt><a href="#contact"><img src="/img/tel.png">联系我们</a></dt>
+                            <dt><a href="http://wpa.qq.com/msgrd?v=3&uin=138000000&site=qq&menu=yes"><img src="/img/qq.png">在线咨询</a></dt>
+                            <dt><a href="#section-3"><img src="/img/qr01.png">扫一扫关注</a></dt>
+                            <dt><a class="top" href="#top"><img src="/img/upArrow.png">TOP</a></dt>
+                        </dl>
+                        
+                    </div>
+            </div>
+          </div>
+        </div>
+       <!-- floatwindow end-->  
+       <script type="text/javascript">
+         function affix_r01(){
+           $("#affix_r01").Affix({
+                  offset:{
+                    top:$("#affix_r01").offset().top, 
+                    bottom: 550
+                  }
+              });
+           
+         }
+       </script>
+    </div>
+    <div class="box">
 			<div class="rangePic clear" data-plugin="superslide" data-p-casename="productSlider01">
                              <div class="bd">
                                <ul>
