@@ -84,20 +84,19 @@
         var p = status.plugin;
         var u = status.ui;
         var position = status.fixedPosition;
-
+        var t = status.type;
         $(e)[position == "top" ? "after" : "before" ](btnRow);
         
         var caseName = status.caseName; 
-        var stag,ptag,uiTag,caseNameTag,tagLine = "" ;
+        var stag,ptag,uiTag,caseNameTag,typeTag,tagLine = "" ;
        
 /*添加标签*/
         u?tagLine += uiTag = "<span class='tagFrame tag-blue  blue'>UI: "+u+"</span>":"";
-        s?
-          tagLine += stag = "<span class='tagFrame tag-green  green'>Javascript</span>":"";
+        s?tagLine += stag = "<span class='tagFrame jsTag tag-green  green'>Javascript</span>":"";
 
         //因为调用插件方法，可能会改变文档结构，所以先获取插件调用前的html。  
         p?(
-          tagLine += ptag = "<span class='tagFrame tag-red  red'>"+p+"</span>",
+          tagLine += ptag = "<span class='tagFrame  tag-red  red'>"+p+"</span>",
           tagLine += caseNameTag = "<span class='tagFrame tag-red  red'>"+caseName+"</span>",
           p in that.options.css_array 
           ? 
@@ -106,19 +105,22 @@
          
           )
         :"";
+        t?tagLine += typeTag = "<span class='tagFrame typeTag tag-black black'>type: "+t+"</span>":"";
 
         var headRow = block.find(".headRow");
             headRow.css("margin-top",position == "top"?"30px":"");
         if(tagLine !="")headRow.append(tagLine);
-
-        that.originalH.push($(e).clone().find("script").remove().end().html());    
 
     })
     for(var i = 0 ;i<node_array.length;i++){
        if(node_array[i]){that.divide(node_array[i],i);}
     }
 
-  	if(box.length != 0){
+    $(".frameBlock").map(function(index,e){
+      that.originalH.push($(e).clone().find("script").remove().end().html()); 
+    });
+  	
+    if(box.length != 0){
   		$.getScript("/js/getHCJ.js",function(){
   			  that.modalWindow();
   		});
@@ -146,18 +148,21 @@
   }
 
   set.prototype.haveTag = function($block){
-    var script = $block.find(".tag").length != 0 || $block.find("script").length != 0;
+    var script = $block.find(".jsTag").length != 0 || $block.find("script").length != 0;
+    console.log($block.find(".jsTag").length)
     var plugin = $block.find("[data-plugin]").attr("data-plugin") || undefined;
     var caseName = $block.find("[data-plugin]").attr("data-p-caseName") || undefined;
     var fixedPosition = $block.find("[data-fixed]").attr("data-fixed") || undefined;
     var ui = $block.find("[data-ui]").attr("data-ui") || undefined;
+    var type = $block.find("[data-type]").attr("data-type") || undefined;
     /*data-ui 类似bootstrap这种*/
     var state = {
       script:script,
       plugin:plugin,
       caseName:caseName,
       fixedPosition:fixedPosition,
-      ui:ui                     
+      ui:ui,
+      type:type                     
     };
 
     return state;
@@ -302,7 +307,7 @@
         var areaWeb = ['800px','600px'],
             areaMobile = [$(window).width()*.9+'px',$(window).height()*.8+'px'],
             areaConfig = deviceType == "mobile" ? areaMobile : areaWeb;
-            
+        
   		  layer.open({
   			  type: 1,
   			  skin: 'demo-class',  //给弹窗添加特殊的class设置样式

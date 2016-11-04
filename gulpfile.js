@@ -45,7 +45,7 @@ gulp.task('watch',['browserSync','connectPhp'],function(){
 	
 	 gulp.watch(['button/*.html','button/*.js,button/*.css'],browserSync.reload);
 	 gulp.watch(['js/*.js'],browserSync.reload);
-	 gulp.watch(['css/*.css'],browserSync.reload);
+	 /*gulp.watch(['css/*.css'],browserSync.reload);*/
 });
 /*压缩*/
 //src 相对于gulpfile，main.html的文件链接相对于main.html

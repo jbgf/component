@@ -34,6 +34,8 @@
 	margin:0 -15px;
 }
 .column{float:left;}
+
+.width66{width:66%;}
 .block{
 	padding-left:15px;padding-right: 15px;float: left;position: relative;
 	min-height: 1px;
@@ -108,6 +110,7 @@
 
 .bg-light-gray02{background-color: #f0f0f0;}
 .bg-gray{background:#e1e9f6;}
+.bg-l-blue{background: #54a4d5;}
 .bg-blue{background:#1978cf;}
 .bg-blue03{background-color: #1978cf;}
 .bg-black{background:#0f1014;}

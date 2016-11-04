@@ -1,92 +1,169 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/css/base.css">
-	<link rel="stylesheet" type="text/css" href="/css/frame.css">
-	<link rel="stylesheet" type="text/css" href="/css/button.css">
-	<link rel="stylesheet" type="text/css" href="/css/index.css">
-	
-	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="/js/layer/layer.js"></script>
-	<script type="text/javascript" src="/js/index.js"></script>
-	<script type="text/javascript">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/css/base.css">
+        <link rel="stylesheet" type="text/css" href="/css/frame.css">
+        <link rel="stylesheet" type="text/css" href="/css/button.css">
+        <link rel="stylesheet" type="text/css" href="/css/index.css">
+        <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="/js/layer/layer.js"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
+        <script type="text/javascript">
+            
+            
+            
+            
+            
+            
+            
+            
 		$(function(){
 			$("#buttonBox").set({
 				brandName:"Button & Input",
 			});
 		});
 		
-	</script>
-</head>
-<body>
 	
-	<div class="bg extend-width bg-black">
-		<div class="container1200">
-			<div class="line ">	
-				<div class="block block-1 ">
-					<div class="brandName white ">Button</div>
-				</div>
-			</div>
-		</div>
-	</div>	
-	<div id="buttonBox" class="container1200" ><!-- data-set="set" -->
-			<div class="box" data-block="1">
-				<div class="loginZone">
-                  <div class="middleRow"> 
+        
+        
+        
+        
+        
+        
+        
+        </script>
+    </head>
+    <body>
+        <div class="bg extend-width bg-black">
+            <div class="container1200">
+                <div class="line ">
+                    <div class="block block-1 ">
+                        <div class="brandName white ">Button</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="buttonBox" class="container1200">
+            <!-- data-set="set" -->
+            <div class="box width66" data-block="1" data-type="form">
+                <div class="form-content01">
+                    <form>
+                        <div class="m-form-line clear">
+                            <div class="block-2 m-form-block">
+                                <span class="text">姓名:</span>
+                                <div class="inputBox padding-r-25">
+                                    <input type="text" name="">
+                                </div>
+                            </div>
+                            <div class="block-2 m-form-block">
+                                <span class="text">电话:</span>
+                                <div class="inputBox">
+                                    <input type="text" name="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-form-line clear">
+                            <div class="block-1 m-form-block">
+                                <span class="text">主题:</span>
+                                <div class="inputBox ">
+                                    <input type="text" name="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-form-line clear">
+                            <div class="block-1 m-form-block">
+                                <span class="text">留言:</span>
+                                <div class="inputBox ">
+                                    <textarea></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-form-line padding-l-64">
+                            <button class="m-btn bg-l-blue" type="submit ">发送</button>
+                            <button class="m-btn bg-l-gray" type="reset">重置</button>
+                        </div>
+                    </form>
+                </div>
+                <style type="text/css"></style>
+            </div>
+            <div class="box" data-type="button">
+                <a class="button float-r cl-details  white">查看详情 》</a>
+            </div>
+            <div class="box" data-block="1" data-type="form">
+                <div class="loginZone">
+                    <div class="middleRow">
                         <form class="login-form" action="" method="post">
-                            <h4 class="no-margins blue" >后台登录</h4>
+                            <h4 class="no-margins blue">后台登录</h4>
                             <input type="text" class="input-base uname" id="user" name="username" placeholder="用户名">
                             <input type="password" class="input-base pword m-b" name="password" placeholder="密码">
                             <div class="line">
-                                 <div class="block block-2">
-                                     <input type="text" class="input-base pword m-b" name="password" placeholder="验证码" >
-                                 </div>   
-                                 <div class="block block-2">
-                                     <a class="verify margin-t-15"><img src="/img/verifyimage.png"></a>
-                                 </div>
-                                
+                                <div class="block block-2">
+                                    <input type="text" class="input-base pword m-b" name="password" placeholder="验证码">
+                                </div>
+                                <div class="block block-2">
+                                    <a class="verify margin-t-15">
+                                        <img src="/img/verifyimage.png">
+                                    </a>
+                                </div>
                             </div>
-                            
                             <a class="blue" href="http://www.fjiqtc.gov.cn/" target="_blank">访问前台</a>
                             <button id="submit" name="submit" class="login button">登录</button>
-                        </form>      
-                  </div>  
-                  
+                        </form>
+                    </div>
                 </div>
-                <style type="text/css">
-                	
-                </style>
-			</div>
-			<div class="box bg-green clear" data-block="3">
-				<div class="input-set01 float-r">
-                      <input class="input " type="" name="" placeholder="输入关键词">
-                      <input class="button white" type="submit" value="">
-            	</div> 
-
-			</div>
-			<div class="box">
-				<div class="button btn-num01 mar-center">04</div>
-			</div>
-
-			<div class="box">
-					《行宫》
+                <style type="text/css"></style>
+            </div>
+            <div class="box bg-green clear" data-block="3" data-type="input">
+                <div class="input-set01 float-r">
+                    <input class="input " type="" name="" placeholder="输入关键词">
+                    <input class="button white" type="submit" value="">
+                </div>
+            </div>
+            <div class="box" data-type="button">
+                <div class="button btn-num01 mar-center">04</div>
+            </div>
+            <div class="box" data-type="button">
+                《行宫》
 
 		寥落古行宫，宫花寂寞红。
 		白头宫女在，闲坐说玄宗。
 
-					<div class="hide">
-						<br/>
-		《登鹳雀楼》
+					
+                
+                
+                
+                
+                
+                
+                
+                <div class="hide">
+                    <br/>《登鹳雀楼》
 
 		白日依山尽，黄河入海流。
 		欲穷千里目，更上一层楼。
-					</div>
-					<div id="float-r" class="btnRow">
-						<span id="toggleBtn01" class="button float-r blue">【详细】</span>
-					</div>
-					<script type="text/javascript">
+					
+                
+                
+                
+                
+                
+                
+                
+                </div>
+                <div id="float-r" class="btnRow">
+                    <span id="toggleBtn01" class="button float-r blue">【详细】</span>
+                </div>
+                <script type="text/javascript">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 						$(document).on("click","#toggleBtn01",function(){
 							var rbBtnRow = $(this).parent(".btnRow"),
 							hideText = rbBtnRow.siblings(".hide");
@@ -99,54 +176,57 @@
 								$(this).text("【详细】");
 							}
 						});
-					</script>
-			</div>
-		
-		
-			<div class="box">
-				<a class="button heart-btn" href="#">
-					<img class="heart" src="/img/btnicon01.png">
-					<img src="/img/c01.png">
-				</a>
-			</div>
-		
-			<div class="box">
-				寥落古行宫
-				<a class="button float-r orange" href="#">【更多】</a>
-			</div> 
-		
-			<div class="box">
-				寥落古行宫
-				<a class="button float-r btn-s gray" href="#">更多 ></a>
-			</div>
-		
-				<div class="box">
-					<a class="button float-r btn-s black" href="#" style="text-transform: uppercase;font-weight:bold;">more+</a>
-				</div>
-			
-				<div class="box">
 					
-                    <div class="input-set input-set-l">
-	                    <input class="input bg-gray" type="" name="" placeholder="输入关键词">
-	                    <input class="button bg-blue white" type="submit" class="addon" value="搜索">
-                    </div>
-                   
-				</div> 
-			
-				<div class="box">
-                    <span class="button btn-r-m bg-yellow white">解析</span>
-				</div> 
-			
-				<div class="box">
-					<span class="button btn-r-m bg-pink white float-r">
-					<img class="icon" src="/img/icon_w.png" style="margin-top: -3px;">做帐</span>
-				</div>
-				<div class="box">
-					<a class="button float-r green more marin-t-7">更多 >></a>
-				</div>
-		
-	</div>
-
-	
-</body>
+                
+                
+                
+                
+                
+                
+                
+                </script>
+            </div>
+            <div class="box" data-type="button">
+                <a class="button heart-btn" href="#">
+                    <img class="heart" src="/img/btnicon01.png">
+                    <img src="/img/c01.png">
+                </a>
+            </div>
+            <div class="box" data-type="button">
+                寥落古行宫
+				<a class="button float-r orange" href="#">【更多】</a>
+            </div>
+            <div class="box" data-type="button">
+                寥落古行宫
+				<a class="button float-r btn-s gray" href="#">更多 ></a>
+            </div>
+            <div class="box" data-type="button">
+                <a class="button float-r btn-s black" href="#" style="text-transform: uppercase;font-weight:bold;">more+</a>
+            </div>
+            <div class="box" data-type="input">
+                <div class="input-set input-set-l">
+                    <input class="input bg-gray" type="" name="" placeholder="输入关键词">
+                    <input class="button bg-blue white" type="submit" class="addon" value="搜索">
+                </div>
+            </div>
+            <div class="box" data-type="button">
+                <span class="button btn-r-m bg-yellow white">解析</span>
+            </div>
+            <div class="box" data-type="button">
+                <span class="button btn-r-m bg-pink white float-r">
+                    <img class="icon" src="/img/icon_w.png" style="margin-top: -3px;">做帐
+                
+                
+                
+                
+                
+                
+                
+                </span>
+            </div>
+            <div class="box" data-type="button">
+                <a class="button float-r green more marin-t-7">更多 >></a>
+            </div>
+        </div>
+    </body>
 </html>
