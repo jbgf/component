@@ -37,6 +37,49 @@
 	
 	<div id="sideBarBox" class="container1200">
 		<div class="box">
+       <div class="l-sider02 float-l">
+            <ul>
+                <li>
+                    <a class="floor bg-green f00">
+                        <div class="link">
+                          <div class="p-wrapper ">
+                            <p class="t01 white">产品检测范围</p><p class="t02">Product detection range</p>
+                          </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="floor f01"><p class="t01">食品类</p></a>
+                    <ul class="list" style="display: none;">
+                    <li><a class="item"><p class="t01">果蔬及其制品</p></a></li>
+                    <li><a class="item"><p class="t01">粮食及其制品</p></a></li>
+                    <li><a class="item"><p class="t01">油/脂及其制品</p></a></li>
+                    <li><a class="item"><p class="t01">调味品</p></a></li>
+                    <li><a class="item"><p class="t01">饮品</p></a></li>
+                    </ul>
+                </li>
+                <li><a class="floor f02 current"><p class="t01">水产类</p></a></li>
+                <li><a class="floor f03 current"><p class="t01">动物及动物产品类</p></a></li>
+                <li><a class="floor f04 current"><p class="t01">其他类</p></a></li>
+                
+                
+
+            </ul>
+            <div class="border"><img src="/img/border.png"></div>
+       </div>
+       <script type="text/javascript">
+           $(".l-sider02 .floor").on("click",function(){
+                $(this).toggleClass("current").siblings('.list').slideToggle();
+            })
+
+            $(".l-sider02 .list .item:not(.on)").hover(function(){
+              $(this).addClass("on")
+           },function(){
+              $(this).removeClass("on")
+           })
+       </script> 
+    </div>
+    <div class="box">
 			<div class="l-sider01 float-l">
                   <ul>
                       <li>

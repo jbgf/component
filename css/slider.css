@@ -233,17 +233,7 @@
 .ul_tab01 .r-row+.r-row{padding-top: 20px;}
 
 .ul_tab01 .tagRow02 {text-align: left;}
-.ul_tab01 .tagRow02 .tag:after {
-    position: absolute;
-    left: 100%;
-    top: 34%;
-    content: " ";
-    width: 0;
-    height: 0;
-    border: 5px solid transparent;
-    border-left: 5px solid #6fba2a;
-} 
-.ul_tab01 .tagRow02 .tag { padding: 0.2rem 0.5rem; text-align: center; position: relative; }
+
 .ul_tab01 .tagRow02 .text02 { margin-right: 1rem; }
 .ul_tab01 .r-row .r-text {
     padding-top: 20px;
