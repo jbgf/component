@@ -17,7 +17,8 @@
          "swiper":{url:"/js/swiper.min.js"},
          "affix-m":{url:"/js/affix-m.js"},
          "affixBeta":{url:"/js/affixBeta.js"},
-         "equalHeights":{url:"/js/equalHeights.js"}
+         "equalHeights":{url:"/js/equalHeights.js"},
+         "flippingbook":{url:"/js/flippingbook.js"}
     },
     'css_array': {
          "swiper":"/css/swiper.min.css"

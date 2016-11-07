@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
 	
 	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="/js/swfobject.js"></script>
 	<script type="text/javascript" src="/js/layer/layer.js"></script>
 	<script type="text/javascript" src="/js/index.js"></script>
 	<script type="text/javascript">
@@ -35,7 +36,7 @@
 	</div>	
 	
 	<div id="sliderBox" class="container1200">
-		
+		<!-- affix 放在最前面 -->
     <div class="box">
         <!-- floatwindow start-->
         <div id="affix_r01" class="affix_p01 affix-top"  data-plugin="affixBeta" data-p-casename="affix_r01" data-type="affix">
@@ -67,6 +68,58 @@
          }
        </script>
     </div>
+
+    <div class="box" >
+      <div id="fbContainer" style="position:relative" data-plugin="flippingbook" data-p-casename="flippingbook01" data-type="book">
+          <a class="altlink" href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
+            <div id="altmsg">Download Adobe Flash Player.</div>
+          </a>
+      </div>
+      <script type="text/javascript">
+      /*引入flash必备的swfobject.js*/
+      /*flippingbook.js 中载入FlippingBook.swf,expressInstall.swf*/
+
+      function flippingbook01(){
+        flippingBook.pages = [
+          "/source/flippingBook_pages/page-001.jpg",
+          "/source/flippingBook_pages/page-002.jpg",
+          "/source/flippingBook_pages/page-003.jpg",
+          "/source/flippingBook_pages/page-004.jpg",
+          "/source/flippingBook_pages/page-005.jpg",
+          "/source/flippingBook_pages/page-006.jpg",
+          "/source/flippingBook_pages/page-007.jpg",
+          "/source/flippingBook_pages/page-008.jpg",
+          "/source/flippingBook_pages/page-009.jpg",
+          "/source/flippingBook_pages/page-010.jpg",
+          "/source/flippingBook_pages/page-011.jpg",
+          "/source/flippingBook_pages/page-012.jpg"
+        ];
+        flippingBook.contents = [
+          [ "Cover", 1 ],
+          [ "Modern", 4 ]
+        ];
+
+        // define custom book settings here
+        flippingBook.settings.bookWidth = 1264;
+        flippingBook.settings.bookHeight = 900;
+        flippingBook.settings.pageBackgroundColor = 0x5b7414;
+        flippingBook.settings.backgroundColor = 0x83a51c;
+        flippingBook.settings.zoomUIColor = 0x919d6c;
+        flippingBook.settings.useCustomCursors = false;
+        flippingBook.settings.dropShadowEnabled = false,
+        flippingBook.settings.zoomImageWidth = 1264;
+        flippingBook.settings.zoomImageHeight = 900;
+        flippingBook.settings.downloadURL = "http://www.page-flip.com/new-demos/03-kitchen-gorenje-2008/kitchen_gorenje_2008.pdf";
+        flippingBook.settings.flipSound = "";
+        flippingBook.settings.flipCornerStyle = "first page only";
+        flippingBook.settings.zoomHintEnabled = false;
+         
+        // default settings can be found in the flippingbook.js file
+        flippingBook.create();
+      }
+      </script>
+    </div>
+
     <div class="box width66" data-block="1">
         <div class="ul_tab01" data-type="tab">
   <!-- r-row start -->              
