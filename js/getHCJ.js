@@ -29,7 +29,7 @@
     var that = this;
 	  var html = this.options.oh.length>0 ? this.options.oh
                :box.html();
-             
+          
 	  $("#html .content").text(html);
 
   }
@@ -39,36 +39,42 @@
     var cssDiv = $("#css .content");
     var css = {
         allNode:function(){
-            var $node = box.find("*");
-            var selectorArray = [];
-            for(var i = 0;i < $node.length;i++){
-              
-               selectorArray.push($node[i]);
-            };
-            return selectorArray;
             
+            var $node = box[0].querySelectorAll("*");
+            return $node;
         },
         readCss:function(a){
-            var sheets = document.styleSheets, o = [];
-            
+            console.log(a)
+            var sheets = document.styleSheets, 
+                o = [];
+
+            /*function getPseudo(a){
+                console.log(a)
+                var after = window.getComputedStyle(a,":after");
+                var before = window.getComputedStyle(a,":before");
+
+            }
+            getPseudo(a);*/
             a.matches = a.matches || a.webkitMatchesSelector || a.mozMatchesSelector || a.msMatchesSelector || a.oMatchesSelector;
             //不要base.css,从1开始。
-            for (var i = 1; i < sheets.length; i++) {
+            for (var i = 1; i < sheets.length; i++){
                 var rules = sheets[i].rules || sheets[i].cssRules;
             //不要ui库的样式表，不要本插件使用的弹窗插件layer的样式表      
                 if(
                   sheets[i].ownerNode.className == "base" ||
                   sheets[i].ownerNode.className == "ui" || 
-                  sheets[i].ownerNode.id == "layui_layer_skinlayercss"){continue}
+                  sheets[i].ownerNode.id == "layui_layer_skinlayercss"
+                  ){continue}
                 for (var r in rules){
-                    if (a.matches(rules[r].selectorText)) {
+                    if (a.matches(rules[r].selectorText)){
                         o.push(rules[r].cssText);
                     }
                 }
             }
-            /*style样式*/
-            /*if(a.style.cssText){o.push(a.style.cssText)}*/
+            
             if(o.length>0){return o}
+
+
         }
 
     }
@@ -76,8 +82,10 @@
 		function writeCss(){
           var s = css.allNode();
           var tra = [];
-          for(var i in s){
-            var c = css.readCss(s[i]);
+          Array.prototype.map.call(s,function(v){
+
+            var c = css.readCss(v);
+
             if(c){
               for(var j = 0 ;j<c.length;j++){
                   //非重复
@@ -89,7 +97,7 @@
               }      
             }
 
-          }
+          })
 		};
 
 	  writeCss(); 

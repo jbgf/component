@@ -35,7 +35,8 @@
 	</div>	
 	
 	<div id="sliderBox" class="container1200">
-		<div class="box">
+		
+    <div class="box">
         <!-- floatwindow start-->
         <div id="affix_r01" class="affix_p01 affix-top"  data-plugin="affixBeta" data-p-casename="affix_r01" data-type="affix">
           <div class="myScrollspyWrapper" >
@@ -236,11 +237,9 @@
                       <script type="text/javascript">
                       	function productSlider01(){
                       		
-                           
-                           
                            if($(".rangePic .bd li").length>4){
     					                jQuery(".rangePic").slide(
-    					                	{titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:1,vis:4,trigger:"click",interTime:6000}
+    					                	{titCell:".hd ul",mainCell:".bd ul",effect:"leftLoop",autoPlay:true,scroll:1,vis:4,trigger:"click",interTime:6000}
     					                	);
 					                 };
                            $('.rp-img:not(.on)').hover(function(){
@@ -288,12 +287,8 @@
                         </div>
               <!--新闻tab切换 end-->
               <script type="text/javascript">
-              		
-              		function textTab02(){
-              			//news tab切换
-          				jQuery("#textTab02").slide();
-              		}
-              
+                function textTab02(){ //news tab切换 
+                  jQuery("#textTab02").slide(); }
               </script>
 		</div>
 		<div class="box bg-black">

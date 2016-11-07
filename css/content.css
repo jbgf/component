@@ -167,4 +167,40 @@
 .qa-wrapper01 .qa-body .qa-div .answer .anwser-text{padding-left: 25px;}
 
 
+.toggle_ul01 .riRow {
+    padding: 5px 0;
+    text-align: left;
+}
+.toggle_ul01 .riRow .riRow-t01 {
+    padding-left: 25px;
+    background: url(../img/plus.png) no-repeat 0 50%;
+    ;
+    font-size: 14px;
+    cursor: pointer;
+}
+.toggle_ul01 .riRow .riRow-t02 {
+    padding-left: 25px;
+    color: #b2b2b2;
+}
+
+/*switch-tag01 start*/
+.switch-tag01 .search-inf-box{padding:20px 0 0px;font-size: 13px;}
+.switch-tag01 .search-inf-box .search-tag,
+.switch-tag01 .search-inf-box .search-info{padding:0 18px;}
+.switch-tag01 .search-info .s-keyword,
+.switch-tag01 .search-info .s-count{float: left;}
+.switch-tag01 .s-keyword .blue03.k{color:#094990;}
+
+
+.switch-tag01 .search-inf-box .search-tag{margin:0 -10px;padding-top: 15px;}
+.switch-tag01 .search-inf-box .search-tag .ul-line li{float: left;display: block;padding:0 10px;}
+.switch-tag01 .search-inf-box .search-tag .ul-line li a{padding:5px 10px;background-color: #eaeaea;}
+.switch-tag01 .search-inf-box .search-tag .ul-line li a.on{background-color: #094990;color:#fff;}
+
+.switch-tag01 .cl-details02{
+  padding: 1px 5px 1px 12px;
+  background-color: #094990;
+}
+/*switch-tag end*/
+
 

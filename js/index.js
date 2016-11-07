@@ -46,6 +46,7 @@
     //递归直到完成插件js+css的载入
     function callUntil(callBack){
       var status  = po.compelete;
+      
       return function(){if(status){window[callBack](); }else{setTimeout(callUntil(callBack),100);}}
     }
   }
@@ -117,7 +118,8 @@
     }
 
     $(".frameBlock").map(function(index,e){
-      that.originalH.push($(e).clone().find("script").remove().end().html()); 
+      that.originalH.push($(e).children(".box").clone().find("script,.headRow").remove().end().html()); 
+
     });
   	
     if(box.length != 0){
@@ -149,7 +151,6 @@
 
   set.prototype.haveTag = function($block){
     var script = $block.find(".jsTag").length != 0 || $block.find("script").length != 0;
-    console.log($block.find(".jsTag").length)
     var plugin = $block.find("[data-plugin]").attr("data-plugin") || undefined;
     var caseName = $block.find("[data-plugin]").attr("data-p-caseName") || undefined;
     var fixedPosition = $block.find("[data-fixed]").attr("data-fixed") || undefined;
@@ -323,11 +324,7 @@
   			  }	
   		  });
   	})
-	  
-    
-
-    
-
+	
   }
   
   function Plugin(option) {
