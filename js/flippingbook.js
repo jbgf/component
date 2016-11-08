@@ -73,7 +73,7 @@ function FlippingBook() {
 			dropShadowEnabled: true,
 			dropShadowHideWhenFlipping: true,
 			backgroundColor: 0xFFFFFF,
-			backgroundImage: "img/bookBackground.jpg",
+			backgroundImage: "/img/bookBackground.jpg",
 			backgroundImagePlacement: "fit", //  "top left", "center", "fit"
 			printEnabled: true,
 			printTitle: "Print Pages",
@@ -84,15 +84,15 @@ function FlippingBook() {
 			extXML: ""
 		};
 		
-		this.containerId = "fbContainer";
-		this.forwardButtonId = "fbForwardButton";
-		this.backButtonId = "fbBackButton";
-		this.zoomButtonId = "fbZoomButton";
-		this.printButtonId = "fbPrintButton";
-		this.downloadButtonId = "fbDownloadButton";
-		this.currentPagesId = "fbCurrentPages";
-		this.totalPagesId = "fbTotalPages";
-		this.contentsMenuId = "fbContentsMenu";		
+	this.containerId = "fbContainer";
+	this.forwardButtonId = "fbForwardButton";
+	this.backButtonId = "fbBackButton";
+	this.zoomButtonId = "fbZoomButton";
+	this.printButtonId = "fbPrintButton";
+	this.downloadButtonId = "fbDownloadButton";
+	this.currentPagesId = "fbCurrentPages";
+	this.totalPagesId = "fbTotalPages";
+	this.contentsMenuId = "fbContentsMenu";		
 };
 
 FlippingBook.prototype.create = function(){
@@ -311,6 +311,7 @@ function wheel(event){
         event.returnValue = false;
 }
 
-if (window.addEventListener)
+/*可以不用鼠标滚动翻页的功能*/
+/*if (window.addEventListener)
 	window.addEventListener('DOMMouseScroll', wheel, false);
-window.onmousewheel = document.onmousewheel = wheel;
+window.onmousewheel = document.onmousewheel = wheel;*/

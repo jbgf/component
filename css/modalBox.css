@@ -93,7 +93,7 @@ button.close {
 }
 .modalBox-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
+  /*border-bottom: 1px solid #e5e5e5;*/
 }
 .modalBox-header .close {
   margin-top: -2px;

@@ -18,10 +18,11 @@
          "affix-m":{url:"/js/affix-m.js"},
          "affixBeta":{url:"/js/affixBeta.js"},
          "equalHeights":{url:"/js/equalHeights.js"},
-         "flippingbook":{url:"/js/flippingbook.js"}
+         "modalBox":{url:"/js/modalBox.js"}
     },
     'css_array': {
-         "swiper":"/css/swiper.min.css"
+         "swiper":"/css/swiper.min.css",
+         "modalBox":"/css/modalBox.css"
     }
   }	
   

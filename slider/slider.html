@@ -3,15 +3,19 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/css/liquid-green.css">
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
 	<link rel="stylesheet" type="text/css" href="/css/frame.css">
 	<link rel="stylesheet" type="text/css" href="/css/button.css">
 	<link rel="stylesheet" type="text/css" href="/css/slider.css">
 	<link rel="stylesheet" type="text/css" href="/css/content.css">
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
+
 	
 	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="/js/liquid.js"></script>
   <script type="text/javascript" src="/js/swfobject.js"></script>
+  <script type="text/javascript" src="/js/flippingbook.js"></script>
 	<script type="text/javascript" src="/js/layer/layer.js"></script>
 	<script type="text/javascript" src="/js/index.js"></script>
 	<script type="text/javascript">
@@ -69,17 +73,36 @@
        </script>
     </div>
 
-    <div class="box" >
-      <div id="fbContainer" style="position:relative" data-plugin="flippingbook" data-p-casename="flippingbook01" data-type="book">
-          <a class="altlink" href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
-            <div id="altmsg">Download Adobe Flash Player.</div>
-          </a>
+    <div class="box" style="">
+      <div class="bookwrapper" data-type="book">
+          <div id="fbContainer" style="position:relative;" >
+              <a class="altlink" href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
+                <div id="altmsg">Download Adobe Flash Player.</div>
+              </a>
+          </div>
+          <div id="fbFooter" style="margin-top: -7px;">
+              <div id="fbContents">
+                <select id="fbContentsMenu" name="fbContentsMenu"></select>
+              <span class="fbPaginationMinor">p.&nbsp;</span>
+                <span id="fbCurrentPages">1</span>
+              <span id="fbTotalPages" class="fbPaginationMinor"></span>
+              </div>
+              <div id="fbMenu"> 
+                  <img src="/img/btnZoom.gif" width="36" height="40" border="0" id="fbZoomButton" />
+                  <img src="/img/btnPrint.gif" width="36" height="40" border="0" id="fbPrintButton" />
+                  <img src="/img/btnDownload.gif" width="36" height="40" border="0" id="fbDownloadButton" />
+                  <img src="/img/btnDiv.gif" width="13" height="40" border="0" />
+                  <img src="/img/btnPrevious.png" width="101"  border="0" id="fbBackButton" style="position:absolute; top:50%; left:16%; margin-top:-32px;visibility:visible" />
+                  <img src="/img/btnNext.png" width="101" border="0" id="fbForwardButton" style="position:absolute; top:50%; right:16%; margin-top:-32px;visibility:visible" />
+              </div>
+          </div>
       </div>
       <script type="text/javascript">
+      /*引入liquid.js*/
       /*引入flash必备的swfobject.js*/
-      /*flippingbook.js 中载入FlippingBook.swf,expressInstall.swf*/
-
-      function flippingbook01(){
+      /*引入flippingbook.js ，其中载入FlippingBook.swf,expressInstall.swf*/
+      /*可以不用鼠标滚动翻页的功能flippingbook.js最后注释掉*/
+      /*不想要底栏可以将fbFooter加上样式style="visibility:hidden;height:0 !important;"*/
         flippingBook.pages = [
           "/source/flippingBook_pages/page-001.jpg",
           "/source/flippingBook_pages/page-002.jpg",
@@ -98,17 +121,17 @@
           [ "Cover", 1 ],
           [ "Modern", 4 ]
         ];
-
+        /*书本的高度height和宽度width*/
         // define custom book settings here
-        flippingBook.settings.bookWidth = 1264;
-        flippingBook.settings.bookHeight = 900;
+        flippingBook.settings.bookWidth = 1000;
+        flippingBook.settings.bookHeight = 700;
         flippingBook.settings.pageBackgroundColor = 0x5b7414;
         flippingBook.settings.backgroundColor = 0x83a51c;
         flippingBook.settings.zoomUIColor = 0x919d6c;
         flippingBook.settings.useCustomCursors = false;
         flippingBook.settings.dropShadowEnabled = false,
-        flippingBook.settings.zoomImageWidth = 1264;
-        flippingBook.settings.zoomImageHeight = 900;
+        flippingBook.settings.zoomImageWidth = 1000;
+        flippingBook.settings.zoomImageHeight = 700;
         flippingBook.settings.downloadURL = "http://www.page-flip.com/new-demos/03-kitchen-gorenje-2008/kitchen_gorenje_2008.pdf";
         flippingBook.settings.flipSound = "";
         flippingBook.settings.flipCornerStyle = "first page only";
@@ -116,7 +139,7 @@
          
         // default settings can be found in the flippingbook.js file
         flippingBook.create();
-      }
+      
       </script>
     </div>
 
