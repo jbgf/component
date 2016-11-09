@@ -113,6 +113,10 @@
 
 /*loginZone form start*/
 .loginZone{position: relative;}
+.loginZone .middleRow {
+    height: 200px;
+    background-color: #d6eafc;
+}
 .loginZone .login-form{
     text-align:left;
     width: 37%;
@@ -158,10 +162,7 @@
 
 .tech-support{text-align: center;font-size: 12px; padding-top: 30px;}
 .loginZone{padding:50px 0;}
-.middleRow {
-    height: 200px;
-    background-color: #d6eafc;
-}
+
 
 /*loginZone form end*/
 
@@ -233,7 +234,7 @@
            
 
 
-.button_group01 .link-wrapper .LinkText { text-align: center; padding-top: 0.7rem; color: rgb(102, 102, 102); }
+.button_group01 .link-wrapper .LinkText {font-size: .8rem; text-align: center; padding-top: 1rem; color: rgb(102, 102, 102); }
 
 .button_group01 .link-zone:nth-child(1) .link-wrapper .circle_c_link { background-color: rgb(0, 91, 172); }
 .button_group01 .link-zone:nth-child(2) .link-wrapper .circle_c_link { background-color: rgb(55, 159, 160); }

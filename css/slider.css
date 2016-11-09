@@ -277,3 +277,23 @@
 }
 .ul_tab01 .r-text .pic img{height: 100%;width: 100%;}
 /*ul_tab01 end*/
+
+/*glideWrapper01 start*/
+.glideWrapper01 .link-l{
+  width: 240px;
+  height: 282px;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  z-index: 999;
+}
+.glideWrapper01 .link-l a{
+  display: inline-block;
+  width: 222px;
+  height: 77px;
+  line-height: 69px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 28px;
+}
+/*glideWrapper01 end*/

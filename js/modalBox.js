@@ -139,15 +139,18 @@
 
       var e = $.Event('shown.bs.modalBox', { relatedTarget: _relatedTarget })
 
-      that.$element.children().eq(0).css("position", "absolute").css({
+      /*modalBox-dialog*/
+      var m_dialog = that.$dialog;
+      m_dialog.css({
+           "position":"absolute",
            "margin":"0px",
            "top": function () {
-               return (that.$element.height() - that.$element.children().eq(0).height()-40) / 2 + "px";
+               return (that.$element.height() - m_dialog.height()) / 2 + "px";
            },
            "left": function () {
-               return (that.$element.width() - that.$element.children().eq(0).width()) / 2 + "px";
+               return (that.$element.width() - m_dialog.width()) / 2 + "px";
            }
-       })
+      })
 
       transition ?
         that.$dialog // wait for modalBox to slide in

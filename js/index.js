@@ -18,11 +18,13 @@
          "affix-m":{url:"/js/affix-m.js"},
          "affixBeta":{url:"/js/affixBeta.js"},
          "equalHeights":{url:"/js/equalHeights.js"},
-         "modalBox":{url:"/js/modalBox.js"}
+         "modalBox":{url:"/js/modalBox.js"},
+         "glide":{url:"/js/glide.min.js"}
     },
     'css_array': {
          "swiper":"/css/swiper.min.css",
-         "modalBox":"/css/modalBox.css"
+         "modalBox":"/css/modalBox.css",
+         "glide":"/css/glide.core.css"
     }
   }	
   
@@ -30,20 +32,25 @@
     var that = this;
     var po = this.options.js_array[pname];
     var compelete = false;
-    if(po.ini){
+
+    if(po && po.ini){
       //直接用setTimeout(window[fname],0),有时会不灵
       if(fname)callUntil(fname)();
 
     }else{
-      $.getScript(po.url,function(){
-        pname in that.options.css_array ?
-        $("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[pname]+'>'):"";
-        if(fname)window[fname]();
-        po.compelete = true;
+      if(po){
+        $.getScript(po.url,function(){
+            pname in that.options.css_array ?
+            $("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[pname]+'>'):"";
+            if(fname)window[fname]();
+            po.compelete = true;
 
-      })
-      /*避免多次载入*/
-      po.ini = true;
+        });
+        /*避免多次载入*/
+        po.ini = true;
+      }else{
+
+      window[fname]();}
     }
     //递归直到完成插件js+css的载入
     function callUntil(callBack){

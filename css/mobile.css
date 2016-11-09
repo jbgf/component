@@ -196,7 +196,9 @@ margin-top: 100%; /* margin 百分比相对父元素宽度计算 */
     background-color: #eaf7ff;
     height: 100%;
 }
-
+.m-testRange01 .typeRow .typeName .middleRow{
+  
+}
 
 /*typeRow end*/
 

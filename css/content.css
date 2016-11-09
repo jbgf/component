@@ -203,4 +203,29 @@
 }
 /*switch-tag end*/
 
+/*content_list01 start*/
+.content_list01 {
+    font-size: 21px;
+    color: #3e3e3e;
+    text-indent: 43px;
+    line-height: 2.3;
+    padding: 23px 0;
+}
+.content_list01 p {
+    font-size: 17px;
+    color: #333;
+    position: relative;
+    text-align: left;
+}
+.content_list01 p:before {
+    content: " ";
+    background: url(/img/rightA.png)no-repeat;
+    width: 17px;
+    height: 18px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+/*content_list01 end*/
+
 

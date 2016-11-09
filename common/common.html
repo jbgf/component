@@ -1,0 +1,30 @@
+<div class="head">
+	
+    
+    
+    <link class="ui" rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link class="base" rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/frame.css">
+    <link rel="stylesheet" type="text/css" href="/css/button.css">
+    <link rel="stylesheet" type="text/css" href="/css/barHeader.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile.css">
+    
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(function() {
+    	$(window).on("load resize",function(){
+			htmlFontSize();
+		})
+		function htmlFontSize (){
+		          var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+		              if(clientWidth > 640) clientWidth = 640;
+		              document.documentElement.style.fontSize = clientWidth * 1/23/*16*/+"px";
+		              return clientWidth * 1/23;
+		};
+        
+    });
+    </script>
+
+</div>

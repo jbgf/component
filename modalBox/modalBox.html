@@ -36,6 +36,37 @@
 	</div>	
 	
 	<div id="modal_wrapper" class="container1200">
+		<div class="box">
+			<a id="heart-btn02" class="button heart-btn" href="#" data-plugin="layer" data-p-casename="layer_iframe01" data-type="ModalBox">
+                <img class="heart" src="/img/btnicon01.png">
+            </a>
+            <script type="text/javascript">
+            	function layer_iframe01(){
+					$(document).on("click","#heart-btn02",function(){
+						
+						var index = layer.open({
+										type: 2,
+										fix: false,
+									    title: false,
+									    shadeClose: true,
+									    area: ['1000px', '500px'],
+									    move: false,
+									    content: "/special/special.html",
+									    scrollbar: false,
+									    closeBtn: 1, /*0没有*/
+									    success:function(layero, index){
+									    	/*iframe的获取；*/
+									    	var $iframe = $("iframe").contents();
+									    	
+									    }
+									});
+						/*全屏*/
+						/*layer.full(index);*/
+					});
+				}
+            </script>
+            
+		</div>
 		<div class="box" data-block="2">
 			
             <a id="heart-btn01" class="button heart-btn" href="#">
@@ -46,13 +77,13 @@
 			  		<div class="modalBox-dialog" role="document">
 					    <div class="modalBox-content">
 					      <div class="modalBox-header">
-					        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
-					          <span aria-hidden="true">&times;</span>
-					        </button>
-								<h4 class="modalBox-title">管理员</h4>
+						        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+									<h4 class="modalBox-title">管理员</h4>
 					      </div>
-					      <div class="modalBox-body">
-		<!-- 提示信息-->		<div class="linkWrapper line">
+					      <div class="modalBox-body middleTable">
+								<div class="linkWrapper line middleRow">
 									
 						            <div class="button_group01 clear">
 						                <div class="row">
@@ -79,28 +110,7 @@
 					    </div>
 				  </div>
 			</div>
-			<style type="text/css">
 			
-
-
-				@media (min-width: 768px){
-					.modalBox01 .modalBox-dialog{
-					    width: auto;
-					    margin: 30px auto;
-					}
-				}
-				.modalBox01 .modalBox-title{
-				    margin:0;
-				    line-height: 1.42857143;
-				    font-size: 30px;
-				    text-align: center;
-				    padding-top: 12px;
-				}
-				.modalBox01 .modalBox-content{
-					height: 485px;
-				    width: 865px;
-				}
-			</style>
 			<script type="text/javascript">
 				function modalBox01(){
 					$(document).on("click","#heart-btn01",function(){
