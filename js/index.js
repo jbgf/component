@@ -19,7 +19,8 @@
          "affixBeta":{url:"/js/affixBeta.js"},
          "equalHeights":{url:"/js/equalHeights.js"},
          "modalBox":{url:"/js/modalBox.js"},
-         "glide":{url:"/js/glide.min.js"}
+         "glide":{url:"/js/glide.min.js"},
+         "hammer":{url:"/js/hammer.min.js"}
     },
     'css_array': {
          "swiper":"/css/swiper.min.css",
@@ -108,9 +109,11 @@
         p?(
           tagLine += ptag = "<span class='tagFrame  tag-red  red'>"+p+"</span>",
           tagLine += caseNameTag = "<span class='tagFrame tag-red  red'>"+caseName+"</span>",
+          
           p in that.options.css_array 
-          ? 
-             tagLine += uiTag = "<span class='tagFrame tag-blue  blue'>UI: "+p+"</span>": " ",          
+          ?tagLine += uiTag = "<span class='tagFrame tag-blue blue'>UI: "+p+"</span>"
+          : " ",  
+
           that.jsPlugin(p,caseName)
          
           )
@@ -122,13 +125,14 @@
         if(tagLine !="")headRow.append(tagLine);
 
     })
+/*分行分列*/
     for(var i = 0 ;i<node_array.length;i++){
        if(node_array[i]){that.divide(node_array[i],i);}
     }
-
+/*因为分行分列后dom布局改变，重新遍历frameBlock*/
     $(".frameBlock").map(function(index,e){
       that.originalH.push($(e).children(".box").clone().find("script,.headRow").remove().end().html()); 
-
+      that.switchPlugin(e);
     });
   	
     if(box.length != 0){
@@ -136,6 +140,17 @@
   			  that.modalWindow();
   		});
   	}
+  }
+  
+  
+  set.prototype.switchPlugin = function(fb){
+    var t = $(fb).find("[data-type='affix_right']") ;
+    if(t.length != 0){
+      $(fb).addClass("switchHide");
+      this.affix_right_a.push(fb);
+      /*第一个加class on*/
+      if(this.affix_right_a.length == 1)$(fb).addClass("on");
+    }
   }
 
   set.prototype.divide = function(a,rn){
@@ -164,7 +179,13 @@
     var caseName = $block.find("[data-plugin]").attr("data-p-caseName") || undefined;
     var fixedPosition = $block.find("[data-fixed]").attr("data-fixed") || undefined;
     var ui = $block.find("[data-ui]").attr("data-ui") || undefined;
-    var type = $block.find("[data-type]").attr("data-type") || undefined;
+    var type = $block.find("[data-type]").attr("data-type") || undefined,type_array;
+        if(type){
+          type_array = type+'_a';
+          /*不可以用this.type_array来新建数组*/
+          if(!this[type_array]){this[type_array] = [];}    /*新建类别数组；*/
+        }
+     
     /*data-ui 类似bootstrap这种*/
     var state = {
       script:script,

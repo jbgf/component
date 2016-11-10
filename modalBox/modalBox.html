@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title></title>
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
 	<link rel="stylesheet" type="text/css" href="/css/frame.css">
 	<link rel="stylesheet" type="text/css" href="/css/button.css">
@@ -10,10 +11,12 @@
 	<link rel="stylesheet" type="text/css" href="/css/content.css">
 	<link rel="stylesheet" type="text/css" href="/css/modalBox.css">
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/css/touch.css">
 	
 	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="/js/layer/layer.js"></script>
 	<script type="text/javascript" src="/js/index.js"></script>
+	
 	<script type="text/javascript">
 		$(function(){
 			$("#modal_wrapper").set({
@@ -37,6 +40,34 @@
 	
 	<div id="modal_wrapper" class="container1200">
 		<div class="box">
+			<a id="heart-btn03" class="button heart-btn" href="#" data-plugin="hammer" data-p-casename="layer_content01" data-type="ModalBox">
+                <img class="heart" src="/img/btnicon01.png">
+            </a>
+            <script type="text/javascript">
+            	function layer_content01(){
+					$("#heart-btn03").click(function(e){
+						
+						
+						var layer_content = layer.open({
+							  type: 1,
+							  /*skin: 'touch_layer',*/
+							  title: false,
+							  closeBtn: 0,
+							  shadeClose: true,
+							  fix: false,
+							  area:["1020px","580px"],
+							  content: '<div id="l_c_img01"><img src="/img/background02.jpg"></div>',
+							  success:function(layero, index){
+							    	
+							  }
+						});
+					})
+					
+					
+				}
+            </script>
+		</div>
+		<div class="box">
 			<a id="heart-btn02" class="button heart-btn" href="#" data-plugin="layer" data-p-casename="layer_iframe01" data-type="ModalBox">
                 <img class="heart" src="/img/btnicon01.png">
             </a>
@@ -44,7 +75,7 @@
             	function layer_iframe01(){
 					$(document).on("click","#heart-btn02",function(){
 						
-						var index = layer.open({
+						var iframe = layer.open({
 										type: 2,
 										fix: false,
 									    title: false,
@@ -57,11 +88,13 @@
 									    success:function(layero, index){
 									    	/*iframe的获取；*/
 									    	var $iframe = $("iframe").contents();
-									    	
+									    	$iframe.find(".brandName ").append("<div  style='color:red;'>哈哈iframe被我控制了,点我关闭</div>").on("click",function(){
+									    		layer.close(iframe)
+									    	})
 									    }
 									});
 						/*全屏*/
-						/*layer.full(index);*/
+						/*layer.full(iframe);*/
 					});
 				}
             </script>

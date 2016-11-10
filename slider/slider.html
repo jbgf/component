@@ -13,11 +13,13 @@
 
 	
 	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="/js/common.js"></script>
   <script type="text/javascript" src="/js/liquid.js"></script>
   <script type="text/javascript" src="/js/swfobject.js"></script>
   <script type="text/javascript" src="/js/flippingbook.js"></script>
 	<script type="text/javascript" src="/js/layer/layer.js"></script>
 	<script type="text/javascript" src="/js/index.js"></script>
+
 	<script type="text/javascript">
 		$(function(){
 			$("#sliderBox").set({
@@ -40,10 +42,20 @@
 	</div>	
 	
 	<div id="sliderBox" class="container1200">
-		<!-- affix 放在最前面 -->
+		<div class="box">
+        <div class="floatWindow_r01" data-type="affix_right">
+            <a href="#speak02">领导致辞</a>
+            <a href="#focus">聚焦会场</a>
+            <a href="#media">媒体报道</a>
+            <a href="#progress">发展历程</a>
+            <a href="#video">正统网宣传片</a>
+            <a class="backTop" href="#top"></a>
+        </div>
+    </div>
+    <!-- affix 放在最前面 -->
     <div class="box">
         <!-- floatwindow start-->
-        <div id="affix_r01" class="affix_p01 affix-top"  data-plugin="affixBeta" data-p-casename="affix_r01" data-type="affix">
+        <div id="affix_r01" class="affix_p01 affix-top"  data-plugin="affixBeta" data-p-casename="affix_r01" data-type="affix_right">
           <div class="myScrollspyWrapper" >
             <div class="myScrollspy">
                     <div class="catalog-scroller">
@@ -152,7 +164,8 @@
       /*引入flash必备的swfobject.js*/
       /*引入flippingbook.js ，其中载入FlippingBook.swf,expressInstall.swf*/
       /*可以不用鼠标滚动翻页的功能flippingbook.js最后注释掉*/
-      /*不想要底栏可以将fbFooter加上样式style="visibility:hidden;height:0 !important;"*/
+      /*不想要底栏可以将fbFooter加上样式style="visibility:hidden;height:0 !important;"
+      /*若location.hash带字符，则从最后一页开始*/
         flippingBook.pages = [
           "/source/flippingBook_pages/page-001.jpg",
           "/source/flippingBook_pages/page-002.jpg",

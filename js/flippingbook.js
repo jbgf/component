@@ -101,6 +101,7 @@ FlippingBook.prototype.create = function(){
 	this.settings.printPagesSet = this.printPages;
 	
 	if( location.hash.substr(1) != "" )
+		/*若location.hash带字符，则从最后一页开始*/
 		this.settings.firstPageNumber = location.hash.substr(1);
 	
 	this.addLoadEvent( this.onWindowLoad );

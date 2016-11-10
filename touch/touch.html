@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/frame.css">
+	<link rel="stylesheet" type="text/css" href="/css/button.css">
+	<link rel="stylesheet" type="text/css" href="/css/slider.css">
+	<link rel="stylesheet" type="text/css" href="/css/content.css">
+	<link rel="stylesheet" type="text/css" href="/css/modalBox.css">
+	<link rel="stylesheet" type="text/css" href="/css/touch.css">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	
+	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+	<script type="text/javascript" src="/js/layer/layer.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+	
+	
+	
+	<script type="text/javascript">
+		$(function(){
+			$("#modal_wrapper").set({
+				brandName:"touch",
+				rowBlock:1
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<div class="bg extend-width bg-black">
+		<div class="container-auto">
+			<div class="line ">	
+				<div class="block block-1 ">
+					<div class="brandName white"></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	<div id="modal_wrapper" class="container-auto">
+		<div class="box">
+			<a id="heart-btn04" class="button heart-btn" href="#" data-plugin="hammer" data-p-casename="hammer01" data-type="ModalBox">
+                <img class="heart" src="/img/btnicon01.png">
+            </a>
+            <script type="text/javascript">
+            	function hammer01(){
+            		/*使用hammer尽量要设置meta user-scalable=0，
+            		插件默认添加样式touch-action:none;如果不能拖动页面，可添加touch-action: pan-x pan-y !important;*/
+            		var width = $(window).width();
+            		var height = $(window).height();
+            		
+					$("#heart-btn04").click(function(e){
+						
+						var layer_content = layer.open({
+							  type: 1,
+							  title: false,
+							  closeBtn: 0,
+							  shadeClose: true,
+							  fix: false,
+							  area:[width+'px',height+'px'],
+							  content: '<div id="l_c_img01" class="touch_layer"><img src="/img/background02.jpg"></div>',
+							  success:function(layero, index){
+							    	var layer_body = document.getElementById("l_c_img01");
+							    	
+							    	gestureIn(layer_body,function(){
+							    		
+							    		layer.close(layer_content);
+							    	});
+							  }
+
+						});
+					})
+					
+					
+				}
+            </script>
+		</div>
+		
+	</div>
+</body>    
+</html>
