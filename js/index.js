@@ -7,6 +7,7 @@
     this.originalH = [];
     this.options = $.extend({}, set.DEFAULTS, options);
     this.ini();
+
   }
 
   set.DEFAULTS = {
@@ -142,13 +143,34 @@
   	}
   }
   
-  
+  set.prototype.listen_scroll = function(fb){
+    var s = true;
+    addWheelListener(fb, function( e ){
+        //console.log( e.deltaY );
+        call_f(); 
+        e.preventDefault();
+    });
+
+    function setTime(){
+       setTimeout(function(){s = true;console.log(s)},1000)
+    }
+    function call_f(){
+        
+        s?
+        (console.log('test'),
+        s = false,
+        setTime())
+        :"";
+
+    }
+  }
   set.prototype.switchPlugin = function(fb){
     var t = $(fb).find("[data-type='affix_right']") ;
     if(t.length != 0){
       $(fb).addClass("switchHide");
       this.affix_right_a.push(fb);
-      /*第一个加class on*/
+      this.listen_scroll(fb);
+      /*******第一个加class on***********************/
       if(this.affix_right_a.length == 1)$(fb).addClass("on");
     }
   }
@@ -173,6 +195,7 @@
     b_box.appendTo(that.container)
   }
 
+/*根据tag即data-属性来给组件分类*/
   set.prototype.haveTag = function($block){
     var script = $block.find(".jsTag").length != 0 || $block.find("script").length != 0;
     var plugin = $block.find("[data-plugin]").attr("data-plugin") || undefined;
