@@ -21,7 +21,9 @@
          "equalHeights":{url:"/js/equalHeights.js"},
          "modalBox":{url:"/js/modalBox.js"},
          "glide":{url:"/js/glide.min.js"},
-         "hammer":{url:"/js/hammer.min.js"}
+         "hammer":{url:"/js/hammer.min.js"},
+         "jQuery.validator":{url:"/js/jquery.validate.js"},
+         "tooltip":{url:"/js/tooltip.js"}
     },
     'css_array': {
          "swiper":"/css/swiper.min.css",
@@ -32,6 +34,10 @@
   
   set.prototype.jsPlugin = function(pname,fname){
     var that = this;
+    var a = pname.split(";");
+    for(var i = 0 ;i<a.length;i++){
+
+    }
     var po = this.options.js_array[pname];
     var compelete = false;
 
@@ -54,6 +60,11 @@
 
       window[fname]();}
     }
+    
+    function getJs(){
+      
+    }
+
     //递归直到完成插件js+css的载入
     function callUntil(callBack){
       var status  = po.compelete;
@@ -93,7 +104,9 @@
         var btnRow = '<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>';  
         var status = that.haveTag(block);
         var s = status.script;
-        var p = status.plugin;
+        var p = status.plugin ;
+        /*status.plugin.indexOf(";")*/
+
         var u = status.ui;
         var position = status.fixedPosition;
         var t = status.type;
@@ -103,8 +116,8 @@
         var stag,ptag,uiTag,caseNameTag,typeTag,tagLine = "" ;
        
 /*添加标签*/
-        u?tagLine += uiTag = "<span class='tagFrame tag-blue  blue'>UI: "+u+"</span>":"";
-        s?tagLine += stag = "<span class='tagFrame jsTag tag-green  green'>Javascript</span>":"";
+        u?tagLine += uiTag = "<span class='tagFrame tag-blue blue'>UI: "+u+"</span>":"";
+        s?tagLine += stag = "<span class='tagFrame jsTag tag-green green'>Javascript</span>":"";
 
         //因为调用插件方法，可能会改变文档结构，所以先获取插件调用前的html。  
         p?(
@@ -143,35 +156,49 @@
   	}
   }
   
-  set.prototype.listen_scroll = function(fb){
-    var s = true;
+  set.prototype.listen_scroll = function(fb,type_array_name){
+    var s = true,
+        that = this;
+
     addWheelListener(fb, function( e ){
-        //console.log( e.deltaY );
-        call_f(); 
+        /*一段时间内只执行一次*/
+        var dy = e.deltaY;
+        s
+        ?(call_f(fb,dy,type_array_name),
+          s = false,
+          setTime(1000))
+        :"";
+         
         e.preventDefault();
     });
 
-    function setTime(){
-       setTimeout(function(){s = true;console.log(s)},1000)
+    function setTime(time){
+       setTimeout(function(){s = true;},time)
     }
-    function call_f(){
-        
-        s?
-        (console.log('test'),
-        s = false,
-        setTime())
-        :"";
-
+    function call_f(fb,dy,type_array_name){
+        var a = that[type_array_name];
+        if(a.length <=1)return;
+        var i = a.indexOf(fb),
+            l = a.length,
+            activeIndex;
+        dy > 0 ? 
+               i == l-1 ? activeIndex = 0 : activeIndex = i + 1
+               :
+               i == 0 ? activeIndex = l-1 : activeIndex = i - 1;
+        a[activeIndex].className +=" on";
+        a[i].className = a[i].className.replace("on","");
     }
   }
   set.prototype.switchPlugin = function(fb){
-    var t = $(fb).find("[data-type='affix_right']") ;
-    if(t.length != 0){
+    var t = $(fb).find("[data-type]");
+    var a = t.attr("data-type");
+    var type_array_name = a+'_a';
+    if( a == "affix_right" ){
       $(fb).addClass("switchHide");
-      this.affix_right_a.push(fb);
-      this.listen_scroll(fb);
+      this[type_array_name].push(fb);
+      this.listen_scroll(fb,type_array_name);
       /*******第一个加class on***********************/
-      if(this.affix_right_a.length == 1)$(fb).addClass("on");
+      if(this[a+'_a'].length == 1)$(fb).addClass("on");
     }
   }
 
@@ -179,7 +206,7 @@
     var that = this;
     var b_array = [];
     var b_box = $("<div id=c"+rn+"></div>");
-//页面布局成几行几列 start
+      //页面布局成几行几列 start
     for(var i=0;i< a.length;i+=rn){
         b_array.push(a.slice(i,i+rn));
     }

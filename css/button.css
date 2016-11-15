@@ -249,3 +249,38 @@
 .circle_c_link:after { content: ''; display: block; margin-top: 100%; }
 .circle_c_link img { width: 50%; height: 50%; display: block; }
 /*circle_c_link end*/
+
+/*content1_form start*/
+.content1_form .input_set01 {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    border-collapse: separate;
+}
+.content1_form .input_set01+.input_set01{margin-top: 20px;}
+.content1_form .input_set01 span{
+    font-size: 16px;
+    display: inline-block;
+    height: 47px;
+    width: 76px;
+    line-height: 47px;
+}
+.content1_form .input_set01 input{
+    width:385px;
+    height: 47px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+.content1_form input[type="submit"]{
+    margin-left: 77px;
+    margin-top: 28px;
+    font-size: 19px;
+    color:#643600;
+    width:231px;
+    height:44px;
+    float: left;
+    padding:0px;
+    background:#ffc000;
+}
+.input_set01 input:focus{box-shadow: inset 0 1px 1px 2px rgba(0,0,0,.075), 0 0 8px 2px rgba(102, 175, 233, .6);outline: 0}
+/*content1_form end*/

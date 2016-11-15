@@ -32,6 +32,58 @@
         </div>
         <div id="buttonBox" class="container1200">
             <!-- data-set="set" -->
+            <div class="box" data-block="2">
+                <form class="content1_form" data-plugin="jQuery.validator;tooltip" data-p-casename="validator_tooltip01">
+                    <div class="input_set01" >
+                        <span style="float: left;color:#707070">公司简称</span>
+                        <input style="float: left;padding-left:12px;" type="" name="">
+                    </div>
+                    <div class="input_set01" >
+                         <span style="float: left;;color:#707070">所属行业</span>
+                         <input style="float: left;padding-left:12px;" type="" name="">
+                    </div>                
+                    <div class="input_set01" >
+                         <span style="float: left;;color:#707070">联系方式</span>
+                          <input style="float: left;padding-left:12px;" type="" name="">
+                    </div> 
+
+                    <input type="submit" name="" value="提交问题" class="button">
+                </form>
+                <script type="text/javascript">
+                    function validator_tooltip01(){
+                        jQuery.validator.addMethod("isTel", function(value,element) {   
+                            var length = value.length;   
+                            var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;   
+                            var tel = /^(\d{3,4}-?)?\d{7,9}$/g;       
+                            return this.optional(element) || tel.test(value) || (length==11 && mobile.test(value));   
+                        }, "请正确填写您的联系方式"); 
+                        
+                        $("#myform").validate({
+                             rules: {
+                                      "data[title]":"required",
+                                      "data[nature]":"required",
+                                      "data[mobile]":{
+                                        required:true,
+                                        isTel:true
+                                      }
+                                    },
+                              messages:{
+                                    "data[title]":"请填写公司名称",
+                                    "data[nature]":"请填写行业",
+                                    "data[mobile]":{
+                                        required:"请填写联系方式"
+                                    }
+                                },
+                              errorPlacement: function (label, element) {
+                                $(element).tooltip('destroy'); /*必需*/
+                                $(element).attr('title', $(label).text()).tooltip({
+                                    placement:"top"
+                                }); 
+                              }
+                        });
+                    }
+                </script>
+            </div>
             <div class="box">
                 <div class="circle_c_link button" data-type="button">
                     <img class="img-center" src="/img/icon001.png">
@@ -167,7 +219,7 @@
                 </div>
                 <style type="text/css"></style>
             </div>
-            <div class="box bg-green clear" data-block="3" data-type="input">
+            <div class="box bg-green clear" data-block="3" data-type="input-set">
                 <div class="input-set01 float-r">
                     <input class="input " type="" name="" placeholder="输入关键词">
                     <input class="button white" type="submit" value="">
@@ -255,7 +307,7 @@
             <div class="box" data-type="button">
                 <a class="button float-r btn-s black" href="#" style="text-transform: uppercase;font-weight:bold;">more+</a>
             </div>
-            <div class="box" data-type="input">
+            <div class="box" data-type="input-set">
                 <div class="input-set input-set-l">
                     <input class="input bg-gray" type="" name="" placeholder="输入关键词">
                     <input class="button bg-blue white" type="submit" class="addon" value="搜索">

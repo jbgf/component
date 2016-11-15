@@ -327,5 +327,5 @@
 /*floatWindow_r01 end*/
 
  /*切换功能 start*/
-.switchHide{display: none;}
-.switchHide.on{display:block; }
+.switchHide{visibility: hidden;height: 1px;}
+.switchHide.on{visibility: visible; height: auto;}
