@@ -34,40 +34,60 @@
   
   set.prototype.jsPlugin = function(pname,fname){
     var that = this;
+    var ini = false,
+        compelete = false;
     var a = pname.split(";");
-    for(var i = 0 ;i<a.length;i++){
-
-    }
-    var po = this.options.js_array[pname];
-    var compelete = false;
-
-    if(po && po.ini){
+    
+    var jsA = [];
+      for(var k in a){
+        jsA.push(that.options.js_array[a[k]])
+        console.log(that.options.js_array[a[k]])
+      }
+      
+    compelete = jsA.every(function(v){
+      return v.compelete;
+    });
+    
+    if(compelete){
       //直接用setTimeout(window[fname],0),有时会不灵
       if(fname)callUntil(fname)();
 
+/*加载js，css*/
     }else{
-      if(po){
-        $.getScript(po.url,function(){
+      var d = getJs(a);
+      if(d){
+        d.done(function(){
+
             pname in that.options.css_array ?
             $("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[pname]+'>'):"";
             if(fname)window[fname]();
-            po.compelete = true;
+            jsA.map(function(v,i){
+              v.compelete = true;
+            })
 
         });
-        /*避免多次载入*/
-        po.ini = true;
+        
       }else{
 
       window[fname]();}
     }
     
-    function getJs(){
-      
+    function getJs(array){
+      var diff ,ua = []; 
+          
+          for(var i in array){
+            var u = jsA[i].url;
+            ua.push($.getScript(u));
+            jsA[i].ini = true;
+          } 
+          diff = $.when.apply($,ua);
+       
+      return diff;
     }
 
-    //递归直到完成插件js+css的载入
+    //递归直到完成插件js+css的载入才调用函数；
     function callUntil(callBack){
-      var status  = po.compelete;
+      var status  = compelete;
       
       return function(){if(status){window[callBack](); }else{setTimeout(callUntil(callBack),100);}}
     }
