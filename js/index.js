@@ -40,11 +40,12 @@
     
     var jsA = [];
       for(var k in a){
-        jsA.push(that.options.js_array[a[k]])
-        console.log(that.options.js_array[a[k]])
+        Array.prototype.push.call(jsA,that.options.js_array[a[k]])
+        
       }
       
-    compelete = jsA.every(function(v){
+    compelete = Array.prototype.every.call(jsA,function(v){
+      console.log(v)  
       return v.compelete;
     });
     
@@ -63,6 +64,7 @@
             if(fname)window[fname]();
             jsA.map(function(v,i){
               v.compelete = true;
+
             })
 
         });
