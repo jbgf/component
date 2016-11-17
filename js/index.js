@@ -34,39 +34,32 @@
   
   set.prototype.jsPlugin = function(pname,fname){
     var that = this;
-    var ini = false,
-        compelete = false;
+    var c = false, /*js加载完成；*/
+        i = false; /*js开始准备加载*/
     var a = pname.split(";");
-    
-    var jsA = [];
+    var jsA = that.options.js_array;
+    var jsTemp = [];
       for(var k in a){
-        Array.prototype.push.call(jsA,that.options.js_array[a[k]])
-        
-      }
-      
-    compelete = Array.prototype.every.call(jsA,function(v){
-      console.log(v)  
-      return v.compelete;
+        Array.prototype.push.call(jsTemp,jsA[a[k]])
+      };
+    i = Array.prototype.every.call(jsTemp,function(v){
+      return v.ini;
     });
-    
-    if(compelete){
+    if(i){
       //直接用setTimeout(window[fname],0),有时会不灵
       if(fname)callUntil(fname)();
-
 /*加载js，css*/
     }else{
       var d = getJs(a);
       if(d){
         d.done(function(){
-
+            
             pname in that.options.css_array ?
             $("head").append('<link class="ui" rel="stylesheet" type="text/css" href='+that.options.css_array[pname]+'>'):"";
             if(fname)window[fname]();
-            jsA.map(function(v,i){
-              v.compelete = true;
-
-            })
-
+            for(var i in a){
+              jsA[a[i]].compelete = true;
+            } 
         });
         
       }else{
@@ -75,12 +68,13 @@
     }
     
     function getJs(array){
-      var diff ,ua = []; 
+      var diff,ua = []; 
           
           for(var i in array){
-            var u = jsA[i].url;
+            
+            var u = jsA[array[i]].url;
             ua.push($.getScript(u));
-            jsA[i].ini = true;
+            jsA[array[i]].ini = true;
           } 
           diff = $.when.apply($,ua);
        
@@ -89,9 +83,10 @@
 
     //递归直到完成插件js+css的载入才调用函数；
     function callUntil(callBack){
-      var status  = compelete;
-      
-      return function(){if(status){window[callBack](); }else{setTimeout(callUntil(callBack),100);}}
+      c = Array.prototype.every.call(jsTemp,function(v,i){
+        return v.compelete;
+      });
+      return function(){if(c){window[callBack](); }else{setTimeout(callUntil(callBack),100);}}
     }
   }
 
@@ -222,6 +217,10 @@
       /*******第一个加class on***********************/
       if(this[a+'_a'].length == 1)$(fb).addClass("on");
     }
+  }
+
+  set.prototype.tip = function(fb){
+    
   }
 
   set.prototype.divide = function(a,rn){

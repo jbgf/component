@@ -31,103 +31,9 @@
             </div>
         </div>
         <div id="buttonBox" class="container1200">
-            <!-- data-set="set" -->
-            <div class="box" data-block="2">
-                <form class="content1_form" name="myform" id="myform" action="/index.php?c=form_account" method="post" data-plugin="jQuery.validator;tooltip"  data-p-casename="validator_tooltip01">
-                    <div class="input_set01" >
-                        <span style="float: left;color:#707070">公司简称</span>
-                        <input style="float: left;padding-left:12px;" type=""  name="data[title]">
-                    </div>
-                    <div class="input_set01" >
-                         <span style="float: left;;color:#707070">所属行业</span>
-                         <input style="float: left;padding-left:12px;" type="" name="data[nature]">
-                    </div>                
-                    <div class="input_set01" >
-                         <span style="float: left;;color:#707070">联系方式</span>
-                          <input style="float: left;padding-left:12px;" type="" name="data[mobile]">
-                    </div> 
-
-                    <input type="submit" name="" value="提交问题" class="button">
-                </form>
-                <script type="text/javascript">
-                    function validator_tooltip01(){
-
-                        jQuery.validator.addMethod("isTel", function(value,element) {   
-                            var length = value.length;   
-                            var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;   
-                            var tel = /^(\d{3,4}-?)?\d{7,9}$/g;       
-                            return this.optional(element) || tel.test(value) || (length==11 && mobile.test(value));   
-                        }, "请正确填写您的联系方式"); 
-                        
-                        $("#myform").validate({
-                             rules: {
-                                      "data[title]":"required",
-                                      "data[nature]":"required",
-                                      "data[mobile]":{
-                                        required:true,
-                                        isTel:true
-                                      }
-                                    },
-                              messages:{
-                                    "data[title]":"请填写公司名称",
-                                    "data[nature]":"请填写行业",
-                                    "data[mobile]":{
-                                        required:"请填写联系方式"
-                                    }
-                                }
-                        });
-                        
-                    }
-                </script>
-            </div>
-            <div class="box" data-block="2">
-                <form class="content1_form" name="myform2" id="myform2" action="/index.php?c=form_account" method="post" data-plugin="jQuery.validator;tooltip"  data-p-casename="validator_tooltip02">
-                    <div class="input_set01" >
-                        <span style="float: left;color:#707070">公司简称</span>
-                        <input style="float: left;padding-left:12px;" type=""  name="data[title]">
-                    </div>
-                    <div class="input_set01" >
-                         <span style="float: left;;color:#707070">所属行业</span>
-                         <input style="float: left;padding-left:12px;" type="" name="data[nature]">
-                    </div>                
-                    <div class="input_set01" >
-                         <span style="float: left;;color:#707070">联系方式</span>
-                          <input style="float: left;padding-left:12px;" type="" name="data[mobile]">
-                    </div> 
-
-                    <input type="submit" name="" value="提交问题" class="button">
-                </form>
-                <script type="text/javascript">
-                    function validator_tooltip02(){
-
-                        jQuery.validator.addMethod("isTel", function(value,element) {   
-                            var length = value.length;   
-                            var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;   
-                            var tel = /^(\d{3,4}-?)?\d{7,9}$/g;       
-                            return this.optional(element) || tel.test(value) || (length==11 && mobile.test(value));   
-                        }, "请正确填写您的联系方式"); 
-                        
-                        $("#myform2").validate({
-                             rules: {
-                                      "data[title]":"required",
-                                      "data[nature]":"required",
-                                      "data[mobile]":{
-                                        required:true,
-                                        isTel:true
-                                      }
-                                    },
-                              messages:{
-                                    "data[title]":"请填写公司名称",
-                                    "data[nature]":"请填写行业",
-                                    "data[mobile]":{
-                                        required:"请填写联系方式"
-                                    }
-                                }
-                        });
-                        
-                    }
-                </script>
-            </div>
+           
+            
+            
             <div class="box">
                 <div class="circle_c_link button" data-type="button">
                     <img class="img-center" src="/img/icon001.png">
@@ -195,80 +101,12 @@
             		
             	</style>
             </div>
-            <div class="box width66" data-block="1" data-type="form">
-                <div class="form-content01">
-                    <form>
-                        <div class="m-form-line clear">
-                            <div class="block-2 m-form-block">
-                                <span class="text">姓名:</span>
-                                <div class="inputBox padding-r-25">
-                                    <input type="text" name="">
-                                </div>
-                            </div>
-                            <div class="block-2 m-form-block">
-                                <span class="text">电话:</span>
-                                <div class="inputBox">
-                                    <input type="text" name="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-form-line clear">
-                            <div class="block-1 m-form-block">
-                                <span class="text">主题:</span>
-                                <div class="inputBox ">
-                                    <input type="text" name="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-form-line clear">
-                            <div class="block-1 m-form-block">
-                                <span class="text">留言:</span>
-                                <div class="inputBox ">
-                                    <textarea></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-form-line padding-l-64">
-                            <button class="m-btn bg-l-blue" type="submit ">发送</button>
-                            <button class="m-btn bg-l-gray" type="reset">重置</button>
-                        </div>
-                    </form>
-                </div>
-                <style type="text/css"></style>
-            </div>
+            
             <div class="box" data-type="button">
                 <a class="button float-r cl-details  white">查看详情 》</a>
             </div>
-            <div class="box" data-block="1" data-type="form">
-                <div class="loginZone">
-                    <div class="middleRow">
-                        <form class="login-form" action="" method="post">
-                            <h4 class="no-margins blue">后台登录</h4>
-                            <input type="text" class="input-base uname" id="user" name="username" placeholder="用户名">
-                            <input type="password" class="input-base pword m-b" name="password" placeholder="密码">
-                            <div class="line">
-                                <div class="block block-2">
-                                    <input type="text" class="input-base pword m-b" name="password" placeholder="验证码">
-                                </div>
-                                <div class="block block-2">
-                                    <a class="verify margin-t-15">
-                                        <img src="/img/verifyimage.png">
-                                    </a>
-                                </div>
-                            </div>
-                            <a class="blue" href="http://www.fjiqtc.gov.cn/" target="_blank">访问前台</a>
-                            <button id="submit" name="submit" class="login button">登录</button>
-                        </form>
-                    </div>
-                </div>
-                <style type="text/css"></style>
-            </div>
-            <div class="box bg-green clear" data-block="3" data-type="input-set">
-                <div class="input-set01 float-r">
-                    <input class="input " type="" name="" placeholder="输入关键词">
-                    <input class="button white" type="submit" value="">
-                </div>
-            </div>
+            
+            
             <div class="box" data-type="button">
                 <div class="button btn-num01 mar-center">04</div>
             </div>
@@ -351,12 +189,7 @@
             <div class="box" data-type="button">
                 <a class="button float-r btn-s black" href="#" style="text-transform: uppercase;font-weight:bold;">more+</a>
             </div>
-            <div class="box" data-type="input-set">
-                <div class="input-set input-set-l">
-                    <input class="input bg-gray" type="" name="" placeholder="输入关键词">
-                    <input class="button bg-blue white" type="submit" class="addon" value="搜索">
-                </div>
-            </div>
+            
             <div class="box" data-type="button">
                 <span class="button btn-r-m bg-yellow white">解析</span>
             </div>
