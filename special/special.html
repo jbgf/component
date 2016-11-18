@@ -38,6 +38,67 @@
 	</div>	
 	<div class="fixedBg"></div>
 	<div id="specialBox" class="container1200">
+		<div class="box">
+			<script type="text/javascript">
+				var imgPath;/*["/img/1.png","/img/2.png","/img/3.png","/img/4.png","/img/5.png","/img/6.png"]*/
+				
+                var percent = 1,
+                    numLoaded = 0,
+                    $loadPercent = document.getElementById("loadPercent");
+				$.ajax({
+					method:"post",
+					url:"/php/special.php",
+					data:{get_file_type: "img"},
+					dataType:"json",
+					success:function(data){
+						imgPath = data;
+						console.log(imgPath)
+		                loadimg(imgPath);
+					}
+				})
+				
+                function loading() {
+                	console.log(numLoaded < imgPath.length)
+                    if (numLoaded < imgPath.length) {
+                        if (percent < 100 - imgPath.length + numLoaded) {
+                            percent++;
+                        		    
+                        }
+
+                    } else {
+
+                        percent += 10;
+                        percent > 100 && (percent = 100);
+                        
+                    }
+                    if (percent >= 100 && typeof $ != 'undefined') {
+                        return
+                    }
+                    setTimeout(arguments.callee, 10)
+                }
+                function loadimg(arr) {
+                    loading();
+                    for (var i = arr.length - 1; i >= 0; i--) {
+                        var img = new Image();
+                        img.onload = loadCheckComplete;
+                        img.onerror = loadCheckComplete;
+                        img.src = arr[i];
+
+                    }
+                   
+                    setTimeout(loadTimeout, 12000)
+                    
+
+                }
+                function loadTimeout() {}
+                function loadCheckComplete() {
+                    numLoaded++;
+
+                }
+                
+            
+			</script>
+		</div>
 		<div class="box" data-block="1" >
 			 <!-- map  start-->              
               <div class="map">
