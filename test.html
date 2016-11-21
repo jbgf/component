@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+       
+        <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+        <style type="text/css">
+
+ .input_set_text{float: left;line-height: 48px;}
+ .input-set-l { height: 48px; }
+ .bg-gray { background: rgb(225, 233, 246); }
+ .input-set input { display: inline-block; float: left; height: 100%; font-size: 16px; font-weight: 500; }
+ .input-set input.input { width: 72%; padding-left: 10px; box-sizing: border-box;border:none;}
+ .button, .link { cursor: pointer; }
+ .white { color: rgb(255, 255, 255); }
+ .bg-blue { background: rgb(25, 120, 207);}
+ .input-set input.button { width: 28%;border:none;}
+
+
+.margin-l-8{margin-left: 8px}
+.width66{width:66%;}
+.float-l{float: left;}
+
+.info_fail{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.info_success{
+	color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.search_tips>div.info {
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+}
+        </style>
+        
+    </head>
+    <body>
+		<div id="search_phone " class="search-wrapper width66 ">
+			
+                <div class="input_box01">
+                	<div class="input_set_text">电话号码查询</div>
+                	<form class="width66 float-l margin-l-8" onsubmit="return false;">
+	                	<div class="input-set input-set-l">
+		                    <input class="input bg-gray" type="" name="" placeholder="输入关键词">
+		                    <input class="button bg-blue white" type="submit" value="搜索"  >
+		                </div>
+
+		                <div class="search_tips">
+		        			<div class="info success_div info_success"></div>
+		        			<div class="info fail_div info_fail"></div>
+		        		</div>
+	                </form>
+                </div>
+        		
+		</div>        
+
+    </body>
+    <script type="text/javascript">
+        	/*结果*/
+        	var r = false;
+        	/*信息*/
+        	var message = r
+        	?"oh!成功oh!成功oh!成功oh!成功oh!成功oh!成功oh!成功oh!成功oh!成功oh!成功oh!成功oh!成功oh!成功"
+        	:"haha！失败haha！失败haha！失败haha！失败haha！失败haha！失败haha！失败haha！失败haha！失败haha";
+        	if(r){
+        		$(".success_div").text(message).show().siblings("div").hide();
+        	}
+        		else{$(".fail_div").text(message).show().siblings("div").hide();}
+        </script>
+</html>
