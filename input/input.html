@@ -186,11 +186,39 @@
                     <input class="button white" type="submit" value="">
                 </div>
             </div>
-            <div class="box" data-type="input-set">
+            <div class="box" data-block="3" data-type="input-set">
                 <div class="input-set input-set-l">
-                    <input class="input bg-gray" type="" name="" placeholder="输入关键词">
+                    <input class="input bg-gray" type="" name="" placeholder="输入搜索关键词">
                     <input class="button bg-blue white" type="submit" class="addon" value="搜索">
                 </div>
+            </div>
+            <div class="box" data-block="3" data-type="input-set">
+                <div class="input_box01">
+                    <div class="input_set_text">电话号码查询</div>
+                    <form class="width66 float-l margin-l-8" onsubmit="return false;">
+                        <div class="input-set input-set-l">
+                            <input class="input bg-gray" type="" name="" placeholder="输入关键词">
+                            <input class="button bg-blue white" type="submit" value="搜索"  >
+                        </div>
+
+                        <div class="info_box">
+                            <div class="info success_div info_success"></div>
+                            <div class="info fail_div info_fail"></div>
+                        </div>
+
+                    </form>
+                </div>
+            <script type="text/javascript">
+                /*结果*/
+            var r = false;
+            /*信息*/
+            var message = r
+            ?"oh!成功oh!成功oh!成功oh!"
+            :"haha！失败haha！失败haha！";
+            if(r){
+                $(".success_div").text(message).show().siblings("div").hide();
+            }else{$(".fail_div").text(message).show().siblings("div").hide();}
+            </script>    
             </div>
         </div>
     </body>

@@ -1,7 +1,7 @@
 /*input-set start*/
 .input-set{}
 .input-set input{display: inline-block;float:left;height: 100%;font-size: 16px;font-weight: 500;}
-.input-set input.input{width:72%;padding-left:10px;}
+.input-set input.input{width:72%;padding-left:10px;box-sizing: border-box;}
 .input-set input.button{width:28%;}
 .input-set-l{height: 48px;}
 /*input-set end*/
@@ -167,3 +167,7 @@ font-size: 14px;
     cursor: pointer;
 }
 /*m-form-line end*/
+
+/*input_box01 start*/
+.input_box01 .input_set_text{float: left;line-height: 48px;width: 30%;}
+/*input_box01 end*/
