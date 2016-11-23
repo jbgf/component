@@ -4,7 +4,6 @@ $.ajax({
     success:function(data){
 
         var h = $(data).find("#head").html();
-        console.log(h)    
         $("head").append(h);
     }
 });
