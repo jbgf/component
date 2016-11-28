@@ -1,12 +1,16 @@
-$.ajax({
-    url:"/common/common.html",
-    type:"GET",
-    success:function(data){
+function commonHead(callback){
+    $.ajax({
+        url:"/common/common.html",
+        type:"GET",
+        success:function(data){
 
-        var h = $(data).find("#head").html();
-        $("head").append(h);
-    }
-});
+            var h = $(data).find("#head").html();
+            $("head").append(h);
+            callback();
+        }
+    });
+}
+
 
 
 /*******************************************************

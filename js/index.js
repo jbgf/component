@@ -24,6 +24,7 @@
          "hammer":{url:"/js/hammer.min.js"},
          "jQuery.validator":{url:"/js/jquery.validate.js"},
          "tooltip":{url:"/js/tooltip.js"}
+
     },
     'css_array': {
          "swiper":"/css/swiper.min.css",
@@ -33,23 +34,28 @@
   }	
   
   set.prototype.jsPlugin = function(pname,fname){
+
     var that = this;
     var c = false, /*js加载完成；*/
         i = false; /*js开始准备加载*/
     var a = pname.split(";");
+
     var jsA = that.options.js_array;
     var jsTemp = [];
-      for(var k in a){
+      for(var k = 0;k<a.length;k++){
         Array.prototype.push.call(jsTemp,jsA[a[k]])
       };
+
     i = Array.prototype.every.call(jsTemp,function(v){
-      return v.ini;
+      return v?v.ini:false;
     });
+
     if(i){
       //直接用setTimeout(window[fname],0),有时会不灵
       if(fname)callUntil(fname)();
 /*加载js，css*/
     }else{
+
       var d = getJs(a);
       if(d){
         d.done(function(){
@@ -70,9 +76,10 @@
     function getJs(array){
       var diff,ua = []; 
           
-          for(var i in array){
+          for(var i = 0;i< array.length;i++){
             
             var u = jsA[array[i]].url;
+
             ua.push($.getScript(u));
             jsA[array[i]].ini = true;
           } 
@@ -102,6 +109,7 @@
 //开头的brand    写组件名
     $(".brandName ").html(brandName);
     box.each(function(i,e){
+        
         var bn = $(e).attr("data-block") || rowNum;
           if(bn){
             var classNameNew = 'block block-'+bn+' frameBlock';
@@ -136,6 +144,7 @@
         u?tagLine += uiTag = "<span class='tagFrame tag-blue blue'>UI: "+u+"</span>":"";
         s?tagLine += stag = "<span class='tagFrame jsTag tag-green green'>Javascript</span>":"";
 
+        
         //因为调用插件方法，可能会改变文档结构，所以先获取插件调用前的html。  
         p?(
           tagLine += ptag = "<span class='tagFrame  tag-red  red'>"+p+"</span>",
@@ -266,7 +275,7 @@
       ui:ui,
       type:type                     
     };
-
+    
     return state;
   }
   set.prototype.device = function(){
