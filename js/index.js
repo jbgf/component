@@ -174,7 +174,7 @@
       that.originalH.push($(e).children(".box").clone().find("script,.headRow").remove().end().html()); 
       that.switchPlugin(e);
     });
-  	
+  	that.tip();
     if(box.length != 0){
   		$.getScript("/js/getHCJ.js",function(){
   			  that.modalWindow();
@@ -219,17 +219,29 @@
     var t = $(fb).find("[data-type]");
     var a = t.attr("data-type");
     var type_array_name = a+'_a';
+    
+    /*affix_right*/
     if( a == "affix_right" ){
       $(fb).addClass("switchHide");
       this[type_array_name].push(fb);
       this.listen_scroll(fb,type_array_name);
-      /*******第一个加class on***********************/
-      if(this[a+'_a'].length == 1)$(fb).addClass("on");
+      
     }
   }
 
   set.prototype.tip = function(fb){
-    
+    var a = "affix_right";
+    var type_array_name = a+'_a';
+    var array = this[type_array_name];
+    if(array && array.length>1){
+      array[0].className+=" on";
+
+      $.each(this[type_array_name],function(index, el) {
+         $(el).mouseover(function(event) {
+           /*alert('TEST')*/
+         });
+      });
+    }
   }
 
   set.prototype.divide = function(a,rn){
