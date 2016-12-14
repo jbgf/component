@@ -1,0 +1,64 @@
+$is : 'input-set';
+$ib : 'inputBox';
+$text_width : 63;
+/* input-set03 start */
+.#{$is}03 .text {
+    width: #{$text_width}px;
+    float: left;
+    text-align: right;
+}
+.#{$is}03 .text,
+.#{$is}03 input {
+    height: 27px;
+    line-height: 27px;
+    display: block;
+    font-size: 14px;
+}
+
+.#{$is}03 {
+    .#{$ib}{
+        margin-left: #{$text_width+15}px;
+        position: relative;
+    }
+}
+ 
+
+.#{$is}03 .inputBox {
+    
+}
+.#{$is}03 .inputBox .verification_code{height: 27px;}
+.#{$is}03 .inputBox .verification_code img{height: 100%;margin:0 15px;}
+.#{$is}03 .inputBox .tips{
+    float: left;
+    color: #b5b5b5;
+    line-height: 29px;
+    margin-left: 5px;
+}
+.#{$is}03 .inputBox.textarea .tips{
+    position: absolute;
+    left: 62%;
+    bottom: 0;   
+}
+.#{$is}03 .inputBox .small{
+    width: 33%;
+}
+.#{$is}03 .inputBox .big{
+    width: 60%;
+}
+.#{$is}03 input,
+.#{$is}03 textarea {
+    border: 1px solid #cfcfcf;
+    width: 100%;
+    float: left;
+    padding: 0 5px;
+}
+.#{$is}03 textarea{
+    padding:{
+        top: 5px ;
+        bottom: 5px;
+    } 
+}     
+.#{$is}03 textarea {
+    min-height: 110px;
+}
+/* input-set03 end */

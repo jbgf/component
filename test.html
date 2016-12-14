@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+    <title></title>  
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script> 
+    <script type="text/javascript">  
+    $(function () {  
+        $(".figcaption").each(function (i) {  
+            var divH = $(this).height();  
+            var $p = $("p", $(this)).eq(0);  
+            while ($p.outerHeight() > divH) {  
+                $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));  
+            };  
+        });  
+        });  
+    </script>  
+    <style>  
+        .figcaption  
+        {  
+            background: #EEE;  
+            width: 410px;  
+            height: 3em;  
+            margin: 1em;  
+        }  
+        .figcaption p  
+        {  
+            margin: 0;  
+            line-height: 1.5em;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="figcaption">  
+        <p>  
+            You probably can't do it (currently?) without a fixed-width font like Courier. With  
+            a fixed-width font every letter occupies the same horizontal space, so you could  
+            probably count the letters and multiply the result with the current font size in  
+            ems or exs. Then you would just have to test how many letters fit on one line, and  
+            then break it up.</p>  
+    </div>  
+</body>  
+</html>  

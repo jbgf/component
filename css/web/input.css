@@ -1,0 +1,56 @@
+/* input-set03 start */
+.input-set03 .text {
+  width: 63px;
+  float: left;
+  text-align: right; }
+
+.input-set03 .text,
+.input-set03 input {
+  height: 27px;
+  line-height: 27px;
+  display: block;
+  font-size: 14px; }
+
+.input-set03 .inputBox {
+  margin-left: 78px;
+  position: relative; }
+
+.input-set03 .inputBox .verification_code {
+  height: 27px; }
+
+.input-set03 .inputBox .verification_code img {
+  height: 100%;
+  margin: 0 15px; }
+
+.input-set03 .inputBox .tips {
+  float: left;
+  color: #b5b5b5;
+  line-height: 29px;
+  margin-left: 5px; }
+
+.input-set03 .inputBox.textarea .tips {
+  position: absolute;
+  left: 62%;
+  bottom: 0; }
+
+.input-set03 .inputBox .small {
+  width: 33%; }
+
+.input-set03 .inputBox .big {
+  width: 60%; }
+
+.input-set03 input,
+.input-set03 textarea {
+  border: 1px solid #cfcfcf;
+  width: 100%;
+  float: left;
+  padding: 0 5px; }
+
+.input-set03 textarea {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.input-set03 textarea {
+  min-height: 110px; }
+
+/* input-set03 end */

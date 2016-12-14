@@ -43,6 +43,34 @@
 	
 	<div id="sliderBox" class="container1200">
 		<div class="box">
+        <!-- slider begin -->
+          <div class="slideBox slideBox02" data-plugin="superslide" data-p-caseName="picScroll03" data-type="img">
+              <div class="hd">
+                <ul>
+                  <li><a></a></li>
+                  <li><a></a></li>
+                  <li><a></a></li>
+                </ul>
+              </div>
+              <div class="bd">
+                <ul>
+                  <li><a href="#" target="_blank"><img src="/img/slider01.png"></a></li>
+                  <li><a href="#" target="_blank"><img src="/img/slider01.png"></a></li>
+                  <li><a href="#" target="_blank"><img src="/img/slider01.png"></a></li>
+                </ul>
+              </div>
+          </div>
+          <script type="text/javascript">
+              function picScroll03 (){
+
+                  jQuery(".slideBox02").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
+              }
+              
+            
+          </script>  
+        <!-- slider end -->  
+    </div>
+    <div class="box">
         <div class="floatWindow_r01" data-type="affix_right">
             <a href="#speak02">领导致辞</a>
             <a href="#focus">聚焦会场</a>
@@ -564,7 +592,7 @@
 		</div>	
 		<div class="box">
 			<!-- slider begin -->
-		      <div id="slideBox01" class="slideBox slideBox01" data-plugin="superslide" data-p-caseName="picScroll01" data-type="img">
+		      <div  class="slideBox slideBox01" data-plugin="superslide" data-p-caseName="picScroll01" data-type="img">
 		          <div class="hd">
 		            <ul>
 		              <li><a></a></li>

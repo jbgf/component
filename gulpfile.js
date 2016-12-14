@@ -1,8 +1,8 @@
 /*npm install gulp browser-sync gulp-connect-php run-sequence --save-dev;*/
 var gulp=require('gulp'),
-	
-	browserSync=require('browser-sync'),
-	
+	sass = require('gulp-sass'),
+	browserSync = require('browser-sync'),
+	changed = require('gulp-changed'),
 	
 	connect = require('gulp-connect-php'),
 	runSequence = require('run-sequence');
@@ -16,13 +16,14 @@ gulp.task('fonts',function(){                              //不使用插件的�
 })
 
 gulp.task('sass',function(){
-	return gulp.src('source/**/*.scss')
+	return gulp.src('sass/**/*.scss')
+			   .pipe(changed('css/'))
 			   .pipe(sass())
-			   .pipe(gulp.dest('dest'))
+			   .pipe(gulp.dest('css/'))
 			   .pipe(browserSync.reload({
 					stream:true
 				}))
-});
+}); 
 /*优化线路*/
 gulp.task('build',function(callback){
 	runSequence('clean:dest',
@@ -45,7 +46,7 @@ gulp.task('watch',['browserSync','connectPhp'],function(){
 	
 	 gulp.watch(['button/*.html','button/*.js,button/*.css'],browserSync.reload);
 	 gulp.watch(['js/*.js'],browserSync.reload);
-	 /*gulp.watch(['css/*.css'],browserSync.reload);*/
+	 gulp.watch(['sass/mobile/**/*.scss','sass/web/**/*.scss'],['sass']);
 });
 /*压缩*/
 //src 相对于gulpfile，main.html的文件链接相对于main.html

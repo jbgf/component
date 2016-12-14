@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    
+    <link class="ui" rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    
+    <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+    
+    
+</head>
+
+<body>
+    <script type="text/javascript">
+    var c = function(){
+      
+        $(window).on("load resize",function(){
+          htmlFontSize();
+          function htmlFontSize (){
+                    var rate = 23;
+                    var baseFontSize;
+                    var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+                        if(clientWidth > 640) clientWidth = 640;
+
+                        baseFontSize = clientWidth * 1/rate;
+                        document.documentElement.style.fontSize = baseFontSize+"px";
+                        document.body.style.fontSize = baseFontSize+"px";
+                        
+                        return clientWidth * 1/rate;
+          };
+          $("#mobile").set({
+              brandName: "mobile",
+              rowBlock: 1
+          });
+        });
+    }
+    commonHead(c);
+    </script>
+    <div id="m_button" class="container">
+    </div>
+    
+</body>
+</html>

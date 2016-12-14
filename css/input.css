@@ -63,6 +63,42 @@ font-size: 14px;
 .input-set03 textarea{min-height: 110px;}
 /*input-set03 end*/
 
+/*input-set04 start*/
+.input-set04 {
+    width: 328px;
+    height: 38px;
+    border:1px solid #e0e0e0;
+}
+.input-set04 input {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 38px;
+}
+.input-set04 input.input { 
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+    box-sizing: border-box;
+    
+    width: 82%;
+    padding-left: 2%;
+    border-top: 1px solid rgb(246, 246, 246);
+    border-bottom: 1px solid rgb(246, 246, 246);
+    border-left: 1px solid rgb(246, 246, 246);
+    border-image: initial;
+    border-right: none;
+    background-color: rgb(255, 255, 255);
+}
+.input-set04 input.button {
+        width: 18%;
+    background-image: url(../img/search-icon.png);
+    background-repeat: no-repeat;
+    background-color: rgb(246, 246, 246);
+    background-position: 54% 46%;
+}
+/*input-set04 end*/
 
 /*content1_form start*/
 .content1_form {}

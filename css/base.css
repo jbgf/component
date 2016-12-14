@@ -26,6 +26,7 @@ input{border:none;}
 .orange{color:#ff8702;}
 .gray{color:#C2C1C1;}
 .red{color: #ec5369;}
+
 .heavy-red{color:#ff8d99;}
 .black{color:#333;}
 
@@ -38,7 +39,7 @@ input{border:none;}
 .bg-yellow{background: #ffae00;}
 .bg-pink{background:#ec5369;}
 .bg-green {background: #6eb92b;}
-
+.bg_red{background-color: #df0000;}
 
 
 

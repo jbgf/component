@@ -137,32 +137,7 @@ margin-top: 100%; /* margin 百分比相对父元素宽度计算 */
   font-size: .5rem;
 }
 
-/*.news-list01 start*/
-.news-list01 {
-	max-height: 240px;
-}
-.news-list01 ul {
-	padding-top: 10px;
-	text-align: left;
-}
-.news-list01 li {
-	display:block;
-    height:36px;
-    line-height: 30px;
-    padding-left: 15px;
-    background: url(../img/iconbg02.png) 1px 35% no-repeat;
-    background-size: 5px;
-}
-.news-list01 li .list-text {
-	width: 90%;
-	color: #666;
-  text-align: left;
-}
-.more-Row {
-    text-align:center;
-    padding:.4rem 0;
-}
-/*.news-list01 end*/
+
 
 /*swiperGroup01 end*/
 .m-testRange01{text-align: left;}
