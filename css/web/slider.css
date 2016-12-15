@@ -1,0 +1,44 @@
+/*slideBox02 start*/
+.slideBox02 {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+  .slideBox02 .hd {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 5px;
+    z-index: 1; }
+    .slideBox02 .hd ul {
+      overflow: hidden;
+      zoom: 1;
+      display: inline-block; }
+      .slideBox02 .hd ul li {
+        width: 30px;
+        height: 6px;
+        float: left;
+        margin-right: 12px;
+        line-height: 14px;
+        text-align: center;
+        background: #faf9f9;
+        cursor: pointer; }
+        .slideBox02 .hd ul li.on {
+          background: #df0000;
+          color: white; }
+  .slideBox02 .bd {
+    position: relative;
+    width: 100%;
+    z-index: 0; }
+    .slideBox02 .bd li {
+      width: 100%;
+      display: block;
+      vertical-align: middle; }
+      .slideBox02 .bd li a {
+        width: 100%;
+        display: block; }
+        .slideBox02 .bd li a img {
+          width: 100%;
+          display: block; }
+
+/*slideBox02 end*/

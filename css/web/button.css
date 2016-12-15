@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(base.scss);
 　
 .button_group01 {
   padding: 0 5%; }

@@ -17,7 +17,8 @@ gulp.task('fonts',function(){                              //不使用插件的�
 
 gulp.task('sass',function(){
 	return gulp.src('sass/**/*.scss')
-			   .pipe(changed('css/'))
+	/*只编译change的文件*/
+			   .pipe(changed('css/',{extension: '.css'}))
 			   .pipe(sass())
 			   .pipe(gulp.dest('css/'))
 			   .pipe(browserSync.reload({
@@ -33,7 +34,7 @@ gulp.task('build',function(callback){
 
 /*开发线路*/
 gulp.task('default',function(callback){
-	runSequence(['browserSync','watch'],
+	runSequence([/*'browserSync',*/'watch'],
 		callback)
 })
 gulp.task('browserSync',function(){
@@ -42,7 +43,7 @@ gulp.task('browserSync',function(){
 		proxy: "localhost:8001"			//处理php文件，gulp-connect-php默认监听8000，直接设置port：8000会发生占用，启用8001；
 	})
 });
-gulp.task('watch',['browserSync','connectPhp'],function(){
+gulp.task('watch',[/*'browserSync',*/'connectPhp'],function(){
 	
 	 gulp.watch(['button/*.html','button/*.js,button/*.css'],browserSync.reload);
 	 gulp.watch(['js/*.js'],browserSync.reload);

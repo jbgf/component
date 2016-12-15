@@ -1,0 +1,15 @@
+/* color */
+
+.gray{color:lighten(#C2C1C1,10%);}
+
+.abs{position: absolute;}
+.absCenter {
+    @extend .abs;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+ 
+
