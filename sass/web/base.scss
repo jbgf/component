@@ -1,3 +1,15 @@
+$baseSize : 14px;
+$baseLineHeight : 22px;
+$baseFontColor : #666;
+body{
+	font-family: 'Microsoft YaHei',"Helvetica Neue", Helvetica, 'Hiragino Sans GB',  'WenQuanYi Micro Hei', Arial,sans-serif;
+	overflow-x: hidden;
+	font-size: $baseSize;
+	line-height: $baseLineHeight;
+    color: $baseFontColor;
+}
+
+
 /* color */
 
 .gray{color:lighten(#C2C1C1,10%);}

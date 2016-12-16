@@ -1,7 +1,26 @@
 @charset "UTF-8";
-@import url(base.scss);
-　
-.button_group01 {
+body {
+  font-family: 'Microsoft YaHei',"Helvetica Neue", Helvetica, 'Hiragino Sans GB',  'WenQuanYi Micro Hei', Arial,sans-serif;
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 22px;
+  color: #666; }
+
+/* color */
+.gray {
+  color: #dbdbdb; }
+
+.abs, .absCenter {
+  position: absolute; }
+
+.absCenter {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+　 .button_group01 {
   padding: 0 5%; }
 
 .button_group01 .link-zone {
@@ -24,9 +43,33 @@
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  /* opera mini ie9以下不支持*/ }
 
 .button_group01 .link-zone .link-wrapper .circle_c_link {
   background-color: #f2910f; }
 
 /*button_group01 end */
+.tag-green {
+  border: 1px solid #6eb92b;
+  border-radius: 10px;
+  padding: 0px 10px;
+  display: inline-block; }
+
+.tag-blue {
+  border: 1px solid #1978CF;
+  border-radius: 10px;
+  padding: 0px 10px;
+  display: inline-block; }
+
+.tag-red {
+  border: 1px solid #ec5369;
+  border-radius: 10px;
+  padding: 0px 10px;
+  display: inline-block; }
+
+.tag-black {
+  border: 1px solid #171011;
+  border-radius: 10px;
+  padding: 0px 10px;
+  display: inline-block; }

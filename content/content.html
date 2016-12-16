@@ -3,24 +3,22 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/css/base.css">
-	<link rel="stylesheet" type="text/css" href="/css/frame.css">
-	<link rel="stylesheet" type="text/css" href="/css/button.css">
-	<link rel="stylesheet" type="text/css" href="/css/slider.css">
-	<link rel="stylesheet" type="text/css" href="/css/content.css">
-	<link rel="stylesheet" type="text/css" href="/css/index.css">
 	
 	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="/js/layer/layer.js"></script>
-	<script type="text/javascript" src="/js/index.js"></script>
+  <script type="text/javascript" src="/js/common.js"></script>
+  <script type="text/javascript" src="/js/layer/layer.js"></script>
+
 	<script type="text/javascript">
-		$(function(){
-			$("#contentBox").set({
-				brandName:"content & List",
-				rowBlock:3
-			});
-		});
 		
+    var c = function(){
+                $(function(){
+                  $("#contentBox").set({
+                    brandName:"content & List",
+                    rowBlock:3
+                  });
+                });
+            } 
+  commonHead(c);
 	</script>
 </head>
 <body>
@@ -38,18 +36,21 @@
     <div class="box">
         <div class="introduce float-l clear" style="height: 281px;">
             <div class="m_inner left">
-              <div class="header font-title">
+              
+            <div class="header04 font-title">
                 <span class="itemChoose">公司简介</span>
-                      </div>  
-                      <div class="newsBox01 n-pic ">
+            </div>
+
+            <div class="newsBox01 n-pic ">
                 
-                  <img src="img/introduce01.png">
+                  <img src="/img/introduce01.png">
                   <div class="title n-pic-text ">
                       
                       <p class="n-pic-content">
                           福建肯特计量科技有限公司是由绍兴市肯特机械电子有限公司与福建省计量科学研究院共同投资组建的一家股份制有限责任公司，注册资本人民币2000万元，...    
-                          <a class="float-r button kent_red">[查看详情]</a>
+                          
                       </p>
+                      <a class="red float-r button kent_red">[查看详情]</a>
                   </div>
                 
             </div>

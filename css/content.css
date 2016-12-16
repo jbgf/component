@@ -78,7 +78,7 @@
 /*newsBox01 start*/
 .newsBox01.n-pic { overflow: hidden; position: relative; width: 290px;} 
 .newsBox01 .bd { position: relative; width: 100%; z-index: 0; } 
-.newsBox01 .bd img { width: 100%; display: block; } 
+.newsBox01 img { width: 100%; display: block; } 
 .newsBox01.n-pic .n-pic-text { padding: 9px; } 
 .newsBox01.n-pic .n-pic-text .n-pic-title { text-align: center; font-size: 16px; padding: 3px 0; } 
 .newsBox01.n-pic .n-pic-text .n-pic-content { padding: 5px 0;text-align: left; }

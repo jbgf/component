@@ -34,7 +34,7 @@ gulp.task('build',function(callback){
 
 /*开发线路*/
 gulp.task('default',function(callback){
-	runSequence([/*'browserSync',*/'watch'],
+	runSequence(['browserSync','watch'],
 		callback)
 })
 gulp.task('browserSync',function(){

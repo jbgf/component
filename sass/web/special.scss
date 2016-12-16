@@ -1,9 +1,10 @@
-@function sign($s) {
-	$s : '-';
+@import "base.scss";
+@function sign(){
+	$s : '-'!default;
 	@if random()<0.5{$s : '';}@else{$s : '-';}
 	@return #{$s};
 }
- 
+  
 @keyframes shake{
 	 $i : 2;
 	 $sign : '-';
@@ -12,7 +13,7 @@
 	 @while $i < 100{
 	 	
 	 	#{$i}%{
-          	 transform: translate(sign($sign)+($baseNum*random()+px),sign($sign)+($baseNum*random()+px)) rotate(sign($sign)+($baseAngle*random()+deg));
+          	 transform: translate(sign()+($baseNum*random()+px),sign()+($baseNum*random()+px)) rotate(sign()+($baseAngle*random()+deg));
 	 	}
 	 	$i : $i + 2;
 	 }  

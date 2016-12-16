@@ -1,4 +1,5 @@
 $sb:'slideBox';
+$colorArray : #faf9f9 , #df0000 , rgb(255, 255, 255);
 @mixin bd{
     position: relative;
     width: 100%;
@@ -16,8 +17,8 @@ $sb:'slideBox';
             }
         }
     }
-};
-@mixin hd($width,$height){
+}; 
+@mixin hd($width,$height,$ca){
     text-align: center;
     width: 100%;
     overflow: hidden;
@@ -35,14 +36,14 @@ $sb:'slideBox';
             margin-right: 12px;
             line-height: 14px;
             text-align: center;
-            background: #faf9f9;
+            background: nth($ca,1);
             cursor: pointer;
             &.on{
-                background: #df0000;
-                color: rgb(255, 255, 255);
+                background: nth($ca,2);
+                color: nth($ca,3);
             }
-        }
-    }
+        } 
+    } 
 };
 @mixin slideBox($num){
     .#{$sb}0#{$num}{
@@ -50,7 +51,7 @@ $sb:'slideBox';
         overflow: hidden;
         position: relative;
         .hd{
-            @include hd(30,6);
+            @include hd(30,6,$colorArray);
         }
         .bd{
             @include bd;
