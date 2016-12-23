@@ -42,7 +42,80 @@
 	</div>	
 	
 	<div id="sliderBox" class="container1200">
-		<div class="box">
+		<!-- affix 放在最前面 -->
+    <div class="box">
+        <!-- floatwindow start-->
+        <div id="affix_r01" class="affix_p01 affix-top"  data-plugin="affixBeta" data-p-casename="affix_r01" data-type="affix_right">
+          <div class="myScrollspyWrapper" >
+            <div class="myScrollspy">
+                    <div class="catalog-scroller">
+                       
+                        <dl class="nav" id="myNav">
+                            <dt><a href="#contact"><img src="/img/tel.png">联系我们</a></dt>
+                            <dt><a href="http://wpa.qq.com/msgrd?v=3&uin=138000000&site=qq&menu=yes"><img src="/img/qq.png">在线咨询</a></dt>
+                            <dt><a href="#section-3"><img src="/img/qr01.png">扫一扫关注</a></dt>
+                            <dt><a class="top" href="#top"><img src="/img/upArrow.png">TOP</a></dt>
+                        </dl>
+                        
+                    </div>
+            </div>
+          </div>
+        </div>
+       <!-- floatwindow end-->  
+       <script type="text/javascript">
+         function affix_r01(){
+           $("#affix_r01").Affix({
+                  offset:{
+                    top:$("#affix_r01").offset().top, 
+                    bottom: 550
+                  }
+              });
+           
+         }
+       </script>
+    </div>
+    <div class="box" data-block="3" data-plugin="superslide" data-p-casename="textTab03" data-type="tab">
+              <!-- 咨询中心 start -->
+              <div class="i_center clear" >
+                  <div class="m_inner center">
+                    
+                      <div class="info_details ">
+                          <div class="hd">
+                            <ul class="ul-line01 clear">
+                                <li><a href="#" class="font-normal">肯特新闻  </a></li>
+                                <li><a href="#" class="font-normal">行业新闻</a></li>
+                            </ul>
+                          </div>
+                          <div class="bd">
+                              <div class="news-list01">
+                                  <ul>
+                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
+                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
+                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
+                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
+                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
+                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
+
+                                  </ul>  
+                              </div>
+                              <div class="news-list01">
+                                  hello?
+                              </div>
+                          </div>
+                            
+                      </div>
+                  </div>
+                  
+              </div>
+              <!-- 咨询中心 end -->
+              <script type="text/javascript">
+                  function textTab03(){
+                      /*咨询中心tab切换*/
+                      jQuery(".info_details").slide();
+                  }
+              </script>
+    </div>
+    <div class="box">
         <!-- slider begin -->
           <div class="slideBox slideBox02" data-plugin="superslide" data-p-caseName="picScroll03" data-type="img">
               <div class="hd">
@@ -80,38 +153,7 @@
             <a class="backTop" href="#top"></a>
         </div>
     </div>
-    <!-- affix 放在最前面 -->
-    <div class="box">
-        <!-- floatwindow start-->
-        <div id="affix_r01" class="affix_p01 affix-top"  data-plugin="affixBeta" data-p-casename="affix_r01" data-type="affix_right">
-          <div class="myScrollspyWrapper" >
-            <div class="myScrollspy">
-                    <div class="catalog-scroller">
-                       
-                        <dl class="nav" id="myNav">
-                            <dt><a href="#contact"><img src="/img/tel.png">联系我们</a></dt>
-                            <dt><a href="http://wpa.qq.com/msgrd?v=3&uin=138000000&site=qq&menu=yes"><img src="/img/qq.png">在线咨询</a></dt>
-                            <dt><a href="#section-3"><img src="/img/qr01.png">扫一扫关注</a></dt>
-                            <dt><a class="top" href="#top"><img src="/img/upArrow.png">TOP</a></dt>
-                        </dl>
-                        
-                    </div>
-            </div>
-          </div>
-        </div>
-       <!-- floatwindow end-->  
-       <script type="text/javascript">
-         function affix_r01(){
-           $("#affix_r01").Affix({
-                  offset:{
-                    top:$("#affix_r01").offset().top, 
-                    bottom: 550
-                  }
-              });
-           
-         }
-       </script>
-    </div>
+    
 
     <div class="box">
         <div class="glideWrapper01" data-plugin="glide" data-p-casename="glide_img01" data-type="img">

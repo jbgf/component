@@ -1,3 +1,21 @@
+/*ul-line start*/
+.ul-line01 li {
+    float: left;
+    display: block;
+    margin-right: 10px;  
+}
+.ul-line01 li a{
+    display: block;
+    padding: 0 10px;
+    border:1px solid #ddd;
+}
+.ul-line01 .on a{
+    background-color: #df0000;
+    color: #fff;
+    border:1px solid #df0000;
+}
+/*ul-line end*/
+
 /*slideBox02 start*/
 .slideBox02 {
     width: 100%;
@@ -69,7 +87,7 @@
 
 .publish{padding: 20px 0;}
 .tip{
-	background: url(../img/tip.png) no-repeat;
+    background: url(../img/tip.png) no-repeat;
     width: 96px;
     height: 36px;
     line-height: 36px;
@@ -78,7 +96,7 @@
     color: #fff;
     text-align: left;
     position: relative;
-    z-index: 99;	
+    z-index: 99;    
 }
 /*txtScroll-left01 start*/
 .txtScroll-left01.case02{width:730px; background-color: #f7f7f7;}
