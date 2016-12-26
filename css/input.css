@@ -1,68 +1,3 @@
-/*input-set start*/
-.input-set{}
-.input-set input{display: inline-block;float:left;height: 100%;font-size: 16px;font-weight: 500;}
-.input-set input.input{width:72%;padding-left:10px;box-sizing: border-box;}
-.input-set input.button{width:28%;}
-.input-set-l{height: 48px;}
-/*input-set end*/
-
-/*.input_set01  start*/
-.input_set01 {
-    position: relative;
-    display: table;
-    table-layout: fixed;
-    border-collapse: separate;
-}
-.input_set01+.input_set01{margin-top: 20px;}
-.input_set01 span{
-    font-size: 16px;
-    display: inline-block;
-    height: 47px;
-    width: 76px;
-    line-height: 47px;
-}
-.input_set01 input{
-    width:385px;
-    height: 47px;
-    border: 1px solid #dbdbdb;
-    border-radius: 3px;
-}
-.input_set01 input:focus{box-shadow: inset 0 1px 1px 2px rgba(0,0,0,.075), 0 0 8px 2px rgba(102, 175, 233, .6);outline: 0}
-/*.input_set01  end*/
-
-/*input-set02 start*/
-.input-set02{width:328px; height: 38px;}
-.input-set02 input { display: inline-block; float: left; height: 100%; font-size: 16px; font-weight: 500; }
-.input-set02 input.input:focus{outline: none;} 
-.input-set02 input.input {
-    box-sizing:border-box; width: 80%; padding-left: 2%;border:1px solid #f6f6f6;
-    border-right: none;
-    background-color: #fff;
-}
-.input-set02 input.button { width: 18%; 
-    background-image: url(../img/search-icon.jpg);background-repeat:  no-repeat;
-    background-color: #f6f6f6;
-}
-/*input-set02 end*/
-
-/*input-set03 start*/
-.input-set03 .text{width: 63px;float: left;}
-.input-set03 .inputBox{margin-left: 63px;}
-.input-set03 .text,
-.input-set03 input{
-height: 27px;
-line-height: 27px;
-display: block;
-font-size: 14px;
-}
-.input-set03 input, 
-.input-set03 textarea{
-    border:1px solid #efefef;
-    width: 100%;
-}
-.input-set03 textarea{min-height: 110px;}
-/*input-set03 end*/
-
 /*input-set04 start*/
 .input-set04 {
     width: 328px;
@@ -77,9 +12,7 @@ font-size: 14px;
     font-weight: 500;
     line-height: 38px;
 }
-.input-set04 input.input { 
-    -moz-box-sizing:border-box; /* Firefox */
-    -webkit-box-sizing:border-box; /* Safari */
+.input-set04 input.input { /* Firefox */ /* Safari */
     box-sizing: border-box;
     
     width: 82%;
@@ -99,6 +32,79 @@ font-size: 14px;
     background-position: 54% 46%;
 }
 /*input-set04 end*/
+
+/*input-set03 start*/
+.input-set03 .text{width: 63px;float: left;}
+.input-set03 .inputBox{margin-left: 63px;}
+.input-set03 .text,
+.input-set03 input{
+height: 27px;
+line-height: 27px;
+display: block;
+font-size: 14px;
+}
+.input-set03 input, 
+.input-set03 textarea{
+    border:1px solid #efefef;
+    width: 100%;
+}
+.input-set03 textarea{min-height: 110px;}
+/*input-set03 end*/
+
+/*input-set02 start*/
+.input-set02{width:328px; height: 38px;}
+.input-set02 input { display: inline-block; float: left; height: 100%; font-size: 16px; font-weight: 500; }
+.input-set02 input.input:focus{outline: none;} 
+.input-set02 input.input {
+    box-sizing:border-box; width: 80%; padding-left: 2%;border:1px solid #f6f6f6;
+    border-right: none;
+    background-color: #fff;
+}
+.input-set02 input.button { width: 18%; 
+    background-image: url(../img/search-icon.jpg);background-repeat:  no-repeat;
+    background-color: #f6f6f6;
+}
+/*input-set02 end*/
+
+/*.input-set01  start*/
+.input-set01 {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    border-collapse: separate;
+}
+.input-set01+.input-set01{margin-top: 20px;}
+.input-set01 span{
+    font-size: 16px;
+    display: inline-block;
+    height: 47px;
+    width: 76px;
+    line-height: 47px;
+}
+.input-set01 .input{
+    width:385px;
+    height: 47px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+.input-set01 .input:focus{box-shadow: inset 0 1px 1px 2px rgba(0,0,0,.075), 0 0 8px 2px rgba(102, 175, 233, .6);outline: 0}
+/*.input-set01  end*/
+
+/*input-set start*/
+.input-set{}
+.input-set input{display: inline-block;float:left;height: 100%;font-size: 16px;font-weight: 500;}
+.input-set input.input{width:72%;padding-left:10px;box-sizing: border-box;}
+.input-set input.button{width:28%;}
+.input-set-l{height: 48px;}
+/*input-set end*/
+
+
+
+
+
+
+
+
 
 /*content1_form start*/
 .content1_form {}
@@ -128,11 +134,7 @@ font-size: 14px;
     margin: 0 auto; 
     background: #deeffd;
     border: 1px solid rgba(255,255,255,.3);
-    -moz-box-shadow: 0 3px 0 rgba(12,12,12,.03);
-    -webkit-box-shadow: 0 3px 0 rgba(12,12,12,.03);
     box-shadow: 0 0 40px black;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
     padding: 30px;
     position: absolute;

@@ -5,22 +5,14 @@
 	<meta charset="utf-8">
   <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="/js/common.js"></script>
-  <script type="text/javascript" src="/js/layer/layer.js"></script>
-  
+  <script type="text/javascript" src="/js/layer/layer.js"></script>  
   <link rel="stylesheet" type="text/css" href="/css/liquid-green.css">
-	
-	
-
   <script type="text/javascript" src="/js/liquid.js"></script>
   <script type="text/javascript" src="/js/swfobject.js"></script>
   <script type="text/javascript" src="/js/flippingbook.js"></script>
-	
-
-	
 </head>
 <body>
 <script type="text/javascript">
-
   var c = function(){
     $(function(){
       $("#sliderBox").set({
@@ -74,15 +66,47 @@
          }
        </script>
     </div>
+    <div class="box" data-block="3" data-plugin="superslide" data-p-casename="picScroll04" data-type="img">
+          <div class="picScroll04 slideBox03 newsBox n-pic">
+                <div class="hd">
+                  <ul>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                  </ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                      <li>
+                          <a href="#" target="_blank"><img src="/img/n-pic.png">
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" target="_blank"><img src="/img/n-pic.png">
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" target="_blank"><img src="/img/n-pic.png">
+                          </a>
+                      </li>
+                    </ul>
+                </div>
+          </div>
+          <script type="text/javascript">
+            function picScroll04(){
+                jQuery(".picScroll04").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});  
+            }
+          </script> 
+    </div>
     <div class="box" data-block="3" data-plugin="superslide" data-p-casename="textTab03" data-type="tab">
               <!-- 咨询中心 start -->
               <div class="i_center clear" >
-                  <div class="m_inner center">
+                  <div class="m_inner center shadow01">
                     
                       <div class="info_details ">
                           <div class="hd">
                             <ul class="ul-line01 clear">
-                                <li><a href="#" class="font-normal">肯特新闻  </a></li>
+                                <li><a href="#" class="font-normal">肯特新闻</a></li>
                                 <li><a href="#" class="font-normal">行业新闻</a></li>
                             </ul>
                           </div>
@@ -114,6 +138,7 @@
                       jQuery(".info_details").slide();
                   }
               </script>
+
     </div>
     <div class="box">
         <!-- slider begin -->
@@ -503,7 +528,7 @@
 		<div class="box bg-black">
 	        <div class="publish clear" data-plugin="superslide" data-p-casename="textScroll02" data-type="text">
 	            <div class="tip title-s float-l">最新公告</div>
-	    		<div class="input-set01 float-r">
+	    		<div class="input-set02 float-r">
                       <input class="input " type="" name="" placeholder="输入关键词">
                       <input class="button white" type="submit" value="">
             	</div> 

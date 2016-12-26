@@ -44,7 +44,7 @@
             return $node;
         },
         readCss:function(a){
-            console.log(a)
+           
             var sheets = document.styleSheets, 
                 o = [];
 
