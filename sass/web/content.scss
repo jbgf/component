@@ -1,4 +1,50 @@
 @import "variable.scss";
+
+/*news-list04 start*/
+.news-list04 {
+    ul { 
+        text-align: left;
+        li {
+            display: block;
+            height: 33px;
+            line-height: 33px;
+            padding-left: 15px;
+            background: url(#{$baseImgUrl}iconbg03_gray.png) 0px 50% no-repeat;
+            &:hover{
+                color:#df0000;
+                background: url(#{$baseImgUrl}iconbg03_red.png) 0px 50% no-repeat;
+                a {
+                    .date {
+                        color:#df0000;
+                    }
+                    
+                }
+            }
+            .iconDownLoad {
+                width: 20px;
+                display: block;
+                height: 20px;
+                margin-top: 5px;
+                margin-left: 15px;
+            }
+            .date {
+                float: right;
+                color: rgb(153, 153, 153);
+            }
+            .text {
+                width: 75%;
+                display: block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+    }   
+}
+
+
+/*news-list04 end*/
+
 /*.news-list03 start*/
 .news-list03 {
     max-height: 240px;
@@ -142,6 +188,45 @@
 .news-ul01 .newsRow .cl-newsBox .cl-btn .time{color: #c3c3c3;}
 
 /*news-ul01 start*/
+
+@mixin pagination($num){
+    .pagination0#{$num}{
+        text-align: center;
+        ul{
+            display: inline-block;
+            li{
+                cursor: pointer;
+                display: block;
+                float: left;
+            }        
+        }        
+    }        
+}
+/*pagination02  start*/
+@include pagination(2);
+.pagination02 {
+    padding: 32px 0px 0px;
+    ul li{
+        margin: 0px 5px;
+        a{
+            display: block;
+            width: 23px;
+            height: 23px;
+            line-height: 23px;
+            border: 1px solid #ddd;
+        }
+        &.left a,&.right a{
+            width:auto;
+            padding:0 5px;
+        }
+        &.on a{
+            background:#df0000;
+            color: rgb(255, 255, 255);
+        }
+    }    
+}
+
+/*pagination02  end*/
 
 /*pagination0101 start*/
 .pagination01{text-align: center;padding: 18px 0 0;}

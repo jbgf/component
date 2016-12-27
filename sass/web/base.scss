@@ -36,9 +36,19 @@ input{border:none;}
      width: 100%;
      height: 100%;
 }
+.mar-center{margin:0 auto;}
+.align-center{text-align: center;}
+.hide{display: none;}
+.view-hide{visibility: hidden;}
 
 .float-r{float: right;}
 .float-l{float: left;}
+
+
+.phase {
+    text-indent: 2rem;
+    line-height: 1.7;
+}
 
 /*color*/
 .white{color:#fff;}
@@ -62,12 +72,15 @@ input{border:none;}
 .bg-green {background: #6eb92b;}
 .bg_red{background-color: #df0000;}
 
+
 .padding-15{padding-left: 15px;padding-right: 15px;}
 .padding-37{padding-left:37px;padding-right:37px;}
 .padding-t-15{padding-top: 15px;}
 .padding-t-65{padding-top: 65px;}
 .padding-r-25{padding-right: 25px;}
 .padding-l-64{padding-left: 64px;}
+.padding-l-77{padding-left:77px;}
+
 
 .marin-t-7{margin-top: 7px;}
 .margin-t-15{margin-top: 15px;}

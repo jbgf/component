@@ -1,3 +1,34 @@
+/*news-list04 start*/
+.news-list04 ul {
+  text-align: left; }
+  .news-list04 ul li {
+    display: block;
+    height: 33px;
+    line-height: 33px;
+    padding-left: 15px;
+    background: url(/img/iconbg03_gray.png) 0px 50% no-repeat; }
+    .news-list04 ul li:hover {
+      color: #df0000;
+      background: url(/img/iconbg03_red.png) 0px 50% no-repeat; }
+      .news-list04 ul li:hover a .date {
+        color: #df0000; }
+    .news-list04 ul li .iconDownLoad {
+      width: 20px;
+      display: block;
+      height: 20px;
+      margin-top: 5px;
+      margin-left: 15px; }
+    .news-list04 ul li .date {
+      float: right;
+      color: #999999; }
+    .news-list04 ul li .text {
+      width: 75%;
+      display: block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
+
+/*news-list04 end*/
 /*.news-list03 start*/
 .news-list03 {
   max-height: 240px; }
@@ -201,6 +232,34 @@
   color: #c3c3c3; }
 
 /*news-ul01 start*/
+/*pagination02  start*/
+.pagination02 {
+  text-align: center; }
+  .pagination02 ul {
+    display: inline-block; }
+    .pagination02 ul li {
+      cursor: pointer;
+      display: block;
+      float: left; }
+
+.pagination02 {
+  padding: 32px 0px 0px; }
+  .pagination02 ul li {
+    margin: 0px 5px; }
+    .pagination02 ul li a {
+      display: block;
+      width: 23px;
+      height: 23px;
+      line-height: 23px;
+      border: 1px solid #ddd; }
+    .pagination02 ul li.left a, .pagination02 ul li.right a {
+      width: auto;
+      padding: 0 5px; }
+    .pagination02 ul li.on a {
+      background: #df0000;
+      color: white; }
+
+/*pagination02  end*/
 /*pagination0101 start*/
 .pagination01 {
   text-align: center;

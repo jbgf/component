@@ -1396,3 +1396,9 @@ if ( $.ajaxPrefilter ) {
 }
 
 }));
+/*添加方法*/
+
+jQuery.validator.addMethod("specialCharValidate", function(value, element) { 
+                            var pattern = new RegExp("[`~!@%#$^&*()=|{}':;',　\\[\\]<>/? \\.；：%……+￥（）【】‘”“'。，、？]"); 
+                            return this.optional(element)||!pattern.test(value) ; 
+                            },"不允许包含特殊符号!"); 
