@@ -334,6 +334,29 @@
     color: #b2b2b2;
 }
 
+
+.tag{padding:20px 0;border-bottom: 1px dashed #ddd;}
+/*ul-line02 start*/
+.ul-line02 li {
+    float: left;
+    display: block;
+    margin-right: 10px;  
+}
+.ul-line02 li a{
+    display: block;
+    padding: 0 10px;
+    border:1px solid #ddd;
+    border-radius: 5px;
+}
+.tag .icon{float: left;}
+/*ul-line02 end*/
+
+/* tagLine01 start */
+.tagLine01{
+
+}
+/* tagLine01 end */
+
 /*switch-tag01 start*/
 .switch-tag01 .search-inf-box{padding:20px 0 0px;font-size: 13px;}
 .switch-tag01 .search-inf-box .search-tag,

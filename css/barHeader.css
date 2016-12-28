@@ -63,9 +63,7 @@
 
 .navbar-line03 .naver_wrapper .naver_01 {
     border-right: 1px solid #dddcdd;
-    min-width: 158px;
-    -moz-box-sizing:border-box; /* Firefox */
-    -webkit-box-sizing:border-box; /* Safari */
+    min-width: 158px; /* Firefox */ /* Safari */
     box-sizing: border-box;
     min-height: 130px;
     display: inline-block;
@@ -174,16 +172,16 @@
 /*导航栏navbar-line01 start*/
 .navbar-line01{}
 .navbar-line01 .navbar-block{
-	float: left;position: relative;
-	min-height: 1px;
-	cursor: pointer;
-	font-size:14px;
-	position: relative;
-	display: block;
+  float: left;position: relative;
+  min-height: 1px;
+  cursor: pointer;
+  font-size:14px;
+  position: relative;
+  display: block;
 }
 .navbar-line01 .navbar-block a.navLink{
-	display: block;
-	padding:13px 37px;
+  display: block;
+  padding:13px 37px;
 }
 .navbar-line01 .navbar-block.on,.navbar-line01 .navbar-block:hover{background: #fff;color:#6eb92b;}
 .navbar-line01 .navbar-block .naver_01 {background-color: #fff; display: none; position: absolute; z-index: 99; padding-top: 10px; }
@@ -209,7 +207,9 @@
     border-right-color: transparent;
     border-bottom-color: transparent;
     background-color: #fff;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 } 
 .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Pic, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Pic a, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Link { display: block; height: 100%; }
 .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Link .linkWrapper { 
@@ -251,7 +251,6 @@
 }
 .wave.depth-30 {
   -webkit-animation: wave 7.11111s 0.1s infinite linear;
-  -moz-animation: wave 7.11111s 0.1s infinite linear;
   animation: wave 7.11111s 0.1s infinite linear;
   bottom: 200px;
   margin: 0px 0px;
@@ -263,7 +262,6 @@
 }
 .wave.depth-40 {
   -webkit-animation: wave 6.66667s 0.1s infinite linear;
-  -moz-animation: wave 6.66667s 0.1s infinite linear;
   animation: wave 6.66667s 0.1s infinite linear;
   bottom: 180px;
   margin: 0px 0px;
@@ -275,7 +273,6 @@
 }
 .wave.depth-50 {
   -webkit-animation: wave 6.22222s 0.1s infinite linear;
-  -moz-animation: wave 6.22222s 0.1s infinite linear;
   animation: wave 6.22222s 0.1s infinite linear;
   bottom: 150px;
   margin: 0px 0px;
@@ -287,7 +284,6 @@
 }
 .wave.depth-60 {
   -webkit-animation: wave 5.77778s 0.1s infinite linear;
-  -moz-animation: wave 5.77778s 0.1s infinite linear;
   animation: wave 5.77778s 0.1s infinite linear;
   bottom: 120px;
   margin: 0px 0px;
@@ -299,7 +295,6 @@
 }
 .wave.depth-80 {
   -webkit-animation: wave 4.88889s 0.1s infinite linear;
-  -moz-animation: wave 4.88889s 0.1s infinite linear;
   animation: wave 4.88889s 0.1s infinite linear;
   bottom: 60px;
   margin: 0px 0px;
@@ -311,7 +306,6 @@
 }
 .wave.depth-100 {
   -webkit-animation: wave 4s 0.1s infinite linear;
-  -moz-animation: wave 4s 0.1s infinite linear;
   animation: wave 4s 0.1s infinite linear;
   bottom: 0px;
   margin: 0px 0px;
@@ -321,25 +315,33 @@
 .wave.depth-100:after {
   height: 0px;
 }
-@keyframes wave {
+@-webkit-keyframes wave {
           0% {
             -webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
-            -moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
             transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
           }
 
           100% {
             -webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
-            -moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+            transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+          }
+}
+@keyframes wave {
+          0% {
+            -webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+            transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+          }
+
+          100% {
+            -webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
             transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
           }
 }
 .lighthouse{
           -webkit-transform-origin: 50% 90%;
-          -moz-transform-origin: 50% 90%;
-          transform-origin: 50% 90%;
+          -ms-transform-origin: 50% 90%;
+              transform-origin: 50% 90%;
           -webkit-animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
-          -moz-animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
           animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
           background-image: url(../img/lighthouse.png);
           background-repeat: no-repeat;
@@ -352,16 +354,25 @@
           margin: 0px -104px;
           bottom: 188px;
 }
-@keyframes lighthouse{
+@-webkit-keyframes lighthouse{
           0% {
             -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
-            -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
             transform: translate3d(15%,0,0) rotateZ(10deg);
           }
 
           100% {
             -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
-            -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+            transform: translate3d(-15%,0,0) rotateZ(-10deg);
+          }
+}
+@keyframes lighthouse{
+          0% {
+            -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
+            transform: translate3d(15%,0,0) rotateZ(10deg);
+          }
+
+          100% {
+            -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
             transform: translate3d(-15%,0,0) rotateZ(-10deg);
           }
 }
@@ -478,6 +489,25 @@
     font-size: 30px;
 }
 /*logoRow end*/
+
+/*a-title-header02 start*/
+.a-title-header02 {
+    
+}
+.a-title-header02 .mainTitle {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+.a-title-header02 .articleInf {
+    text-align: center;
+    padding: 4px 0px;
+    color: #818181;
+}
+.a-title-header02 .articleInf span{margin-left: 15px;}
+/*a-title-header02 end*/
 
 /*a-title-header01 start*/
 .a-title-header01{border-bottom:1px dashed #c3c3c3;}
