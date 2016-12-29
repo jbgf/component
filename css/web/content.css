@@ -185,6 +185,17 @@
   top: -5px;
   transition: opacity left right 0.5s; }
 
+/*r-article02 start*/
+.r-article02 {
+  padding: 23px 0px 23px 15px;
+  border: 1px dashed #ddd; }
+  .r-article02 .r-row .r-link, .r-article02 .r-row {
+    text-align: left; }
+  .r-article02 .r-page {
+    margin-right: 12px;
+    text-align: left; }
+
+/*r-article02 end*/
 /*r-article01 start*/
 .r-article01 {
   padding: 23px 0 23px; }
@@ -198,6 +209,83 @@
   text-align: left; }
 
 /*r-article01 end*/
+/*news-ul03 start*/
+.news-ul03 .newsRow {
+  padding: 20px 0px;
+  border-bottom: 1px dashed #ddd; }
+
+.news-ul03 .newsRow:first-child {
+  padding-top: 0px; }
+
+.news-ul03 .newsRow .cl-pic {
+  width: 177px;
+  padding: 3px;
+  text-align: center;
+  height: 125px;
+  line-height: 125px;
+  font-size: 18px; }
+
+.news-ul03 .newsRow .cl-pic img {
+  width: 100%;
+  display: block; }
+
+.news-ul03 .newsRow .cl-newsBox {
+  text-align: left; }
+
+.news-ul03 .newsRow .cl-newsBox .cl-title .cl-p01 {
+  font-weight: 700;
+  width: 80%;
+  line-height: 32px; }
+
+.news-ul03 .newsRow .cl-newsBox .cl-text {
+  height: 88px; }
+
+.news-ul03 .newsRow .cl-newsBox .time {
+  line-height: 32px; }
+
+/*news-ul03 end*/
+/*news-ul02 start*/
+.news-ul02 .newsRow {
+  padding: 20px 0px;
+  border-bottom: 1px dashed #ddd;
+  cursor: pointer; }
+  .news-ul02 .newsRow .button.cl-details {
+    padding: 1px 18px;
+    border: 1px solid #df0000;
+    background: #fff;
+    color: #df0000; }
+
+.news-ul02 .newsRow:first-child {
+  padding-top: 0px; }
+
+.news-ul02 .newsRow .cl-pic {
+  width: 177px;
+  padding: 3px;
+  border: 1px solid #eaeaea; }
+
+.news-ul02 .newsRow .cl-pic img {
+  width: 100%;
+  display: block; }
+
+.news-ul02 .newsRow .cl-newsBox {
+  text-align: left; }
+
+.news-ul02 .newsRow .cl-newsBox .cl-title .cl-p01 {
+  font-weight: 700;
+  width: 80%;
+  line-height: 32px; }
+
+.news-ul02 .newsRow .cl-newsBox .cl-title:hover {
+  color: #df0000; }
+
+.news-ul02 .newsRow .cl-newsBox .cl-text {
+  padding: 3px 0px 10px; }
+
+.news-ul02 .newsRow .button.cl-details:hover {
+  background-color: #df0000;
+  color: #fff; }
+
+/*news-ul02 end*/
 /*news-ul01 start*/
 .news-ul01 .newsRow {
   padding: 30px 0;
@@ -397,6 +485,13 @@
 
 /*ul-line02 end*/
 /* tagLine01 start */
+.tagLine01 {
+  padding: 20px 0;
+  border-bottom: 1px dashed #ddd;
+  border-top: 1px dashed #ddd; }
+  .tagLine01 .icon {
+    float: left; }
+
 /* tagLine01 end */
 /*switch-tag01 start*/
 .switch-tag01 .search-inf-box {

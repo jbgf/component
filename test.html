@@ -1,37 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
-<html xmlns="http://www.w3.org/1999/xhtml">  
+<!DOCTYPE html>
+<html>
 <head>  
     <title></title>  
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
-    <script type="text/javascript">  
-    window.onload = function(){
-        var cd = document.getElementById("cd"),
-            context = cd.getContext("2d");
-            context.beginPath();
-
-            context.moveTo(100,75);
-            context.lineTo(250,75);
-            context.lineTo(125,30);
-            context.closePath();
-
-            context.lineWidth = 5;
-            context.stroke();
-            context.fillStyle = "red";
-            context.fill();
-
-            context.beginPath();
-            context.arc(100,100,75,0,degreesToRadians(360),false);
-            context.fillStyle = "lightblue";
-            context.fill();
-
-        function degreesToRadians(degrees){
-            return (degrees*Math.PI)/180;
-        }
-    }  
-    </script>  
-    
+    <script type="text/javascript" src="jquery.slideBeta.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".slide").slideBeta();
+        })
+    </script>
 </head>  
 <body>  
-    <canvas id="cd" width="800" height="800">hey you ,update your browser,ok?</canvas>
+    <div class="slide">
+        <div class="page"><img src="img/background.jpg"></div>
+        <div class="page"><img src="img/background.jpg"></div>
+        <div class="page"><img src="img/background.jpg"></div>
+        <div class="page"><img src="img/background.jpg"></div>
+    </div>
 </body>  
 </html>  

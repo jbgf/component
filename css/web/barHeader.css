@@ -429,6 +429,12 @@
     transform: translate3d(-15%, 0, 0) rotateZ(-10deg); } }
 
 /*wave-banner end*/
+.h-title01 .icon {
+  vertical-align: middle;
+  margin-right: 7px;
+  position: relative;
+  top: 2px; }
+
 /*header04 start*/
 .header04 {
   padding: 12px 0 12px 15px; }
