@@ -38,67 +38,183 @@
 	</div>	
 	<div class="fixedBg"></div>
 	<div id="specialBox" class="container1200">
-		<div class="box">
+		<div class="box" data-block="1">
+			<div class="parent" style="height:550px;">
+				<canvas id="canvas-star0"></canvas>
+			</div>
 			<script type="text/javascript">
-				var imgPath;/*["/img/1.png","/img/2.png","/img/3.png","/img/4.png","/img/5.png","/img/6.png"]*/
-				
-                var percent = 1,
-                    numLoaded = 0,
-                    $loadPercent = document.getElementById("loadPercent");
-				$.ajax({
-					method:"post",
-					url:"/php/special.php",
-					data:{get_file_type: "img"},
-					dataType:"json",
-					success:function(data){
-						imgPath = data;
-						console.log(imgPath)
-		                loadimg(imgPath);
+				(function(){
+					var parent = document.getElementsByClassName("parent")[0],
+						w = parent.offsetWidth,
+						h = parent.offsetHeight;
+
+					var canvas = document.getElementById("canvas-star0");
+						canvas.setAttribute("width",w);
+						canvas.setAttribute("height",h);
+					
+
+					var ctx = canvas.getContext('2d');
+					var mousePos = [0, 0];
+					var easingFactor = 5.0;
+					var backgroundColor = '#000';
+					var nodeColor = '#fff';
+					var edgeColor = '#fff';
+					var nodes = [];
+					var edges = [];
+
+					window.onresize = function () {
+					    canvas.width = parent.offsetWidth;
+					    canvas.height = parent.offsetHeight;
+
+					    if (nodes.length == 0) {
+					      constructNodes();
+					    }
+
+					    render();
+					};
+
+
+					function constructNodes() {
+					    for (var i = 0; i < 100; i++) {
+					      var node = {
+					        drivenByMouse: i == 0,
+					        x: Math.random() * canvas.width,
+					        y: Math.random() * canvas.height,
+					        vx: Math.random() * 1 - 0.5,
+					        vy: Math.random() * 1 - 0.5,
+					        radius: Math.random() > 0.9 ? 3 + Math.random() * 3 : 1 + Math.random() * 3
+					      };
+
+					      nodes.push(node);
+					    }
+
+					    nodes.forEach(function (e) {
+					      nodes.forEach(function (e2) {
+					        if (e == e2) {
+					          return;
+					        }
+
+					        var edge = {
+					          from: e,
+					          to: e2
+					        }
+
+					        addEdge(edge);
+					      });
+					    });
 					}
-				})
-				
-                function loading() {
-                	console.log(numLoaded < imgPath.length)
-                    if (numLoaded < imgPath.length) {
-                        if (percent < 100 - imgPath.length + numLoaded) {
-                            percent++;
-                        		    
-                        }
+					
+					function addEdge(edge) {
+					    var ignore = false;
 
-                    } else {
+					    edges.forEach(function (e) {
+					      if (e.from == edge.from && e.to == edge.to) {
+					        ignore = true;
+					      }
 
-                        percent += 10;
-                        percent > 100 && (percent = 100);
-                        
-                    }
-                    if (percent >= 100 && typeof $ != 'undefined') {
-                        return
-                    }
-                    setTimeout(arguments.callee, 10)
-                }
-                function loadimg(arr) {
-                    loading();
-                    for (var i = arr.length - 1; i >= 0; i--) {
-                        var img = new Image();
-                        img.onload = loadCheckComplete;
-                        img.onerror = loadCheckComplete;
-                        img.src = arr[i];
+					      if (e.to == edge.from && e.from == edge.to) {
+					        ignore = true;
+					      }
+					    });
 
-                    }
-                   
-                    setTimeout(loadTimeout, 12000)
-                    
+					    if (!ignore) {
+					      edges.push(edge);
+					    }
+					}
 
-                }
-                function loadTimeout() {}
-                function loadCheckComplete() {
-                    numLoaded++;
+					function step() {
+					    nodes.forEach(function (e) {
+					      if (e.drivenByMouse) {
+					        return;
+					      }
 
-                }
-                
-            
+					      e.x += e.vx;
+					      e.y += e.vy;
+
+					      function clamp(min, max, value) {
+					        if (value > max) {
+					          return max;
+					        } else if (value < min) {
+					          return min;
+					        } else {
+					          return value;
+					        }
+					      }
+
+					      if (e.x <= 0 || e.x >= canvas.width) {
+					        e.vx *= -1;
+					        e.x = clamp(0, canvas.width, e.x)
+					      }
+
+					      if (e.y <= 0 || e.y >= canvas.height) {
+					        e.vy *= -1;
+					        e.y = clamp(0, canvas.height, e.y)
+					      }
+					    });
+
+					    adjustNodeDrivenByMouse();
+					    render();
+					    window.requestAnimationFrame(step);
+					}
+
+					function lengthOfEdge(edge) {
+					    return Math.sqrt(Math.pow((edge.from.x - edge.to.x), 2) + Math.pow((edge.from.y - edge.to.y), 2));
+					}
+/*缓动效果*/
+					function adjustNodeDrivenByMouse() {
+					    nodes[0].x += (mousePos[0] - nodes[0].x) / easingFactor;
+					    nodes[0].y += (mousePos[1] - nodes[0].y) / easingFactor;
+					}
+/*缓动效果*/
+					function render() {
+					    ctx.fillStyle = backgroundColor;
+					    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+					    edges.forEach(function (e) {
+					      var l = lengthOfEdge(e);
+					      var threshold = canvas.width / 8;
+
+					      if (l > threshold) {
+					        return;
+					      }
+
+					      ctx.strokeStyle = edgeColor;
+					      ctx.lineWidth = (1.0 - l / threshold) * 2.5;
+					      ctx.globalAlpha = 1.0 - l / threshold;
+					      ctx.beginPath();
+					      ctx.moveTo(e.from.x, e.from.y);
+					      ctx.lineTo(e.to.x, e.to.y);
+					      ctx.stroke();
+					    });
+					    ctx.globalAlpha = 1.0;
+					/*画点*/
+					    nodes.forEach(function (e) {
+					/*如果是鼠标点则不绘制*/    	
+					      if (e.drivenByMouse) {
+					        return;
+					      }
+
+					      ctx.fillStyle = nodeColor;
+					      ctx.beginPath();
+					      ctx.arc(e.x, e.y, e.radius, 0, 2 * Math.PI);
+					      ctx.fill();
+					    });
+					}
+
+					canvas.onmousemove = function (e) {
+					    mousePos[0] = e.offsetX;
+					    mousePos[1] = e.offsetY;
+					}
+
+					
+
+					window.onresize(); // trigger the event manually.
+					window.requestAnimationFrame(step);
+
+				})()
 			</script>
 		</div>
+
 		<div class="box" data-block="1" >
 			 <!-- map  start-->              
               <div class="map">
@@ -192,7 +308,7 @@
 	            <div class='frosted-glass02'></div>  
 	             
 		</div>
-		
+
 		<div class="box" style="height:555px;">
 			<div class='centerBg'>  
 	            <div class='frosted-glass01'></div>  
@@ -200,6 +316,205 @@
 	        </div> 
 		</div>
 
+		<div class="box" style="overflow:hidden;background:black;">
+			<div id="leafContainer">
+				<style type="text/css">
+				#leafContainer {
+				    z-index: -1;
+				    width: 100%;
+				    height: 690px;
+				    overflow: hidden;
+				}
+				#leafContainer > div { position: absolute; max-width: 100px; max-height: 100px; -webkit-animation-iteration-count: infinite, infinite; -webkit-animation-direction: normal, normal; -webkit-animation-timing-function: linear, ease-in;}
+				#leafContainer > div > img { width: 100%; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate; -webkit-animation-timing-function: ease-in-out; -webkit-transform-origin: 50% -100%;}
+				@-webkit-keyframes fade {   
+				    0% {
+				        opacity: 1;
+				    }
+				    95% {
+				        opacity: 1;
+				    }
+				    100% {
+				        opacity: 0;
+				    }
+				}
+				@-webkit-keyframes drop {
+				    0% {
+				        -webkit-transform: translate(0px, -50px);
+				    }
+				    100% {
+				        -webkit-transform: translate(0px, 650px);
+				    }
+				}
+				@-webkit-keyframes counterclockwiseSpinAndFlip {   
+				    0% {
+				        -webkit-transform: scale(-1, 1) rotate(50deg);
+				    }
+				    100% {
+				        -webkit-transform: scale(-1, 1) rotate(-50deg);
+				    }
+				}
+				</style>
+				<script type="text/javascript">
+ 					
+ 					(function(){
+ 						var _config = {};
+ 						    _config["isStatic"] = "/";
+ 							init(26);
+
+ 							function init(num,leavesnum)
+							{
+							    if (num==0||num=="0") 
+								   {return;}
+							    var container = document.getElementById('leafContainer');
+								if(typeof(leavesnum) == 'undefined')
+								{
+									NUMBER_OF_LEAVES = 30;
+
+								}else{
+									NUMBER_OF_LEAVES = leavesnum;
+								}
+							    for (var i = 0; i < NUMBER_OF_LEAVES; i++) 
+							    {
+									//console.log("dd="+NUMBER_OF_LEAVES);
+							        container.appendChild(createALeaf(num));
+							    }
+							}
+
+							 function randomInteger(low, high)
+							{
+							    return low + Math.floor(Math.random() * (high - low));
+							}
+
+							 
+							function randomFloat(low, high)
+							{
+							    return low + Math.random() * (high - low);
+							}
+
+							 
+							function pixelValue(value)
+							{
+							    return value + 'px';
+							}
+							 
+							function durationValue(value)
+							{
+							    return value + 's';
+							}
+							 
+							function createALeaf(num)
+							{
+							    
+							    var leafDiv = document.createElement('div');
+							    var image = document.createElement('img');
+							    
+							    	if(num==1){
+										 flashtype='realLeaf';
+									}else if(num==26){
+											flashtype='xue';
+									}
+
+							    image.src = _config["isStatic"]+'img/' +flashtype+ randomInteger(1, 5) + '.png';
+							    
+							    leafDiv.style.top = "-100px";
+
+							  
+							    leafDiv.style.left = pixelValue(randomInteger(0, 500));
+							    
+							   
+							    var spinAnimationName = (Math.random() < 0.5) ? 'clockwiseSpin' : 'counterclockwiseSpinAndFlip';
+							    
+							    
+							    leafDiv.style.webkitAnimationName = 'fade, drop';
+							    image.style.webkitAnimationName = spinAnimationName;
+							    
+							   
+							    var fadeAndDropDuration = durationValue(randomFloat(5, 11));
+							   
+							    var spinDuration = durationValue(randomFloat(4, 8));
+							     
+							    leafDiv.style.webkitAnimationDuration = fadeAndDropDuration + ', ' + fadeAndDropDuration;
+
+							    var leafDelay = durationValue(randomFloat(0, 5));
+							    leafDiv.style.webkitAnimationDelay = leafDelay + ', ' + leafDelay;
+
+							    image.style.webkitAnimationDuration = spinDuration;
+
+							 
+							    leafDiv.appendChild(image);
+							 
+							    return leafDiv;
+							}
+
+ 					})();
+
+ 
+				</script>
+			</div>
+		</div>
+
+		<div class="box" data-type="load-process">
+			<script type="text/javascript">
+				var imgPath;/*["/img/1.png","/img/2.png","/img/3.png","/img/4.png","/img/5.png","/img/6.png"]*/
+				
+                var percent = 1,
+                    numLoaded = 0,
+                    $loadPercent = document.getElementById("loadPercent");
+				$.ajax({
+					method:"post",
+					url:"/php/special.php",
+					data:{get_file_type: "img"},
+					dataType:"json",
+					success:function(data){
+						imgPath = data;
+						console.log(imgPath)
+		                loadimg(imgPath);
+					}
+				})
+				
+                function loading() {
+                	console.log(numLoaded < imgPath.length)
+                    if (numLoaded < imgPath.length) {
+                        if (percent < 100 - imgPath.length + numLoaded) {
+                            percent++;
+                        		    
+                        }
+
+                    } else {
+
+                        percent += 10;
+                        percent > 100 && (percent = 100);
+                        
+                    }
+                    if (percent >= 100 && typeof $ != 'undefined') {
+                        return
+                    }
+                    setTimeout(arguments.callee, 10)
+                }
+                function loadimg(arr) {
+                    loading();
+                    for (var i = arr.length - 1; i >= 0; i--) {
+                        var img = new Image();
+                        img.onload = loadCheckComplete;
+                        img.onerror = loadCheckComplete;
+                        img.src = arr[i];
+
+                    }
+                   
+                    setTimeout(loadTimeout, 12000)
+                    
+
+                }
+                function loadTimeout() {}
+                function loadCheckComplete() {
+                    numLoaded++;
+
+                }
+                
+            
+			</script>
+		</div>
 	</div>
 </body>
 </html>

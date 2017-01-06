@@ -17,12 +17,12 @@
 
     this.options.keyboard && this.$element.on('keydown.bs.slideBeta', $.proxy(this.keydown, this))
 
-    this.options.pause == 'hover' && !('ontouchstart' in document.documentElement) && this.$element
+    this.options.pause == 'hover' && !('' in document.documentElement) && this.$element
       .on('mouseenter.bs.slideBeta', $.proxy(this.pause, this))
       .on('mouseleave.bs.slideBeta', $.proxy(this.cycle, this))
   }
 
-  slideBeta.VERSION  = '3.3.5'
+  slideBeta.VERSION  = '3.3.5'ontouchstart
 
   slideBeta.TRANSITION_DURATION = 600
 

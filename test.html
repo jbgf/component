@@ -3,19 +3,20 @@
 <head>  
     <title></title>  
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
-    <script type="text/javascript" src="jquery.slideBeta.js"></script>
+    
     <script type="text/javascript">
         $(function(){
-            $(".slide").slideBeta();
+            $(".editDate").blur(function(){
+                alert($(this).text())
+            })
         })
     </script>
 </head>  
 <body>  
-    <div class="slide">
-        <div class="page"><img src="img/background.jpg"></div>
-        <div class="page"><img src="img/background.jpg"></div>
-        <div class="page"><img src="img/background.jpg"></div>
-        <div class="page"><img src="img/background.jpg"></div>
-    </div>
+    <table>
+          <tr>
+              <td class="editDate" contenteditable="true">2010</td>
+          </tr>  
+    </table>
 </body>  
 </html>  

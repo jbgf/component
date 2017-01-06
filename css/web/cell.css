@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/*-----------------------------------------------------	*/
+/* setting scss*/
+/*-----------------------------------------------------	*/
+/* 开关设置*/
+/*-----------------------------------------------------	*/
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.float-cell,
+.float-cell .cell-line,
+.float-cell .cell-line .cell {
+  *zoom: 1; }
+  .float-cell:before,
+  .float-cell .cell-line:before,
+  .float-cell .cell-line .cell:before, .float-cell:after,
+  .float-cell .cell-line:after,
+  .float-cell .cell-line .cell:after {
+    content: "";
+    display: table; }
+  .float-cell:after,
+  .float-cell .cell-line:after,
+  .float-cell .cell-line .cell:after {
+    clear: both; }
+
+.float-cell .cell-line .cell {
+  float: left; }
+
+/* 如果采用float，子元素清除浮动使用clearfix或overflow*/
+/* col*/
+.float-cell .cell-line .cell {
+  height: 100%; }
+
+.float-cell .cell-line .cell-1-3 {
+  /* 如果$total为默认的1，则表示等分的$num分之一*/
+  /* 否则计算$num/$total*/
+  width: 33.33333%; }

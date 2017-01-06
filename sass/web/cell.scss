@@ -1,0 +1,35 @@
+@import "variable";
+
+
+$gridRowClearfix:   true !default; /* 如果采用float，子元素清除浮动使用clearfix或overflow*/
+$gridFlex:          false !default;
+
+.float-cell,
+.float-cell .cell-line,
+.float-cell .cell-line .cell{
+	@if $gridRowClearfix{
+        @extend %clearfix;
+    } @else {
+        overflow: hidden;
+    }
+
+} 
+/* col*/
+@mixin col($num, $total: 1) {
+	.cell{@extend %float-l;height:100%;}
+    .cell-#{$num}-#{$total}{
+    	/* 如果$total为默认的1，则表示等分的$num分之一*/
+	    /* 否则计算$num/$total*/
+ 
+	    @if $total == 1 {
+	        width: 100% / $num; 
+	    } @else {
+	        width: percentage($num / $total);
+	    }
+    }
+    
+}
+
+.float-cell .cell-line {
+	@include col(1,3);
+}
