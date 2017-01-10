@@ -39,6 +39,114 @@
 	<div class="fixedBg"></div>
 	<div id="specialBox" class="container1200">
 		<div class="box" data-block="1">
+			 <div class="parent02">
+				  <canvas id="html5_3d_animation" class="mar-center" style="display:block;">Internet Explorer 8 Not Supported</canvas>
+				  
+			 </div>
+			 <script type="text/javascript">
+			 	  (function(a){
+					    var html5_3d_animation=function(p){
+					        var p=p||{};
+
+					        var w_w=p&&p.window_width?p.window_width:"500";
+					        var w_h=p&&p.window_height?p.window_height:"400";
+					        var w_b=p&&p.window_background?p.window_background:"#000";
+					        var s_c=p&&p.star_count?p.star_count:"600";
+					        var s_color=p&&p.star_color?p.star_color:"#FFF";
+					        var s_d=p&&p.star_depth?p.star_depth:"250";
+					        var dom=a(p.selector);
+
+					        var fov = parseInt(s_d);
+					        var SCREEN_WIDTH = parseInt(w_w);
+					        var SCREEN_HEIGHT = parseInt(w_h);
+					        var HALF_WIDTH = SCREEN_WIDTH/2;
+					        var HALF_HEIGHT = SCREEN_HEIGHT/2;
+					        var c_id = dom.attr("id");
+					        var numPoints = s_c;
+					        dom.attr({ width: w_w, height: w_h});
+					        setup();
+					        function setup(){
+
+					            function draw3Din2D(point3d)
+					            {
+					                var x3d = point3d[0];
+					                var y3d = point3d[1];
+					            /*备注：initPoints 中x,y,z均为[-200,200];
+					              +HALF_WIDTH 及 + HALF_HEIGHT 使产生star的区域为中心的200X200;
+					            */
+
+					                var z3d = point3d[2];
+					                    z3d-=4;
+					                    if(z3d<-fov) z3d +=400;
+					                    point3d[2] = z3d;
+
+					                var scale = fov/(fov+z3d);
+					                var x2d = (x3d * scale) + HALF_WIDTH;
+					                var y2d = (y3d * scale)  + HALF_HEIGHT;
+
+
+					                c.lineWidth= scale;
+					                c.strokeStyle = s_color;
+					                c.beginPath();
+					                c.moveTo(x2d,y2d);
+					                c.lineTo(x2d+scale,y2d);
+					                c.stroke();
+
+					            }
+
+					            var canvas = document.getElementById(c_id);
+					            var c = canvas.getContext('2d');
+
+					            var points = [];
+
+					            function initPoints()
+					            {
+					                for (i=0; i<numPoints; i++)
+					                {
+					                    var point = [(Math.random()*400)-200, (Math.random()*400)-200 , (Math.random()*400)-200 ];
+					                    points.push(point);
+					                }
+
+					            }
+
+					            function render()
+					            {
+
+					                c.fillStyle=w_b;
+					                c.fillRect(0,0, SCREEN_WIDTH, SCREEN_HEIGHT);
+
+					                for (i=0; i<numPoints; i++)
+					                {
+					                    var point3d = points[i];
+
+					                    draw3Din2D(point3d);
+					                }
+					                
+					            }
+
+					            initPoints();
+
+					            var loop = setInterval(function(){
+					                render();
+					            }, 50);
+
+					        }
+					    
+					    }
+					    html5_3d_animation({
+					    	window_width: $(".parent02").width(),
+				            window_height: '400',
+				            window_background: '#00113F',
+				            star_count: '100',
+				            star_color: '#FBFFAF',
+				            star_depth: '100',
+				            selector:"#html5_3d_animation"
+					    })
+					})(jQuery);	
+
+			 </script>
+		</div>
+		<div class="box" data-block="1">
 			<div class="parent" style="height:550px;">
 				<canvas id="canvas-star0"></canvas>
 			</div>
@@ -63,8 +171,8 @@
 					var edges = [];
 
 					window.onresize = function () {
-					    canvas.width = parent.offsetWidth;
-					    canvas.height = parent.offsetHeight;
+					    canvas.width = w;
+					    canvas.height = h;
 
 					    if (nodes.length == 0) {
 					      constructNodes();
