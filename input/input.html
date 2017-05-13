@@ -139,7 +139,7 @@
                                  success:function(label,element){
                                         var index = $(formId).find(":input").index($(element));
                                         /*还原回原来的提示信息*/
-                                        $(element).nextAll(".tips").html(b[index]).css({color:"#b5b5b5"});
+                                        $(element).next(".tips").html(b[index]).css({color:"#b5b5b5"});
                                         
 
                                  }
