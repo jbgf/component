@@ -1,14 +1,40 @@
 /*
-npm install gulp browser-sync gulp-connect-php run-sequence --save-dev;
+npm install gulp gulp.spritesmith@4.1.1 vinyl-buffer gulp-csso gulp-imagemin merge-stream browser-sync gulp-connect-php run-sequence --save-dev;
 sass 墙的原因，使用淘宝镜像，cnpm install sass --save-dev
 */
 var gulp=require('gulp'),
 	sass = require('gulp-sass'),
 	browserSync = require('browser-sync'),
 	changed = require('gulp-changed'),
-	
+    spritesmith = require('gulp.spritesmith'),
+	buffer = require('vinyl-buffer'),
+	csso = require('gulp-csso'),
+	imagemin = require('gulp-imagemin'),
+	merge = require('merge-stream'),
 	connect = require('gulp-connect-php'),
 	runSequence = require('run-sequence');
+
+gulp.task('sprite', function () {
+    var spriteData = gulp.src('sprite/*.png').pipe(spritesmith({
+        imgName: 'sprite.png',
+        cssName: 'sprite.css'
+    }));
+
+    // Pipe image stream through image optimizer and onto disk
+    var imgStream = spriteData.img
+    // DEV: We must buffer our stream into a Buffer for `imagemin`
+        .pipe(buffer())
+        .pipe(imagemin())
+        .pipe(gulp.dest('img/'));
+
+    // Pipe CSS stream through CSS optimizer and onto disk
+    var cssStream = spriteData.css
+        .pipe(csso())
+        .pipe(gulp.dest('css/'));
+
+    // Return a merged stream to handle both `end` events
+    return merge(imgStream, cssStream);
+});
 
 gulp.task('test',function(){								
 	console.log('hello world!');							//直接在cmd界面显示；
@@ -18,10 +44,10 @@ gulp.task('fonts',function(){                              //不使用插件的�
 				.pipe(gulp.dest('dest/fonts'))
 })
 
-gulp.task('sass',function(){
-	return gulp.src('sass/**/*.scss')
+gulp.task('sass'/*,['sprite']*/,function(){
+	return gulp.src(['sass/web/*.scss','sass/mobile/*.scss','sass/mySassWare/*.scss'])
 	/*只编译change的文件*/
-			   .pipe(changed('css/',{extension: '.css'}))
+			   .pipe(changed('css/',{extension:'.css'}))
 			   .pipe(sass())
 			   .pipe(gulp.dest('css/'))
 			   .pipe(browserSync.reload({
@@ -41,16 +67,24 @@ gulp.task('default',function(callback){
 		callback)
 })
 gulp.task('browserSync',function(){
-	browserSync({
+    browserSync.init({
+        server: {
+            baseDir: "."
+        }
+    });
+	/*browserSync({
 
 		proxy: "localhost:8002"			//处理php文件，gulp-connect-php默认监听8000，直接设置port：8000会发生占用，启用8001；
-	})
+	})*/
 });
-gulp.task('watch',[/*'browserSync',*/'connectPhp'],function(){
-	
-	 gulp.watch(['button/*.html','button/*.js,button/*.css'],browserSync.reload);
-	 gulp.watch(['js/*.js'],browserSync.reload);
-	 
+
+var arr = ['topbar','navbar'];
+	arr = arr.map(function (x) {
+		return './'+x+'/**/*.html';
+    })
+gulp.task('watch',['browserSync'/*,'connectPhp'*/],function(){
+    gulp.watch(arr,browserSync.reload);
+    gulp.watch(['./sass/**/*.scss'],['sass']);
 });
 /*压缩*/
 //src 相对于gulpfile，main.html的文件链接相对于main.html

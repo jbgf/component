@@ -1,1 +1,2 @@
-.touch_layer {touch-action: pan-x pan-y !important;}
+.touch_layer {
+  touch-action: pan-x pan-y !important; }

@@ -1,203 +1,298 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/* input set  start  */
+/* input set  end  */
+/* input set05  start  */
+.input-set05 {
+  height: 25px; }
+  .input-set05 input {
+    display: inline-block;
+    float: left;
+    height: 100%; }
+    .input-set05 input.input {
+      width: 180px;
+      padding-left: 10px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    .input-set05 input.button {
+      width: 75px; }
+  .input-set05 .input {
+    border: 1px solid #2675d5;
+    border-right: none; }
+  .input-set05 .button {
+    background: url(../img/isearch.png) no-repeat 12px 50% #2675d5;
+    padding-left: 15px; }
+
+/* input set05  end  */
 /*input-set04 start*/
 .input-set04 {
-    width: 328px;
-    height: 38px;
-    border:1px solid #e0e0e0;
-}
+  width: 328px;
+  height: 38px;
+  border: 1px solid #e0e0e0; }
+
 .input-set04 input {
-    display: inline-block;
-    float: left;
-    height: 100%;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 38px;
-}
-.input-set04 input.input { /* Firefox */ /* Safari */
-    box-sizing: border-box;
-    
-    width: 82%;
-    padding-left: 2%;
-    border-top: 1px solid rgb(246, 246, 246);
-    border-bottom: 1px solid rgb(246, 246, 246);
-    border-left: 1px solid rgb(246, 246, 246);
-    border-image: initial;
-    border-right: none;
-    background-color: rgb(255, 255, 255);
-}
+  display: inline-block;
+  float: left;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 38px; }
+
+.input-set04 input.input {
+  /* Firefox */
+  /* Safari */
+  box-sizing: border-box;
+  width: 82%;
+  padding-left: 2%;
+  border-top: 1px solid #f6f6f6;
+  border-bottom: 1px solid #f6f6f6;
+  border-left: 1px solid #f6f6f6;
+  border-image: initial;
+  border-right: none;
+  background-color: white; }
+
 .input-set04 input.button {
-        width: 18%;
-    background-image: url(../img/search-icon.png);
-    background-repeat: no-repeat;
-    background-color: rgb(246, 246, 246);
-    background-position: 54% 46%;
-}
+  width: 18%;
+  background-image: url(../img/search-icon.png);
+  background-repeat: no-repeat;
+  background-color: #f6f6f6;
+  background-position: 54% 46%; }
+
 /*input-set04 end*/
-
 /*input-set03 start*/
-.input-set03 .text{width: 63px;float: left;}
-.input-set03 .inputBox{margin-left: 63px;}
+.input-set03 .text {
+  width: 63px;
+  float: left; }
+
+.input-set03 .inputBox {
+  margin-left: 63px; }
+
 .input-set03 .text,
-.input-set03 input{
-height: 27px;
-line-height: 27px;
-display: block;
-font-size: 14px;
-}
-.input-set03 input, 
-.input-set03 textarea{
-    border:1px solid #efefef;
-    width: 100%;
-}
-.input-set03 textarea{min-height: 110px;}
+.input-set03 input {
+  height: 27px;
+  line-height: 27px;
+  display: block;
+  font-size: 14px; }
+
+.input-set03 input,
+.input-set03 textarea {
+  border: 1px solid #efefef;
+  width: 100%; }
+
+.input-set03 textarea {
+  min-height: 110px; }
+
 /*input-set03 end*/
-
 /*input-set02 start*/
-.input-set02{width:328px; height: 38px;}
-.input-set02 input { display: inline-block; float: left; height: 100%; font-size: 16px; font-weight: 500; }
-.input-set02 input.input:focus{outline: none;} 
-.input-set02 input.input {
-    box-sizing:border-box; width: 80%; padding-left: 2%;border:1px solid #f6f6f6;
-    border-right: none;
-    background-color: #fff;
-}
-.input-set02 input.button { width: 18%; 
-    background-image: url(../img/search-icon.jpg);background-repeat:  no-repeat;
-    background-color: #f6f6f6;
-}
-/*input-set02 end*/
+.input-set02 {
+  width: 328px;
+  height: 38px; }
 
+.input-set02 input {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 500; }
+
+.input-set02 input.input:focus {
+  outline: none; }
+
+.input-set02 input.input {
+  box-sizing: border-box;
+  width: 80%;
+  padding-left: 2%;
+  border: 1px solid #f6f6f6;
+  border-right: none;
+  background-color: #fff; }
+
+.input-set02 input.button {
+  width: 18%;
+  background-image: url(../img/search-icon.jpg);
+  background-repeat: no-repeat;
+  background-color: #f6f6f6; }
+
+/*input-set02 end*/
 /*.input-set01  start*/
 .input-set01 {
-    position: relative;
-    display: table;
-    table-layout: fixed;
-    border-collapse: separate;
-}
-.input-set01+.input-set01{margin-top: 20px;}
-.input-set01 span{
-    font-size: 16px;
-    display: inline-block;
-    height: 47px;
-    width: 76px;
-    line-height: 47px;
-}
-.input-set01 .input{
-    width:385px;
-    height: 47px;
-    border: 1px solid #dbdbdb;
-    border-radius: 3px;
-}
-.input-set01 .input:focus{box-shadow: inset 0 1px 1px 2px rgba(0,0,0,.075), 0 0 8px 2px rgba(102, 175, 233, .6);outline: 0}
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  border-collapse: separate; }
+
+.input-set01 + .input-set01 {
+  margin-top: 20px; }
+
+.input-set01 span {
+  font-size: 16px;
+  display: inline-block;
+  height: 47px;
+  width: 76px;
+  line-height: 47px; }
+
+.input-set01 .input {
+  width: 385px;
+  height: 47px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px; }
+
+.input-set01 .input:focus {
+  box-shadow: inset 0 1px 1px 2px rgba(0, 0, 0, 0.075), 0 0 8px 2px rgba(102, 175, 233, 0.6);
+  outline: 0; }
+
 /*.input-set01  end*/
-
 /*input-set start*/
-.input-set{}
-.input-set input{display: inline-block;float:left;height: 100%;font-size: 16px;font-weight: 500;}
-.input-set input.input{width:72%;padding-left:10px;box-sizing: border-box;}
-.input-set input.button{width:28%;}
-.input-set-l{height: 48px;}
-/*input-set end*/
+.input-set input {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 500; }
 
+.input-set input.input {
+  width: 72%;
+  padding-left: 10px;
+  box-sizing: border-box; }
+
+.input-set input.button {
+  width: 28%; }
+
+.input-set-l {
+  height: 48px; }
+
+/*input-set end*/
 /*content1_form start*/
-.content1_form {}
-.content1_form input[type="submit"]{
-    margin-left: 77px;
-    margin-top: 28px;
-    font-size: 19px;
-    color:#643600;
-    width:231px;
-    height:44px;
-    float: left;
-    padding:0px;
-    background:#ffc000;
-}
+.content1_form input[type="submit"] {
+  margin-left: 77px;
+  margin-top: 28px;
+  font-size: 19px;
+  color: #643600;
+  width: 231px;
+  height: 44px;
+  float: left;
+  padding: 0px;
+  background: #ffc000; }
 
 /*content1_form end*/
-
 /*loginZone form start*/
-.loginZone{position: relative;}
+.loginZone {
+  position: relative; }
+
 .loginZone .middleRow {
-    height: 200px;
-    background-color: #d6eafc;
-}
-.loginZone .login-form{
-    text-align:left;
-    width: 37%;
-    margin: 0 auto; 
-    background: #deeffd;
-    border: 1px solid rgba(255,255,255,.3);
-    box-shadow: 0 0 40px black;
-    border-radius: 3px;
-    padding: 30px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;  
-}    
+  height: 200px;
+  background-color: #d6eafc; }
+
+.loginZone .login-form {
+  text-align: left;
+  width: 37%;
+  margin: 0 auto;
+  background: #deeffd;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 40px black;
+  border-radius: 3px;
+  padding: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
 .login-form .uname {
-    background: #fff url(../img/user.png) no-repeat 95% center;
-    color: #333;
-}
+  background: #fff url(../img/user.png) no-repeat 95% center;
+  color: #333; }
+
 .login-form .input-base {
-    display: block;
-    margin-top: 15px;
-}
+  display: block;
+  margin-top: 15px; }
+
 .login-form .pword {
-    background: #fff url(../img/locked.png) no-repeat 95% center;
-    color: #333;
-}
-.login-form .verify{display: inline-block;}
-.login-form .login{
-    display: block;width: 80%;margin:15px auto 0;
-    background-color: #1a7bb9;
-    border-color: #1a7bb9;
-    color: #FFF;
-    padding: 6px 12px;
-    border-radius: 5px;
-    
-}
-.tech-support{text-align: center;font-size: 12px; padding-top: 30px;}
-.loginZone{padding:50px 0;}
+  background: #fff url(../img/locked.png) no-repeat 95% center;
+  color: #333; }
+
+.login-form .verify {
+  display: inline-block; }
+
+.login-form .login {
+  display: block;
+  width: 80%;
+  margin: 15px auto 0;
+  background-color: #1a7bb9;
+  border-color: #1a7bb9;
+  color: #FFF;
+  padding: 6px 12px;
+  border-radius: 5px; }
+
+.tech-support {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 30px; }
+
+.loginZone {
+  padding: 50px 0; }
 
 /*loginZone form end*/
-
 /*.input-bg_icon start*/
-.input-bg_icon{
-    background: #fff url(../img/user.png) no-repeat 95% center;
-    color: #333;
-    padding-right: 40px;
-}
+.input-bg_icon {
+  background: #fff url(../img/user.png) no-repeat 95% center;
+  color: #333;
+  padding-right: 40px; }
+
 /*.input-bg_icon end*/
-
 /*form-content01 start*/
-.form-content01 form{width:100%;}
+.form-content01 form {
+  width: 100%; }
+
 /*form-content01 end*/
-
-
-
 /*m-form-line start*/
- .m-form-line{text-align: left;}
- .m-form-line .input-set03{
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding: 12px 0;
-} 
-.m-form-line .m-btn{
-    width: 99px;
-    font-size: 13px;
-    font-weight: 700;
-    border:none;
-    color: #fff;
-    text-align: center;
-    padding:7px 0;
-    margin-right: 10px;
-    cursor: pointer;
-}
-/*m-form-line end*/
+.m-form-line {
+  text-align: left; }
 
+.m-form-line .input-set03 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding: 12px 0; }
+
+.m-form-line .m-btn {
+  width: 99px;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  color: #fff;
+  text-align: center;
+  padding: 7px 0;
+  margin-right: 10px;
+  cursor: pointer; }
+
+/*m-form-line end*/
 /*input_box01 start*/
-.input_box01 .input_set_text{float: left;line-height: 48px;width: 30%;}
+.input_box01 .input_set_text {
+  float: left;
+  line-height: 48px;
+  width: 30%; }
+
 /*input_box01 end*/

@@ -1,132 +1,47 @@
-@import "variable";
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
 
-$text_width : 63;
-@mixin input_set($num){
-    $is : 'input-set';
-    $ib : 'inputBox';
- 
-    .#{$is}0#{$num}{
-        .text,input{
-            height: 27px;
-            line-height: 27px;
-            display: block;
-            font-size: 14px;
-        }
-        .text{
-            width: #{$text_width}px;
-            float: left;
-            text-align: right;
-        }
-        .#{$ib}{
-            margin-left: #{$text_width+15}px;
-            position: relative;
-            .verification_code{
-                height: 27px;
-                img{height: 100%;margin:0 15px;}
-            }
-            .tips{
-                float: left;
-                color: #b5b5b5;
-                line-height: 29px;
-                margin-left: 5px;
-            }
-            .small{
-                width: 33%;
-            }
-            .big{
-                width: 60%;
-            }
-            &.textarea .tips{
-                position: absolute;
-                left: 62%;
-                bottom: 0;   
-            }
-            
-        }
-        input,textarea{
-            border: 1px solid #cfcfcf;
-            width: 100%;
-            float: left;
-            padding: 0 5px;
-        }
-        textarea{
-            padding:{
-                top: 5px ;
-                bottom: 5px;
-            }
-            min-height: 110px; 
-        }
-         
-    } 
-    
-}
-
-/* input-set04 start */
-.m-form-line{
-    .input-set05{
-        float: left;
-        position: relative;
-        min-height: 1px;
-        padding: 12px 0px;
-        
+/* input set05  start  */
+    .input-set05 {
+        @include inputset($width1:180px,$width2:75px);
+        .input{@include border($color:$blue);border-right:none;}
+        .button{background:url(#{$baseImgUrl}isearch.png) no-repeat 12px 50% $blue;padding-left:15px;}
     }
-    &.buttonRow{
-                padding-left:#{$text_width+16}px;
-    }
-}
-@include input_set(5);  
-
-.m-form-line .m-btn {
-    border-radius: 6px;
-}
-.m-form-line .m-btn {
-    width: 99px;
-    font-size: 13px;
-    font-weight: 700;
-    border: none;
-    color: rgb(255, 255, 255);
-
-    text-align: center;
-    padding: 7px 0px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-/* input-set04 end */
+/* input set05  end  */
 
 /*input-set04 start*/
-.input-set04 {
-    width: 328px;
-    height: 38px;
-    border:1px solid #e0e0e0;
-}
-.input-set04 input {
-    display: inline-block;
-    float: left;
-    height: 100%;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 38px;
-}
-.input-set04 input.input { /* Firefox */ /* Safari */
-    box-sizing: border-box;
-    
-    width: 82%;
-    padding-left: 2%;
-    border-top: 1px solid rgb(246, 246, 246);
-    border-bottom: 1px solid rgb(246, 246, 246);
-    border-left: 1px solid rgb(246, 246, 246);
-    border-image: initial;
-    border-right: none;
-    background-color: rgb(255, 255, 255);
-}
-.input-set04 input.button {
-        width: 18%;
-    background-image: url(#{$baseImgUrl}search-icon.png);
-    background-repeat: no-repeat;
-    background-color: rgb(246, 246, 246);
-    background-position: 54% 46%;
-}
+    .input-set04 {
+        width: 328px;
+        height: 38px;
+        border:1px solid #e0e0e0;
+    }
+    .input-set04 input {
+        display: inline-block;
+        float: left;
+        height: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 38px;
+    }
+    .input-set04 input.input { /* Firefox */ /* Safari */
+        box-sizing: border-box;
+
+        width: 82%;
+        padding-left: 2%;
+        border-top: 1px solid rgb(246, 246, 246);
+        border-bottom: 1px solid rgb(246, 246, 246);
+        border-left: 1px solid rgb(246, 246, 246);
+        border-image: initial;
+        border-right: none;
+        background-color: rgb(255, 255, 255);
+    }
+    .input-set04 input.button {
+            width: 18%;
+        background-image: url(#{$baseImgUrl}search-icon.png);
+        background-repeat: no-repeat;
+        background-color: rgb(246, 246, 246);
+        background-position: 54% 46%;
+    }
 /*input-set04 end*/
 
 /*input-set03 start*/

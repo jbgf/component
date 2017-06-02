@@ -1,0 +1,215 @@
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
+@charset "utf-8";
+
+/* navbar06 start */
+$navbar_num:7;
+$navbar_bg:#f4ca04;
+$navbar_to:#eda803;
+
+    .navBar_wrapper06{
+          background:$blue;
+          .navbar-line06{
+            padding-left:20px; position: relative;
+            /* nav_erc0 start*/
+            .naver_0 {
+              display: none;
+              position: absolute;
+              z-index: 99;
+              top: 100%;
+              min-width: 100%;
+              max-width:200%;
+              left:0;
+              .nav_erc{
+                @extend %bg-white;
+                @extend %align-left;
+                @include border();
+                @extend %clear;
+
+                border-top:none;
+
+                li{
+                  font-size: $smallSize*1.2;
+                  font-weight: normal;
+                  text-align: center;
+                  float:left;
+                  display: block;
+                  @extend %capitalize;
+                  &:hover{
+                    /* .link{background:url(#{$baseImgUrl}irightArrow.png) 0px 50% no-repeat;} */
+                  }
+                  $link_h:22px;
+                  .link{
+                    white-space: nowrap;
+                    color:$baseFontColor;
+                    padding: 20px 25px;
+                    display: inline-block;
+                    @extend %block;
+                    .inner{@extend %ellipsis;}
+                    &,.inner{@include lheightM($height:$link_h);}
+                    &:hover{color:$blue;}
+                    i.fa{
+                      margin-right: 8px;
+                      top: -1px;
+                      position: relative;
+                    }
+                    span{@extend %ellipsis;line-height:1;}
+
+                  }
+                }
+              }
+            }
+            /*nav_erc0 end */
+          }
+    }
+    .navbar-line06 .navbar-block{
+      float: left;
+      min-height: 1px;
+      cursor: pointer;
+
+      display: block;
+      width:percentage(1/$navbar_num);
+      color:#fff;
+
+      @extend %uppercase;
+      .bg{
+        width:153px;
+        height: 60px;
+        bottom:0;
+        right:0;
+        position:absolute;
+
+      }
+      .text{z-index:999;position:relative;}
+    }
+    .navbar-line06 .navbar-block{
+      &.on{.naver_0{display:block;}}
+      &.on,
+      .navLink:hover{
+        .bg{
+          background:url(#{$baseImgUrl}navBg2.png) no-repeat 50% 0
+        }
+
+      }
+    }
+
+    .navbar-line06 .navbar-block a.navLink {
+      display: block;
+      text-align: center;
+      font-size: $mediumSize;
+      color:#fff;
+      @extend %relative;
+      padding:13px 0;
+      &.divider{
+        @include persudo($color:#dbdbdb,$content:"|",$position:before,$bg:"ndivider2.png");
+        &:before{width: 3px;height: 40px;top: 6px;}
+      }
+    }
+
+    .navbar-line06 .navbar-block{
+
+    }
+
+/* navbar06 end */
+
+/* navbar05 start */
+    $navbar_num:8;
+
+    .navBar_wrapper05{
+      background:#ea421e;
+      /* nav_erc0 start*/
+      .naver_0 {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        top: 100%;
+        min-width: 100%;
+        max-width:200%;
+        .nav_erc{
+          @extend %bg-white;
+          @extend %align-left;
+          @include border();
+
+          background:#d2d2d2;
+          padding:15px 0;
+          border-top:none;
+          -webkit-border-radius: 0 0 15px 15px;
+          border-radius: 0 0 15px 15px;
+          li{
+            font-size: $smallSize*1.2;
+            font-weight: normal;
+            text-align: center;
+            @extend %capitalize;
+            &:hover{
+              .link{background:url(#{$baseImgUrl}irightArrow.png) 0px 50% no-repeat;}
+            }
+            $link_h:22px;
+            .link{
+              white-space: nowrap;
+              color:$baseFontColor;
+              padding: 5px 18px;
+              display: inline-block;
+              @extend %block;
+              .inner{@extend %ellipsis;}
+              &,.inner{@include lheightM($height:$link_h);}
+              i.fa{
+                margin-right: 8px;
+                top: -1px;
+                position: relative;
+              }
+              span{@extend %ellipsis;line-height:1;}
+
+            }
+          }
+        }
+      }
+      /*nav_erc0 end */
+    }
+    .navbar-line05 .navbar-block{
+      float: left;
+      min-height: 1px;
+      cursor: pointer;
+      padding: 4px 0;
+      position: relative;
+      display: block;
+      width:percentage(1/$navbar_num);
+      color:#fff;
+
+      @extend %uppercase;
+    }
+    .navbar-line05 .navbar-block.on,
+    .navbar-line05 .navbar-block:hover {
+
+      background:url(#{$baseImgUrl}navBg.png) no-repeat;
+      color:#fff;
+      z-index: 99;
+      a.navLink {
+        &.divider{
+          @include persudo($color:none,$content:"",$position:before,$bg:none);
+        }
+      }
+      & + .navbar-block{
+        .divider{
+
+          @include persudo($color:none,$content:"",$position:before,$bg:none);
+        }
+      }
+    }
+    .navbar-line05 .navbar-block a.navLink {
+      display: block;
+      text-align: center;
+      font-size: $mediumSize;
+      color:#fff;
+      @extend %relative;
+      padding:10px 0;
+      &.divider{
+        @include persudo($color:#dbdbdb,$content:"|",$position:before,$bg:"ndivider.png");
+        &:before{width: 2px;height: 40px;top: -1px;}
+      }
+    }
+
+    .navbar-line05 .navbar-block{
+
+    }
+
+/* navbar05 end */

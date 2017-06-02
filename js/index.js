@@ -130,6 +130,7 @@
         var status = that.haveTag(block);
         var s = status.script;
         var p = status.plugin ;
+        var tit = status.title;
         /*status.plugin.indexOf(";")*/
 
         var u = status.ui;
@@ -138,13 +139,15 @@
         $(e)[position == "top" ? "after" : "before" ](btnRow);
         
         var caseName = status.caseName; 
-        var stag,ptag,uiTag,caseNameTag,typeTag,tagLine = "" ;
-       
+        var stag,ptag,uiTag,caseNameTag,typeTag,tagLine = "";
+        var titlestring = "";
 /*添加标签*/
-        u?tagLine += uiTag = "<span class='tagFrame tag-blue blue'>UI: "+u+"</span>":"";
-        s?tagLine += stag = "<span class='tagFrame jsTag tag-green green'>Javascript</span>":"";
+        u?(tagLine += uiTag = "<span class='tagFrame tag-blue blue'>UI: "+u+"</span>"):"";
+        s?(tagLine += stag = "<span class='tagFrame jsTag tag-green green'>Javascript</span>"):"";
+        tit?(titlestring = "<span class='tagFrame tag-blue blue'>title:"+tit+"</span>",
+             tagLine += titlestring)
+            :"";
 
-        
         //因为调用插件方法，可能会改变文档结构，所以先获取插件调用前的html。  
         p?(
           tagLine += ptag = "<span class='tagFrame  tag-red  red'>"+p+"</span>",
@@ -268,6 +271,7 @@
   set.prototype.haveTag = function($block){
     var script = $block.find(".jsTag").length != 0 || $block.find("script").length != 0;
     var plugin = $block.find("[data-plugin]").attr("data-plugin") || undefined;
+    var title = $block.find("[data-title]").attr("data-title") || undefined;
     var caseName = $block.find("[data-plugin]").attr("data-p-caseName") || undefined;
     var fixedPosition = $block.find("[data-fixed]").attr("data-fixed") || undefined;
     var ui = $block.find("[data-ui]").attr("data-ui") || undefined;
@@ -285,7 +289,8 @@
       caseName:caseName,
       fixedPosition:fixedPosition,
       ui:ui,
-      type:type                     
+      type:type,
+        title:title
     };
     
     return state;

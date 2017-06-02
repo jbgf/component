@@ -1,8 +1,26 @@
-@import "base.scss";
+@import "variable.scss";
 @function sign(){
 	$s : '-'!default;
 	@if random()<0.5{$s : '';}@else{$s : '-';}
 	@return #{$s};
+}
+  
+@-webkit-keyframes shake{
+	 $i : 2;
+	 $sign : '-';
+	 $baseNum : 2.5;
+	 $baseAngle : 10;
+	 @while $i < 100{
+	 	
+	 	#{$i}%{
+          	 -webkit-transform: translate(sign()+($baseNum*random()+px),sign()+($baseNum*random()+px)) rotate(sign()+($baseAngle*random()+deg));
+          	         transform: translate(sign()+($baseNum*random()+px),sign()+($baseNum*random()+px)) rotate(sign()+($baseAngle*random()+deg));
+	 	}
+	 	$i : $i + 2;
+	 }  
+	 0%, 100% {
+             -webkit-transform: translate(0, 0) rotate(0);
+                     transform: translate(0, 0) rotate(0); } 
 }
   
 @keyframes shake{
@@ -13,13 +31,15 @@
 	 @while $i < 100{
 	 	
 	 	#{$i}%{
-          	 transform: translate(sign()+($baseNum*random()+px),sign()+($baseNum*random()+px)) rotate(sign()+($baseAngle*random()+deg));
+          	 -webkit-transform: translate(sign()+($baseNum*random()+px),sign()+($baseNum*random()+px)) rotate(sign()+($baseAngle*random()+deg));
+          	         transform: translate(sign()+($baseNum*random()+px),sign()+($baseNum*random()+px)) rotate(sign()+($baseAngle*random()+deg));
 	 	}
 	 	$i : $i + 2;
 	 }  
 	 0%, 100% {
-             transform: translate(0, 0) rotate(0); } 
-}
+             -webkit-transform: translate(0, 0) rotate(0);
+                     transform: translate(0, 0) rotate(0); } 
+} 
 
 
  

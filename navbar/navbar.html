@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	
+	
+	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+	<script type="text/javascript" src="/js/layer/layer.js"></script>
+	
+</head>
+<body>
+	<script type="text/javascript">
+
+	  var c = function(){
+	    $(function(){
+	      $("#navbarBox").set({
+	        brandName:"topbar",
+	        rowBlock:1
+	      });
+	    });
+	  } 
+	  commonHead(c);
+	</script>
+	<div class="bg extend-width bg-black">
+		<div class="container1200">
+			<div class="line ">	
+				<div class="block block-1 ">
+					<div class="brandName white"></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div id="navbarBox" class="" ><!-- data-set="set" -->
+		<div class="box" data-title="navbar-line06">
+			<!-- navbar start -->
+			<div class="navBar_wrapper06">
+
+
+				<div class="navbar-line06 clear ">
+					<div class="navbar-block on">
+
+						<a class="navLink">
+
+							首&nbsp;&nbsp;&nbsp;页
+
+						</a>
+
+					</div>
+					<div class="navbar-block ">
+						<a class="navLink">关于我们</a>
+						<ul class="naver_0" >
+
+							<div class="nav_erc">
+								<li class="nav_center"><a href="#"><div class="link">公司简介</div></a></li>
+								<li class="nav_center"><a href="#"><div class="link">企业文化</div></a></li>
+								<li class="nav_center"><a href="#"><div class="link">组织结构</div></a></li>
+								<li class="nav_center"><a href="#"><div class="link">荣誉资质</div></a></li>
+
+
+							</div>
+
+						</ul>
+					</div>
+					<div class="navbar-block"><a class="navLink">新闻中心</a></div>
+					<div class="navbar-block"><a class="navLink">产品中心</a></div>
+					<div class="navbar-block"><a class="navLink">生产流程</a></div>
+					<div class="navbar-block"><a class="navLink">质量控制</a></div>
+					<div class="navbar-block"><a class="navLink">人力资源</a></div>
+
+
+				</div>
+
+
+			</div>
+			<!-- navbar end -->
+			<script type="text/javascript">
+
+
+                (function navbar(){
+					var navbar = $('.navbar-line06');
+                    var st = 180;
+                    var navs = navbar.find('.navbar-block');
+                    var naver = $('naver_0');
+                    var uls = navs.find("ul");
+                    var height ;
+                    navs.mouseenter(function () {
+                        var ul = $(this).find("ul");
+                        if(ul.length == 0){
+                            navbar.css('margin-bottom',0);
+                        }else{}
+                        uls.hide();
+                        ul.show(0,function(){
+                            height ? "" : height = $(this).height();
+
+                            navbar.css('margin-bottom',height)
+                        });
+
+                    })
+                    navs.each(function(i,e){
+                        if($(this).hasClass("on") && $(this).find("ul").length > 0){
+                            height ? "" : height = $(this).find('.naver_0').height();
+                            navbar.css('margin-bottom',height)
+                        }
+                    })
+					/*背景图片相关*/
+                    navbar.find('.navLink').wrapInner('<span class="text">').addClass("divider").prepend('<div class="bg"></div>').first().removeClass("divider");
+                })();
+			</script>
+		</div>
+
+		<div class="box" data-title="navbar-line05 ">
+			<!-- navbar start -->
+			<div  class="navBar_wrapper05">
+				<div class="container1200">
+
+					<div class="navbar-line05 clear ">
+						<div class="navbar-block on">
+							<a class="navLink">
+								首&nbsp;&nbsp;&nbsp;页</a>
+						</div>
+						<div class="navbar-block"><a class="navLink">关于我们</a>
+							<ul class="naver_0" >
+
+								<div class="nav_erc">
+									<li class="nav_center"><a href="#"><div class="link">公司简介</div></a></li>
+									<li class="nav_center"><a href="#"><div class="link">企业文化</div></a></li>
+									<li class="nav_center"><a href="#"><div class="link">组织结构</div></a></li>
+									<li class="nav_center"><a href="#"><div class="link">荣誉资质</div></a></li>
+
+
+								</div>
+
+							</ul>
+						</div>
+						<div class="navbar-block"><a class="navLink">新闻中心</a></div>
+						<div class="navbar-block"><a class="navLink">产品中心</a></div>
+						<div class="navbar-block"><a class="navLink">生产流程</a></div>
+						<div class="navbar-block"><a class="navLink">质量控制</a></div>
+						<div class="navbar-block"><a class="navLink">人力资源</a></div>
+						<div class="navbar-block"><a class="navLink">客户服务</a></div>
+
+					</div>
+
+				</div>
+			</div>
+			<script type="text/javascript">
+
+
+                (function navbar(){
+
+                    var st = 180;
+                    $('.navbar-line05 .navbar-block').mouseenter(function () {
+
+                        $(this).find('ul').stop(false, true).slideDown(st);
+                    }).mouseleave(function () {
+                        $(this).find('ul').stop(false, true).slideUp(st);
+                    });
+
+                    $('.navbar-line05 .navLink').addClass("divider").first().removeClass("divider");
+                })();
+			</script>
+			<!-- navbar end -->
+		</div>
+
+	</div>
+
+	
+</body>
+</html>
