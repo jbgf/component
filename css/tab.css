@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.tab04 .hd:before, .tab04 .hd:after {
+  content: " ";
+  display: table; }
+
+.tab04 .hd:after {
+  clear: both; }
+
+.tab04 .hd ul li + li .hdInner {
+  position: relative; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.tab04 .hd:before, .tab04 .hd:after {
+  content: " ";
+  display: table; }
+
+.tab04 .hd:after {
+  clear: both; }
+
+.tab04 .hd ul li + li .hdInner {
+  position: relative; }
+
+/* input set  start  */
+/* input set  end  */
+/*tab05 tab切换 start*/
+.tab05.case02 {
+  height: auto;
+  border-bottom: none; }
+
+.tab05.case02 .news-list01 {
+  border-top: 1px dashed #ddd; }
+
+.tab05.case02 .bd ul.switch {
+  padding: 0px 0;
+  zoom: 1; }
+
+.tab05 {
+  text-align: left;
+  border-bottom: 1px dashed #ddd;
+  height: 142px; }
+
+.tab05 .hd {
+  height: 35px;
+  line-height: 38px;
+  background: #f4f4f4;
+  border-bottom: 2px solid #6eb92b;
+  position: relative; }
+
+.tab05 .hd ul {
+  float: left;
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  height: 37px; }
+
+.tab05 .hd ul li {
+  float: left;
+  padding: 0 20px;
+  cursor: pointer; }
+
+.tab05 .hd ul li.on {
+  height: 35px;
+  background: #fff;
+  background: #6eb92b;
+  border-bottom: 2px solid #6eb92b;
+  color: #fff; }
+
+.tab05 .bd ul.switch {
+  padding: 15px 0;
+  zoom: 1; }
+
+.tab05 .bd ul li .s-general {
+  padding: 15px 0; }
+
+.tab05 .bd li .stb-text {
+  height: 30px;
+  line-height: 23px;
+  font-size: 15px;
+  font-weight: 600; }
+
+/*tab05 tab切换 end*/
+/*tab04 start*/
+.tab04 {
+  height: auto;
+  border-bottom: none;
+  text-align: left; }
+  .tab04 .more {
+    height: 38px;
+    line-height: 38px;
+    color: #999; }
+
+.tab04 .hd {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  height: 38px; }
+  .tab04 .hd ul {
+    float: left; }
+    .tab04 .hd ul li {
+      float: left;
+      height: 38px;
+      cursor: pointer;
+      font-size: 15.6px; }
+      .tab04 .hd ul li .iconfont {
+        color: #2675d5;
+        margin-right: 10px;
+        font-size: 18.72px; }
+      .tab04 .hd ul li .hdInner {
+        padding: 8px 20px; }
+      .tab04 .hd ul li + li .hdInner:before {
+        position: absolute;
+        left: 0px;
+        width: auto;
+        color: #dbdbdb;
+        content: "|";
+        font-size: 15px;
+        left: -2px; }
+      .tab04 .hd ul li.on {
+        background: url(../img/aslionbg.png) center 100% no-repeat;
+        color: #2675d5; }
+
+.tab04 .bd .switch {
+  padding: 13px; }
+
+.tab04 .bd ul.switch {
+  padding: 15px 0px;
+  zoom: 1; }
+
+.tab04 .bd li .stb-text {
+  height: 30px;
+  line-height: 23px;
+  font-size: 15px;
+  font-weight: 600; }
+
+/*tab04 end*/

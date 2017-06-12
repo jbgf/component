@@ -1,0 +1,102 @@
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
+@charset "utf-8";
+
+/*tab05 tab切换 start*/
+  .tab05.case02{height: auto;border-bottom: none;}
+  .tab05.case02 .news-list01{border-top: 1px dashed #ddd;}
+  .tab05.case02 .bd ul.switch{ padding:0px 0;  zoom:1; }
+  .tab05{ text-align:left;border-bottom: 1px dashed #ddd;height: 142px;}
+  .tab05 .hd{
+    height:35px;
+    line-height:38px;
+    background:#f4f4f4;
+    border-bottom:2px solid #6eb92b;
+    position:relative;
+  }
+  .tab05 .hd ul{
+    float:left;
+    position:absolute; left:0px; top:-1px;
+    height:37px;
+  }
+  .tab05 .hd ul li{
+    float:left; padding:0 20px;
+    cursor:pointer;
+  }
+  .tab05 .hd ul li.on{
+    height:35px;
+    background:#fff;
+    background:#6eb92b;
+    border-bottom:2px solid #6eb92b;
+    color: #fff;
+  }
+  .tab05 .bd ul.switch{ padding:15px 0;  zoom:1; }
+  .tab05 .bd li{
+  }
+  .tab05 .bd ul li .s-general{padding:15px 0;}
+  .tab05 .bd li .stb-text{
+    height: 30px;
+    line-height: 23px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+/*tab05 tab切换 end*/
+
+/*tab04 start*/
+$tth:38px;
+  .tab04 {
+    height: auto;
+    border-bottom: none;
+
+    text-align: left;
+    .more {@include lheightM($tth);color:#999;}
+  }
+  .tab04 .hd {
+
+    @include border($position:bottom);
+    position: relative;
+    height: $tth;
+    @extend %clear;
+    ul {
+      float: left;
+
+      li {
+        float: left;
+        height: $tth;
+        cursor: pointer;
+        font-size: $mediumSize;
+        .iconfont{color:$blue;margin-right:10px;font-size:$bigSize;}
+        .hdInner{
+
+          padding: 8px 20px;
+        }
+        & + li{
+          .hdInner{
+            @include persudo($color:#dbdbdb,$content:"|",$position:before,$bg:none){
+              left:-2px;
+            };
+          }
+        }
+        &.on {
+          background:url(#{$baseImgUrl}aslionbg.png) center 100% no-repeat;
+          color: $blue;
+        }
+      }
+    }
+  }
+  .tab04 .bd {
+    .switch {
+      padding:13px;
+    }
+  }
+  .tab04 .bd ul.switch {
+    padding: 15px 0px;
+    zoom: 1;
+  }
+  .tab04 .bd li .stb-text {
+    height: 30px;
+    line-height: 23px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+/*tab04 end*/

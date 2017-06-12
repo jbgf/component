@@ -4,6 +4,8 @@ sass 墙的原因，使用淘宝镜像，cnpm install sass --save-dev
 */
 var gulp=require('gulp'),
 	sass = require('gulp-sass'),
+    express = require('express'),
+    routes = require('./routes'),
 	browserSync = require('browser-sync'),
 	changed = require('gulp-changed'),
     spritesmith = require('gulp.spritesmith'),
@@ -13,6 +15,10 @@ var gulp=require('gulp'),
 	merge = require('merge-stream'),
 	connect = require('gulp-connect-php'),
 	runSequence = require('run-sequence');
+
+/*var app = express();
+// 路由
+routes(app);*/
 
 gulp.task('sprite', function () {
     var spriteData = gulp.src('sprite/*.png').pipe(spritesmith({
@@ -78,7 +84,7 @@ gulp.task('browserSync',function(){
 	})*/
 });
 
-var arr = ['topbar','navbar'];
+var arr = ['topbar','navbar','slider','tab','list','iconGroup'];
 	arr = arr.map(function (x) {
 		return './'+x+'/**/*.html';
     })

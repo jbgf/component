@@ -1,14 +1,54 @@
 @charset "UTF-8";
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /* setting scss*/
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /* 开关设置*/
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /*是否兼容ie6-7*/
 /*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
 /*是否开启打印样式*/
+/* color start */
+/* color end */
+.slideBox05 .bd li .slideTitle .link {
+  display: block;
+  *display: inline;
+  /*zoom: 1;
+  text-align:center;
+  max-width: 100%;
+  line-height: 100%; */
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
 /* clearfix*/
 /* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.slideBox05 .bd li .slideTitle .link {
+  display: block;
+  *display: inline;
+  /*zoom: 1;
+  text-align:center;
+  max-width: 100%;
+  line-height: 100%; */
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/* input set  start  */
+/* input set  end  */
 /*ul-line start*/
 .ul-line01 li {
   float: left;
@@ -26,6 +66,71 @@
   border: 1px solid #df0000; }
 
 /*ul-line end*/
+/*slideBox05 start*/
+/* slideBox start  */
+.slideBox05 {
+  overflow: hidden;
+  position: relative;
+  text-align: right; }
+  .slideBox05 .hd {
+    text-align: right;
+    right: 0;
+    overflow: hidden;
+    position: absolute;
+    bottom: 5px;
+    z-index: 1; }
+
+.slideBox05 .hd ul {
+  overflow: hidden;
+  zoom: 1;
+  display: inline-block; }
+
+.slideBox05 .hd ul li {
+  float: left;
+  margin-right: 12px;
+  width: 22px;
+  color: #fff;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  font-size: 12px;
+  position: relative; }
+  .slideBox05 .hd ul li.on {
+    background: #ffbf00;
+    color: white; }
+
+.slideBox05 .bd {
+  position: relative;
+  width: 100%;
+  z-index: 0; }
+  .slideBox05 .bd li {
+    width: 100%;
+    display: block;
+    vertical-align: middle;
+    position: relative; }
+    .slideBox05 .bd li .slideTitle {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      text-align: left;
+      padding: 10px 20px; }
+      .slideBox05 .bd li .slideTitle .link {
+        width: 70%; }
+
+.slideBox05 .bd li a {
+  width: 100%;
+  display: block; }
+
+.slideBox05 .bd li a img {
+  width: 100%;
+  display: block; }
+
+/*slideBox05 end*/
 /* slideBox03 start */
 .slideBox03 {
   width: 100%;
@@ -173,7 +278,7 @@
   padding: 20px 0; }
 
 .tip {
-  background: url(/img//tip.png) no-repeat;
+  background: url(../img//tip.png) no-repeat;
   width: 96px;
   height: 36px;
   line-height: 36px;
@@ -206,7 +311,7 @@
   _display: inline; }
 
 .txtScroll-left01 .bd ul li a {
-  background: url(/img//bgicon01.png) no-repeat 0 50%;
+  background: url(../img//bgicon01.png) no-repeat 0 50%;
   padding-left: 15px; }
 
 /*txtScroll-left01 end*/
@@ -283,63 +388,6 @@
   text-align: left; }
 
 /*picScroll02 end*/
-/*textTab01 tab切换 start*/
-.textTab01.case02 {
-  height: auto;
-  border-bottom: none; }
-
-.textTab01.case02 .news-list01 {
-  border-top: 1px dashed #ddd; }
-
-.textTab01.case02 .bd ul.switch {
-  padding: 0px 0;
-  zoom: 1; }
-
-.textTab01 {
-  text-align: left;
-  border-bottom: 1px dashed #ddd;
-  height: 142px; }
-
-.textTab01 .hd {
-  height: 35px;
-  line-height: 38px;
-  background: #f4f4f4;
-  border-bottom: 2px solid #6eb92b;
-  position: relative; }
-
-.textTab01 .hd ul {
-  float: left;
-  position: absolute;
-  left: 0px;
-  top: -1px;
-  height: 37px; }
-
-.textTab01 .hd ul li {
-  float: left;
-  padding: 0 20px;
-  cursor: pointer; }
-
-.textTab01 .hd ul li.on {
-  height: 35px;
-  background: #fff;
-  background: #6eb92b;
-  border-bottom: 2px solid #6eb92b;
-  color: #fff; }
-
-.textTab01 .bd ul.switch {
-  padding: 15px 0;
-  zoom: 1; }
-
-.textTab01 .bd ul li .s-general {
-  padding: 15px 0; }
-
-.textTab01 .bd li .stb-text {
-  height: 30px;
-  line-height: 23px;
-  font-size: 15px;
-  font-weight: 600; }
-
-/*textTab01 tab切换 end*/
 /*rangePic start*/
 .rangePic .bd li {
   width: 160px;
@@ -522,7 +570,7 @@
   font-size: 13px;
   text-indent: 12px;
   color: #b2b2b2;
-  background: url(/img//bluei.png) no-repeat 0 53%; }
+  background: url(../img//bluei.png) no-repeat 0 53%; }
 
 .ul_tab01 .r-text .pic {
   width: 220px;
@@ -579,7 +627,7 @@
   border-bottom: 1px solid #2d82bf; }
 
 .floatWindow_r01 a.backTop {
-  background: url(/img//bTop.png) no-repeat; }
+  background: url(../img//bTop.png) no-repeat; }
 
 /*floatWindow_r01 end*/
 /*切换功能 start*/

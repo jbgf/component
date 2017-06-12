@@ -1,4 +1,5 @@
-@import "variable";
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
 
 /*ul-line start*/
 .ul-line01 li {
@@ -18,11 +19,80 @@
 }
 /*ul-line end*/
 
+/*slideBox05 start*/
+/* slideBox start  */
+    .slideBox05 {
+        overflow: hidden;
+        position: relative;
+        text-align: right;
+        .hd {
+            text-align: right;
+            right:0;
+            overflow: hidden;
+            position: absolute;
+            bottom: 5px;
+            z-index: 1;
+        }
+    }
+    .slideBox05 .hd ul {
+        overflow: hidden;
+        zoom: 1;
+        display: inline-block;
+    }
+    $size:22px;
+    $bgColor1:rgba(0, 0, 0,0.6);
+    $bgColor2:rgba(0, 0, 0,0.4);
+    .slideBox05 .hd ul li {
+        float: left;
+        margin-right: 12px;
+        width: $size;
+        color:#fff;
+        @include lheightM($size);
+        text-align: center;
+        background: $bgColor1;
+        cursor: pointer;
+        font-size: $smallSize;
+        position:relative;
+
+        &.on {
+            background: $yellow;
+            color: white;
+        }
+    }
+    .slideBox05 .bd {
+        position: relative;
+        width: 100%;
+        z-index: 0;
+
+        li {
+            width: 100%;
+            display: block;
+            vertical-align: middle;
+            position:relative;
+            .slideTitle{
+                position:absolute;left:0;right:0;bottom:0;
+                background:$bgColor2;
+                color:#fff;
+                text-align:left;
+                padding:10px 20px;
+                .link{width:70%;@extend %ellipsis;}
+
+            }
+        }
+    }
+    .slideBox05 .bd li a {
+        width: 100%;
+        display: block;
+    }
+    .slideBox05 .bd li a img {
+        width: 100%;
+        display: block;
+    }
+
+/*slideBox05 end*/
+
 $color_a02:#faf9f9,#df0000,rgb(255, 255, 255);
-
-
 $color_a02:#faf9f9,#df0000,rgb(255, 255, 255);
-
 @mixin hd03($ca){
     .hd{
         text-align: right;
@@ -122,25 +192,25 @@ $color_a02:#faf9f9,#df0000,rgb(255, 255, 255);
 }
 
 /* slideBox03 start */
-@include slideBox(3);    
-/* slideBox03 end */
+    @include slideBox(3);
+    /* slideBox03 end */
 /*slideBox02 start*/
-@include slideBox(2);
+    @include slideBox(2);
 /*slideBox02 end*/
 
 /*slideBox02 end*/
 
 /*slideBox01 start*/
 
-.slideBox01{ width:100%; overflow:hidden; position:relative; border-top:1px solid #ddd;  }
-.slideBox01 .hd{text-align: center; width:100%; overflow:hidden; position:absolute; bottom:5px; z-index:1; }
-.slideBox01 .hd ul{ overflow:hidden; zoom:1; display: inline-block; }
-.slideBox01 .hd ul li{ float:left; margin-right:12px;  width:15px; height:15px; border-radius:50%;line-height:14px; text-align:center; background:#fff; cursor:pointer; }
-.slideBox01 .hd ul li.on{ background:#6eb92b; color:#fff; }
-.slideBox01 .bd{ position:relative; width:100%; z-index:0;   }
-.slideBox01 .bd li{ width:100%;display:block;vertical-align:middle; }
-.slideBox01 .bd li a{width: 100%;display: block;}
-.slideBox01 .bd img{width:100%; display: block;}
+    .slideBox01{ width:100%; overflow:hidden; position:relative; border-top:1px solid #ddd;  }
+    .slideBox01 .hd{text-align: center; width:100%; overflow:hidden; position:absolute; bottom:5px; z-index:1; }
+    .slideBox01 .hd ul{ overflow:hidden; zoom:1; display: inline-block; }
+    .slideBox01 .hd ul li{ float:left; margin-right:12px;  width:15px; height:15px; border-radius:50%;line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+    .slideBox01 .hd ul li.on{ background:#6eb92b; color:#fff; }
+    .slideBox01 .bd{ position:relative; width:100%; z-index:0;   }
+    .slideBox01 .bd li{ width:100%;display:block;vertical-align:middle; }
+    .slideBox01 .bd li a{width: 100%;display: block;}
+    .slideBox01 .bd img{width:100%; display: block;}
 
 
 /*slideBox01 end*/
@@ -211,45 +281,7 @@ $color_a02:#faf9f9,#df0000,rgb(255, 255, 255);
 
 /*picScroll02 end*/
 
-/*textTab01 tab切换 start*/ 
-.textTab01.case02{height: auto;border-bottom: none;}
-.textTab01.case02 .news-list01{border-top: 1px dashed #ddd;}
-.textTab01.case02 .bd ul.switch{ padding:0px 0;  zoom:1; }     
-.textTab01{ text-align:left;border-bottom: 1px dashed #ddd;height: 142px;}
-.textTab01 .hd{ 
-    height:35px; 
-    line-height:38px; 
-    background:#f4f4f4;  
-    border-bottom:2px solid #6eb92b;  
-    position:relative; 
-}
-.textTab01 .hd ul{
-    float:left;  
-    position:absolute; left:0px; top:-1px;
-    height:37px;   
-}     
-.textTab01 .hd ul li{ 
-    float:left; padding:0 20px;
-    cursor:pointer;  
-}    
-.textTab01 .hd ul li.on{ 
-    height:35px;
-    background:#fff;
-    background:#6eb92b;
-    border-bottom:2px solid #6eb92b;
-    color: #fff; 
-}
-.textTab01 .bd ul.switch{ padding:15px 0;  zoom:1; }     
-.textTab01 .bd li{
-}
-.textTab01 .bd ul li .s-general{padding:15px 0;}      
-.textTab01 .bd li .stb-text{
-    height: 30px;
-    line-height: 23px;
-    font-size: 15px;
-    font-weight: 600;
-}
-/*textTab01 tab切换 end*/ 
+
 
 /*rangePic start*/
 .rangePic .bd li {

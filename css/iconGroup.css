@@ -1,0 +1,420 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.prow01:before, .prow01 .productDiamond:before, .prow:before, .prow01:after, .prow01 .productDiamond:after, .prow:after {
+  content: " ";
+  display: table; }
+
+.prow01:after, .prow01 .productDiamond:after, .prow:after {
+  clear: both; }
+
+.prow01 .productDiamond_1 .text, .prow01 .productDiamond_2 .text, .prow01 .productDiamond_3 .text, .prow01 .productDiamond_4 .text, .prow01 .productDiamond_5 .text, .prow01 .productDiamond_6 .text, .prow01 .productDiamond_7 .text, .prow01 .productDiamond_8 .text, .prow01 .productDiamond_9 .text, .prow01 .productDiamond_10 .text {
+  position: relative; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.prow01:before, .prow01 .productDiamond:before, .prow:before, .prow01:after, .prow01 .productDiamond:after, .prow:after {
+  content: " ";
+  display: table; }
+
+.prow01:after, .prow01 .productDiamond:after, .prow:after {
+  clear: both; }
+
+.prow01 .productDiamond_1 .text, .prow01 .productDiamond_2 .text, .prow01 .productDiamond_3 .text, .prow01 .productDiamond_4 .text, .prow01 .productDiamond_5 .text, .prow01 .productDiamond_6 .text, .prow01 .productDiamond_7 .text, .prow01 .productDiamond_8 .text, .prow01 .productDiamond_9 .text, .prow01 .productDiamond_10 .text {
+  position: relative; }
+
+/* input set  start  */
+/* input set  end  */
+.pWrapper01 {
+  padding: 0 60px 0 60px; }
+
+.prow01 {
+  margin-left: 0;
+  margin-right: 0; }
+  .prow01 .productDiamond {
+    width: 20%;
+    float: left;
+    min-height: 1px; }
+  .prow01 .str-inner {
+    padding-left: 0;
+    padding-right: 0; }
+  .prow01 .productDiamond_1 .pic {
+    background: #3fdc94; }
+  .prow01 .productDiamond_1 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #3fdc94;
+    box-shadow: 0 0 25px #3fdc94; }
+  .prow01 .productDiamond_1 .str-inner:hover .text {
+    color: #3fdc94; }
+  .prow01 .productDiamond_1 .title {
+    color: #3fdc94; }
+  .prow01 .productDiamond_1 .text:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #3fdc94;
+    content: "";
+    font-size: 15px;
+    top: 0;
+    height: 1px;
+    background: #3fdc94;
+    width: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .prow01 .productDiamond_2 .pic {
+    background: #218bd5; }
+  .prow01 .productDiamond_2 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #218bd5;
+    box-shadow: 0 0 25px #218bd5; }
+  .prow01 .productDiamond_2 .str-inner:hover .text {
+    color: #218bd5; }
+  .prow01 .productDiamond_2 .title {
+    color: #218bd5; }
+  .prow01 .productDiamond_2 .text:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #218bd5;
+    content: "";
+    font-size: 15px;
+    top: 0;
+    height: 1px;
+    background: #218bd5;
+    width: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .prow01 .productDiamond_3 .pic {
+    background: #f26262; }
+  .prow01 .productDiamond_3 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #f26262;
+    box-shadow: 0 0 25px #f26262; }
+  .prow01 .productDiamond_3 .str-inner:hover .text {
+    color: #f26262; }
+  .prow01 .productDiamond_3 .title {
+    color: #f26262; }
+  .prow01 .productDiamond_3 .text:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #f26262;
+    content: "";
+    font-size: 15px;
+    top: 0;
+    height: 1px;
+    background: #f26262;
+    width: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .prow01 .productDiamond_4 .pic {
+    background: #f6aa58; }
+  .prow01 .productDiamond_4 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #f6aa58;
+    box-shadow: 0 0 25px #f6aa58; }
+  .prow01 .productDiamond_4 .str-inner:hover .text {
+    color: #f6aa58; }
+  .prow01 .productDiamond_4 .title {
+    color: #f6aa58; }
+  .prow01 .productDiamond_4 .text:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #f6aa58;
+    content: "";
+    font-size: 15px;
+    top: 0;
+    height: 1px;
+    background: #f6aa58;
+    width: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .prow01 .productDiamond_5 .pic {
+    background: #cf78f3; }
+  .prow01 .productDiamond_5 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #cf78f3;
+    box-shadow: 0 0 25px #cf78f3; }
+  .prow01 .productDiamond_5 .str-inner:hover .text {
+    color: #cf78f3; }
+  .prow01 .productDiamond_5 .title {
+    color: #cf78f3; }
+  .prow01 .productDiamond_5 .text:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #cf78f3;
+    content: "";
+    font-size: 15px;
+    top: 0;
+    height: 1px;
+    background: #cf78f3;
+    width: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .prow01 .productDiamond_6 .pic {
+    background: #e882c5; }
+  .prow01 .productDiamond_6 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #e882c5;
+    box-shadow: 0 0 25px #e882c5; }
+  .prow01 .productDiamond_6 .str-inner:hover .text {
+    color: #e882c5; }
+  .prow01 .productDiamond_6 .title {
+    color: #e882c5; }
+  .prow01 .productDiamond_6 .text:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #e882c5;
+    content: "";
+    font-size: 15px;
+    top: 0;
+    height: 1px;
+    background: #e882c5;
+    width: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .prow01 .productDiamond_7 .pic {
+    background: #39be62; }
+  .prow01 .productDiamond_7 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #39be62;
+    box-shadow: 0 0 25px #39be62; }
+  .prow01 .productDiamond_7 .str-inner:hover .text {
+    color: #39be62; }
+  .prow01 .productDiamond_7 .title {
+    color: #39be62; }
+  .prow01 .productDiamond_7 .text:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #39be62;
+    content: "";
+    font-size: 15px;
+    top: 0;
+    height: 1px;
+    background: #39be62;
+    width: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .prow01 .productDiamond_8 .pic {
+    background: #9534bd; }
+  .prow01 .productDiamond_8 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #9534bd;
+    box-shadow: 0 0 25px #9534bd; }
+  .prow01 .productDiamond_8 .str-inner:hover .text {
+    color: #9534bd; }
+  .prow01 .productDiamond_8 .title {
+    color: #9534bd; }
+  .prow01 .productDiamond_8 .text:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #9534bd;
+    content: "";
+    font-size: 15px;
+    top: 0;
+    height: 1px;
+    background: #9534bd;
+    width: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .prow01 .productDiamond_9 .pic {
+    background: #58cced; }
+  .prow01 .productDiamond_9 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #58cced;
+    box-shadow: 0 0 25px #58cced; }
+  .prow01 .productDiamond_9 .str-inner:hover .text {
+    color: #58cced; }
+  .prow01 .productDiamond_9 .title {
+    color: #58cced; }
+  .prow01 .productDiamond_9 .text:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #58cced;
+    content: "";
+    font-size: 15px;
+    top: 0;
+    height: 1px;
+    background: #58cced;
+    width: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .prow01 .productDiamond_10 .pic {
+    background: #f6da58; }
+  .prow01 .productDiamond_10 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #f6da58;
+    box-shadow: 0 0 25px #f6da58; }
+  .prow01 .productDiamond_10 .str-inner:hover .text {
+    color: #f6da58; }
+  .prow01 .productDiamond_10 .title {
+    color: #f6da58; }
+  .prow01 .productDiamond_10 .text:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #f6da58;
+    content: "";
+    font-size: 15px;
+    top: 0;
+    height: 1px;
+    background: #f6da58;
+    width: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .prow01 .productDiamond {
+    padding: 15px 0; }
+    .prow01 .productDiamond .title {
+      overflow: hidden;
+      height: 0;
+      -webkit-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out; }
+    .prow01 .productDiamond .pic {
+      padding: 12px 0;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      width: 80px;
+      margin: 0 auto; }
+    .prow01 .productDiamond .text {
+      padding: 20px 0;
+      font-size: 18.72px;
+      color: #999; }
+      .prow01 .productDiamond .text:before {
+        -webkit-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in; }
+    .prow01 .productDiamond .str-inner:hover .title {
+      height: auto;
+      padding: 5px 0; }
+    .prow01 .productDiamond .str-inner:hover .text {
+      padding: 5px 0; }
+      .prow01 .productDiamond .str-inner:hover .text:before {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1); }
+    .prow01 .productDiamond .str-inner {
+      text-align: center;
+      height: 155px; }
+
+.pWrapper {
+  padding: 0 0 0 20px; }
+
+.prow {
+  margin-left: -34px;
+  margin-right: -34px; }
+  .prow .productDiamond {
+    width: 20%;
+    float: left;
+    min-height: 1px; }
+  .prow .str-inner {
+    padding-left: 34px;
+    padding-right: 34px; }
+  .prow .productDiamond_1 .pic {
+    background: #3fdc94; }
+  .prow .productDiamond_1 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #3fdc94;
+    box-shadow: 0 0 25px #3fdc94; }
+  .prow .productDiamond_1 .str-inner:hover .text {
+    color: #3fdc94; }
+  .prow .productDiamond_2 .pic {
+    background: #218bd5; }
+  .prow .productDiamond_2 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #218bd5;
+    box-shadow: 0 0 25px #218bd5; }
+  .prow .productDiamond_2 .str-inner:hover .text {
+    color: #218bd5; }
+  .prow .productDiamond_3 .pic {
+    background: #f26262; }
+  .prow .productDiamond_3 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #f26262;
+    box-shadow: 0 0 25px #f26262; }
+  .prow .productDiamond_3 .str-inner:hover .text {
+    color: #f26262; }
+  .prow .productDiamond_4 .pic {
+    background: #f6aa58; }
+  .prow .productDiamond_4 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #f6aa58;
+    box-shadow: 0 0 25px #f6aa58; }
+  .prow .productDiamond_4 .str-inner:hover .text {
+    color: #f6aa58; }
+  .prow .productDiamond_5 .pic {
+    background: #cf78f3; }
+  .prow .productDiamond_5 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #cf78f3;
+    box-shadow: 0 0 25px #cf78f3; }
+  .prow .productDiamond_5 .str-inner:hover .text {
+    color: #cf78f3; }
+  .prow .productDiamond_6 .pic {
+    background: #e882c5; }
+  .prow .productDiamond_6 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #e882c5;
+    box-shadow: 0 0 25px #e882c5; }
+  .prow .productDiamond_6 .str-inner:hover .text {
+    color: #e882c5; }
+  .prow .productDiamond_7 .pic {
+    background: #39be62; }
+  .prow .productDiamond_7 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #39be62;
+    box-shadow: 0 0 25px #39be62; }
+  .prow .productDiamond_7 .str-inner:hover .text {
+    color: #39be62; }
+  .prow .productDiamond_8 .pic {
+    background: #9534bd; }
+  .prow .productDiamond_8 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #9534bd;
+    box-shadow: 0 0 25px #9534bd; }
+  .prow .productDiamond_8 .str-inner:hover .text {
+    color: #9534bd; }
+  .prow .productDiamond_9 .pic {
+    background: #58cced; }
+  .prow .productDiamond_9 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #58cced;
+    box-shadow: 0 0 25px #58cced; }
+  .prow .productDiamond_9 .str-inner:hover .text {
+    color: #58cced; }
+  .prow .productDiamond_10 .pic {
+    background: #f6da58; }
+  .prow .productDiamond_10 .str-inner:hover .pic {
+    -webkit-box-shadow: 0 0 25px #f6da58;
+    box-shadow: 0 0 25px #f6da58; }
+  .prow .productDiamond_10 .str-inner:hover .text {
+    color: #f6da58; }
+  .prow .productDiamond {
+    padding: 15px 0; }
+    .prow .productDiamond .str-inner {
+      text-align: center; }
+  .prow .pic {
+    padding: 12px 0;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; }
+  .prow .text {
+    padding: 20px 0;
+    font-size: 18.72px;
+    color: #999; }

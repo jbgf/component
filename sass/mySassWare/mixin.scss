@@ -26,6 +26,35 @@
 
 @charset "utf-8";
 
+@mixin lheightM($height:30px){
+  height:$height;
+  line-height:$height;
+}
+
+@mixin str_width($strArr,$padding:5px,$block:false) {
+  $sum:length($strArr);
+  $index:0;
+  @extend %clear;
+  margin-left: -$padding;
+  margin-right: -$padding;
+  @each $var in $strArr{
+    $index : $index + 1;
+    #{(nth($strArr,$index))}{
+      @if $block == false {
+        width:percentage(1/$sum);
+      } @else {
+        width:percentage(1/$block);
+      }
+      float:left;
+      min-height: 1px;
+      @content;
+    };
+    .str-inner{
+      padding-left: $padding;
+      padding-right: $padding;
+    }
+  }
+}
 
 @mixin transition($time){
   -webkit-transition: all #{$time}s;
