@@ -156,6 +156,9 @@ button:focus {
 .button, .link {
   cursor: pointer; }
 
+img {
+  margin: auto; }
+
 /* img{max-height:100%;max-width:100%;max-width:none\9;max-height:none\9;margin:auto;} */
 input {
   border: none; }
@@ -379,3 +382,5 @@ input[type="checkbox"] {
 
 .margin-l-493 {
   margin-left: 493px; }
+
+/*# sourceMappingURL=maps/base.css.map */

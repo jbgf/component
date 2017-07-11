@@ -48,7 +48,8 @@
         content: "▪";
         font-size: 15px;
         top: 1px;
-        left: 0; }
+        left: 0;
+        line-height: 1; }
       .list02 ul li .inner:hover .list-text, .list02 ul li .inner:hover:before {
         color: #2675d5; }
     .list02 ul li .list-text {
@@ -86,3 +87,5 @@
   overflow: hidden; }
 
 /* list01 end */
+
+/*# sourceMappingURL=maps/list.css.map */

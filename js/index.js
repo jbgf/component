@@ -18,6 +18,7 @@
          "swiper":{url:"/js/swiper.min.js"},
          "affix-m":{url:"/js/affix-m.js"},
          "affixBeta":{url:"/js/affixBeta.js"},
+         "bootstrap":{url:"/js/bootstrap.min.js"},
          "equalHeights":{url:"/js/equalHeights.js"},
          "modalBox":{url:"/js/modalBox.js"},
          "glide":{url:"/js/glide.min.js"},

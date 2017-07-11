@@ -2,6 +2,41 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+/*tab06 tab切换 start*/
+    .tab06.case02{height: auto;border-bottom: none;}
+    .tab06.case02 .news-list01{border-top: 1px dashed #ddd;}
+    .tab06.case02 .bd ul.switch{ padding:0px 0;  zoom:1; }
+    .tab06{ text-align:left;border-bottom: 1px dashed #ddd;height: 142px;}
+    .tab06 .hd{
+      background:$little-gray;
+      position:relative;
+      margin-top:45px;
+      ul {
+        overflow: hidden;
+        li{
+          float:left;
+          cursor:pointer;
+          text-align: center;
+          width:percentage(1/4);
+          color:$water-blue;
+          .inner{
+            padding:23px 0px;
+            height: 27px;
+            font-size: $bigSize;
+            .iconfont{
+              font-size: $titleSize;
+              margin-right: 10px;
+            }
+          }
+          &.on{
+            background:$water-blue;
+            color: #fff;
+          }
+        }
+      }
+    }
+/*tab06 tab切换 end*/
+
 /*tab05 tab切换 start*/
   .tab05.case02{height: auto;border-bottom: none;}
   .tab05.case02 .news-list01{border-top: 1px dashed #ddd;}

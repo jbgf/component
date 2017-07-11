@@ -2,13 +2,14 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+
+
 /*list02 start*/
     .list02 ul {
       text-align: left;
       li {
         display: block;
         padding: 3px 12px;
-
         .inner {
           $innerPl: 10px;
           padding-left: $innerPl;
@@ -16,8 +17,8 @@
           @include persudo($color: #000, $content: "▪", $position: before, $bg: none) {
             top: 1px;
             left: 0;
-          }
-        ;
+            line-height:1;
+          };
           &:hover {
             .list-text,
             &:before {

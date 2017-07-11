@@ -1,5 +1,6 @@
-@import "variable";
-
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
+@charset "utf-8";
 
 .middleTable{
     display: table;
@@ -81,6 +82,10 @@
     content:" ";display:table;  
 }
 
+.container1150{
+    width:1150px;margin:0 auto;
+    @extend %clear;
+}
 .container-auto:after,
 .column:after,
 .line:after,

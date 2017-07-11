@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+
+</head>
+<body style="height:1000px;">
+<script type="text/javascript">
+
+    var c = function(){
+        $(function(){
+            $("#animateBox").set({
+                brandName:"animate",
+                rowBlock:4
+            });
+        });
+    }
+    commonHead(c);
+</script>
+<div class="bg extend-width bg-black">
+    <div class="container1200">
+        <div class="line ">
+            <div class="block block-1 ">
+                <div class="brandName white"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="animateBox" class="" ><!-- data-set="set" -->
+    <div class="box" data-title="taekwondo">
+        <div class="taekwondo" style="width:317px;height:400px"></div>
+    </div>
+</div>
+
+
+</body>
+</html>

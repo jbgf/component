@@ -10,15 +10,29 @@ var gulp=require('gulp'),
 	changed = require('gulp-changed'),
     spritesmith = require('gulp.spritesmith'),
 	buffer = require('vinyl-buffer'),
+    cons = require('consolidate'),
+    path = require('path'),
 	csso = require('gulp-csso'),
+    nodemon = require('gulp-nodemon'),
+	pkg = require('./package'),
+    flash = require('connect-flash'),
 	imagemin = require('gulp-imagemin'),
 	merge = require('merge-stream'),
+    sourcemaps = require('gulp-sourcemaps'),
 	connect = require('gulp-connect-php'),
+	config = require('./config'),
 	runSequence = require('run-sequence');
 
-/*var app = express();
-// 路由
-routes(app);*/
+// path 定义
+var basedir = './'
+var publicdir = './public'
+var filepath = {
+    'css': path.join(publicdir, 'css/**/*.css'),
+    'scss': path.join(basedir, 'sass/**/*.scss'),
+    'js': path.join(publicdir, 'js/**/*.js'),
+    'view': path.join(basedir,'views/**/*.html')
+    /*'view': path.join(basedir,'views/!**!/!*.pug')*/
+}
 
 gulp.task('sprite', function () {
     var spriteData = gulp.src('sprite/*.png').pipe(spritesmith({
@@ -50,11 +64,13 @@ gulp.task('fonts',function(){                              //不使用插件的�
 				.pipe(gulp.dest('dest/fonts'))
 })
 
-gulp.task('sass'/*,['sprite']*/,function(){
+gulp.task('sass',function(){
 	return gulp.src(['sass/web/*.scss','sass/mobile/*.scss','sass/mySassWare/*.scss'])
 	/*只编译change的文件*/
 			   .pipe(changed('css/',{extension:'.css'}))
-			   .pipe(sass())
+		       .pipe(sourcemaps.init())
+			   .pipe(sass().on('error', sass.logError))
+		       .pipe(sourcemaps.write('./maps'))
 			   .pipe(gulp.dest('css/'))
 			   .pipe(browserSync.reload({
 					stream:true
@@ -73,18 +89,27 @@ gulp.task('default',function(callback){
 		callback)
 })
 gulp.task('browserSync',function(){
-    browserSync.init({
+
+   /* browserSync.init(null, {
+        proxy: 'http://localhost:' + config.port,
+        baseDir: ".",
+        port: 5000
+    })*/
+
+	browserSync.init({
         server: {
             baseDir: "."
         }
     });
-	/*browserSync({
+	 /*
+	browserSync({
 
 		proxy: "localhost:8002"			//处理php文件，gulp-connect-php默认监听8000，直接设置port：8000会发生占用，启用8001；
 	})*/
 });
 
-var arr = ['topbar','navbar','slider','tab','list','iconGroup'];
+
+var arr = ['topbar','navbar','slider','tab','list','iconGroup','affix','animate','header'];
 	arr = arr.map(function (x) {
 		return './'+x+'/**/*.html';
     })
@@ -133,3 +158,4 @@ gulp.task('connectPhp',function(){
     browserSync.reload();
   });
 })
+

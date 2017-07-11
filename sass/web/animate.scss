@@ -1,0 +1,11 @@
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
+@charset "utf-8";
+
+
+.taekwondo{
+  background:url(../img/pep.png);
+  background-size:400% auto;
+
+  animation: taekwondo 2s steps(4)infinite;
+}

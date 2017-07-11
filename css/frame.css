@@ -1,14 +1,44 @@
 @charset "UTF-8";
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /* setting scss*/
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /* 开关设置*/
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /*是否兼容ie6-7*/
 /*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
 /*是否开启打印样式*/
+/* color start */
+/* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
+.container1150:before, .container1150:after {
+  content: " ";
+  display: table; }
+
+.container1150:after {
+  clear: both; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.container1150:before, .container1150:after {
+  content: " ";
+  display: table; }
+
+.container1150:after {
+  clear: both; }
+
+/* input set  start  */
+/* input set  end  */
 .middleTable {
   display: table; }
 
@@ -120,6 +150,10 @@
   content: " ";
   display: table; }
 
+.container1150 {
+  width: 1150px;
+  margin: 0 auto; }
+
 .container-auto:after,
 .column:after,
 .line:after,
@@ -132,7 +166,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(/img/background.jpg);
+  background-image: url(../img/background.jpg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   overflow: hidden; }
@@ -172,3 +206,5 @@
 
 .clear:after {
   clear: both; }
+
+/*# sourceMappingURL=maps/frame.css.map */

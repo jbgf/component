@@ -45,6 +45,47 @@
 
 /* input set  start  */
 /* input set  end  */
+/*tab06 tab切换 start*/
+.tab06.case02 {
+  height: auto;
+  border-bottom: none; }
+
+.tab06.case02 .news-list01 {
+  border-top: 1px dashed #ddd; }
+
+.tab06.case02 .bd ul.switch {
+  padding: 0px 0;
+  zoom: 1; }
+
+.tab06 {
+  text-align: left;
+  border-bottom: 1px dashed #ddd;
+  height: 142px; }
+
+.tab06 .hd {
+  background: #f0f0f0;
+  position: relative;
+  margin-top: 45px; }
+  .tab06 .hd ul {
+    overflow: hidden; }
+    .tab06 .hd ul li {
+      float: left;
+      cursor: pointer;
+      text-align: center;
+      width: 25%;
+      color: #59a3d6; }
+      .tab06 .hd ul li .inner {
+        padding: 23px 0px;
+        height: 27px;
+        font-size: 18.72px; }
+        .tab06 .hd ul li .inner .iconfont {
+          font-size: 22.464px;
+          margin-right: 10px; }
+      .tab06 .hd ul li.on {
+        background: #59a3d6;
+        color: #fff; }
+
+/*tab06 tab切换 end*/
 /*tab05 tab切换 start*/
 .tab05.case02 {
   height: auto;
@@ -155,3 +196,5 @@
   font-weight: 600; }
 
 /*tab04 end*/
+
+/*# sourceMappingURL=maps/tab.css.map */
