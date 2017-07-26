@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+
+
+    <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+
+    var c = function(){
+        $(function(){
+            $("#paginationBox").set({
+                brandName:"list",
+                rowBlock:3
+            });
+        });
+    }
+    commonHead(c);
+</script>
+<div class="bg extend-width bg-black">
+    <div class="container1200">
+        <div class="line ">
+            <div class="block block-1 ">
+                <div class="brandName white"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="paginationBox" class="" ><!-- data-set="set" -->
+    <div class="box" data-block="2" data-title="pagination2" data-type="pagination">
+        <div class="pagination2" data-type="pagination">
+            <ul>
+                <li class="left"><a>上一页</a></li>
+                <li class=""><a>1</a></li>
+                <li class=""><a>2</a></li>
+                <li class="on"><a>3</a></li>
+                <li class=""><a>4</a></li>
+                <li class=""><a>5</a></li>
+                <li class="right"><a>下一页</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="box" data-block="2" data-title="pagination1" data-type="pagination">
+        <div class="pagination1" >
+            <ul>
+                <li class="left"></li>
+                <li class="">1</li>
+                <li class="">2</li>
+                <li class="on">3</li>
+                <li class="">4</li>
+                <li class="p_ellipsis">...</li>
+                <li class="">5</li>
+                <li class="right"></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+</body>
+</html>

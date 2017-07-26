@@ -2,7 +2,76 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+/*list05 start*/
+.list05{
+  $iniColor:#3cc6c2;
+  $steps:20;
+  $amount:4deg;
+  @for $i from 1 through $steps {
+    .color{
+      &:nth-child(#{$i}){
+        color:$iniColor;
+      }
+      $iniColor:adjust-hue($iniColor,$amount)
+    }
+  }
+  .text{
 
+    color:$baseFontColor;
+  }
+  .content-p{
+    padding:3px 0;
+    .p{font-weight:700;font-size:$mediumSize*1.1;}
+  }
+}
+
+/*list05 end*/
+
+/* list04 start */
+.list04{
+  padding-bottom:60px;
+  .cooli{
+    display:inline-block;
+    padding-right: 80px;
+    & + .cooli{
+      padding-left: 80px;
+      @include border($position:left,$type:dashed);
+    }
+  }
+  .name{
+    font-size: $titleSize;
+  }
+}
+/* list04 end */
+
+/* list03 start */
+.list03 ul {
+  text-align: left;
+
+}
+.list03 {
+  $l03h:24px;
+  @include f_pictext_row($width:20px,$height:auto,$fpos:"left",$mar-gutter:0px);
+  li {
+    $l03p:5px;
+    display: block;
+
+    @include lheightM($l03h);
+    @extend %clear;
+
+    .icon{
+      color:$water-blue;
+      height: $l03h;
+      overflow: hidden;
+      @include rel_ajust($value:2px);
+    }
+    .text {
+      padding-left: 03px;
+    }
+  }
+}
+
+/* list03 end */
 
 /*list02 start*/
     .list02 ul {

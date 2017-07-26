@@ -109,9 +109,6 @@
   padding-right: 15px;
   padding-left: 15px; }
 
-.line {
-  margin: 0 -15px; }
-
 .column {
   float: left; }
 
@@ -119,8 +116,6 @@
   width: 66%; }
 
 .block {
-  padding-left: 15px;
-  padding-right: 15px;
   float: left;
   position: relative;
   min-height: 1px; }

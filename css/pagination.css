@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/* input set  start  */
+/* input set  end  */
+/*pagination2  start*/
+.pagination2 {
+  padding: 32px 0px 0px;
+  text-align: center; }
+  .pagination2 ul {
+    display: inline-block; }
+    .pagination2 ul li {
+      cursor: pointer;
+      display: block;
+      float: left; }
+  .pagination2 ul li {
+    margin: 0px 5px; }
+    .pagination2 ul li a {
+      display: block;
+      width: 23px;
+      height: 23px;
+      line-height: 23px;
+      border: 1px solid #ddd; }
+    .pagination2 ul li.left a, .pagination2 ul li.right a {
+      width: auto;
+      padding: 0 5px; }
+    .pagination2 ul li.on a {
+      background: #df0000;
+      color: white; }
+
+/*pagination2  end*/
+/*pagination1 start*/
+.pagination1 {
+  text-align: center;
+  padding: 18px 0 0; }
+
+.pagination1 ul {
+  display: inline-block; }
+
+.pagination1 ul li {
+  cursor: pointer;
+  display: block;
+  float: left;
+  width: 20px;
+  min-height: 32px;
+  margin: 0 7px;
+  padding: 5px 0; }
+
+.pagination1 ul li.left {
+  background: url(../img//p-left.png) no-repeat 0 6px; }
+
+.pagination1 ul li.right {
+  background: url(../img//p-right.png) no-repeat 0 6px; }
+
+.pagination1 ul li.p_ellipsis {
+  cursor: default; }
+
+.pagination1 ul li.on {
+  background: url(../img//blue-bg.png) no-repeat 0 6px;
+  color: #fff; }
+
+/*pagination1 end*/
+
+/*# sourceMappingURL=maps/pagination.css.map */

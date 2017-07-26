@@ -1,6 +1,41 @@
 @import "../mySassWare/variable";
 @import "../mySassWare/mixin";
 
+/* input-set06 start*/
+.input-set06 {
+    height: 40px;
+    background: #fff;
+    $radius:20px;
+    @include border($color:$mainColor);
+    -webkit-border-radius:$radius;
+    border-radius:$radius;
+    input {
+        display: inline-block;
+        float: left;
+        height: 100%;
+        font-weight: 500;
+    }
+    input.input {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 250px;
+        padding-left:20px;
+        -webkit-border-image: initial;
+        -o-border-image: initial;
+        border-image: initial;
+        border-right: none;
+        -webkit-border-radius:$radius 0 0 $radius;
+        border-radius:$radius 0 0 $radius;
+    }
+    input.button {
+        -webkit-border-radius:0 $radius $radius 0 ;
+        border-radius:0 $radius $radius 0 ;
+        width: 45px;
+        background: url(../img/iconSearch.png) no-repeat center center;
+    }
+}
+/* input-set06 end*/
+
 /* input set05  start  */
     .input-set05 {
         @include inputset($width1:180px,$width2:75px);

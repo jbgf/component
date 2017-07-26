@@ -1,0 +1,40 @@
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
+@charset "utf-8";
+
+/*pagination2  start*/
+
+  .pagination2 {
+    padding: 32px 0px 0px;
+    @include pagination();
+    ul li{
+      margin: 0px 5px;
+      a{
+        display: block;
+        width: 23px;
+        height: 23px;
+        line-height: 23px;
+        border: 1px solid #ddd;
+      }
+      &.left a,&.right a{
+        width:auto;
+        padding:0 5px;
+      }
+      &.on a{
+        background:#df0000;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+/*pagination2  end*/
+
+/*pagination1 start*/
+  .pagination1{text-align: center;padding: 18px 0 0;}
+  .pagination1 ul{display: inline-block;}
+  .pagination1 ul li{cursor: pointer;display: block;float: left;width: 20px;min-height:32px;margin: 0 7px;padding:5px 0;}
+  .pagination1 ul li.left{background:url(#{$baseImgUrl}/p-left.png) no-repeat 0 6px;}
+  .pagination1 ul li.right{background:url(#{$baseImgUrl}/p-right.png) no-repeat 0 6px;;}
+  .pagination1 ul li.p_ellipsis{cursor: default;}
+  .pagination1 ul li.on{background:url(#{$baseImgUrl}/blue-bg.png) no-repeat 0 6px;;color: #fff;}
+/*pagination1 end*/

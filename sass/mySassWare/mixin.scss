@@ -23,6 +23,18 @@
 
 }
 /* input set  end  */
+@mixin pagination(){
+  text-align: center;
+  ul{
+    display: inline-block;
+    li{
+      cursor: pointer;
+      display: block;
+      float: left;
+    }
+  }
+}
+
 
 @charset "utf-8";
 

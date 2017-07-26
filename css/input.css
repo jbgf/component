@@ -25,6 +25,36 @@
 /* 闭合子元素的浮动*/
 /* input set  start  */
 /* input set  end  */
+/* input-set06 start*/
+.input-set06 {
+  height: 40px;
+  background: #fff;
+  border: 1px solid #006acf;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; }
+  .input-set06 input {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    font-weight: 500; }
+  .input-set06 input.input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 250px;
+    padding-left: 20px;
+    -webkit-border-image: initial;
+    -o-border-image: initial;
+    border-image: initial;
+    border-right: none;
+    -webkit-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px; }
+  .input-set06 input.button {
+    -webkit-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
+    width: 45px;
+    background: url(../img/iconSearch.png) no-repeat center center; }
+
+/* input-set06 end*/
 /* input set05  start  */
 .input-set05 {
   height: 25px; }
@@ -296,3 +326,5 @@
   width: 30%; }
 
 /*input_box01 end*/
+
+/*# sourceMappingURL=maps/input.css.map */

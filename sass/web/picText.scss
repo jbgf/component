@@ -1,0 +1,60 @@
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
+@charset "utf-8";
+
+/* picText1 start */
+
+  .picText1 .newsRow {
+    $nuheight1:100px;
+    $ptp:5px;
+    padding:$ptp 0;
+    .cl-pic{
+      /* width: $nuheight1/3*4; */
+      width: $nuheight1;
+      height: $nuheight1;
+      padding:5px;
+      @include radius($nuheight1);
+      @include border($color:$blue,$width:2px);
+      img{
+        @extend %full;
+        @include radius($nuheight1);
+        display: block;
+      }
+
+    }
+    .adr{
+      color:$gray;
+      font-size: $smallSize;
+      padding:15px 0;
+    }
+    .cl-newsBox {
+      text-align: left;
+      margin-left: $nuheight1 + 40px;
+      .view{margin-left:20px}
+      .cl-title .cl-p01 {
+        font-weight: 700;
+        font-size: $mediumSize;
+        color:$water-blue;
+        padding:30px 0;
+      }
+      .cl-text {
+
+        height: 70px;
+        overflow:hidden;
+        font-size:$mediumSize;
+        line-height: 1.6;
+        .share{
+          overflow: hidden;padding-top: 25px;
+        }
+        .p{margin-bottom:10px;}
+        .g{color:$gray;}
+      }
+    }
+  }
+
+  .picText1 .newsRow .cl-pic img{
+    width: 100%;
+    display: block;
+  }
+
+/* picText1 end */

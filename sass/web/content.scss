@@ -1,4 +1,14 @@
-@import "variable.scss";
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
+@charset "utf-8";
+
+/*content1 start*/
+.content1 .p {
+    font-weight: 700;
+    font-size: 17.16px;
+}
+/*content1 end*/
+
 
 /*news-list04 start*/
 .news-list04 {
@@ -318,15 +328,7 @@
 
 /*pagination02  end*/
 
-/*pagination0101 start*/
-.pagination01{text-align: center;padding: 18px 0 0;}
-.pagination01 ul{display: inline-block;}
-.pagination01 ul li{cursor: pointer;display: block;float: left;width: 20px;min-height:32px;margin: 0 7px;padding:5px 0;}
-.pagination01 ul li.left{background:url(#{$baseImgUrl}/p-left.png) no-repeat 0 6px;}
-.pagination01 ul li.right{background:url(#{$baseImgUrl}/p-right.png) no-repeat 0 6px;;}
-.pagination01 ul li.p_ellipsis{cursor: default;}
-.pagination01 ul li.on{background:url(#{$baseImgUrl}/blue-bg.png) no-repeat 0 6px;;color: #fff;}
-/*pagination01 end*/
+
 
 
 @mixin adr_box01($num){

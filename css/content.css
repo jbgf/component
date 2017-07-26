@@ -1,14 +1,36 @@
 @charset "UTF-8";
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /* setting scss*/
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /* 开关设置*/
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /*是否兼容ie6-7*/
 /*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
 /*是否开启打印样式*/
+/* color start */
+/* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/* input set  start  */
+/* input set  end  */
+/*content1 start*/
+.content1 .p {
+  font-weight: 700;
+  font-size: 17.16px; }
+
+/*content1 end*/
 /*news-list04 start*/
 .news-list04 ul {
   text-align: left; }
@@ -17,10 +39,10 @@
     height: 33px;
     line-height: 33px;
     padding-left: 15px;
-    background: url(/img/iconbg03_gray.png) 0px 50% no-repeat; }
+    background: url(../img/iconbg03_gray.png) 0px 50% no-repeat; }
     .news-list04 ul li:hover {
       color: #df0000;
-      background: url(/img/iconbg03_red.png) 0px 50% no-repeat; }
+      background: url(../img/iconbg03_red.png) 0px 50% no-repeat; }
       .news-list04 ul li:hover a .date {
         color: #df0000; }
     .news-list04 ul li .iconDownLoad {
@@ -52,7 +74,7 @@
   height: 36px;
   line-height: 30px;
   padding-left: 15px;
-  background: url(/img/iconbg02.png) 1px 35% no-repeat;
+  background: url(../img/iconbg02.png) 1px 35% no-repeat;
   background-size: 5px; }
 
 .news-list03 li .list-text {
@@ -78,7 +100,7 @@
   height: 36px;
   line-height: 30px;
   padding-left: 15px;
-  background: url(/img//iconbg02.png) 1px 35%/5px no-repeat; }
+  background: url(../img//iconbg02.png) 1px 35%/5px no-repeat; }
 
 .news-list02 li .list-text {
   width: 90%;
@@ -98,7 +120,7 @@
   height: 33px;
   line-height: 33px;
   padding-left: 15px;
-  background: url(/img/iconbg02.png) no-repeat 0 50%; }
+  background: url(../img/iconbg02.png) no-repeat 0 50%; }
 
 .news-list01 li a .text {
   width: 80%;
@@ -359,37 +381,6 @@
       color: white; }
 
 /*pagination02  end*/
-/*pagination0101 start*/
-.pagination01 {
-  text-align: center;
-  padding: 18px 0 0; }
-
-.pagination01 ul {
-  display: inline-block; }
-
-.pagination01 ul li {
-  cursor: pointer;
-  display: block;
-  float: left;
-  width: 20px;
-  min-height: 32px;
-  margin: 0 7px;
-  padding: 5px 0; }
-
-.pagination01 ul li.left {
-  background: url(/img//p-left.png) no-repeat 0 6px; }
-
-.pagination01 ul li.right {
-  background: url(/img//p-right.png) no-repeat 0 6px; }
-
-.pagination01 ul li.p_ellipsis {
-  cursor: default; }
-
-.pagination01 ul li.on {
-  background: url(/img//blue-bg.png) no-repeat 0 6px;
-  color: #fff; }
-
-/*pagination01 end*/
 /*adr_box01 start*/
 .adr_box01 p {
   color: #9c9c9c;
@@ -399,15 +390,15 @@
   margin-bottom: 25px;
   text-align: left; }
   .adr_box01 p.adr {
-    background-image: url(/img//adr.png);
+    background-image: url(../img//adr.png);
     background-repeat: no-repeat;
     background-position: 16px center; }
   .adr_box01 p.phone {
-    background-image: url(/img//phone.png);
+    background-image: url(../img//phone.png);
     background-repeat: no-repeat;
     background-position: 18px; }
   .adr_box01 p.email {
-    background-image: url(/img//email.png);
+    background-image: url(../img//email.png);
     background-repeat: no-repeat;
     background-position: 18px; }
 
@@ -417,19 +408,19 @@
   padding: 0px 10px 0 50px;
   text-align: left; }
   .adr_box02 p.adr {
-    background-image: url(/img//adr01_adr.png);
+    background-image: url(../img//adr01_adr.png);
     background-repeat: no-repeat;
     background-position: 16px center; }
   .adr_box02 p.phone {
-    background-image: url(/img//adr01_phone.png);
+    background-image: url(../img//adr01_phone.png);
     background-repeat: no-repeat;
     background-position: 16px center; }
   .adr_box02 p.cellphone {
-    background-image: url(/img//adr01_cellphone.png);
+    background-image: url(../img//adr01_cellphone.png);
     background-repeat: no-repeat;
     background-position: 18px center; }
   .adr_box02 p.email {
-    background-image: url(/img//adr01_email.png);
+    background-image: url(../img//adr01_email.png);
     background-repeat: no-repeat;
     background-position: 17px center; }
 
@@ -467,7 +458,7 @@
 
 .toggle_ul01 .riRow .riRow-t01 {
   padding-left: 25px;
-  background: url(/img//plus.png) no-repeat 0 50%;
+  background: url(../img//plus.png) no-repeat 0 50%;
   font-size: 14px;
   cursor: pointer; }
 
@@ -590,7 +581,7 @@
   position: absolute;
   left: -20px;
   top: 16px;
-  background: url(/img//fLeft.png) no-repeat;
+  background: url(../img//fLeft.png) no-repeat;
   width: 65px;
   height: 137px;
   text-align: center; }
@@ -608,3 +599,5 @@
   padding-left: 15px; }
 
 /*foreword 01 end*/
+
+/*# sourceMappingURL=maps/content.css.map */

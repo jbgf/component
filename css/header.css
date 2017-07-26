@@ -14,7 +14,7 @@
 .header05 .header05-left {
   float: left; }
 
-.header05, .header05 .iconfont {
+.header06, .header05, .header05 .iconfont {
   position: relative; }
 
 .header05 .header05-left {
@@ -35,7 +35,7 @@
 .header05 .header05-left {
   float: left; }
 
-.header05, .header05 .iconfont {
+.header06, .header05, .header05 .iconfont {
   position: relative; }
 
 .header05 .header05-left {
@@ -43,6 +43,40 @@
 
 /* input set  start  */
 /* input set  end  */
+/* header06 start*/
+.header06 {
+  height: 25px;
+  line-height: 25px;
+  margin: 45px 0; }
+  .header06:after {
+    position: absolute;
+    right: 0px;
+    width: auto;
+    color: inherit;
+    content: "";
+    font-size: 15px;
+    width: 100%;
+    height: 2px;
+    background: #ddd;
+    top: 12.5px; }
+  .header06 .title {
+    height: 25px;
+    line-height: 25px;
+    font-size: 22.464px;
+    overflow: hidden;
+    background: #f3f9fe;
+    display: inline-block;
+    z-index: 999;
+    position: relative;
+    padding-right: 20px; }
+    .header06 .title.little-gray {
+      background: #f0f0f0; }
+    .header06 .title img {
+      vertical-align: middle; }
+    .header06 .title .iconfont {
+      font-size: 22.464px; }
+
+/* header06 end */
 .header05 {
   margin: 30px 0 15px; }
   .header05 .header05-left, .header05 .header05-right {

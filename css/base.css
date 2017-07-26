@@ -157,7 +157,8 @@ button:focus {
   cursor: pointer; }
 
 img {
-  margin: auto; }
+  margin: auto;
+  max-width: 100%; }
 
 /* img{max-height:100%;max-width:100%;max-width:none\9;max-height:none\9;margin:auto;} */
 input {

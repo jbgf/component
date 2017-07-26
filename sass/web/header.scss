@@ -2,6 +2,38 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+/* header06 start*/
+.header06{
+  $h06h:25px;
+  @include lheightM($h06h);
+  @include persudo($color:inherit,$content:"",$position:after,$bg:none){
+    width:100%;
+    height: 2px;
+    background:$baseBorderColor;
+    top:$h06h/2;
+  };
+  margin:45px 0;
+  .title{
+    @include lheightM($h06h);
+    font-size: $titleSize;
+    overflow: hidden;
+    background:$mainBgColor;
+    &.little-gray{
+      background:$little-gray;
+    }
+    display: inline-block;
+    z-index: 999;
+    position: relative;
+    padding-right:20px;
+    img{vertical-align:middle}
+    .iconfont{
+      font-size: $titleSize;
+    }
+  }
+}
+/* header06 end */
+
+
 .header05{
   @include f_pictext_rowNew($width:40px,$height:auto,$fpos:"left",$mar-gutter:5px);
   margin:30px 0 15px;
