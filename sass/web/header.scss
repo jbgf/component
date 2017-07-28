@@ -2,6 +2,21 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+.header07{
+  $radius07:15px;
+  padding: 4px 18px;
+  display: block;
+  height: 26px;
+  line-height: 26px;
+  background-color: $mainColor;
+  color:#fff;
+  -webkit-border-radius: $radius07 $radius07 0 0;
+  border-radius: $radius07 $radius07 0 0;
+  .h-title01{font-size: 15px;}
+  .more{padding-left: 20px;font-size:$smallSize;}
+
+}
+
 /* header06 start*/
 .header06{
   $h06h:25px;

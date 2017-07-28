@@ -2,6 +2,26 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+/*picText2 start*/
+  .picText2{
+  @include f_pictext_rowNew($width:$mainLeft,$height:245px,$fpos:"left",$mar-gutter:$mainP*2);
+  .picText2-right{
+    padding-right:$mainP*2;
+  }
+  @include border();
+  .picText2-title{
+    color:$mainColor;
+    font-weight: bold;
+    font-size: $bigSize;
+    text-align: center;
+    padding:20px 0 10px;
+  }
+  .picText2-text{
+    text-align: justify;
+  }
+}
+/*picText2 end*/
+
 /* picText1 start */
 
   .picText1 .newsRow {

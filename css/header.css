@@ -20,6 +20,7 @@
 .header05 .header05-left {
   float: left; }
 
+/*frame */
 /*----------------------------------------------------- */
 /* setting scss*/
 /*----------------------------------------------------- */
@@ -41,8 +42,24 @@
 .header05 .header05-left {
   float: left; }
 
+/*frame */
 /* input set  start  */
 /* input set  end  */
+.header07 {
+  padding: 4px 18px;
+  display: block;
+  height: 26px;
+  line-height: 26px;
+  background-color: #006acf;
+  color: #fff;
+  -webkit-border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0; }
+  .header07 .h-title01 {
+    font-size: 15px; }
+  .header07 .more {
+    padding-left: 20px;
+    font-size: 12px; }
+
 /* header06 start*/
 .header06 {
   height: 25px;

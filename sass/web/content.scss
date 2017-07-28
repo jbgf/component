@@ -2,6 +2,25 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+/*content2 start*/
+.content2{
+    $height:64px;
+    text-align: center;
+    @include lheightM($height:$height);
+    @include f_pictext_rowNew($width:55px,$height:$height,$fpos:"left",$mar-gutter:0);
+    .content2-left{
+        background:$mainColor;color:#fff;text-align:center;
+        line-height: 1.5;
+        .content2-leftInner{padding-top:11px;}
+    }
+    .content2-right{
+        background:#f4f4f4;
+        font-size:$bigTitle;
+        font-family: ""
+    }
+}
+/*content2 end*/
+
 /*content1 start*/
 .content1 .p {
     font-weight: 700;

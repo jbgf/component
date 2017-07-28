@@ -2,6 +2,27 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+.btnGroup1{
+  $row5h:300px;
+  text-align: center;
+  .button{
+    $btg-gutter:11px;
+    $btgh:($row5h - 3*$btg-gutter )/4 ;
+    @include button_groupBeta($height:$btgh,$width:100%,$gutter:$btg-gutter,$direction:v);
+
+    color:#fff;
+    display: inline-block;
+    img{vertical-align:middle;margin-right:10px;}
+    a{width:100%;height:100%;display:block;}
+    &.white-bg{
+      background:#fff;
+      color:$orange;
+
+    }
+    @include radius(5px);
+  }
+}
+
 $colorArr01:#3fdc94 #218bd5 #f26262 #f6aa58 #cf78f3 #e882c5 #39be62 #9534bd #58cced #f6da58;
 $cal01:length($colorArr01);
 .pWrapper01{padding:0 60px 0 60px;}

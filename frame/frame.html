@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+    <script type="text/javascript">
+
+        var c = function(){
+            $(function(){
+                $("#frameBox").set({
+                    brandName:"frame",
+                    rowBlock:1
+                });
+            });
+        }
+        commonHead(c);
+    </script>
+</head>
+<body>
+<div class="bg extend-width bg-black">
+    <div class="container1200">
+        <div class="line ">
+            <div class="block block-1 ">
+                <div class="brandName white">frame</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="frameBox" class="container1200">
+    <div class="box" data-title="frame1" data-block="1">
+         <div class="frame1 testFrame">
+             <div class="frame1-left"></div>
+             <div class="frame1-right"></div>
+             <div class="frame1-center"></div>
+         </div>
+    </div>
+</div>
+</body>
+</html>

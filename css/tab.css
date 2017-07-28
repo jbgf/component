@@ -11,16 +11,17 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.tab04 .hd:before, .tab04 .hd:after {
+.tab07 .hd:before, .tab04 .hd:before, .tab07 .hd:after, .tab04 .hd:after {
   content: " ";
   display: table; }
 
-.tab04 .hd:after {
+.tab07 .hd:after, .tab04 .hd:after {
   clear: both; }
 
 .tab04 .hd ul li + li .hdInner {
   position: relative; }
 
+/*frame */
 /*----------------------------------------------------- */
 /* setting scss*/
 /*----------------------------------------------------- */
@@ -33,18 +34,71 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.tab04 .hd:before, .tab04 .hd:after {
+.tab07 .hd:before, .tab04 .hd:before, .tab07 .hd:after, .tab04 .hd:after {
   content: " ";
   display: table; }
 
-.tab04 .hd:after {
+.tab07 .hd:after, .tab04 .hd:after {
   clear: both; }
 
 .tab04 .hd ul li + li .hdInner {
   position: relative; }
 
+/*frame */
 /* input set  start  */
 /* input set  end  */
+/* tab07 start */
+.tab07 {
+  height: auto;
+  border-bottom: none;
+  text-align: left; }
+  .tab07.marginBottom .hd {
+    margin-bottom: 20px; }
+  .tab07 .hd {
+    border-bottom: 2px solid #006acf;
+    height: 34px;
+    position: relative; }
+    .tab07 .hd ul {
+      float: left; }
+      .tab07 .hd ul li {
+        float: left;
+        height: 33px;
+        cursor: pointer;
+        font-size: 15.6px;
+        -webkit-border-radius: 5px 5px 0 0;
+        border-radius: 5px 5px 0 0;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-bottom: none; }
+        .tab07 .hd ul li + li {
+          margin-left: 3px; }
+        .tab07 .hd ul li .hdInner {
+          padding: 6px 20px; }
+        .tab07 .hd ul li.on {
+          background: #006acf;
+          color: #fff;
+          border: 1px solid #006acf;
+          border-bottom: none; }
+    .tab07 .hd .more {
+      height: 34px;
+      line-height: 34px; }
+  .tab07 .bd {
+    height: 207px;
+    border: 1px solid #ddd;
+    border-top: none; }
+    .tab07 .bd li .stb-text {
+      height: 30px;
+      line-height: 23px;
+      font-size: 15px;
+      font-weight: 600; }
+    .tab07 .bd .switch {
+      padding: 13px;
+      padding: 15px 0px;
+      zoom: 1; }
+      .tab07 .bd .switch .product_gallary {
+        margin: -13px; }
+
+/* tab07 end */
 /*tab06 tab切换 start*/
 .tab06.case02 {
   height: auto;

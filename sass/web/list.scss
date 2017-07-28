@@ -2,6 +2,32 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+/* list06 start */
+.list06 ul {
+   text-align: left;
+   li {
+    $l06p:5px;
+    display: block;
+    padding: $l06p 0 $l06p $l06p*3;
+    @include persudo($content:"•",$color:inherit);
+    &:hover{
+      color:$mainColor;
+    }
+    .text {
+      display: block;
+      max-height:44px;
+      overflow: hidden;
+    }
+  }
+   li .date{
+    float: right;
+    font-size:$smallSize;
+   }
+}
+
+
+/* list07 end */
+
 /*list05 start*/
 .list05{
   $iniColor:#3cc6c2;

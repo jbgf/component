@@ -54,9 +54,9 @@ input[type="checkbox"]{outline:none;}
 .hide{display: none;}
 .view-hide{visibility: hidden;}
 
-.float-r{float: right;}
-.float-l{float: left;}
-
+.float-r{float: right!important;}
+.float-l{float: left!important;}
+.clear{@extend %clear;}
 .capitalize{@extend %capitalize;}
 .uppercase {@extend %uppercase;}
 .phase-indent {

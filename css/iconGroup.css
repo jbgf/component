@@ -21,6 +21,10 @@
 .prow01 .productDiamond_1 .text, .prow01 .productDiamond_2 .text, .prow01 .productDiamond_3 .text, .prow01 .productDiamond_4 .text, .prow01 .productDiamond_5 .text, .prow01 .productDiamond_6 .text, .prow01 .productDiamond_7 .text, .prow01 .productDiamond_8 .text, .prow01 .productDiamond_9 .text, .prow01 .productDiamond_10 .text {
   position: relative; }
 
+.btnGroup1 .button {
+  text-align: center !important; }
+
+/*frame */
 /*----------------------------------------------------- */
 /* setting scss*/
 /*----------------------------------------------------- */
@@ -43,8 +47,36 @@
 .prow01 .productDiamond_1 .text, .prow01 .productDiamond_2 .text, .prow01 .productDiamond_3 .text, .prow01 .productDiamond_4 .text, .prow01 .productDiamond_5 .text, .prow01 .productDiamond_6 .text, .prow01 .productDiamond_7 .text, .prow01 .productDiamond_8 .text, .prow01 .productDiamond_9 .text, .prow01 .productDiamond_10 .text {
   position: relative; }
 
+.btnGroup1 .button {
+  text-align: center !important; }
+
+/*frame */
 /* input set  start  */
 /* input set  end  */
+.btnGroup1 {
+  text-align: center; }
+  .btnGroup1 .button {
+    display: block;
+    height: 66.75px;
+    line-height: 66.75px;
+    width: 100% !important;
+    color: #fff;
+    display: inline-block;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+    .btnGroup1 .button {
+      margin-bottom: 11px; }
+    .btnGroup1 .button img {
+      vertical-align: middle;
+      margin-right: 10px; }
+    .btnGroup1 .button a {
+      width: 100%;
+      height: 100%;
+      display: block; }
+    .btnGroup1 .button.white-bg {
+      background: #fff;
+      color: #efa506; }
+
 .pWrapper01 {
   padding: 0 60px 0 60px; }
 
@@ -418,3 +450,5 @@
     padding: 20px 0;
     font-size: 18.72px;
     color: #999; }
+
+/*# sourceMappingURL=maps/iconGroup.css.map */

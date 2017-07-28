@@ -36,7 +36,28 @@
 }
 
 
+
 @charset "utf-8";
+
+@mixin threeColumn1($arr,$gutter){
+  $last:getParent(&);
+  #{$last}-left,#{$last}-center,#{$last}-right{
+    min-height: 1px;
+  }
+  #{$last}-left{
+    width:nth($arr,1);
+    float:left;
+  }
+  #{$last}-center{
+
+    margin-left:nth($arr,1) + $gutter;
+    margin-right:nth($arr,2) + $gutter;
+  }
+  #{$last}-right{
+    width:nth($arr,2);
+    float:right;
+  }
+}
 
 @mixin lheightM($height:30px){
   height:$height;

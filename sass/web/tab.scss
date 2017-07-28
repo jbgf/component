@@ -2,6 +2,77 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+/* tab07 start */
+.tab07 {
+  $tth:34px;
+  $radius09:5px;
+  height: auto;
+  border-bottom: none;
+  text-align: left;
+  &.marginBottom{
+    .hd{margin-bottom:20px;}
+
+  }
+  .hd {
+    @include border($position:bottom,$width:2px,$color:$mainColor);
+    height: $tth;
+    position: relative;
+    @extend %clear;
+    ul {
+      float: left;
+      li {
+        float: left;
+        height: $tth - 1px;
+        cursor: pointer;
+        font-size: $mediumSize;
+        -webkit-border-radius:$radius09 $radius09 0 0;
+        border-radius:$radius09 $radius09 0 0;
+        background:#fafafa;
+        @include border();
+        border-bottom:none;
+        & + li{
+          margin-left: 3px;
+        }
+        .hdInner{
+          padding: 6px 20px;
+
+        }
+        &.on {
+          background:$mainColor;
+          color: #fff;
+          @include border($color:$mainColor);
+          border-bottom:none;
+        }
+      }
+    }
+    .more{
+      @include lheightM($tth);
+    }
+  }
+  .bd {
+    height: 207px;
+    @include border();
+    border-top:none;
+    li .stb-text {
+      height: 30px;
+      line-height: 23px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .switch {
+      $switchP:13px;
+      padding:$switchP;
+      padding: 15px 0px;
+      zoom: 1;
+      .product_gallary{
+        margin:0 -$switchP;
+      }
+    }
+  }
+}
+
+/* tab07 end */
+
 /*tab06 tab切换 start*/
     .tab06.case02{height: auto;border-bottom: none;}
     .tab06.case02 .news-list01{border-top: 1px dashed #ddd;}

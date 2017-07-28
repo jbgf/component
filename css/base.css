@@ -77,6 +77,13 @@ a[href].white, .white {
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
+.clear:before, .clear:after {
+  content: " ";
+  display: table; }
+
+.clear:after {
+  clear: both; }
+
 .relative {
   position: relative; }
 
@@ -115,6 +122,7 @@ a[href].white, .white {
 .align-right {
   text-align: right; }
 
+/*frame */
 * {
   /* box-sizing: border-box; */
   margin: 0;
@@ -195,10 +203,10 @@ input[type="checkbox"] {
   visibility: hidden; }
 
 .float-r {
-  float: right; }
+  float: right !important; }
 
 .float-l {
-  float: left; }
+  float: left !important; }
 
 .phase-indent {
   text-indent: 2rem;

@@ -21,12 +21,13 @@
 .list03 li:after {
   clear: both; }
 
-.list03, .list03 li .icon, .list02 ul li .inner, .list01 li .date {
+.list06 ul li, .list03, .list03 li .icon, .list02 ul li .inner, .list01 li .date {
   position: relative; }
 
 .list03 .list03_left {
   float: left; }
 
+/*frame */
 /*----------------------------------------------------- */
 /* setting scss*/
 /*----------------------------------------------------- */
@@ -49,14 +50,39 @@
 .list03 li:after {
   clear: both; }
 
-.list03, .list03 li .icon, .list02 ul li .inner, .list01 li .date {
+.list06 ul li, .list03, .list03 li .icon, .list02 ul li .inner, .list01 li .date {
   position: relative; }
 
 .list03 .list03_left {
   float: left; }
 
+/*frame */
 /* input set  start  */
 /* input set  end  */
+/* list06 start */
+.list06 ul {
+  text-align: left; }
+  .list06 ul li {
+    display: block;
+    padding: 5px 0 5px 15px; }
+    .list06 ul li:before {
+      position: absolute;
+      left: 0px;
+      width: auto;
+      color: inherit;
+      content: "•";
+      font-size: 15px; }
+    .list06 ul li:hover {
+      color: #006acf; }
+    .list06 ul li .text {
+      display: block;
+      max-height: 44px;
+      overflow: hidden; }
+  .list06 ul li .date {
+    float: right;
+    font-size: 12px; }
+
+/* list07 end */
 /*list05 start*/
 .list05 .color:nth-child(1) {
   color: #3cc6c2; }

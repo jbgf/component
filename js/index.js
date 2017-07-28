@@ -24,13 +24,16 @@
          "glide":{url:"/js/glide.min.js"},
          "hammer":{url:"/js/hammer.min.js"},
          "jQuery.validator":{url:"/js/jquery.validate.js"},
-         "tooltip":{url:"/js/tooltip.js"}
+         "tooltip":{url:"/js/tooltip.js"},
+        "videojs":{url:"/js/videojs.js"}
 
     },
     'css_array': {
          "swiper":"/css/swiper.min.css",
          "modalBox":"/css/modalBox.css",
-         "glide":"/css/glide.core.css"
+         "glide":"/css/glide.core.css",
+        "videojs":"/css/videojs.css"
+
     }
   }	
   
@@ -113,8 +116,12 @@
         
         var bn = $(e).attr("data-block") || rowNum;
           if(bn){
-            var classNameNew = 'block block-'+bn+' frameBlock';
+            /*var classNameNew = 'block block-'+bn+' frameBlock';*/
+            var classNameNew = 'block row-'+bn+'-block frameBlock';
+
+
             $(e).wrap(function() {
+
                    return "<div class='"+ classNameNew +"'></div>";
             });
             if($.inArray(bn, bn_temp_array) == -1){
@@ -126,7 +133,7 @@
                 node_array[bn].push($(e).parent(".frameBlock"));
             }
           }
-        var block = $(e).parents(".frameBlock");
+        var block = $(e).parents(".frameBlock").wrapInner("<div class='innerBlock'></div>");
         var btnRow = '<div class="headRow clear"><span class="button btn-r-m bg-pink white float-l get"><img style="margin-top: -3px;" src="/img/icon_w.png" class="icon">Get!</span></div>';  
         var status = that.haveTag(block);
         var s = status.script;
@@ -263,7 +270,7 @@
 
     $.each(b_array,function(index,value){
         var row = b_array[index];
-        var $line = $("<div class='line'></div>");
+        var $line = $("<div class='rows'></div>");
         $.each(row,function(i,v){
             $(v).appendTo($line)
         });
