@@ -11,15 +11,7 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.content2 .content2-left {
-  float: left; }
-
-.content2 {
-  position: relative; }
-
-.content2 .content2-left {
-  float: left; }
-
+/*frame */
 /*----------------------------------------------------- */
 /* setting scss*/
 /*----------------------------------------------------- */
@@ -32,44 +24,9 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.content2 .content2-left {
-  float: left; }
-
-.content2 {
-  position: relative; }
-
-.content2 .content2-left {
-  float: left; }
-
+/*frame */
 /* input set  start  */
 /* input set  end  */
-/*content2 start*/
-.content2 {
-  text-align: center;
-  height: 64px;
-  line-height: 64px; }
-  .content2 .content2-left, .content2 .content2-right {
-    min-height: 1px; }
-  .content2 .content2-left {
-    width: 55px;
-    text-align: left;
-    height: 64px; }
-  .content2 .content2-right {
-    margin-left: 55px;
-    height: 64px; }
-  .content2 .content2-left {
-    background: #006acf;
-    color: #fff;
-    text-align: center;
-    line-height: 1.5; }
-    .content2 .content2-left .content2-leftInner {
-      padding-top: 11px; }
-  .content2 .content2-right {
-    background: #f4f4f4;
-    font-size: 27.6px;
-    font-family: ""; }
-
-/*content2 end*/
 /*content1 start*/
 .content1 .p {
   font-weight: 700;

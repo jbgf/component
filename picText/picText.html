@@ -33,6 +33,35 @@
     </div>
 </div>
 <div id="picTextBox" class="" ><!-- data-set="set" -->
+
+    <div class="box" data-block="1" data-title="picText3" data-type="picText" >
+        <div id="picText3" class="picText3 productRow"></div>
+        <textarea id="picText3ta" style="display:none;">
+					<div class="row-block">
+                        <div class="inner">
+                            <div class="wrap">
+                                <div class="p"><img src=$imgsrc$></div>
+                                <div class="t">$title$</div>
+                            </div>
+                        </div>
+                    </div>
+		</textarea>
+        <script type="text/javascript">
+            +function(){
+
+                var ta1_data = [{
+                    imgsrc: "/img/n-pic.png",
+                    title:"ERP系统"
+                }];
+                for (var i = 0 ;i<8;i++){
+                    ta1_data[i]=ta1_data[0];
+                }
+                jsonTemplate("#picText3ta",ta1_data,"#picText3");
+            }()
+
+        </script>
+    </div>
+
     <div class="box" data-block="1" data-title="picText2" data-type="picText" data-plugin="superslide" data-p-casename="picText2">
         <div class="picText2 riBlock">
         <div class="picText2-left">

@@ -2,6 +2,52 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+
+/* pagination03 start */
+.pagination03 {
+  $pagi02Size:23px;
+  padding: 30px 0px 45px;
+  overflow: hidden;
+  display: inline-block;
+  .info{
+    @include lheightM($pagi02Size);
+  }
+  ul li {
+    &.disabled{
+      display:none;
+    }
+    cursor: pointer;
+    display: block;
+    float: left;
+    @extend %align-center;
+
+    margin: 0px 5px;
+  }
+
+  ul li a {
+    display: block;
+    width: $pagi02Size;
+    height: $pagi02Size;
+    line-height: $pagi02Size;
+    border: 1px solid rgb(221, 221, 221);
+    @extend %bg-white;
+    color:$gray;
+  }
+
+  ul li.left a,
+  ul li.right a,
+  ul li.last a {
+    width: auto;
+    padding: 0px 5px;
+  }
+
+  ul li.on a {
+    color: white;
+    background: $mainColor;
+  }
+}
+/* pagination03 end */
+
 /*pagination2  start*/
 
   .pagination2 {

@@ -8,9 +8,16 @@
 /*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
 /*是否开启打印样式*/
 /* color start */
+.pagination03 ul li a {
+  background: #fff; }
+
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
+.pagination03 ul li {
+  text-align: center !important; }
+
+/*frame */
 /*----------------------------------------------------- */
 /* setting scss*/
 /*----------------------------------------------------- */
@@ -20,11 +27,50 @@
 /*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
 /*是否开启打印样式*/
 /* color start */
+.pagination03 ul li a {
+  background: #fff; }
+
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
+.pagination03 ul li {
+  text-align: center !important; }
+
+/*frame */
 /* input set  start  */
 /* input set  end  */
+/* pagination03 start */
+.pagination03 {
+  padding: 30px 0px 45px;
+  overflow: hidden;
+  display: inline-block; }
+  .pagination03 .info {
+    height: 23px;
+    line-height: 23px; }
+  .pagination03 ul li {
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 0px 5px; }
+    .pagination03 ul li.disabled {
+      display: none; }
+  .pagination03 ul li a {
+    display: block;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    border: 1px solid #dddddd;
+    color: #999; }
+  .pagination03 ul li.left a,
+  .pagination03 ul li.right a,
+  .pagination03 ul li.last a {
+    width: auto;
+    padding: 0px 5px; }
+  .pagination03 ul li.on a {
+    color: white;
+    background: #006acf; }
+
+/* pagination03 end */
 /*pagination2  start*/
 .pagination2 {
   padding: 32px 0px 0px;

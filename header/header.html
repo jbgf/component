@@ -30,7 +30,68 @@
         </div>
     </div>
 </div>
+
 <div id="headerBox" class="" ><!-- data-set="set" -->
+    <div class="box" data-title="header11" data-block="1">
+        <div class="header11">
+            <div class="header11-left header11Title"><div class="header11-leftInner">热<br>点</div></div>
+            <div class="header11-right header11Text"> 坚持用武夷精神，创国家文明城市</div>
+        </div>
+    </div>
+    
+    <div class="box" data-title="header10" data-block="1">
+        <ul class="header10 enRow" style="padding-top: 20px">
+
+        </ul>
+        <textarea id="header10ta" style="display:none;">
+			    <li class="">
+                <div class="imgBox"><img src=$imgsrc$></div>
+                <span class="smallBtn01">$title$</span>
+            </li>
+		</textarea>
+        <script type="text/javascript">
+            +function(){
+
+                    var ta1_data = [{
+                        imgsrc: "/img/n-pic.png",
+                        title:"ERP系统"
+                    }];
+                    for (var i = 0 ;i<6;i++){
+                        ta1_data[i]=ta1_data[0];
+                    }
+                    jsonTemplate("#header10ta",ta1_data,".header10");
+
+
+            }()
+
+        </script>
+    </div>
+
+    <div class="box">
+        <div class="header09 clear">
+            <span class="h-title01">在线留言</span>
+            <div class="more float-r"><i class="iconfont icon-homebig"></i>你的位置：<a>网站首页</a> > <a>在线留言</a> </div>
+        </div>
+    </div>
+
+    <div class="box" data-title="header08" data-block="1">
+        <div class="header08">
+            <div class="header08-left">
+                内设机构
+            </div>
+            <div class="header08-right">
+                <ul>
+                    <li><a>党政办公室</a></li>
+                    <li><a>组织人事部</a></li>
+                    <li><a>宣传部</a></li>
+                    <li><a>监察室</a></li>
+                    <li><a>经济发展局</a></li>
+                    <li><a>财务</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="box" data-title="header07" >
         <div class="header07">
             <div class="more float-r">

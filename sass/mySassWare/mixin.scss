@@ -264,7 +264,9 @@
     @extend %clear;
     .inner{
       padding:0 $outer_gutter;
-      @if($height){height:$height;line-height:$height;@extend %block;}}
+      @if($height){height:$height;line-height:$height;@extend %block;}
+      @content;
+    }
   }
 
 }
@@ -489,6 +491,23 @@
 
 }
 
+@mixin f_pictext_row2($width:100px,$height:100px,$fpos:"right",$mar-gutter:15px){
+  &{@extend %relative;overflow: hidd}
+
+  $last:getParent(&);
+
+  $string2:str-slice($last,2);
+  $string:str-insert($string2, ".", 1);
+
+  #{$string}-left,#{$string}-right{min-height:1px;}
+  $margin_pos:"left";
+  #{$string}-#{$fpos}{@include ftextTab($width,$height,$fpos);}
+  @if $fpos == "left" {
+    $margin_pos : "right";
+  }
+  #{$string}-#{$margin_pos}{@include newsTab_img($height,($width) + $mar-gutter,$fpos);}
+
+}
 @mixin f_pictext_rowNew($width:100px,$height:100px,$fpos:"right",$mar-gutter:15px){
   &{@extend %relative;}
 

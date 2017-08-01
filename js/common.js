@@ -18,6 +18,23 @@ function commonHead(callback){
 *******************************************************/
 
 
+String.prototype.temp = function(obj) {
+    return this.replace(/\$\w+\$/gi, function(matchs) {
+        var returns = obj[matchs.replace(/\$/g, "")];
+        return (returns + "") == "undefined"? "": returns;
+    });
+};
+
+function jsonTemplate(template,json,output){
+    var htmlList = '',
+        htmlTemp = $(template).val();
+    json.forEach(function(object) {
+        htmlList += htmlTemp.temp(object);
+    });
+    $(output).html(htmlList);
+}
+
+
 /*跨浏览器支持鼠标滚动事件start；*/
 
 // creates a global "addWheelListener" method

@@ -2,6 +2,75 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+/* tab09 start */
+.tab09 {
+  $tth:34px;
+  $radius09:15px;
+  height: auto;
+  border-bottom: none;
+  text-align: left;
+  &.marginBottom{
+    .hd{margin-bottom:20px;}
+  }
+  .hd {
+    @include border($position:bottom,$width:2px,$color:$mainColor);
+    height: $tth;
+    position: relative;
+    @extend %clear;
+    ul {
+      float: left;
+      li {
+        float: left;
+        height: $tth - 1px;
+        cursor: pointer;
+        font-size: $mediumSize;
+        -webkit-border-radius:$radius09 $radius09 0 0;
+        border-radius:$radius09 $radius09 0 0;
+        background:#fafafa;
+        @include border();
+        border-bottom:none;
+        & + li{
+          margin-left: 3px;
+        }
+        .hdInner{
+          padding: 6px 20px;
+
+        }
+        &.on {
+          background:$mainColor;
+          color: #fff;
+          @include border($color:$mainColor);
+          border-bottom:none;
+        }
+      }
+    }
+    .more{
+      @include lheightM($tth);
+    }
+  }
+  .bd {
+
+    .switch {
+      $switchP:13px;
+      padding:$switchP;
+
+      zoom: 1;
+      .product_gallary{
+        margin:0 -$switchP;
+      }
+      li .stb-text {
+        height: 30px;
+        line-height: 23px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* tab09 end */
+
+
 /* tab07 start */
 .tab07 {
   $tth:34px;

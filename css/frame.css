@@ -59,6 +59,10 @@
 /*frame */
 /* input set  start  */
 /* input set  end  */
+.container-1150 {
+  width: 1150px;
+  margin: 0 auto; }
+
 .testFrame > div {
   height: 200px;
   border: 1px solid #ddd; }

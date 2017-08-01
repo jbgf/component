@@ -53,6 +53,41 @@
 /*frame */
 /* input set  start  */
 /* input set  end  */
+/*iconGroup04 start */
+.iconGroup04 {
+  padding: 0 5%; }
+  .iconGroup04 .link-zone .link-wrapper {
+    padding-right: 5px;
+    padding-left: 5px;
+    display: block;
+    padding: 0px 0px 1rem;
+    text-decoration: none; }
+
+.iconGroup04 .link-wrapper .LinkText {
+  font-size: .8rem;
+  text-align: center;
+  padding-top: 1rem;
+  color: #666666; }
+
+.iconGroup04 .link-zone:nth-child(1) .link-wrapper .circle_c_link {
+  background-color: #005bac; }
+
+.iconGroup04 .link-zone:nth-child(2) .link-wrapper .circle_c_link {
+  background-color: #379fa0; }
+
+.iconGroup04 .link-zone:nth-child(3) .link-wrapper .circle_c_link {
+  background-color: #fdb111; }
+
+.iconGroup04 .link-zone:nth-child(4) .link-wrapper .circle_c_link {
+  background-color: #e84c3d; }
+
+.iconGroup04 .link-zone:nth-child(5) .link-wrapper .circle_c_link {
+  background-color: #1e8fcb; }
+
+.iconGroup04 .link-zone:nth-child(6) .link-wrapper .circle_c_link {
+  background-color: #6eb92b; }
+
+/*iconGroup04 end */
 .btnGroup1 {
   text-align: center; }
   .btnGroup1 .button {

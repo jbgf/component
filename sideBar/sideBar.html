@@ -28,20 +28,98 @@
 				</div>
 			</div>
 		</div>
-	</div>	
-	
+	</div>
+
 	<div id="sideBarBox" class="container1200">
-		<div class="box">
-        <div class="l-sider03 float-l">
-            <ul>
-                <li><a class="floor f01 current"><p class="t01">肯特介绍</p></a></li>
-                <li><a class="floor f02 "><p class="t01">企业文化</p></a></li>
-                <li><a class="floor f02 "><p class="t01">荣誉资质</p></a></li>
-                <li><a class="floor f02 "><p class="t01">联系我们</p></a></li>
-                
-            </ul>
-        </div>  
-    </div>
+		<div class="box" data-title="l-sideBar04" data-des="负margin-top">
+            <div style="width:230px;margin-top: 100px;">
+                <div class="l-sideBar04">
+                    <div class="brand bg-green">
+                        <p class="title">走进新区</p>
+                        <span class="text">Walk into the New District</span>
+                    </div>
+                    <!-- current 表示页面载入时激活的项 -->
+                    <ul class="sideBar_ul ">
+
+                        <li class="sideBar_li">
+                            <a class="floor sideBar_a "><p class="t01">IQTC服务指南</p></a>
+                            <ul class="sideBar_ul hide ">
+                                <li class="sideBar_li ">
+                                    <a class="floor sideBar_a floor2"><p class="t01">1</p></a>
+
+                                </li>
+                                <li class="sideBar_li"><a class="floor sideBar_a "><p class="t01">2</p></a></li>
+                            </ul>
+                        </li>
+                        <li class="sideBar_li"><a class="floor sideBar_a "><p class="t01">常见问题</p></a></li>
+                    </ul>
+                    <div class="border"><img src="/img/border.png"></div>
+                </div>
+            </div>
+            <script>
+                +function lsideBar04() {
+                    var sideBar = {
+                        sideBarObj:$(".l-sideBar04 .sideBar_ul"),
+                        ini:function(){
+                            this.floor();
+                            this.sideBarObj.find(".sideBar_li").each(function(i,e){
+                                var sideBar_a = $(e).children(".sideBar_a");
+                                var childList = $(e).children("ul.sideBar_ul");
+                                childList.length>0 ?
+                                    sideBar_a.addClass("childList")
+                                        .on("click",function(){
+                                            childList.slideToggle();
+                                            $(this).toggleClass("on");
+                                            $(e).toggleClass("expand")
+                                        })
+                                    :sideBar_a.addClass("bottom");
+                                if(sideBar_a.hasClass("current")){
+                                    /*父代全展开*/
+                                    $(e).parents(".sideBar_li").children(".sideBar_a").trigger("click");
+                                }else{
+
+                                }
+                            });
+                        },
+                        floor:function(){    /*确定层级：level1 level2*/
+                            var that = this;
+                            var ul = this.sideBarObj;
+                            var floor = 0;
+
+                            addFloor(ul);
+
+                            function addFloor(parent){
+
+                                var lis = parent.children(".sideBar_li");
+
+                                if(lis.length>0){
+                                    floor++;
+                                    lis.addClass("level"+floor);
+                                    lis.each(function(i,e){
+
+                                        var parentUL = $(e).children(".sideBar_ul");
+                                        if(parentUL.length>0){addFloor(parentUL)}
+                                    })
+                                }
+                            }
+                        }
+                    };
+                    sideBar.ini();
+                }()
+            </script>
+        </div>
+
+        <div class="box">
+            <div class="l-sider03 float-l">
+                <ul>
+                    <li><a class="floor f01 current"><p class="t01">肯特介绍</p></a></li>
+                    <li><a class="floor f02 "><p class="t01">企业文化</p></a></li>
+                    <li><a class="floor f02 "><p class="t01">荣誉资质</p></a></li>
+                    <li><a class="floor f02 "><p class="t01">联系我们</p></a></li>
+
+                </ul>
+            </div>
+        </div>
 
     <div class="box">
        <div class="l-sider02 float-l">

@@ -2,6 +2,27 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+/*iconGroup04 start */
+    .iconGroup04{
+      padding: 0 5%;
+      .link-zone {
+        .link-wrapper {
+          padding-right: 5px; padding-left: 5px;
+          display: block; padding: 0px 0px 1rem; text-decoration: none;
+        }
+      }
+    }
+    
+    .iconGroup04 .link-wrapper .LinkText {font-size: .8rem; text-align: center; padding-top: 1rem; color: rgb(102, 102, 102); }
+    
+    .iconGroup04 .link-zone:nth-child(1) .link-wrapper .circle_c_link { background-color: rgb(0, 91, 172); }
+    .iconGroup04 .link-zone:nth-child(2) .link-wrapper .circle_c_link { background-color: rgb(55, 159, 160); }
+    .iconGroup04 .link-zone:nth-child(3) .link-wrapper .circle_c_link { background-color: rgb(253, 177, 17); }
+    .iconGroup04 .link-zone:nth-child(4) .link-wrapper .circle_c_link { background-color: rgb(232, 76, 61); }
+    .iconGroup04 .link-zone:nth-child(5) .link-wrapper .circle_c_link { background-color: rgb(30, 143, 203); }
+    .iconGroup04 .link-zone:nth-child(6) .link-wrapper .circle_c_link { background-color: rgb(110, 185, 43); }
+/*iconGroup04 end */
+
 .btnGroup1{
   $row5h:300px;
   text-align: center;

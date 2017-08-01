@@ -53,7 +53,7 @@ input[type="checkbox"]{outline:none;}
 .align-right{@extend %align-right;}
 .hide{display: none;}
 .view-hide{visibility: hidden;}
-
+.over-flow{overflow:hidden;}
 .float-r{float: right!important;}
 .float-l{float: left!important;}
 .clear{@extend %clear;}

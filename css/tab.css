@@ -11,11 +11,11 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.tab07 .hd:before, .tab04 .hd:before, .tab07 .hd:after, .tab04 .hd:after {
+.tab09 .hd:before, .tab07 .hd:before, .tab04 .hd:before, .tab09 .hd:after, .tab07 .hd:after, .tab04 .hd:after {
   content: " ";
   display: table; }
 
-.tab07 .hd:after, .tab04 .hd:after {
+.tab09 .hd:after, .tab07 .hd:after, .tab04 .hd:after {
   clear: both; }
 
 .tab04 .hd ul li + li .hdInner {
@@ -34,11 +34,11 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.tab07 .hd:before, .tab04 .hd:before, .tab07 .hd:after, .tab04 .hd:after {
+.tab09 .hd:before, .tab07 .hd:before, .tab04 .hd:before, .tab09 .hd:after, .tab07 .hd:after, .tab04 .hd:after {
   content: " ";
   display: table; }
 
-.tab07 .hd:after, .tab04 .hd:after {
+.tab09 .hd:after, .tab07 .hd:after, .tab04 .hd:after {
   clear: both; }
 
 .tab04 .hd ul li + li .hdInner {
@@ -47,6 +47,53 @@
 /*frame */
 /* input set  start  */
 /* input set  end  */
+/* tab09 start */
+.tab09 {
+  height: auto;
+  border-bottom: none;
+  text-align: left; }
+  .tab09.marginBottom .hd {
+    margin-bottom: 20px; }
+  .tab09 .hd {
+    border-bottom: 2px solid #006acf;
+    height: 34px;
+    position: relative; }
+    .tab09 .hd ul {
+      float: left; }
+      .tab09 .hd ul li {
+        float: left;
+        height: 33px;
+        cursor: pointer;
+        font-size: 15.6px;
+        -webkit-border-radius: 15px 15px 0 0;
+        border-radius: 15px 15px 0 0;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-bottom: none; }
+        .tab09 .hd ul li + li {
+          margin-left: 3px; }
+        .tab09 .hd ul li .hdInner {
+          padding: 6px 20px; }
+        .tab09 .hd ul li.on {
+          background: #006acf;
+          color: #fff;
+          border: 1px solid #006acf;
+          border-bottom: none; }
+    .tab09 .hd .more {
+      height: 34px;
+      line-height: 34px; }
+  .tab09 .bd .switch {
+    padding: 13px;
+    zoom: 1; }
+    .tab09 .bd .switch .product_gallary {
+      margin: -13px; }
+    .tab09 .bd .switch li .stb-text {
+      height: 30px;
+      line-height: 23px;
+      font-size: 15px;
+      font-weight: 600; }
+
+/* tab09 end */
 /* tab07 start */
 .tab07 {
   height: auto;

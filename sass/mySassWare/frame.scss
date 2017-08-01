@@ -2,6 +2,14 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+@mixin container($width:1200){
+  .container-#{$width}{
+    width:#{$width}px;
+    margin:0 auto;
+  }
+}
+@include container(1150);
+
 .testFrame{
   &>div{
     height:200px;

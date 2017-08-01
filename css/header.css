@@ -11,13 +11,13 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.header05 .header05-left {
+.header11 .header11-left, .header08 .header08-left, .header05 .header05-left {
   float: left; }
 
-.header06, .header05, .header05 .iconfont {
+.header11, .header08, .header08 .header08-right, .header06, .header05, .header05 .iconfont {
   position: relative; }
 
-.header05 .header05-left {
+.header11 .header11-left, .header08 .header08-left, .header05 .header05-left {
   float: left; }
 
 /*frame */
@@ -33,18 +33,113 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.header05 .header05-left {
+.header11 .header11-left, .header08 .header08-left, .header05 .header05-left {
   float: left; }
 
-.header06, .header05, .header05 .iconfont {
+.header11, .header08, .header08 .header08-right, .header06, .header05, .header05 .iconfont {
   position: relative; }
 
-.header05 .header05-left {
+.header11 .header11-left, .header08 .header08-left, .header05 .header05-left {
   float: left; }
 
 /*frame */
 /* input set  start  */
 /* input set  end  */
+/*header11 start*/
+.header11 {
+  text-align: center;
+  height: 64px;
+  line-height: 64px; }
+  .header11 .header11-left, .header11 .header11-right {
+    min-height: 1px; }
+  .header11 .header11-left {
+    width: 55px;
+    text-align: left;
+    height: 64px; }
+  .header11 .header11-right {
+    margin-left: 55px;
+    height: 64px; }
+  .header11 .header11-left {
+    background: #006acf;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5; }
+    .header11 .header11-left .header11-leftInner {
+      padding-top: 11px; }
+  .header11 .header11-right {
+    background: #f4f4f4;
+    font-size: 27.6px;
+    font-family: ""; }
+
+/*header11 end*/
+.header10 {
+  text-align: center; }
+  .header10 li {
+    display: inline-block; }
+    .header10 li img {
+      width: 90px; }
+    .header10 li + li {
+      margin-left: 55px; }
+
+.header09 {
+  padding: 10px 28px;
+  display: block;
+  height: 26px;
+  line-height: 26px;
+  background-color: #f6f6f6; }
+  .header09 .h-title01 {
+    font-size: 18.72px;
+    color: #006acf;
+    font-weight: 700; }
+  .header09 .more {
+    color: #333;
+    padding-left: 20px; }
+    .header09 .more .iconfont {
+      vertical-align: middle;
+      margin-right: 5px;
+      color: #006acf; }
+
+.header08 {
+  height: 50px;
+  line-height: 50px; }
+  .header08 .header08-left, .header08 .header08-right {
+    min-height: 1px; }
+  .header08 .header08-left {
+    width: 100px;
+    text-align: left;
+    height: 50px; }
+  .header08 .header08-right {
+    margin-left: 100px;
+    height: 50px; }
+  .header08 .header08-left {
+    background: #006acf;
+    color: #fff;
+    text-align: center; }
+  .header08 .header08-right {
+    background: #f4f4f4; }
+    .header08 .header08-right:before {
+      position: absolute;
+      left: 0px;
+      width: auto;
+      color: #dbdbdb;
+      content: "";
+      font-size: 15px;
+      top: 50%;
+      left: -8px;
+      margin-top: -8px;
+      border-top: 8px solid transparent;
+      border-right: 8px dashed #f4f4f4;
+      border-bottom: 8px solid transparent;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      vertical-align: middle; }
+    .header08 .header08-right li {
+      padding: 0 35px;
+      float: left; }
+      .header08 .header08-right li:hover {
+        color: #006acf; }
+
 .header07 {
   padding: 4px 18px;
   display: block;

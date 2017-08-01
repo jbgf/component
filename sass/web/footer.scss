@@ -1,0 +1,112 @@
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
+@charset "utf-8";
+
+/*footer03 start*/
+.footer03{
+  $footinner_h:125px;
+  $footer03_p:50px;
+  $qrZone_w:380px;
+  $foot-logo-size:120px;
+  margin-top: 30px;
+  background:$super-gray0;
+  @include border($position:top,$width:1px,$color:$baseBorderColor);
+  @extend %align-center;
+  .fridend_link{
+    background:$mainColor;
+
+    @extend %relative;
+
+    .right{
+      padding:10px 0 ;
+      a{
+        font-weight: 700;
+        color:#fff;
+        @extend %uppercase;
+
+        @extend %relative;
+        padding:0 15px ;
+        &:first-child{padding-left:0;}
+        & + a{ @include divider(); @extend %align-center;
+          &:before{left:-3px;}
+        }
+      }
+
+    }
+  }
+  .img{display:inline-block;padding-right:20px;background:url(../img/border2.png) 100% no-repeat}
+  .copyRight{display:inline-block;text-align:left; font-size:$smallSize;padding-left:20px;}
+  .footer03-info{
+    padding:30px 0;
+  }
+
+}
+/* footer03 end */
+
+/* footer02 start */
+@mixin foot($num){
+  .footer0#{$num}{
+    box-sizing: content-box;
+    background: #fff;
+    text-align: left;
+    .footer-content{
+      .f-content{
+        float: left;
+        padding: 30px 0px;
+        box-sizing: content-box;
+        &:first-child{
+          padding-left: 0px;
+          text-align: left;
+        }
+        &.logo{
+          width: 380px;
+          padding-top: 50px;
+        }
+        &.address{
+          width: 384px;
+          padding-top: 45px;
+          font-size: 13px;
+        }
+        &:last-child{
+          padding-right: 0px;
+          text-align: right;
+        }
+        &.qr{
+          width: 122px;float: right;
+        }
+      }
+
+    }
+    .copyRight{background-color: #eee;text-align: center;padding:8px 0;}
+  }
+}
+@include foot(2);
+
+
+/* footer02 end */
+
+/*footer01 start*/
+.footer01{box-sizing: content-box;background:#393939;padding-top: 38px;color:#ebebeb;text-align: left;}
+.footer01 .footer-link {border-bottom: 1px solid #4d4d4d;}
+.footer01 .footer-link .fl01{
+  color: #fff;
+  padding-left: 23px;
+  padding-right: 23px;
+  font-size: 14px;
+  padding-bottom: 10px;
+  display: block;
+  float: left;
+}
+.footer01 .footer-link .fl01:first-child{padding-left: 0;}
+
+.footer01 .footer-content{padding-top: 20px;}
+.footer01 .footer-content .f-content{float: left;padding:30px 62px;box-sizing: content-box;}
+.footer01 .footer-content .f-content:first-child{padding-left: 0;text-align: left;}
+.footer01 .footer-content .f-content:last-child{padding-right: 0;text-align: right;}
+
+.footer01 .footer-content .f-content.logo{width:243px;padding-top: 50px;border-right: 1px solid #4d4d4d;}
+.footer01 .footer-content .f-content.address{width:384px;padding-top: 45px;border-right: 1px solid #4d4d4d;font-size: 13px;}
+.footer01 .footer-content .f-content.qr{width:122px;}
+/*footer01 end*/
+
+

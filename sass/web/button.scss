@@ -1,8 +1,17 @@
-@import "variable";
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
+@charset "utf-8";
 
-/*button_group01 start */
 
-/*button_group01 end */
+/*smallBtn01 start*/
+  .smallBtn01{
+  background:$mainColor;
+  padding:1px 14px;
+  color:#fff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/*smallBtn01 end*/
 
 
 
@@ -159,22 +168,7 @@ $tagArray :('green':#6eb92b,'blue':#1978CF,'red':#ec5369,'black':#171011);
 }
 /*textTag01 end*/
 
-/*button_group01 start */
-.button_group01{padding: 0 5%;}
-.button_group01 .link-zone { padding-right: 5px; padding-left: 5px; }
-.button_group01 .link-wrapper { display: block; padding: 0px 0px 1rem; text-decoration: none; }
-           
 
-
-.button_group01 .link-wrapper .LinkText {font-size: .8rem; text-align: center; padding-top: 1rem; color: rgb(102, 102, 102); }
-
-.button_group01 .link-zone:nth-child(1) .link-wrapper .circle_c_link { background-color: rgb(0, 91, 172); }
-.button_group01 .link-zone:nth-child(2) .link-wrapper .circle_c_link { background-color: rgb(55, 159, 160); }
-.button_group01 .link-zone:nth-child(3) .link-wrapper .circle_c_link { background-color: rgb(253, 177, 17); }
-.button_group01 .link-zone:nth-child(4) .link-wrapper .circle_c_link { background-color: rgb(232, 76, 61); }
-.button_group01 .link-zone:nth-child(5) .link-wrapper .circle_c_link { background-color: rgb(30, 143, 203); }
-.button_group01 .link-zone:nth-child(6) .link-wrapper .circle_c_link { background-color: rgb(110, 185, 43); }
-/*button_group01 end */
 
 /*circle_c_link start*/
 .circle_c_link { background-color:rgb(0, 91, 172);width: 85%; margin: 0px auto; border-radius: 50%; overflow: hidden; position: relative; }

@@ -1,16 +1,41 @@
 @charset "UTF-8";
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /* setting scss*/
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /* 开关设置*/
-/*-----------------------------------------------------	*/
+/*----------------------------------------------------- */
 /*是否兼容ie6-7*/
 /*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
 /*是否开启打印样式*/
+/* color start */
+/* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-/*button_group01 start */
-/*button_group01 end */
+/*frame */
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*frame */
+/* input set  start  */
+/* input set  end  */
+/*smallBtn01 start*/
+.smallBtn01 {
+  background: #006acf;
+  padding: 1px 14px;
+  color: #fff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/*smallBtn01 end*/
 .tag-green {
   border: 1px solid #6eb92b;
   border-radius: 10px;
@@ -170,44 +195,6 @@
   border-left: 5px solid #6fba2a; }
 
 /*textTag01 end*/
-/*button_group01 start */
-.button_group01 {
-  padding: 0 5%; }
-
-.button_group01 .link-zone {
-  padding-right: 5px;
-  padding-left: 5px; }
-
-.button_group01 .link-wrapper {
-  display: block;
-  padding: 0px 0px 1rem;
-  text-decoration: none; }
-
-.button_group01 .link-wrapper .LinkText {
-  font-size: .8rem;
-  text-align: center;
-  padding-top: 1rem;
-  color: #666666; }
-
-.button_group01 .link-zone:nth-child(1) .link-wrapper .circle_c_link {
-  background-color: #005bac; }
-
-.button_group01 .link-zone:nth-child(2) .link-wrapper .circle_c_link {
-  background-color: #379fa0; }
-
-.button_group01 .link-zone:nth-child(3) .link-wrapper .circle_c_link {
-  background-color: #fdb111; }
-
-.button_group01 .link-zone:nth-child(4) .link-wrapper .circle_c_link {
-  background-color: #e84c3d; }
-
-.button_group01 .link-zone:nth-child(5) .link-wrapper .circle_c_link {
-  background-color: #1e8fcb; }
-
-.button_group01 .link-zone:nth-child(6) .link-wrapper .circle_c_link {
-  background-color: #6eb92b; }
-
-/*button_group01 end */
 /*circle_c_link start*/
 .circle_c_link {
   background-color: #005bac;
@@ -344,3 +331,5 @@
   border-bottom-color: #000; }
 
 /*tooltip end*/
+
+/*# sourceMappingURL=maps/button.css.map */

@@ -2,6 +2,76 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+
+/*header11 start*/
+.header11{
+  $height:64px;
+  text-align: center;
+  @include lheightM($height:$height);
+  @include f_pictext_rowNew($width:55px,$height:$height,$fpos:"left",$mar-gutter:0);
+  .header11-left{
+    background:$mainColor;color:#fff;text-align:center;
+    line-height: 1.5;
+    .header11-leftInner{padding-top:11px;}
+  }
+  .header11-right{
+    background:#f4f4f4;
+    font-size:$bigTitle;
+    font-family: ""
+  }
+}
+/*header11 end*/
+
+.header10{
+  text-align: center;
+  li{
+    display:inline-block;
+    img{width:90px;}
+    &+li{
+      margin-left: 55px;
+    }
+  }
+}
+
+.header09{
+  $sideHeaderP:28px;
+  padding: 10px $sideHeaderP;
+  display: block;
+  height: 26px;
+  line-height: 26px;
+  background-color: #f6f6f6;
+
+  .h-title01{font-size: $bigSize;color:$mainColor;font-weight:700;}
+  .more{color:#333;padding-left: 20px;.iconfont{    vertical-align: middle;margin-right: 5px;color:$mainColor;}}
+
+}
+
+.header08{
+  $dHeight:50px;
+  @include f_pictext_rowNew($width:100px,$height:$dHeight,$fpos:"left",$mar-gutter:0px);
+  @include lheightM($height:$dHeight);
+  .header08-left{
+    background:$mainColor;
+    color:#fff;
+    text-align: center;
+  }
+  .header08-right{
+    $caretSize:8px;
+    background:#f4f4f4;
+    @include persudo($color:#dbdbdb,$content:"",$position:before,$bg:none){
+      top:50%;
+      left:-$caretSize;
+      margin-top: -$caretSize;
+      @include caret($color:#f4f4f4,$position:right,$width:$caretSize);
+    };
+    li{
+      padding:0 35px;
+      float:left;
+      &:hover{color:$mainColor;}
+    }
+  }
+}
+
 .header07{
   $radius07:15px;
   padding: 4px 18px;

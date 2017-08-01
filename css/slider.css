@@ -9,7 +9,7 @@
 /*是否开启打印样式*/
 /* color start */
 /* color end */
-.slideBox07 .inner .text, .slideBox06 .bd li .slideTitle .link, .slideBox05 .bd li .slideTitle .link {
+.slider07 .inner .text, .slideBox06 .bd li .slideTitle .link, .slideBox05 .bd li .slideTitle .link {
   display: block;
   *display: inline;
   /*zoom: 1;
@@ -23,31 +23,31 @@
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.slideBox07 .gallary .row-block {
+.slider07 .gallary .row-block {
   float: left; }
 
-.slideBox07 .gallary:before, .slideBox07 .gallary .row-block:before, .slideBox07 .gallary:after, .slideBox07 .gallary .row-block:after {
+.slider08 .hspt .hsptBlock .link:before, .slider08 .hr2-inner:before, .slider07 .gallary:before, .slider07 .gallary .row-block:before, .slider08 .hspt .hsptBlock .link:after, .slider08 .hr2-inner:after, .slider07 .gallary:after, .slider07 .gallary .row-block:after {
   content: " ";
   display: table; }
 
-.slideBox07 .gallary:after, .slideBox07 .gallary .row-block:after {
+.slider08 .hspt .hsptBlock .link:after, .slider08 .hr2-inner:after, .slider07 .gallary:after, .slider07 .gallary .row-block:after {
   clear: both; }
 
-.slideBox07, .slideBox07 .gallary .row-block {
+.slider07, .slider07 .gallary .row-block {
   position: relative; }
 
-.slideBox07 .direction .directionBtn {
+.slider07 .direction .directionBtn {
   position: absolute; }
 
-.slideBox07 .inner img {
+.slider07 .inner img {
   display: block;
   width: 100%;
   height: 100%; }
 
-.slideBox07 .gallary {
+.slider07 .gallary {
   margin: 0 auto; }
 
-.slideBox07 .gallary .row-block {
+.slider07 .gallary .row-block {
   float: left; }
 
 /*frame */
@@ -61,7 +61,7 @@
 /*是否开启打印样式*/
 /* color start */
 /* color end */
-.slideBox07 .inner .text, .slideBox06 .bd li .slideTitle .link, .slideBox05 .bd li .slideTitle .link {
+.slider07 .inner .text, .slideBox06 .bd li .slideTitle .link, .slideBox05 .bd li .slideTitle .link {
   display: block;
   *display: inline;
   /*zoom: 1;
@@ -75,31 +75,31 @@
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.slideBox07 .gallary .row-block {
+.slider07 .gallary .row-block {
   float: left; }
 
-.slideBox07 .gallary:before, .slideBox07 .gallary .row-block:before, .slideBox07 .gallary:after, .slideBox07 .gallary .row-block:after {
+.slider08 .hspt .hsptBlock .link:before, .slider08 .hr2-inner:before, .slider07 .gallary:before, .slider07 .gallary .row-block:before, .slider08 .hspt .hsptBlock .link:after, .slider08 .hr2-inner:after, .slider07 .gallary:after, .slider07 .gallary .row-block:after {
   content: " ";
   display: table; }
 
-.slideBox07 .gallary:after, .slideBox07 .gallary .row-block:after {
+.slider08 .hspt .hsptBlock .link:after, .slider08 .hr2-inner:after, .slider07 .gallary:after, .slider07 .gallary .row-block:after {
   clear: both; }
 
-.slideBox07, .slideBox07 .gallary .row-block {
+.slider07, .slider07 .gallary .row-block {
   position: relative; }
 
-.slideBox07 .direction .directionBtn {
+.slider07 .direction .directionBtn {
   position: absolute; }
 
-.slideBox07 .inner img {
+.slider07 .inner img {
   display: block;
   width: 100%;
   height: 100%; }
 
-.slideBox07 .gallary {
+.slider07 .gallary {
   margin: 0 auto; }
 
-.slideBox07 .gallary .row-block {
+.slider07 .gallary .row-block {
   float: left; }
 
 /*frame */
@@ -122,8 +122,96 @@
   border: 1px solid #df0000; }
 
 /*ul-line end*/
-/* slideBox07 start  */
-.slideBox07 .direction .directionBtn {
+/* slider08 start  */
+.slider08 {
+  padding-bottom: 120px; }
+  .slider08 .hspt .hsptBlock {
+    -webkit-box-shadow: 0 0 20px #999;
+    box-shadow: 0 0 20px #999;
+    width: 100%;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+    margin-bottom: 10px;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8); }
+    .slider08 .hspt .hsptBlock .img {
+      position: relative; }
+      .slider08 .hspt .hsptBlock .img img {
+        display: block;
+        width: 100%;
+        height: 190px; }
+    .slider08 .hspt .hsptBlock .hspt-bottom {
+      padding: 0 45px;
+      padding-bottom: 10px;
+      background: #fff; }
+    .slider08 .hspt .hsptBlock .text .hspt_title {
+      color: #6eb92b;
+      padding: 20px 0;
+      font-size: 20.592px;
+      text-align: center; }
+    .slider08 .hspt .hsptBlock .text .hspt_text {
+      padding-bottom: 35px; }
+    .slider08 .hspt .hsptBlock .hspt-p {
+      color: #2675d5;
+      padding-bottom: 10px;
+      display: none; }
+    .slider08 .hspt .hsptBlock .link {
+      margin-left: -5px;
+      margin-right: -5px; }
+      .slider08 .hspt .hsptBlock .link .linkBlock {
+        width: 50%;
+        float: left;
+        min-height: 1px;
+        margin-bottom: 10px; }
+      .slider08 .hspt .hsptBlock .link .str-inner {
+        padding-left: 5px;
+        padding-right: 5px; }
+      .slider08 .hspt .hsptBlock .link .link-inner {
+        border: 1px solid #ddd;
+        text-align: center;
+        height: 36px;
+        position: relative; }
+        .slider08 .hspt .hsptBlock .link .link-inner img {
+          width: 100%;
+          height: 100%;
+          display: block; }
+  .slider08 .hspt.on .hsptBlock {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    z-index: 999;
+    position: relative; }
+    .slider08 .hspt.on .hsptBlock .hspt-bottom {
+      padding: 0 15px; }
+  .slider08 .hr2-inner {
+    margin-left: -31px;
+    margin-right: -31px;
+    position: relative; }
+    .slider08 .hr2-inner .hspt {
+      width: 33.33333%;
+      float: left;
+      min-height: 1px; }
+    .slider08 .hr2-inner .str-inner {
+      padding-left: 31px;
+      padding-right: 31px; }
+  .slider08 .arrows {
+    position: absolute;
+    width: 64px;
+    height: 100%;
+    top: 0;
+    cursor: pointer; }
+    .slider08 .arrows.prev {
+      left: -79px;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADmUlEQVR4nO2bX4iVRRiHz4WBhkZGdaFQQRJbGGSwURIWBOWFFxkZGf0BjRSMkujCIGOS2Jn3+c1+xRbklkVBBRm0kYFQXRgkkVBRQoISCgXVxV5UZGTUdrG7sMjM5eyLe84D5/75vXNmvu+875xeb8CAAQPOMXLOQ8CrwFEz2xlCWOTtNG9Iug/4Bpia89ns7TUvAA8D/5wVfsrMgrdbU7quuwiIpfDASTO70duxGWZ2NfBaIfjUzBnwkLdjM4BbgAOV8J8C670dmwFsAo5Uwr8DXO/t2AwzexQ4VQn/Qtd1K70dmxBCuMDM9gCnC8EnJT01Pj5+nrdnE2KMq4C9lVU/ZmZbvR2bkVJaa2YTpfBm9hmwwduxGZI2SjpcWfn9ZnaDt2MzJG2TdKIS/qUY4xXejk3oum6JpN2SfisE/13S7q7rlnh7NiHnfLmkF0urLumEpG3ejs3IOQ8D+yvhD0va6O3YDGADcKhy0k+klNZ6OzYD2AJ8Xzns9sYYV3k7NiGEsAjYBUwWgp82sz1mtszbswlmtsLMnq+s+ilgh7djM2KMa4C3K+G/BDZ5OzYjpXQH8Ekl/IGc8zpvx2aY2QNm9l3lMbcv5zzk7dgM4Engl0L4M2Y2EmNc7u3YhLGxsUskIem/QvifgMe9HZshabWkNyr7/SsWcr9+5hl/tNbAWLAvN7MwPaQohT8YQljq7decvi9ACGEpcKxvt0Cv1+vFGIfN7N3aISjpXm/H5qSULjOzYoMD+FHSY96OzQkhLAaeBkotrr8lPRdCuNDbsznAI8DxyqvwKyMjI1d5OzbHzO4EPq9siQ9SSjd7OzZH0k3A+6UimNkXZnaXt2NzgCuBlytF+MHMtns7NsfMlgHPAn8WivAH8EwI4Xxvz+YAO4CTlXNh4U6A5pJzvnumHdZ/M8BZcs7rJH1YKcIhFvIUeJac85CkfbXfEMAWb8fmxBiXm9kIcKZQhElgV1/c/jSznTNts9K3oTOzFd6OzQE2m9nXlSK8BVzn7dgcM7sNOFgpwsfA7d6OzUkpXQu8WSnCt5Lu93ZsjqRLAVWK8LOkJ7wd5wWmhyy/Forwr6SUc77Y27E5wINAbcz2es75Gm/H5gDrmb4UXSrCR5Ju9XZszujo6BqmL0eXinAkpXSPt2Nzuq5bKal22eJ4znnY23FeYPq6Tf/9ZWYukrZy1kCmL94R5iJpNTAB/CXpvRDCYm+nAQMGnJv8D+SfigwiKaaBAAAAAElFTkSuQmCC") center center no-repeat; }
+    .slider08 .arrows.next {
+      right: -79px;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADnElEQVR4nO2bXYjVRRyGZS9MSijCYIsSEozQwMCihCK82MCipCIMLFAo+g4zyCijf+Dumfd55+zBjU22iA0MLEoqwqCEhBaLMMgo+ybBSCEvLCoo+thu9iLkzF4Ec36wnQfO/fO+Z+Z/Zs7Mf968Pn369PmPSNoEfAJM2r4o2qen5JyHgOl/fT6zvTHaq2dIuuukAqaBPyRtinbrCTnnZcCnXUqYBkYlnRPtWB1gHXCgUMILwMXRjtWRtBrYUyhhL3B1tGN1UkrLgclCCR9Lui3asTo550W2k+0/u5RwTNJD0Y49wfZm20e7lPA3oJGRkbOiHasjab2kg92mhKTnU0rLox2rI2kIeKtQwpuSVkc7VieltALYWXg4fmj7lmjH6gCDQO5Wgu0jth+IdqxO0zQDwMPAD12K+N32tk6nc0a0Z3WADbMsn59tt9sXRDtWJ+e8BninUMLrwJXRjtXJOa+UtKtQwvvATdGO1ZF0rqTthRK+Be6OdqxO0zTzgUeBE11K+EVSY/u0aM/qALcDXxRGw9OtVmtJtGN1bF8HvFso4RVJl0c7Vsf2ZbZfLiyfpyRdH+1YHdvn2x4vlPBlSumOaMfqTExMnCrpCUk/dynihKTHmqaZH+1ZnZl/nr8p7CO2t9vt86IdqyPpRuC9Qgm7cs4rox2rM7Oj/KjwC/F50zQLoh2r0zTNQuDVwsPxvmi/6sxWALA12q8qM1OgdABzDBiMdqyG7Rts7y+Efy2ldEW0YzVs32n768K8fwZYGu1YhcnJyQW2H7f9U5fwv0nallI6PdqzCimlxbafKgz5I8D90Y7VaLVal9p+qRD+ALAu2rEaKaVrgX2F8Hvm9EGKpI3AoUL4yZzzsmjHKjRNMyBpC3C8S/C/bKec86JozyoAg5LahU3OUdubox2rMduZoe2Dtm+NdqzGbKfGwNs556Fox2pIWj/LtnZnSmlFtGM1gAeB7wvL2vbw8PDZ0Y5VGB0dPRNoAd3uDh2XtKVpmoFozyrknC8EnisM+UPAhmjHagBXAW8Uwu8Drol2rAZwM/BBIfyLki6JdqwGcC9wuBB+LKW0ONqxCuPj4wuBJ4FfuwT/Edg6NjZ2SrRnFTqdzhJgR+Fb/8r23D3Osr3K9u7CsnbK9tpox2rYXmt7qhB+t+1V0Y7VAJbOsqzd0el05valhsIrM9OSmmi3npBSWnNS8MOS7on26inAI8B3wN7/xRWWPn36zDn+Ad32iOM3CgUgAAAAAElFTkSuQmCC") center center no-repeat; }
+
+/* slider08 end  */
+/* slider07 start  */
+.slider07 .direction .directionBtn {
   line-height: 125px;
   width: 25px;
   height: 100%;
@@ -132,33 +220,33 @@
   cursor: pointer;
   background: #f4f4f4;
   text-align: center; }
-  .slideBox07 .direction .directionBtn.sprev {
+  .slider07 .direction .directionBtn.sprev {
     left: 0; }
-  .slideBox07 .direction .directionBtn.snext {
+  .slider07 .direction .directionBtn.snext {
     right: 0; }
 
-.slideBox07 i {
+.slider07 i {
   color: gray;
   font-size: 28.08px;
   vertical-align: middle; }
 
-.slideBox07 .gallary {
+.slider07 .gallary {
   width: 94%; }
-  .slideBox07 .gallary .row-block {
+  .slider07 .gallary .row-block {
     width: 20%;
     min-height: 1px; }
-    .slideBox07 .gallary .row-block .inner {
+    .slider07 .gallary .row-block .inner {
       padding: 0 5px; }
 
-.slideBox07 .bd {
+.slider07 .bd {
   overflow: hidden; }
 
-.slideBox07 .inner .gInner {
+.slider07 .inner .gInner {
   position: relative;
   height: 125px;
   overflow: hidden; }
 
-.slideBox07 .inner .text {
+.slider07 .inner .text {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -168,9 +256,9 @@
   text-align: center;
   padding: 2px 0; }
 
-.slideBox07 .inner:hover {
+.slider07 .inner:hover {
   opacity: 1; }
-  .slideBox07 .inner:hover img {
+  .slider07 .inner:hover img {
     -webkit-transform: scale(1.01, 1.1);
     -ms-transform: scale(1.01, 1.1);
     transform: scale(1.01, 1.1);
@@ -178,7 +266,7 @@
     -o-transition: .3s transform;
     transition: .3s transform; }
 
-/* slideBox07 end  */
+/* slider07 end  */
 /* slideBox06 start  */
 .slideBox06 {
   overflow: hidden;
