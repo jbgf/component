@@ -35,13 +35,17 @@
 	</div>	
 	<div class="fixedBg"></div>
 	<div id="specialBox" class="container1200">
-		<div class="box"  data-p-caseName="" data-plugin="videojs">
+		<div class="box" data-title="player.swf" style="height:400px;">
+			<embed src="/src/player.swf" allowfullscreen="true" flashvars="controlbar=over&image=/img/background02.jpg&file=cbh.flv" width="100%" height="100%"/>
+		</div>
+
+		<div class="box" data-p-caseName="videojs1"  data-plugin="videojs">
 			<!-- If you'd like to support IE8 -->
 			<!--[if lte IE 8]>
 			<script src="js/videojs-ie8.min.js"></script>
 			<![endif]-->
 			<div class="videoBox" style="height: 300px;">
-				<video id="my-video" class="video-js" controls preload="auto" style="width:100%;height:100%" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">                       <!-- 预览图 -->
+				<video id="videojs1" class="video-js" controls preload="auto" style="width:100%;height:100%" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">                       <!-- 预览图 -->
 					<source src="/src/movie.mp4" type='video/mp4'>
 					<source src="MY_VIDEO.webm" type='video/webm'>
 					<p class="vjs-no-js">
@@ -50,6 +54,11 @@
 					</p>
 				</video>
 			</div>
+			<script>
+				function videojs1() {
+
+                }
+			</script>
 		</div>
 		<div class="box" data-block ="1">
 			<script type="text/javascript" src="canvas1.js"></script>
@@ -340,105 +349,15 @@
 			</script>
 		</div>
 
-		<div class="box" data-block="1" >
-			 <!-- map  start-->              
-              <div class="map">
-                    
-                      <div style="width:100%;height:255px;border:#ccc solid 1px;font-size:12px" id="map"></div>
-                         
-                        <script type="text/javascript">
-                           //创建和初始化地图函数：备注：需先引入百度API
-                            
-                            var map;
-	                        initMap();
-	                        function initMap(){
-	                          createMap();//创建地图
-	                          setMapEvent();//设置地图事件
-	                          addMapControl();//向地图添加控件
-	                          addMapOverlay();//向地图添加覆盖物
-	                        }
-	                        function createMap(){ 
-	                          map = new BMap.Map("map"); 
-	                          map.centerAndZoom(new BMap.Point(119.32016,26.100697),19);
-	                        }
-	                        function setMapEvent(){
-	                          map.enableScrollWheelZoom();
-	                          map.enableKeyboard();
-	                          map.enableDragging();
-	                          map.enableDoubleClickZoom()
-	                        }
-	                        function addClickHandler(target,window){
-	                          target.addEventListener("click",function(){
-	                            target.openInfoWindow(window);
-	                          });
-	                        }
-	                        function addMapOverlay(){
-	                          var markers = [
-	                            {content:"福建省福州市湖东路312号国检广场B座",title:"",imageOffset: {width:0,height:0},position:{lat:26.100588,lng:119.320173}}
-	                          ];
-	                          for(var index = 0; index < markers.length; index++ ){
-	                            var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
-	                            //标注图片路径，大小
-	                            var marker = new BMap.Marker(point,{icon:new BMap.Icon("/img/icon-adr.png",new BMap.Size(22,29),{
-	                              imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
-	                            })});
-	                            var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
-	                            
-	                            //给标注 用label 设置样式，任意的CSS都是可以的
-	                            label.setStyle({                                   
-
-	                                color:"red",                   //颜色
-	                                fontSize:"14px",               //字号
-	                                border:"0",                    //边
-	                                /*height:"120px", */               //高度
-	                                /*width:"125px", */                //宽
-	                                textAlign:"center",            //文字水平居中显示
-	                                /*lineHeight:"120px",*/            //行高，文字垂直居中显示
-	                                background:"transparent",    //背景图片，这是房产标注的关键！
-	                                cursor:"pointer"
-	                            });
-
-	                            var opts = {
-	                              width: 200,
-	                              title: markers[index].title,
-	                              enableMessage: false
-	                            };
-	                            var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
-	                            marker.setLabel(label);
-	                            addClickHandler(marker,infoWindow);
-	                            map.addOverlay(marker);
-	                          };
-	                        }
-	                        //向地图添加控件
-	                        function addMapControl(){
-	                          /*var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-	                          scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
-	                          map.addControl(scaleControl);*/
-	                          /*var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-	                          map.addControl(navControl);*/
-	                        }
-	                        
-                        
-                        </script>
-              </div>
-  <!-- map  end-->
-		</div>
-		<div class="box" style="height:555px;padding:0">
-			
-	            <div class='frosted-glass02'></div>  
-	             
-		</div>
-		<div class="box" style="height:555px;padding:0">
-			
-	            <div class='frosted-glass02'></div>  
-	             
+		<div class="box" data-block="1" data-title="frosted glass" data-des="bg attach fixed" style="height:555px;padding:0">
+	            <div class='frosted-glass02 float-l row-2-block'></div>
+	            <div class='frosted-glass02 float-l row-2-block'></div>
 		</div>
 
 		<div class="box" style="height:555px;">
 			<div class='centerBg'>  
 	            <div class='frosted-glass01'></div>  
-	             
-	        </div> 
+	        </div>
 		</div>
 
 		<div class="box" style="overflow:hidden;background:black;">

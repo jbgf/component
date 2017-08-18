@@ -47,6 +47,23 @@
 /*frame */
 /* input set  start  */
 /* input set  end  */
+/*tab10 start*/
+.tab10 li {
+  float: left;
+  display: block;
+  margin-right: 10px; }
+
+.tab10 li a {
+  display: block;
+  padding: 0 10px;
+  border: 1px solid #ddd; }
+
+.tab10 .on a {
+  background-color: #df0000;
+  color: #fff;
+  border: 1px solid #df0000; }
+
+/*tab10 end*/
 /* tab09 start */
 .tab09 {
   height: auto;

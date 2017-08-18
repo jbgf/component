@@ -67,6 +67,65 @@
        </script>
     </div>
 
+    <div class="box" data-block="1" data-plugin="superslide" data-p-casename="slider09" data-type="slider" data-title="slider09">
+        <div id="slider09" class="slider09 riBlock">
+            <div class="slider09-left">
+                <div class="slideBox06 newsBox n-pic">
+                    <div class="hd">
+                        <ul>
+
+                            <li><a></a></li>
+                            <li><a></a></li>
+                        </ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img src="/img/n-pic.png">
+                                    <div class="slideTitle"><div class="link">武夷山：抓市政设施建设 美化城市环境</div></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img src="/img/n-pic.png">
+                                    <div class="slideTitle"><div class="link">武夷山：抓市政设施建设 美化城市环境</div></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slider09-right">
+                <ul>
+                    <li>
+                        <div class="slider09-title">坚定不移加快武夷新区建设</div>
+                        <div class="slider09-text">
+                            本报讯 5日至6日，市委书记庄稼汉深入武夷新区调研时强调:“坚持目标不变、思路不变、力度不变，坚定不移地加快新区建设步伐。冒着绵绵春雨，庄稼汉首先来到武夷新区南林核心区，察看了万达城市综合体、南林大桥、森林公园、新区四所学校、水之廊、水之门等项目；之后，来到将口和兴田片区，实地察看了合福高铁武夷山东站、客运枢纽、智慧旅游集散中心、站西大桥、水之廊、水之门学……<span class="more1">【详细】</span>
+                        </div>
+                    </li>
+                    <li>2</li>
+
+                </ul>
+            </div>
+        </div>
+        <script>
+            function slider09() {
+                var nrli = $(".slider09-right li");
+                $("#slider09").slide({
+                    mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500",
+                    startFun:function(i,c){
+
+                        if($("#slider09").length>0){
+                            nrli.hide().eq(i).show()
+                        }
+                    }
+                });
+            }
+        </script>
+    </div>
+
     <div class="box" data-plugin="superslide" data-p-casename="slider08" data-title="slider08">
         <div class="slider08 ">
 
@@ -377,7 +436,7 @@
        </div>
 
     <div class="box" data-block="3" data-plugin="superslide" data-p-casename="slider06" data-title="slider06" data-type="slider">
-        <div class="slideBox06 newsBox n-pic">
+        <div id="slider06" class="slideBox06 newsBox n-pic">
             <div class="hd">
                 <ul>
                     
@@ -405,7 +464,7 @@
         </div>
         <script type="text/javascript">
             function slider06() {
-                jQuery(".slideBox06").slide({
+                jQuery("#slideBox06").slide({
                     mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
             }
         </script>
@@ -482,48 +541,7 @@
             }
           </script> 
     </div>
-    <div class="box" data-block="3" data-plugin="superslide" data-p-casename="textTab03" data-type="tab">
-              <!-- 咨询中心 start -->
-              <div class="i_center clear">
-                  <div class="m_inner center shadow01">
-                    
-                      <div class="info_details">
-                          <div class="hd">
-                            <ul class="ul-line01 clear">
-                                <li><a href="#" class="font-normal">肯特新闻</a></li>
-                                <li><a href="#" class="font-normal">行业新闻</a></li>
-                            </ul>
-                          </div>
-                          <div class="bd">
-                              <div class="news-list01">
-                                  <ul>
-                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
-                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
-                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
-                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
-                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
-                                      <li><a><span class="date">09-04</span><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
 
-                                  </ul>  
-                              </div>
-                              <div class="news-list01">
-                                  hello?
-                              </div>
-                          </div>
-                            
-                      </div>
-                  </div>
-                  
-              </div>
-              <!-- 咨询中心 end -->
-              <script type="text/javascript">
-                  function textTab03(){
-                      /*咨询中心tab切换*/
-                      jQuery(".info_details").slide();
-                  }
-              </script>
-
-    </div>
     <div class="box">
         <!-- picScroll03 begin -->
           <div class="slideBox slideBox02" data-plugin="superslide" data-title="picScroll03" data-p-caseName="picScroll03" data-type="img">

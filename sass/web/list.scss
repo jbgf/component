@@ -2,6 +2,37 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+/* list07 start */
+.list07 ul {
+  text-align: left;
+
+}
+.list07 li {
+  $l07p:11px;
+  display: block;
+  padding: $l07p 0 $l07p $l07p*2;
+  @include persudo($content:"▪",$color:inherit);
+  @include border($position:bottom,$type:solid);
+  &:hover{
+    color:$mainColor;
+
+  }
+  .text {
+    width: 75%;
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+.list07 li .date{
+  float: right;
+  font-size:$smallSize;
+}
+
+/* list07 end */
+
 /* list06 start */
 .list06 ul {
    text-align: left;

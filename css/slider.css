@@ -23,7 +23,7 @@
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.slider07 .gallary .row-block {
+.slider09 .slider09-left, .slider07 .gallary .row-block {
   float: left; }
 
 .slider08 .hspt .hsptBlock .link:before, .slider08 .hr2-inner:before, .slider07 .gallary:before, .slider07 .gallary .row-block:before, .slider08 .hspt .hsptBlock .link:after, .slider08 .hr2-inner:after, .slider07 .gallary:after, .slider07 .gallary .row-block:after {
@@ -33,7 +33,7 @@
 .slider08 .hspt .hsptBlock .link:after, .slider08 .hr2-inner:after, .slider07 .gallary:after, .slider07 .gallary .row-block:after {
   clear: both; }
 
-.slider07, .slider07 .gallary .row-block {
+.slider09, .slider07, .slider07 .gallary .row-block {
   position: relative; }
 
 .slider07 .direction .directionBtn {
@@ -47,7 +47,7 @@
 .slider07 .gallary {
   margin: 0 auto; }
 
-.slider07 .gallary .row-block {
+.slider09 .slider09-left, .slider07 .gallary .row-block {
   float: left; }
 
 /*frame */
@@ -75,7 +75,7 @@
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.slider07 .gallary .row-block {
+.slider09 .slider09-left, .slider07 .gallary .row-block {
   float: left; }
 
 .slider08 .hspt .hsptBlock .link:before, .slider08 .hr2-inner:before, .slider07 .gallary:before, .slider07 .gallary .row-block:before, .slider08 .hspt .hsptBlock .link:after, .slider08 .hr2-inner:after, .slider07 .gallary:after, .slider07 .gallary .row-block:after {
@@ -85,7 +85,7 @@
 .slider08 .hspt .hsptBlock .link:after, .slider08 .hr2-inner:after, .slider07 .gallary:after, .slider07 .gallary .row-block:after {
   clear: both; }
 
-.slider07, .slider07 .gallary .row-block {
+.slider09, .slider07, .slider07 .gallary .row-block {
   position: relative; }
 
 .slider07 .direction .directionBtn {
@@ -99,29 +99,36 @@
 .slider07 .gallary {
   margin: 0 auto; }
 
-.slider07 .gallary .row-block {
+.slider09 .slider09-left, .slider07 .gallary .row-block {
   float: left; }
 
 /*frame */
 /* input set  start  */
 /* input set  end  */
-/*ul-line start*/
-.ul-line01 li {
-  float: left;
-  display: block;
-  margin-right: 10px; }
-
-.ul-line01 li a {
-  display: block;
-  padding: 0 10px;
+/*slider09 start*/
+.slider09 {
   border: 1px solid #ddd; }
+  .slider09 .slider09-left, .slider09 .slider09-right {
+    min-height: 1px; }
+  .slider09 .slider09-left {
+    width: 400px;
+    text-align: left;
+    height: 300px; }
+  .slider09 .slider09-right {
+    margin-left: 430px;
+    height: 300px; }
+  .slider09 .slider09-right {
+    padding-right: 30px; }
+  .slider09 .slider09-title {
+    color: #006acf;
+    font-weight: bold;
+    font-size: 18.72px;
+    text-align: center;
+    padding: 20px 0 10px; }
+  .slider09 .slider09-text {
+    text-align: justify; }
 
-.ul-line01 .on a {
-  background-color: #df0000;
-  color: #fff;
-  border: 1px solid #df0000; }
-
-/*ul-line end*/
+/*slider09 end*/
 /* slider08 start  */
 .slider08 {
   padding-bottom: 120px; }

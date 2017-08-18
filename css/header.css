@@ -45,6 +45,11 @@
 /*frame */
 /* input set  start  */
 /* input set  end  */
+.header12 .title {
+  color: #006acf;
+  font-weight: bold;
+  font-size: 18.72px; }
+
 /*header11 start*/
 .header11 {
   text-align: center;

@@ -188,7 +188,7 @@
     }
 /*因为分行分列后dom布局改变，重新遍历frameBlock*/
     $(".frameBlock").map(function(index,e){
-      that.originalH.push($(e).children(".box").clone().find("script,.headRow").remove().end().html()); 
+      that.originalH.push($(e).children(".innerBlock").clone().find("script,.headRow").remove().end().html());
       that.switchPlugin(e);
     });
   	that.tip();
@@ -335,8 +335,10 @@
           var data = {propertyOne : "width",propertyTwo : "height" ,className :"column"};
           //行列
           for(var i=0;i<num;i++){
-            $('<div class='+className+'></div>').appendTo(target).css(propertyOne,100/num+'%')
-                                                                 .css(propertyTwo,'100%')           
+            $('<div class='+className+'></div>').appendTo(target)
+                                                .css(propertyOne,100/num+'%')
+                                                .css(propertyTwo,'100%')
+                                                .css("float","left")
           };
          
           $(target ).addClass('frame');

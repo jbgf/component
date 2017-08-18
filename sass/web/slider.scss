@@ -1,23 +1,26 @@
 @import "../mySassWare/variable";
 @import "../mySassWare/mixin";
 
-/*ul-line start*/
-.ul-line01 li {
-    float: left;
-    display: block;
-    margin-right: 10px;  
+/*slider09 start*/
+.slider09{
+    $row5h:300px;
+    @include f_pictext_rowNew($width:$mainLeft,$height:$row5h,$fpos:"left",$mar-gutter:$mainP*2);
+    .slider09-right{
+        padding-right:$mainP*2;
+    }
+    @include border();
+    .slider09-title{
+        color:$mainColor;
+        font-weight: bold;
+        font-size: $bigSize;
+        text-align: center;
+        padding:20px 0 10px;
+    }
+    .slider09-text{
+        text-align: justify;
+    }
 }
-.ul-line01 li a{
-    display: block;
-    padding: 0 10px;
-    border:1px solid #ddd;
-}
-.ul-line01 .on a{
-    background-color: #df0000;
-    color: #fff;
-    border:1px solid #df0000;
-}
-/*ul-line end*/
+/*slider09 end*/
 
 /* slider08 start  */
 

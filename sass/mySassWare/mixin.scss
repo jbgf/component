@@ -492,7 +492,7 @@
 }
 
 @mixin f_pictext_row2($width:100px,$height:100px,$fpos:"right",$mar-gutter:15px){
-  &{@extend %relative;overflow: hidd}
+  &{@extend %relative;overflow: hidden;}
 
   $last:getParent(&);
 
@@ -501,11 +501,15 @@
 
   #{$string}-left,#{$string}-right{min-height:1px;}
   $margin_pos:"left";
-  #{$string}-#{$fpos}{@include ftextTab($width,$height,$fpos);}
   @if $fpos == "left" {
     $margin_pos : "right";
   }
-  #{$string}-#{$margin_pos}{@include newsTab_img($height,($width) + $mar-gutter,$fpos);}
+  #{$string}-#{$fpos}{
+      @include ftextTab($width,$height,$fpos);
+      @include newsTab_img($height,$mar-gutter,$margin_pos);
+  }
+
+  #{$string}-#{$margin_pos}{overflow:hidden;}
 
 }
 @mixin f_pictext_rowNew($width:100px,$height:100px,$fpos:"right",$mar-gutter:15px){

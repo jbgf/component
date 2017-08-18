@@ -21,7 +21,7 @@
 .list03 li:after {
   clear: both; }
 
-.list06 ul li, .list03, .list03 li .icon, .list02 ul li .inner, .list01 li .date {
+.list07 li, .list06 ul li, .list03, .list03 li .icon, .list02 ul li .inner, .list01 li .date {
   position: relative; }
 
 .list03 .list03_left {
@@ -50,7 +50,7 @@
 .list03 li:after {
   clear: both; }
 
-.list06 ul li, .list03, .list03 li .icon, .list02 ul li .inner, .list01 li .date {
+.list07 li, .list06 ul li, .list03, .list03 li .icon, .list02 ul li .inner, .list01 li .date {
   position: relative; }
 
 .list03 .list03_left {
@@ -59,6 +59,36 @@
 /*frame */
 /* input set  start  */
 /* input set  end  */
+/* list07 start */
+.list07 ul {
+  text-align: left; }
+
+.list07 li {
+  display: block;
+  padding: 11px 0 11px 22px;
+  border-bottom: 1px solid #ddd; }
+  .list07 li:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: inherit;
+    content: "▪";
+    font-size: 15px; }
+  .list07 li:hover {
+    color: #006acf; }
+  .list07 li .text {
+    width: 75%;
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.list07 li .date {
+  float: right;
+  font-size: 12px; }
+
+/* list07 end */
 /* list06 start */
 .list06 ul {
   text-align: left; }

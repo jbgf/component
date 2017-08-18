@@ -2,6 +2,17 @@
 @import "../mySassWare/mixin";
 @charset "utf-8";
 
+.adr1{
+
+    @include rowBeta($num:2,$outer_gutter:6px,$plusM:true,$height:false);
+    .iconfont{color:$mainColor;font-size:$bigSize;vertical-align:middle;margin-right:5px}
+    .ciBlock{
+        background: $super-gray0;
+        padding:3px 35px;
+        margin-bottom: 12px;
+    }
+
+}
 
 /*content1 start*/
 .content1 .p {
@@ -89,29 +100,7 @@
 .news-list02 li .list-text { width: 90%; color: rgb(102, 102, 102); text-align: left; }
 /*news-list02 end*/
 
-/*news-list01 start*/
-.news-list01{max-height: 240px;}
-.news-list01 ul{text-align: left}
-.news-list01 li{
-    display: block;
-    height: 33px;
-    line-height: 33px;
-    padding-left: 15px;
-    background:url(#{$baseImgUrl}iconbg02.png) no-repeat 0 50%;
-}
-.news-list01 li a .text{
-    width: 80%;
-    display: block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-.news-list01 li a .date{ 
-    float:right;
-    color:#999;  
-}
 
-/*news-list01 end*/
 
 /*content01 start*/
 .content01{text-align: left;}
@@ -186,109 +175,12 @@
 }
 /*r-article01 end*/
 
-/*news-ul03 start*/
-.news-ul03 .newsRow {
-    padding: 20px 0px;
-    border-bottom: 1px dashed #ddd;
-}
-.news-ul03 .newsRow:first-child{padding-top: 0px;}
-.news-ul03 .newsRow .cl-pic {
-    width: 177px;
-    padding: 3px;
-    text-align: center;
-    height: 125px;
-    line-height: 125px;
-    font-size: 18px;
-}
-.news-ul03 .newsRow .cl-pic img {
-    width: 100%;
-    display: block;
-}
-.news-ul03 .newsRow .cl-newsBox {
-    text-align: left;
-}
-.news-ul03 .newsRow .cl-newsBox .cl-title .cl-p01 {
-    font-weight: 700;
-    width: 80%;
-    line-height: 32px;
-}
-.news-ul03 .newsRow .cl-newsBox .cl-text {
-    height: 88px;
-}
-.news-ul03 .newsRow .cl-newsBox .time {
-    line-height: 32px;   
-}
-
-/*news-ul03 end*/
 
 
-/*news-ul02 start*/
-.news-ul02 .newsRow {
-    padding: 20px 0px;
-    border-bottom: 1px dashed #ddd;
-    cursor:pointer;
-    .button.cl-details {
-        padding: 1px 18px ;
-        border:1px solid #df0000;
-        background:#fff;
-        color:#df0000;   
-    }
-}
-.news-ul02 .newsRow:first-child{padding-top: 0px;}
-.news-ul02 .newsRow .cl-pic {
-    width: 177px;
-    padding: 3px;
-    border: 1px solid rgb(234, 234, 234);
-}
-.news-ul02 .newsRow .cl-pic img {
-    width: 100%;
-    display: block;
-}
-.news-ul02 .newsRow .cl-newsBox{
-    text-align: left;
-}
-.news-ul02 .newsRow .cl-newsBox .cl-title {
-    .cl-p01 {
-        font-weight: 700;
-        width: 80%;
-        line-height: 32px;
-    }
-    &:hover{color: #df0000;}
-}
-.news-ul02 .newsRow .cl-newsBox .cl-text {
-    padding: 3px 0px 10px;
-}
-.news-ul02 .newsRow .button.cl-details:hover{background-color: #df0000;color:#fff;}
-
-/*news-ul02 end*/
 
 
-/*news-ul01 start*/
-.news-ul01{}
-.news-ul01 .newsRow{
-    padding:30px 0;
-    border-bottom: 1px dashed #c2c2c2;
-}
-.news-ul01 .newsRow .cl-pic{
-    width:177px;
-    padding:3px;
-    border:1px solid #eaeaea;
-}
-.news-ul01 .newsRow .cl-pic img{width:100%;display: block;}
-.news-ul01 .newsRow .cl-newsBox{text-align: left;}
-.news-ul01 .newsRow .cl-newsBox .cl-title .cl-p01{
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 32px;
-}
-.news-ul01 .newsRow .cl-newsBox .cl-title .cl-line{
-    border-bottom:1px solid #d5d5d5;
-    width: 60px;
-    min-height: 1px;
-}
-.news-ul01 .newsRow .cl-newsBox .cl-text{padding: 10px 0 5px;}
-.news-ul01 .newsRow .cl-newsBox .cl-btn .time{color: #c3c3c3;}
-/*news-ul01 start*/
+
+
 
 @mixin pagination($num){
     .pagination0#{$num}{
