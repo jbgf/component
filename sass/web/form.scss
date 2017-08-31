@@ -1,0 +1,78 @@
+@import "../mySassWare/variable";
+@import "../mySassWare/mixin";
+@charset "utf-8";
+
+
+.form1{
+  form {
+    width: 100%;
+  }
+  .m-form-line {
+    text-align: left;
+  }
+  .m-form-line .input-set {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 12px 0px;
+  }
+  .input-set .text {
+    width: 63px;
+    float: left;
+    text-align: right;
+  }
+  .input-set .text,
+  .input-set input {
+    height: 27px;
+    line-height: 27px;
+    display: block;
+    font-size: 14px;
+  }
+
+  .input-set .inputBox {
+    margin-left: 77px;
+    position: relative;
+  }
+  .input-set .inputBox .verification_code{height: 27px;}
+  .input-set .inputBox .verification_code img{height: 100%;margin:0 15px;}
+  .input-set .inputBox .tips{
+    float: left;
+    color: #b5b5b5;
+    line-height: 29px;
+    margin-left: 5px;
+  }
+  .input-set .inputBox.textarea .tips{
+    position: absolute;
+    left: 62%;
+    bottom: 0;
+  }
+  .input-set .inputBox .small{
+    width: 33%;
+  }
+  .input-set .inputBox .big{
+    width: 60%;
+  }
+  .input-set input,
+  .input-set textarea {
+    border: 1px solid #cfcfcf;
+    width: 100%;
+    float: left;
+    padding: 0 5px;
+  }
+  .input-set textarea{padding-top: 5px ;padding-bottom: 5px;}
+  .input-set textarea {
+    min-height: 110px;
+  }
+  .m-form-line .m-btn {
+    width: 99px;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 7px 0px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .r-text .m-form-line .m-btn{border-radius: 6px;}
+}

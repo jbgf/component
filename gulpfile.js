@@ -109,7 +109,7 @@ gulp.task('browserSync',function(){
 });
 
 
-var arr = ['button', 'topbar','navbar','footer','slider','special','sideBar','tab','list','map','iconGroup','affix','animate','header',
+var arr = ['button', 'topbar','navbar','footer','form','slider','special','sideBar','tab','list','map','iconGroup','affix','animate','header',
 			'content','pagination','picText','input','logoRow','frame'];
 	arr = arr.map(function (x) {
 		return './'+x+'/**/*.html';

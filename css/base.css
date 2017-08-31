@@ -174,7 +174,7 @@ input {
   input:focus {
     outline: none; }
 
-input[type="checkbox"] {
+input[type="checkbox"], textarea:focus {
   outline: none; }
 
 .disabledLink {
@@ -230,6 +230,9 @@ input[type="checkbox"] {
 
 .i_white {
   color: #fff !important; }
+
+.yellow {
+  color: yellow; }
 
 .blue {
   color: #006acf; }

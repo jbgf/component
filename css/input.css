@@ -11,6 +11,7 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
+/*frame */
 /*----------------------------------------------------- */
 /* setting scss*/
 /*----------------------------------------------------- */
@@ -23,6 +24,7 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
+/*frame */
 /* input set  start  */
 /* input set  end  */
 /* input-set06 start*/
@@ -194,26 +196,26 @@
   outline: 0; }
 
 /*.input-set01  end*/
-/*input-set start*/
-.input-set input {
+/*input-set0 start*/
+.input-set0 input {
   display: inline-block;
   float: left;
   height: 100%;
   font-size: 16px;
   font-weight: 500; }
 
-.input-set input.input {
+.input-set0 input.input {
   width: 72%;
   padding-left: 10px;
   box-sizing: border-box; }
 
-.input-set input.button {
+.input-set0 input.button {
   width: 28%; }
 
-.input-set-l {
+.input-set0-l {
   height: 48px; }
 
-/*input-set end*/
+/*input-set0 end*/
 /*content1_form start*/
 .content1_form input[type="submit"] {
   margin-left: 77px;

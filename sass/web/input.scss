@@ -136,13 +136,13 @@ font-size: 14px;
 .input-set01 .input:focus{box-shadow: inset 0 1px 1px 2px rgba(0,0,0,.075), 0 0 8px 2px rgba(102, 175, 233, .6);outline: 0}
 /*.input-set01  end*/
 
-/*input-set start*/
-.input-set{}
-.input-set input{display: inline-block;float:left;height: 100%;font-size: 16px;font-weight: 500;}
-.input-set input.input{width:72%;padding-left:10px;box-sizing: border-box;}
-.input-set input.button{width:28%;}
-.input-set-l{height: 48px;}
-/*input-set end*/
+/*input-set0 start*/
+.input-set0{}
+.input-set0 input{display: inline-block;float:left;height: 100%;font-size: 16px;font-weight: 500;}
+.input-set0 input.input{width:72%;padding-left:10px;box-sizing: border-box;}
+.input-set0 input.button{width:28%;}
+.input-set0-l{height: 48px;}
+/*input-set0 end*/
 
 /*content1_form start*/
 .content1_form {}

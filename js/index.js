@@ -158,8 +158,8 @@
         tit?(titlestring = "<span class='tagFrame tag-blue blue'>title:"+tit+"</span>",
              tagLine += titlestring)
             :"";
-        des?(describestring = "<span class='tagFrame tag-blue black'>describe:"+des+"</span>",
-            tagLine += describestring)
+        des?(describestring = "<span class='tagFrame tag-blue white bg-black'>Describe| "+des+"</span>",
+            tagLine += describestring)    /*描述标签*/
             :"";
 
         //因为调用插件方法，可能会改变文档结构，所以先获取插件调用前的html。  

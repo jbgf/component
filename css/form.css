@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*frame */
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*frame */
+/* input set  start  */
+/* input set  end  */
+.form1 form {
+  width: 100%; }
+
+.form1 .m-form-line {
+  text-align: left; }
+
+.form1 .m-form-line .input-set {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding: 12px 0px; }
+
+.form1 .input-set .text {
+  width: 63px;
+  float: left;
+  text-align: right; }
+
+.form1 .input-set .text,
+.form1 .input-set input {
+  height: 27px;
+  line-height: 27px;
+  display: block;
+  font-size: 14px; }
+
+.form1 .input-set .inputBox {
+  margin-left: 77px;
+  position: relative; }
+
+.form1 .input-set .inputBox .verification_code {
+  height: 27px; }
+
+.form1 .input-set .inputBox .verification_code img {
+  height: 100%;
+  margin: 0 15px; }
+
+.form1 .input-set .inputBox .tips {
+  float: left;
+  color: #b5b5b5;
+  line-height: 29px;
+  margin-left: 5px; }
+
+.form1 .input-set .inputBox.textarea .tips {
+  position: absolute;
+  left: 62%;
+  bottom: 0; }
+
+.form1 .input-set .inputBox .small {
+  width: 33%; }
+
+.form1 .input-set .inputBox .big {
+  width: 60%; }
+
+.form1 .input-set input,
+.form1 .input-set textarea {
+  border: 1px solid #cfcfcf;
+  width: 100%;
+  float: left;
+  padding: 0 5px; }
+
+.form1 .input-set textarea {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.form1 .input-set textarea {
+  min-height: 110px; }
+
+.form1 .m-form-line .m-btn {
+  width: 99px;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 7px 0px;
+  margin-right: 10px;
+  cursor: pointer; }
+
+.form1 .r-text .m-form-line .m-btn {
+  border-radius: 6px; }
+
+/*# sourceMappingURL=maps/form.css.map */
