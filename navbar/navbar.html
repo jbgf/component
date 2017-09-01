@@ -14,7 +14,7 @@
 	  var c = function(){
 	    $(function(){
 	      $("#navbarBox").set({
-	        brandName:"topbar",
+	        brandName:"navBar",
 	        rowBlock:1
 	      });
 	    });
@@ -32,6 +32,83 @@
 	</div>	
 	<div id="navbarBox" class="" ><!-- data-set="set" -->
 
+		<div class="box" data-block="3" data-title="navbar-line10" style="height:500px;"> <!--700px 模拟手机高度-->
+			<div id="webTopBox" class="webTopBox  navbar-wrapper10">
+				<div id="webHeaderBox" class="webHeaderBox  " >
+					<div class='navButton' id='navButton'>
+						<div class='navButtonPanel'></div>
+						<div class='menuNav'><div class='menuNavTip iconfont icon-weibiaoti1'></div></div>
+					</div>
+					<div id='headerWhiteBg' class='headerSiteMaskWhiteBg'></div>
+					<div id='headerBg' class='headerSiteMaskBg'></div>
+					<div id='webHeader' class='webHeader webHeaderBg' >
+						<div id='header' class='header' style='padding:0px;'>
+							<span class='pageTitle' id='pageTitle' >武夷新区</span>
+						</div>
+					</div>
+				</div>
+				<div id="webTop" class="webTop" >
+					<div id='navbar' class='navbar navBaseIcon'>
+						<div id='navbarList' class='navbarList'>
+							<div class='navItem navItem_1 itemSelected icon-navItem iconfont'>
+								<a href="#">
+									<span class='navItemIcon icon-navItem  iconfont '></span>
+									<span class='navItemName'>首页</span>
+								</a>
+							</div> 
+							<div class='navItem navItem_2 icon-navItem iconfont'>
+								<a href="#">
+									<span class='navItemIcon icon-navItem  iconfont '></span>
+									<span class='navItemName'>走进新区</span>
+								</a>
+							</div> 
+							<div class='navItem navItem_3 icon-navItem iconfont'>
+								<a href="#">
+									<span class='navItemIcon icon-navItem  iconfont '></span>
+									<span class='navItemName'>新闻中心</span>
+								</a>
+							</div> 
+							<div class='navItem navItem_4 icon-navItem iconfont'>
+								<a href="#">
+									<span class='navItemIcon icon-navItem  iconfont'></span>
+									<span class='navItemName'>产业发展</span>
+								</a>
+							</div> 
+							<div class='navItem navItem_5  icon-navItem iconfont'>
+								<a href="#">
+									<span class='navItemIcon icon-navItem  iconfont '></span>
+									<span class='navItemName'>绿色新区</span>
+								</a>
+							</div> 
+							<div class='navItem navItem_6 icon-navItem iconfont'>
+								<a href="#">
+									<span class='navItemIcon icon-navItem  iconfont '></span>
+									<span class='navItemName'>政务发展</span>
+								</a>
+							</div> 
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<script>
+				+function navbarline10() {
+                    var flag = 1;
+                    $("#navButton").on("click",function(){
+                        if(flag){
+                            flag = 0;
+                            $("#webTop,.navbar-wrapper10").css({height:"100%"})
+                        }else{
+                            flag = 1;
+                            $("#webTop").css("height", "")
+                        }
+
+                        $("#navbar").toggleClass("open")
+                    })
+                }()
+			</script>
+		</div>
 		<div class="box" data-title="navbar-line09" >
 			<div class="navBar_wrapper09 ">
 				<div class="navbar-line09 container-1200 font-title clear ">

@@ -53,6 +53,140 @@
 /*frame */
 /* input set  start  */
 /* input set  end  */
+/*iconGroup05 start*/
+.iconGroup05 .cubeNavigationArea .icon-cube {
+  font-size: 2rem;
+  color: #fff; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink_text_p {
+  font-size: .7rem; }
+
+.iconGroup05 .form.formStyle31 {
+  padding: 0;
+  background: transparent;
+  border: 0; }
+
+.iconGroup05 .cubeNavigationArea {
+  overflow: hidden;
+  min-height: .5rem;
+  padding-top: 1.5%; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink {
+  float: left;
+  width: 100%;
+  height: 4.7rem;
+  padding-bottom: 1.5%;
+  padding-left: 1.5%; }
+  .iconGroup05 .cubeNavigationArea .cubeLink.cubeLink1 .icon-cube:before {
+    content: ""; }
+  .iconGroup05 .cubeNavigationArea .cubeLink.cubeLink2 .icon-cube:before {
+    content: ""; }
+  .iconGroup05 .cubeNavigationArea .cubeLink.cubeLink3 .icon-cube:before {
+    content: ""; }
+  .iconGroup05 .cubeNavigationArea .cubeLink.cubeLink4 .icon-cube:before {
+    content: ""; }
+  .iconGroup05 .cubeNavigationArea .cubeLink.cubeLink5 .icon-cube:before {
+    content: ""; }
+  .iconGroup05 .cubeNavigationArea .cubeLink.cubeLink6 .icon-cube:before {
+    content: ""; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink .cubeLink_a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: relative; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink .cubeLink_a .cubeLink_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink .cubeLink_a .cubeLink_curtain {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink .cubeLink_a .cubeLink_ico {
+  width: 2rem;
+  height: 2.1rem;
+  margin: auto;
+  position: absolute;
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink .cubeLink_a .cubeLink_text {
+  width: 100%;
+  position: absolute;
+  table-layout: fixed; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink .cubeLink_a .cubeLink_text .cubeLink_text_p {
+  white-space: nowrap;
+  overflow: hidden; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink .cubeLink_a .cubeLink_text .cubeLink_text_p .cubeLink_subText_p {
+  display: none; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink_fixWidth_1 {
+  width: 97% !important; }
+
+.iconGroup05 .cubeNavigationArea .cubeLink_fixWidth_2 {
+  width: 47.75% !important; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink {
+  width: 31.33%; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink .cubeLink_a .cubeLink_ico {
+  left: 0;
+  right: 0;
+  top: 15%;
+  line-height: 1; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink .cubeLink_a .cubeLink_text {
+  bottom: 20%;
+  text-align: center;
+  color: #fff;
+  font-size: 16px; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(1) {
+  padding-top: 1%; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(2) {
+  padding-top: 1%; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(3) {
+  padding-top: 1%; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(3n+3) {
+  width: 31.34%; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(9n+1) .cubeLink_a .cubeLink_bg {
+  background-color: #006acf; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(9n+2) .cubeLink_a .cubeLink_bg {
+  background-color: #f4b21c; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(9n+3) .cubeLink_a .cubeLink_bg {
+  background-color: #6caede; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(9n+4) .cubeLink_a .cubeLink_bg {
+  background-color: #80b660; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(9n+5) .cubeLink_a .cubeLink_bg {
+  background-color: #e8457f; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(9n+6) .cubeLink_a .cubeLink_bg {
+  background-color: #bc4040; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(9n+7) .cubeLink_a .cubeLink_bg {
+  background-color: #d87570; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(9n+8) .cubeLink_a .cubeLink_bg {
+  background-color: #bbd1c4; }
+
+.iconGroup05 .cubeNavigationArea2 .cubeLink:nth-child(9n+9) .cubeLink_a .cubeLink_bg {
+  background-color: #febf02; }
+
+/*iconGroup06 end*/
 /*iconGroup04 start */
 .iconGroup04 {
   padding: 0 5%; }
